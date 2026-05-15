@@ -8,7 +8,7 @@ Complete implementation of `board-memo-expert` skill for generating comprehensiv
 
 ### Core Structure
 ```
-.claude/skills/board-memo-expert/
+${CLAUDE_PLUGIN_ROOT}/skills/board-memo-expert/
 ├── SKILL.md                              # Complete skill documentation (7,200+ lines)
 ├── README.md                             # User guide and examples
 ├── board_memo_generator.py               # Main generator (250+ lines)

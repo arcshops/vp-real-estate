@@ -215,7 +215,7 @@ COMPENSATION BREAKDOWN:
 ## File Structure
 
 ```
-.claude/skills/expropriation-compensation-entitlement-analysis/
+${CLAUDE_PLUGIN_ROOT}/skills/expropriation-compensation-entitlement-analysis/
 ├── SKILL.md                                    (16KB) - Legal framework skill
 ├── expropriation_calculator.py                 (30KB) - Main calculator
 ├── sample_commercial_expropriation.json        (1.7KB) - Commercial scenario

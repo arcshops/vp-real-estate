@@ -9,8 +9,8 @@ Comprehensive before/after analysis for partial property acquisitions, quantifyi
 ## Calculator Integration
 
 **Python Calculators**:
-- `.claude/skills/severance-damages-quantification/severance_calculator.py`
-- `.claude/skills/injurious-affection-assessment/injurious_affection_calculator.py`
+- `${CLAUDE_PLUGIN_ROOT}/skills/severance-damages-quantification/severance_calculator.py`
+- `${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment/injurious_affection_calculator.py`
 
 **Skills**: `severance-damages-quantification`, `injurious-affection-assessment`
 **Related Skills**: `expropriation-compensation-entitlement-analysis`, `comparable-sales-adjustment-methodology`
@@ -96,7 +96,7 @@ Formula: Total = Market Value Taken + Severance Damages + Injurious Affection
 
 3. **Run severance damages calculator**
    ```bash
-   cd .claude/skills/severance-damages-quantification
+   cd ${CLAUDE_PLUGIN_ROOT}/skills/severance-damages-quantification
    python severance_calculator.py <severance-input.json> --output severance_results.json
    ```
 
@@ -108,7 +108,7 @@ Formula: Total = Market Value Taken + Severance Damages + Injurious Affection
 
 4. **Run injurious affection calculator**
    ```bash
-   cd .claude/skills/injurious-affection-assessment
+   cd ${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment
    python injurious_affection_calculator.py <impacts-input.json> --output impacts_results.json
    ```
 

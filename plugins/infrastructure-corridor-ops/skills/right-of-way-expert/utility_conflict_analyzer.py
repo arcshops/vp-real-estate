@@ -274,7 +274,8 @@ def save_results(
     # Determine output path
     if output_path is None:
         timestamp = eastern_timestamp().replace(':', '').replace('-', '').replace(' ', '_')
-        output_path = f"/workspaces/lease-abstract/Reports/{timestamp}_utility_conflict_analysis.md"
+        project_dir = os.environ.get('CLAUDE_PROJECT_DIR', os.getcwd())
+        output_path = os.path.join(project_dir, 'Reports', f"{timestamp}_utility_conflict_analysis.md")
 
     # Ensure Reports directory exists
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

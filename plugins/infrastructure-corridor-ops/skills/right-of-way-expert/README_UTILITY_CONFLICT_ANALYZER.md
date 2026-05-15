@@ -226,10 +226,10 @@ python utility_conflict_analyzer.py samples/pipeline_corridor_input.json
 
 ```bash
 # Run all tests
-python -m pytest .claude/skills/right-of-way-expert/tests/test_utility_conflict_analyzer.py -v
+python -m pytest ${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/tests/test_utility_conflict_analyzer.py -v
 
 # Run specific test class
-python -m pytest .claude/skills/right-of-way-expert/tests/test_utility_conflict_analyzer.py::TestValidators -v
+python -m pytest ${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/tests/test_utility_conflict_analyzer.py::TestValidators -v
 ```
 
 **Test Coverage:**

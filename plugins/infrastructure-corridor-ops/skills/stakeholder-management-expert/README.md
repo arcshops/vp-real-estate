@@ -6,7 +6,7 @@ Expert in stakeholder consultation analysis, feedback summarization, sentiment a
 
 ```bash
 # Run consultation summarizer with sample data
-cd /workspaces/lease-abstract/.claude/skills/stakeholder-management-expert
+cd /workspaces/lease-abstract/${CLAUDE_PLUGIN_ROOT}/skills/stakeholder-management-expert
 python consultation_summarizer.py samples/sample_1_station_public_meeting.json --verbose
 
 # Specify output location

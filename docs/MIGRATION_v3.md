@@ -66,7 +66,7 @@ This fails if any generated/vendored artifact drifted from its master/canonical.
 
 - `Reports/` — user output dir (commands write here via `$CLAUDE_PROJECT_DIR/Reports/`)
 - `Sample_Inputs/`, `Sample_Outputs/` — documentation examples
-- `Planning/`, `Research_Reports/`, `Specifications/`, `Repository_Dev_Plans/`, `User_Inputs/`, `Images/`, `Issues_Reports/` — repo-level docs
+- `Research_Reports/`, `Specifications/`, `Repository_Dev_Plans/`, `User_Inputs/`, `Images/`, `Issues_Reports/` — repo-level docs
 
 ## What was deleted
 

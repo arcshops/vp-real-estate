@@ -106,7 +106,7 @@ Based on overall score:
 ## Installation
 
 ```bash
-cd .claude/skills/transit-station-site-acquisition-strategy
+cd ${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy
 chmod +x transit_station_scorer.py
 ```
 

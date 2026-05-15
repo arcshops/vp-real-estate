@@ -2,7 +2,7 @@
 
 ## Overview
 
-Complete modular calculator for comprehensive title search analysis at `.claude/skills/title-expert/title_analyzer.py`.
+Complete modular calculator for comprehensive title search analysis at `${CLAUDE_PLUGIN_ROOT}/skills/title-expert/title_analyzer.py`.
 
 **Status:** ✓ FULLY IMPLEMENTED AND TESTED
 

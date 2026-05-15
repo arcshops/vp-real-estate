@@ -171,7 +171,11 @@ def extract_sample_data(excel_path: str, output_path: str, num_properties: int =
 
 
 if __name__ == "__main__":
-    excel_path = "/workspaces/lease-abstract/skillsdevdocs/Relative Valuation Template for newsletter.xlsx"
-    output_path = "/workspaces/lease-abstract/Relative_Valuation/sample_input.json"
+    import argparse
 
-    extract_sample_data(excel_path, output_path)
+    parser = argparse.ArgumentParser(description="Extract sample relative-valuation data from an Excel template into JSON")
+    parser.add_argument("excel_path", help="Path to the Excel template file")
+    parser.add_argument("output_path", help="Path to write the extracted JSON")
+    args = parser.parse_args()
+
+    extract_sample_data(args.excel_path, args.output_path)

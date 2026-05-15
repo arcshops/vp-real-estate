@@ -9,7 +9,7 @@ No installation required - uses existing Python environment with Shared_Utils.
 ### 1. Run a Sample Calculation
 
 ```bash
-cd .claude/skills/title-expert/encumbrance_discount_calculator
+cd ${CLAUDE_PLUGIN_ROOT}/skills/title-expert/encumbrance_discount_calculator
 python encumbrance_discount_calculator.py sample_inputs/simple_drainage_example.json
 ```
 
@@ -370,7 +370,7 @@ python encumbrance_discount_calculator.py my_input.json --json analysis.json
 **Ready to Calculate?**
 
 ```bash
-cd .claude/skills/title-expert/encumbrance_discount_calculator
+cd ${CLAUDE_PLUGIN_ROOT}/skills/title-expert/encumbrance_discount_calculator
 python encumbrance_discount_calculator.py sample_inputs/simple_drainage_example.json --verbose
 ```
 

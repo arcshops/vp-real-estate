@@ -3,7 +3,7 @@
 ## Project Status: PRODUCTION READY
 
 Complete modular calculator for comprehensive title search analysis delivered at:
-**Location:** `.claude/skills/title-expert/title_analyzer.py`
+**Location:** `${CLAUDE_PLUGIN_ROOT}/skills/title-expert/title_analyzer.py`
 
 ---
 
@@ -223,7 +223,7 @@ python title_analyzer.py input.json --verbose
 ## File Structure
 
 ```
-.claude/skills/title-expert/
+${CLAUDE_PLUGIN_ROOT}/skills/title-expert/
 ├── title_analyzer.py              (315 lines - main calculator)
 ├── modules/
 │   ├── __init__.py                (36 lines)

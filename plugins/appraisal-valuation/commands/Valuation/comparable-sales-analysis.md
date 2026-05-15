@@ -818,12 +818,12 @@ Sequential 6-stage framework ensures proper mathematical relationship between ad
 ### C. Calculator Output Files
 
 **Input Files:**
-- JSON Input: `.claude/skills/comparable-sales-adjustment-methodology/inputs/comps_input_[timestamp].json`
-- JSON Schema: `.claude/skills/comparable-sales-adjustment-methodology/comparable_sales_input_schema.json`
+- JSON Input: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/inputs/comps_input_[timestamp].json`
+- JSON Schema: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/comparable_sales_input_schema.json`
 
 **Output Files:**
-- JSON Results: `.claude/skills/comparable-sales-adjustment-methodology/results/comps_results_[timestamp].json`
-- Validation Report: `.claude/skills/comparable-sales-adjustment-methodology/validation_report_[timestamp].txt`
+- JSON Results: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/results/comps_results_[timestamp].json`
+- Validation Report: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/validation_report_[timestamp].txt`
 
 **Calculator Modules:**
 - Main: `comparable_sales_calculator.py` (6-stage hierarchy with non-linear location model)
@@ -953,7 +953,7 @@ After creating all files, provide the user with:
 - `commercial-lease-expert` - Lease analysis and property evaluation
 
 **Validator:**
-- `.claude/skills/comparable-sales-adjustment-methodology/validate_comparables.py`
+- `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/validate_comparables.py`
 - Schema: `comparable_sales_input_schema.json` (JSON Schema Draft 2020-12)
 
 **Calculator Modules:**

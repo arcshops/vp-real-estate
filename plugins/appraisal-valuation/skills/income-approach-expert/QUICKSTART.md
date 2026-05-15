@@ -3,7 +3,7 @@
 ## 1. Run a Sample Calculation (30 seconds)
 
 ```bash
-cd .claude/skills/income-approach-expert
+cd ${CLAUDE_PLUGIN_ROOT}/skills/income-approach-expert
 
 # Telecom tower site example
 python land_capitalization_calculator.py \

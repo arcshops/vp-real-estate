@@ -48,7 +48,7 @@ You're not just getting software. You're getting:
 - **Reggie Chan, CFA, FRICS** - VP of Leasing & Asset Management with 20+ years of institutional real estate experience. Handles complex problems, crisis turnarounds, fraud detection, and multi-domain synthesis. The brain behind the operation.
 - **Adam** - Reggie's senior analyst and protégé. Handles routine lease analysis, credit checks, and professional communication. Fast execution for straightforward tasks.
 - **Dennis** - Reggie's former boss with 36+ years of battle-tested experience. Provides strategic wisdom, negotiation psychology, and brutal honesty when you need it most.
-- **Complete toolkit** - 11 financial calculators, **23+ specialized skills**, 30+ automated workflows, **Location Overview module** for appraisal research, and **intelligent hooks** that automatically suggest the right expertise at the right time
+- **Complete toolkit** - 11 financial calculators, **23+ specialized skills**, 30+ automated workflows, **Location Overview module** for appraisal research, and skills that auto-activate via Claude Code's native skill discovery
 
 Just address "Reggie," "Adam," or "Dennis" in your messages and watch the right team member handle your request—from everyday analysis to impossible problems to strategic decisions.
 

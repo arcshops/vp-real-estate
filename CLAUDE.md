@@ -68,51 +68,73 @@ Specialists are dispatch-oriented: they receive a focused task, return a written
 
 **Example**: `2025-10-31_143022_lease_abstract_acme_corp.md`
 
-## Slash Commands (26 total)
+## Slash Commands (23 total)
 
-All commands follow **PDF → JSON → Python → Report** automated workflow (except utilities). Commands are namespaced under the `leasing-commercial` plugin (prefix: `/leasing-commercial:`).
+Commands are namespaced under their owning plugin (prefix: `/<plugin>:`). Most follow **PDF → JSON → Python → Report** automated workflow.
 
-### Abstraction (2)
-- `/leasing-commercial:abstract-lease` - Extract lease terms using 24-section template
+### leasing-commercial (15)
+
+**Abstraction**
+- `/leasing-commercial:abstract-lease` - Extract lease terms using 25-section template
 - `/leasing-commercial:critical-dates` - Extract timeline and critical dates
 
-### Financial Analysis (10)
+**Financial Analysis**
 - `/leasing-commercial:effective-rent` - NER, NPV, breakeven (Ponzi Rental Rate)
 - `/leasing-commercial:renewal-economics` - Renewal vs. relocation NPV analysis
 - `/leasing-commercial:tenant-credit` - Credit scoring and risk assessment
 - `/leasing-commercial:option-value` - Real options valuation (Black-Scholes)
-- `/leasing-commercial:market-comparison` - Market rent benchmarking
 - `/leasing-commercial:rollover-analysis` - Portfolio lease expiry analysis
 - `/leasing-commercial:rental-variance` - Rental variance decomposition by rate, area, and term
 - `/leasing-commercial:relative-valuation` - MCDA competitive positioning with 25 variables, personas, and filters
-- `/leasing-commercial:recommendation-memo` - VTS approval memo with tenant analysis and deal comparison
-- `/leasing-commercial:extract-mls` - Extract MLS data to professionally formatted Excel with subject highlighting
+- `/leasing-commercial:extract-mls` - Extract MLS data to professionally formatted Excel
 
-### Accounting (1)
+**Accounting**
 - `/leasing-commercial:ifrs16-calculation` - IFRS 16/ASC 842 lease accounting
 
-### Comparison (4)
-- `/leasing-commercial:compare-amendment` - Amendment vs. original lease
-- `/leasing-commercial:compare-offers` - Inbound vs. outbound offers
-- `/leasing-commercial:compare-precedent` - Draft vs. standard form
-- `/leasing-commercial:lease-vs-lease` - General lease comparison
-
-### Compliance (7)
-- `/leasing-commercial:assignment-consent` - Assignment/subletting analysis
+**Compliance**
 - `/leasing-commercial:default-analysis` - Default provisions and cure periods
-- `/leasing-commercial:environmental-compliance` - Environmental obligations
 - `/leasing-commercial:estoppel-certificate` - Estoppel generation
-- `/leasing-commercial:insurance-audit` - Insurance requirement verification
 - `/leasing-commercial:notice-generator` - Generate lease notices
 - `/leasing-commercial:work-letter` - Generate work letter from TI provisions
 
-### Valuation (1)
-- `/leasing-commercial:mcda-sales-comparison` - MCDA ordinal ranking for fee simple valuation (score-to-price mapping)
+### appraisal-valuation (3)
+- `/appraisal-valuation:comparable-sales-analysis` - Comparable sales DCA + MCDA adjustment grid
+- `/appraisal-valuation:easement-valuation` - Easement compensation (percentage-of-fee, income capitalization, before/after)
+- `/appraisal-valuation:mcda-sales-comparison` - MCDA ordinal ranking for fee simple valuation
 
-### Utilities (1)
-- `/leasing-commercial:convert-to-pdf` - Convert markdown files to PDF format
+### expropriation-law (2)
+- `/expropriation-law:expropriation-compensation` - Full statutory compensation analysis under OEA
+- `/expropriation-law:partial-taking-analysis` - Severance damages + injurious affection on partial takings
 
-**See**: `plugins/leasing-commercial/commands/` for detailed documentation
+### common-utilities (3)
+- `/common-utilities:convert-to-pdf` - Convert markdown files to PDF
+- `/common-utilities:git-delete-comments` - Git operations utility
+- `/common-utilities:git-delete` - Git operations utility
+
+### Migration from v2.x
+
+Many v2 commands were folded into related skills (which auto-activate via native discovery) or dropped entirely. To migrate workflows that referenced these:
+
+| v2 command | v3 successor |
+|---|---|
+| `/recommendation-memo` | `commercial-lease-expert` skill |
+| `/assignment-consent` | `consent-to-assignment-expert` skill |
+| `/insurance-audit` | `lease-compliance-auditor` skill |
+| `/compare-amendment`, `/compare-offers`, `/compare-precedent`, `/lease-vs-lease` | `lease-comparison-expert` skill |
+| `/market-comparison`, `/environmental-compliance` | dropped (functionality redistributed across skills) |
+| `/cropland-compensation-analysis` | `cropland-out-of-production-agreements` skill |
+| `/location-overview`, `/right-of-way-analysis`, `/utility-conflict-analysis` | `right-of-way-expert` skill |
+| `/transit-station-scoring` | `transit-station-site-acquisition-strategy` skill |
+| `/expropriation-timeline` | `expropriation-timeline-expert` skill |
+| `/injurious-affection-analysis`, `/settlement-analysis` | dropped (functionality in `injurious-affection-assessment` / `settlement-analysis-expert` skills) |
+| `/income-approach-land` | `income-approach-expert` skill |
+| `/cost-approach-infrastructure` | `cost-approach-expert` skill |
+| `/title-analysis` | `title-expert` skill |
+| `/environmental-due-diligence` | `environmental-due-diligence-expert` skill |
+| `/negotiation-strategy` | `negotiation-expert-infrastructure` skill |
+| `/board-memo`, `/briefing-note` | dropped |
+
+**See**: `plugins/*/commands/` for detailed documentation
 
 ## Specialized Skills (23 total)
 
@@ -278,7 +300,7 @@ When creating JSON schema validation documents (not data templates), follow thes
 
 ## Reference
 
-`Planning/Multi_Tenant_Industrial.md` and `Planning/Multi_Tenant_Office.md` - Full Minden Gross templates (2000+ lines)
+`plugins/leasing-commercial/templates/Industrial/` and `plugins/leasing-commercial/templates/Office/` - Lease template scaffolding (ANSI/BOMA aligned)
 
 `plugins/leasing-commercial/commands/` - All slash command definitions (namespaced under `leasing-commercial`)
 

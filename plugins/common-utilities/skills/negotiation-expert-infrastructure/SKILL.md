@@ -53,7 +53,7 @@ Auto-invoke when reading:
 - `*settlement*analysis*.json`
 - `*negotiation*input*.json`
 - `*batna*zopa*.json`
-- Files in `.claude/skills/negotiation-expert-infrastructure/samples/`
+- Files in `${CLAUDE_PLUGIN_ROOT}/skills/negotiation-expert-infrastructure/samples/`
 
 ## Core Concepts
 

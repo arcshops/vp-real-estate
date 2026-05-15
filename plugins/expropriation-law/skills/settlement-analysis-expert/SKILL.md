@@ -49,7 +49,7 @@ description: Use when deciding settle-versus-hearing on an expropriation file â€
 
 ## Calculator: settlement_analyzer.py
 
-**Location**: `.claude/skills/settlement-analysis-expert/settlement_analyzer.py`
+**Location**: `${CLAUDE_PLUGIN_ROOT}/skills/settlement-analysis-expert/settlement_analyzer.py`
 
 **Purpose**: Analyze settlement scenarios vs. hearing risk with probability-weighted outcomes
 

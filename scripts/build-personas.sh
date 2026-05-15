@@ -40,6 +40,12 @@ generate_for() {
 
   local description
   description=$(awk '/^---$/{f++; next} f==1 && /^description:/{sub(/^description: */, ""); print; exit}' "$master")
+  local skill_description
+  skill_description=$(awk '/^---$/{f++; next} f==1 && /^skill_description:/{sub(/^skill_description: */, ""); print; exit}' "$master")
+  # Fall back to description if no audited skill_description is provided
+  if [[ -z "$skill_description" ]]; then
+    skill_description="$description"
+  fi
   local body
   body=$(awk '/^---$/{f++; next} f==2' "$master")
   if [[ -z "$body" ]]; then
@@ -64,9 +70,9 @@ EOF
   local skill_content
   skill_content=$(cat <<EOF
 ---
-description: $description
+name: ${SKILL_DIR[$slug]}
+description: $skill_description
 ---
-
 $body
 EOF
 )

@@ -15,7 +15,7 @@ Quantifies construction and proximity damages for expropriation claims:
 ### 1. Run a Sample Calculation
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/injurious-affection-assessment
+cd /workspaces/lease-abstract/${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment
 
 # Test residential property with construction impacts
 python3 injurious_affection_calculator.py sample_residential_construction_impact.json --verbose

@@ -152,17 +152,17 @@ Commands invoke Python calculators in these directories:
 - **Shared Utilities**: `shared_utils/`
 
 **Property Valuation:**
-- **Comparable Sales**: `.claude/skills/comparable-sales-adjustment-methodology/`
-- **Easement Valuation**: `.claude/skills/easement-valuation-methods/`
+- **Comparable Sales**: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/`
+- **Easement Valuation**: `${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods/`
 
 **Expropriation & Infrastructure:**
-- **Expropriation Compensation**: `.claude/skills/expropriation-compensation-entitlement-analysis/`
-- **Severance Damages**: `.claude/skills/severance-damages-quantification/`
-- **Injurious Affection**: `.claude/skills/injurious-affection-assessment/`
-- **Cropland Compensation**: `.claude/skills/cropland-out-of-production-agreements/`
+- **Expropriation Compensation**: `${CLAUDE_PLUGIN_ROOT}/skills/expropriation-compensation-entitlement-analysis/`
+- **Severance Damages**: `${CLAUDE_PLUGIN_ROOT}/skills/severance-damages-quantification/`
+- **Injurious Affection**: `${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment/`
+- **Cropland Compensation**: `${CLAUDE_PLUGIN_ROOT}/skills/cropland-out-of-production-agreements/`
 
 **Transit Planning:**
-- **Transit Station Scoring**: `.claude/skills/transit-station-site-acquisition-strategy/`
+- **Transit Station Scoring**: `${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy/`
 
 ## Development
 
