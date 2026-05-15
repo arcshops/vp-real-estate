@@ -452,6 +452,172 @@ ZOPA exists with range of $50,000. However, holdout risk is HIGH
 - May need to offer near or above buyer maximum
 - Consider phased construction or alternative routing
 
+---
+
+# Negotiation Strategy Planner - SKILL Documentation
+
+## Overview
+
+Companion tool that develops a **comprehensive negotiation approach** based on owner psychology, property characteristics, and hearing alternatives. Where the Settlement Calculator quantifies BATNA/ZOPA numbers, the Strategy Planner translates those numbers into a field-ready action plan.
+
+**Python Calculator**: `negotiation_strategy_planner.py`
+**Input Schema**: `negotiation_strategy_input_schema.json`
+
+**Primary Use Cases:**
+- Preparing for first contact with a property owner
+- Determining opening offer positioning and concession sequencing
+- Classifying owner type to select the right communication approach
+- Generating a 3-phase negotiation plan (Opening → Negotiation → Closure)
+
+## When to Use This Tool
+
+Use the Strategy Planner when you need **tactical guidance** — owner classification, communication tone, concession sequencing — as opposed to the Settlement Calculator which provides quantitative BATNA/ZOPA numbers. For complex acquisitions, run both: calculator first (numbers), planner second (field plan).
+
+**Trigger Phrases:**
+- "Develop a negotiation approach for this owner"
+- "How should I open with this farmer?"
+- "What's our concession plan?"
+- "Classify this owner type"
+- "Generate a 3-phase negotiation plan"
+- "Assess holdout risk for this owner profile"
+
+## Calculator Usage
+
+### Command Line
+
+```bash
+# Single combined input file
+python negotiation_strategy_planner.py owner_and_property.json
+
+# Separate owner profile and property data files
+python negotiation_strategy_planner.py owner_profile.json property_data.json
+
+# Custom output path
+python negotiation_strategy_planner.py samples/farmer_profile.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/strategy.md
+```
+
+### Slash Command
+
+```bash
+/negotiation-strategy <owner-profile-json> [<property-data-json>]
+```
+
+## Owner Psychology Framework
+
+### Five Owner Types
+
+| Type | Profile | Negotiation Implication |
+|---|---|---|
+| `RATIONAL_INVESTOR` | Maximize value, evidence-driven | Lead with comparable sales and data |
+| `LEGACY_HOLDER` | Emotional attachment, multi-generational | Acknowledge history; non-monetary terms matter |
+| `OPERATING_BUSINESS` | Business continuity critical | Emphasize timeline flexibility and disruption mitigation |
+| `FINANCIAL_DISTRESS` | Needs liquidity quickly | Speed and certainty of close outweigh price |
+| `SOPHISTICATED_HOLDOUT` | Strategic, patient, well-advised | Principled negotiation only; avoid aggressive tactics |
+
+### Holdout Risk Assessment (0-30 Scale)
+
+The planner scores three factor domains to produce a 0-30 holdout risk score:
+
+1. **Motivation (0-12):** Financial need (inverse), emotional attachment, business impact
+2. **Sophistication (0-10):** Real estate experience, legal representation, prior negotiations
+3. **Alternatives (0-8):** Relocation options, financial flexibility, timeline pressure
+
+**Risk Levels:**
+- 0-9: LOW (15% holdout probability)
+- 10-14: MEDIUM (30% holdout probability)
+- 15-19: HIGH (50% holdout probability)
+- 20+: CRITICAL (70% holdout probability)
+
+## Input Data Schema
+
+### Owner Profile Fields
+
+```json
+{
+  "owner_type": "LEGACY_HOLDER",
+  "motivation": {
+    "financial_need": "low",
+    "emotional_attachment": "high",
+    "business_impact": "critical"
+  },
+  "sophistication": {
+    "real_estate_experience": "high",
+    "legal_representation": true,
+    "previous_negotiations": 2
+  },
+  "alternatives": {
+    "relocation_options": "limited",
+    "financial_flexibility": "medium",
+    "timeline_pressure": "low"
+  }
+}
+```
+
+### Property / Deal Fields
+
+```json
+{
+  "property_description": "125-acre farm easement",
+  "acquisition_type": "easement",
+  "opening_offer": 162500,
+  "target_settlement": 175000,
+  "walkaway_point": 200000,
+  "num_concession_rounds": 3
+}
+```
+
+## Output: Negotiation Strategy Report
+
+The planner generates a 10-section report:
+
+1. **Owner Psychology Analysis** — Owner type classification, sophistication rating, key motivations
+2. **Holdout Risk Assessment** — 0-30 score, risk level, probability, contributing factors
+3. **BATNA Analysis** — Hearing expected value, costs, net BATNA (drawn from settlement calculator output or estimated)
+4. **ZOPA Analysis** — Zone of possible agreement, leverage position
+5. **Settlement Range Recommendation** — Opening / target / floor / ceiling / walkaway
+6. **Opening Offer Strategy** — Risk-adjusted positioning with owner-type-specific messaging
+7. **Concession Plan** — 2-4 rounds using diminishing pattern (50% → 25% → 12.5% of remaining gap) with tactical notes per round
+8. **Communication Strategy** — Tone, rapport tactics, and key messages tailored to the classified owner type
+9. **Leverage Analysis** — Buyer vs. owner advantages and vulnerabilities
+10. **3-Phase Negotiation Plan** — Phase 1: Opening (relationship, anchoring), Phase 2: Negotiation (concessions, objections), Phase 3: Closure (urgency creation, commitment)
+
+## 3-Phase Negotiation Plan Structure
+
+```
+Phase 1 — Opening
+  - Establish rapport (approach varies by owner type)
+  - Present opening offer with objective justification
+  - Anchor below target to preserve concession room
+
+Phase 2 — Negotiation
+  - Execute diminishing concession plan
+  - Respond to objections using negotiation-expert skill
+  - Monitor for closing signals
+
+Phase 3 — Closure
+  - Apply urgency framing appropriate to owner type
+  - Make final small concession to signal limit
+  - Secure commitment and move to documentation
+```
+
+## Integration with Settlement Calculator
+
+For complete negotiation preparation, run both tools in sequence:
+
+```bash
+# Step 1: Quantify the deal (Settlement Calculator)
+python negotiation_settlement_calculator.py input.json --output results.json
+
+# Step 2: Build the field plan (Strategy Planner)
+python negotiation_strategy_planner.py owner_profile.json results.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/negotiation_plan.md
+```
+
+The Strategy Planner accepts Settlement Calculator JSON output as its `property_data` argument, using the computed BATNA, ZOPA, and optimal settlement range to populate sections 3-5 of the strategy report automatically.
+
+---
+
 ## Integration with Negotiation-Expert Skill
 
 This calculator supports the broader **negotiation-expert** skill by providing:
