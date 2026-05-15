@@ -1,6 +1,6 @@
 ---
 name: right-of-way-expert
-description: Utility corridors and transmission lines. Analyzes utility conflicts, relocation requirements, coordination needs, cost estimation. Use for infrastructure projects, utility relocations, ROW acquisition, conflict detection
+description: Utility corridors and transmission lines. Analyzes utility conflicts, relocation requirements, coordination needs, cost estimation. Generates narrative location overviews from address or PIN for appraisal-ready location research (zoning, planning, heritage, environmental, transit, market context). Use for infrastructure projects, utility relocations, ROW acquisition, conflict detection, and "describe the location of [address]" requests
 tags: [utility, right-of-way, ROW, transmission, conflict, relocation, infrastructure, coordination]
 capability: Provides utility conflict analysis including geometric conflict detection, relocation design requirements, cost estimation by utility type, coordination timeline development, and risk assessment for schedule and budget impacts
 proactive: true
@@ -743,6 +743,83 @@ python3 -m Location_Overview.main --no-save "123 Main Street, Mississauga"
 - `--format` / `-f` - Output format: `markdown` (default) or `json`
 - `--no-save` - Don't save the report to file (print only)
 - `--verbose` / `-v` - Enable verbose logging
+
+### When to Use
+
+Use the Location Overview Generator when:
+- Scoping ROW conflicts, heritage constraints, and environmental flags before detailed conflict analysis
+- Drafting the "Location Overview" / "Neighbourhood Description" section of a CUSPAP-compliant appraisal report
+- Performing address research ("describe the location of [address]") for an acquisition target
+- Validating that a corridor route avoids floodplains, Heritage Conservation Districts, or contaminated sites
+- Establishing regional context, transit accessibility, and planning framework for a subject property
+
+### Two-Phase Workflow
+
+The Python script handles Phase 1 (API data collection). Phase 2 (deep web research) and Phase 3 (narrative synthesis) are performed in-conversation by the model after reading the script output.
+
+**Phase 1 — API Data Collection (automated):**
+- Parse input to determine address vs. PIN (PIN = 9 consecutive digits, e.g. `123456789` or `12345-6789`)
+- Geocode and resolve municipality
+- Query providers: Nominatim, Ontario GeoHub, Toronto/Ottawa Open Data, Overpass API, Heritage Registry, Brownfields ESR, TRCA Conservation, Transit GTFS, Census Demographics
+- Emit consolidated markdown or JSON
+
+**Phase 2 — Deep Web Research (skip when speed matters):**
+Supplement API data using `WebSearch` and `WebFetch`. Search across five domains:
+
+1. **Municipal Planning** — active applications, Committee of Adjustment decisions, Site Plan Approval status, development permits. Examples:
+   - `"[address]" site:toronto.ca planning application`
+   - `"[address]" zoning amendment OR minor variance`
+2. **Heritage** — register listings, heritage impact assessments, Heritage Conservation District studies. Examples:
+   - `"[address]" heritage designation Ontario`
+   - `"[address]" site:heritagetrust.on.ca`
+3. **Environmental** — conservation authority permits, Records of Site Condition, contamination history. Examples:
+   - `"[address]" record of site condition`
+   - `"[address]" site:trca.ca OR site:cvc.ca`
+4. **Development Activity** — recent/proposed developments, building permits, neighbourhood trends. Examples:
+   - `"[address]" site:urbantoronto.ca OR site:skyrisecities.com`
+   - `"[neighbourhood]" development pipeline [current year]`
+5. **Market Context** — area market trends, comparable values, notable transactions. Examples:
+   - `"[neighbourhood]" real estate market [current year]`
+   - `"[address]" recent sale OR sold`
+
+**Municipality-specific anchor domains:**
+- Toronto — `site:toronto.ca/city-government/planning-development`, `site:app.toronto.ca/DevelopmentApplications`
+- Ottawa — `site:ottawa.ca/en/planning-development-and-construction`, `site:devapps.ottawa.ca`
+- Mississauga — `site:mississauga.ca/services-and-programs/building-and-renovating/planning-and-development`
+- Other — general searches with municipality name + "planning department"; check for an online development tracker
+
+**Phase 3 — Narrative Synthesis:**
+Combine API output and web findings into flowing prose suitable for direct paste into an appraisal report. Do **not** emit tables or bullet lists in the final narrative.
+
+### Narrative Output Structure
+
+The narrative must follow CUSPAP location description conventions and cover all ten sections in order:
+
+1. **Property Identification** (1 paragraph) — civic address, legal description if available, coordinates, municipality, ward, neighbourhood.
+2. **Regional Context** (1-2 paragraphs) — municipality's role in the GTA/province, population, economic character, subject's position within it.
+3. **Neighbourhood Description** (2-3 paragraphs) — immediate character, land use mix, building typology, streetscape; reference the building/development by name, developer, year built, style if known; cite the applicable Secondary Plan area.
+4. **Transportation & Accessibility** (1-2 paragraphs) — subway, bus, GO Transit, major road access, walkability, cycling; quantify distances to key transit nodes.
+5. **Amenities & Services** (1-2 paragraphs) — schools, shopping, healthcare, recreation, employment; cite specific amenities by name and distance where impactful.
+6. **Planning Framework** (2-3 paragraphs) — Official Plan designation, zoning, Secondary Plan policies, what is permitted, Provincial Plan status (Greenbelt, Growth Plan, etc.).
+7. **Development Activity** (1-2 paragraphs) — recent, ongoing, proposed projects by name, scale, status; neighbourhood trend (intensification, stability, decline).
+8. **Environmental Considerations** (1 paragraph) — floodplain status, conservation authority jurisdiction, heritage designations, brownfield/contamination status.
+9. **Market Context** (1 paragraph) — comparable values, market trends, demand drivers.
+10. **Conclusion** (1 paragraph) — location strengths and limitations relevant to value or marketability.
+
+### Quality Criteria
+
+- **Prose, not tables** — final output reads like an appraisal report section, not a data dump.
+- **Specificity over generality** — name the building, the developer, the Secondary Plan, the transit station, the conservation authority; quantify distances.
+- **Attribute findings** — note when a fact came from API data vs. web research so a reviewer can verify.
+- **Flag uncertainty** — explicitly note when planning application status, environmental clearance, or assessment data could not be confirmed and recommend verification.
+- **Respect the limits** — PIN-to-address resolution via OnLand/Teranet is not available; MPAC assessment data requires a paid subscription; web-sourced planning status may be stale.
+
+### Save Convention
+
+Save the final narrative to:
+`$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_location_overview_narrative_[address_slug].md`
+
+Present to the user: the full narrative text in chat, the saved file path, the list of data sources used (API + web), and verification recommendations for any uncertain items.
 
 ## Best Practices
 
