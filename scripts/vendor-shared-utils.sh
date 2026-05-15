@@ -36,7 +36,18 @@ while IFS= read -r consumer; do
       EXIT_CODE=1
     fi
   else
-    rsync -a --delete "$CANONICAL/" "$consumer/"
+    if command -v rsync > /dev/null 2>&1; then
+      rsync -a --delete "$CANONICAL/" "$consumer/"
+    else
+      # rsync not available; use python3 shutil fallback
+      python3 -c "
+import sys, shutil, os
+src, dst = sys.argv[1], sys.argv[2]
+if os.path.exists(dst):
+    shutil.rmtree(dst)
+shutil.copytree(src, dst)
+" "$CANONICAL" "$consumer"
+    fi
     echo "vendored: $consumer"
   fi
 done <<< "$CONSUMERS"
