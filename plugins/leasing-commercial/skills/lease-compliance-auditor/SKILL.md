@@ -300,6 +300,172 @@ Status: VIOLATION - Immediate action required
 
 ---
 
+## Slash Command Workflow: Insurance Audit (`/insurance-audit`)
+
+**Invocation**: `/insurance-audit <lease-path> [insurance-policies]`
+
+### Step 1: Extract Lease Insurance Requirements
+
+For each required insurance type, extract:
+
+**Commercial General Liability (CGL):**
+- Per-occurrence and annual aggregate limits
+- Required coverages (bodily injury, property damage, personal injury)
+- Additional insureds (landlord, property manager, lender)
+- Cross-liability/severability of interests clause
+- Contractual liability coverage
+
+**Property Insurance (Tenant's Improvements):**
+- Coverage type (replacement cost vs. actual cash value)
+- Perils covered (all-risk vs. named perils)
+- Deductible limits; loss payee requirements
+
+**Business Interruption / Rent Insurance:**
+- Minimum coverage period (months); minimum amount (X months' rent)
+- Landlord as loss payee
+
+**Other Required Insurance:**
+- Automobile liability, pollution/environmental liability
+- Boiler and machinery / equipment breakdown
+- Workers compensation; umbrella/excess liability
+
+**Policy Requirements:**
+- Insurance company A.M. Best rating (A- minimum)
+- Primary and non-contributory
+- Waiver of subrogation in favor of landlord
+- Maximum deductible threshold
+
+**Certificate Requirements:**
+- Certificate holder (landlord name/address)
+- Delivery timeline (before occupancy, annually, 30 days before renewal)
+- Notice of cancellation period (30 days minimum)
+- Form: ACORD 25 or equivalent
+
+### Step 2: Insurance Requirements Matrix
+
+| Insurance Type | Required? | Minimum Limits | Additional Insured | Special Requirements |
+|----------------|-----------|----------------|-------------------|---------------------|
+| CGL | Yes | $X,XXX,XXX per occ / $X,XXX,XXX aggregate | Landlord, PM | Cross-liability, contractual |
+| Property | Yes | Replacement cost | Landlord as loss payee | All-risk, max $X deductible |
+| Business Interruption | Yes | 12 months rent | Landlord as loss payee | Covers rent obligation |
+| Umbrella | ? | - | - | |
+| Auto Liability | If applicable | $X,XXX,XXX | - | |
+| Boiler & Machinery | If applicable | $XXX,XXX | Landlord | If equipment on premises |
+
+### Step 3: Review ACORD 25 Certificate (if provided)
+
+Extract and verify:
+- Insurer name and A.M. Best rating
+- Policy numbers and effective/expiration dates
+- Coverage limits (per occurrence, aggregate)
+- Certificate holder (correct landlord name/address?)
+- Additional insured endorsement listed?
+- Waiver of subrogation shown?
+- Notice of cancellation period
+
+**Required vs. Actual Comparison Table:**
+
+| Requirement | Lease Requires | Actual Policy | Compliant? | Gap/Issue |
+|-------------|----------------|---------------|------------|-----------|
+| CGL Per Occurrence | $2,000,000 | $X | ✓/✗ | |
+| CGL Aggregate | $5,000,000 | $X | ✓/✗ | |
+| Additional Insured | Landlord | Listed/Not listed | ✓/✗ | |
+| Property Coverage | $X | $X | ✓/✗ | |
+| Biz Interruption | 12 months | X months | ✓/✗ | |
+| Waiver of Subrogation | Required | Shown/Not shown | ✓/✗ | |
+| Notice Period | 30 days | X days | ✓/✗ | |
+| A.M. Best Rating | A- minimum | [Rating] | ✓/✗ | |
+
+### Step 4: Non-Compliance Classification
+
+**Critical (Immediate Action):**
+- No insurance certificate on file
+- Insurance has expired
+- Landlord not listed as additional insured
+- Coverage limits below requirements
+- No waiver of subrogation
+- Insurer rating below A-
+
+**Material (Require Correction):**
+- Amounts slightly below requirements
+- Missing specific coverage types
+- Deductible exceeds permitted amount
+- Certificate holder information incorrect
+- Notice period less than required
+
+**Administrative (Low Priority):**
+- Certificate not on ACORD 25 form
+- Minor clerical errors
+
+### Step 5: Calculate Insurance Gap Exposure
+
+For each deficiency, estimate landlord's exposure:
+
+**Inadequate Liability Limits:**
+```
+Required: $2,000,000 per occurrence
+Actual: $1,000,000
+Gap: $1,000,000
+Exposure: If tenant causes $2M claim, landlord potentially liable for $1M shortfall
+```
+
+**Missing Business Interruption:**
+```
+Required: 12 months rent
+Actual: 0 months
+Gap: $XXX,XXX (12 months × monthly rent)
+Exposure: If fire/casualty, tenant may default on rent; landlord loses gap before re-leasing
+```
+
+### Step 6: Action Plan for Non-Compliance
+
+**Immediate (Critical Deficiencies):**
+1. Send notice of insurance deficiency (10-day cure period)
+2. Reject non-compliant certificate
+3. If not cured: landlord may obtain insurance and charge tenant as additional rent
+4. Persistent non-compliance = notice of default
+
+**If Not Cured:**
+- Purchase insurance on tenant's behalf (if lease permits), charge cost to tenant
+- Issue notice of default
+- Consider lease termination if material breach
+
+### Step 7: Insurance Tracking Schedule (Compliant Tenants)
+
+| Tenant | Policy Type | Expiry Date | Renewal Reminder | Certificate Due | Status |
+|--------|-------------|-------------|------------------|-----------------|--------|
+| [Name] | CGL | YYYY-MM-DD | 90 days before | 30 days before | Current/Expiring/Expired |
+| [Name] | Property | YYYY-MM-DD | 90 days before | 30 days before | Current/Expiring/Expired |
+
+**Automated reminder timeline:**
+- 90 days before expiry: Notify tenant renewal approaching
+- 60 days before: Request renewed certificate
+- 30 days before: Follow up if not received
+- 15 days before: Escalate to management
+- 7 days before: Prepare default notice
+- Day of expiry: If not renewed, issue default notice
+
+### Output Report
+
+Save to `Reports/YYYY-MM-DD_HHMMSS_[tenant]_insurance_audit.md`
+
+Report includes:
+- Summary of lease requirements
+- Analysis of actual coverage (if certificates provided)
+- Compliance status (compliant / non-compliant)
+- List of all gaps and deficiencies
+- Estimated exposure for each gap
+- Corrective action requirements with deadlines
+- Template notice to tenant demanding compliance
+
+### Example Usage
+
+```
+/insurance-audit /path/to/lease_abstract.md /path/to/insurance_certificate.pdf
+```
+
+---
+
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, default-and-remedies-advisor, lease-abstraction-specialist
