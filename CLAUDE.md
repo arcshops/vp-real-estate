@@ -5,191 +5,60 @@ Commercial real estate lease analysis toolkit: abstraction, financial analysis, 
 ## Structure
 
 ```
-├── Shared_Utils/           # Shared financial utilities (NPV, IRR, PV, ratios, statistics) + schemas/
-├── Eff_Rent_Calculator/    # Effective rent, NPV, breakeven analysis
-├── Rental_Yield_Curve/     # Term structure pricing using implied termination options
-├── Rental_Variance/        # Rental variance decomposition (rate, area, term)
-├── IFRS16_Calculator/      # IFRS 16/ASC 842 lease accounting (liability, ROU asset, schedules)
-├── Credit_Analysis/        # Tenant credit scoring and financial analysis
-├── Comparable_Sales_Analysis/  # Traditional DCA comparable sales (dollar adjustments)
-├── Renewal_Analysis/       # Renewal vs. relocation economic analysis
-├── Option_Valuation/       # Real options valuation (Black-Scholes) for lease flexibility
-├── Rollover_Analysis/      # Portfolio lease expiry and renewal prioritization
-├── Default_Calculator/     # Tenant default damage quantification
-├── Relative_Valuation/     # MCDA competitive positioning (25 variables) + statistical analysis
-├── MCDA_Sales_Comparison/  # MCDA ordinal ranking for fee simple valuation (74 tests)
-├── MLS_Extractor/          # MLS PDF to Excel extraction with subject highlighting
-├── Planning/               # Source lease documents
-├── Templates/              # Industrial/Office lease templates (24 sections, MD/JSON/Schema)
-├── Reports/                # Generated abstracts & analysis (timestamp prefix required)
-└── .claude/                # Claude Code configuration
-    ├── commands/           # Slash commands (25 commands in 6 categories)
-    │   ├── Abstraction/        # abstract-lease, critical-dates
-    │   ├── Financial_Analysis/ # effective-rent, renewal-economics, tenant-credit, option-value, rental-variance, etc.
-    │   ├── Accounting/         # ifrs16-calculation
-    │   ├── Comparison/         # compare-amendment, compare-offers, compare-precedent, lease-vs-lease
-    │   ├── Compliance/         # assignment-consent, default-analysis, estoppel-certificate, etc.
-    │   └── Utilities/          # convert-to-pdf
-    ├── skills/             # Expert skills (23 specialized skills - auto-invoked)
-    │   ├── Core: commercial-lease-expert/
-    │   ├── Financial Analysis: effective-rent-analyzer/, tenant-credit-analyst/,
-    │   │                       lease-abstraction-specialist/
-    │   ├── Compliance: lease-compliance-auditor/, default-and-remedies-advisor/,
-    │   │               lease-comparison-expert/
-    │   ├── Portfolio: portfolio-strategy-advisor/, real-options-valuation-expert/
-    │   ├── Security: indemnity-expert/, non-disturbance-expert/
-    │   ├── Transfers: consent-to-assignment-expert/, consent-to-sublease-expert/,
-    │   │             share-transfer-consent-expert/, lease-surrender-expert/
-    │   ├── Preliminary: offer-to-lease-expert/, waiver-agreement-expert/,
-    │   │                temporary-license-expert/, storage-agreement-expert/
-    │   ├── Specialized: telecom-licensing-expert/
-    │   ├── Dispute: lease-arbitration-expert/
-    │   └── Negotiation: negotiation-expert/, objection-handling-expert/
-    ├── hooks/              # Intelligent skill activation (UserPromptSubmit + PreToolUse)
-    │   ├── skill-activation-prompt.sh/ts     # Reactive: keyword-based skill suggestions
-    │   ├── pre-tool-use-skill-loader.sh/ts   # Proactive: document type detection
-    │   ├── generate-skill-rules.js           # Auto-generate activation rules from skills
-    │   ├── lease-types-map.json              # Document type → skills mapping
-    │   └── skill-rules.json                  # Auto-generated activation triggers (23 skills)
-    └── agents/             # Sub-agents (The Triumvirate)
-        ├── adam            # Adam - Senior Analyst (Haiku) - Fast execution for straightforward tasks
-        ├── reggie-chan-vp  # Reggie Chan, CFA, FRICS - VP (Sonnet) - Complex problems & crisis management
-        └── dennis          # Dennis - Strategic Advisor (Opus) - Strategic wisdom & reality checks
+vp-real-estate/                                    # plugin marketplace root
+├── .claude-plugin/marketplace.json                # marketplace manifest
+├── plugins/
+│   ├── leasing-commercial/                        # 24 skills, 5 command subdirs, 1 agent (benji)
+│   ├── tenancies-residential/                     # 3 skills, 1 agent (anni)
+│   ├── expropriation-law/                         # 9 skills, 2 agents (christi, stevi)
+│   ├── appraisal-valuation/                       # 6 skills, 1 agent (alexi)
+│   ├── infrastructure-corridor-ops/               # 10 skills, 2 agents (katy, shadi)
+│   └── common-utilities/                          # 4 skills + 3 persona skills, 3 output styles, canonical shared_utils, subagent-stop hook
+├── scripts/                                       # vendor-shared-utils.sh, build-personas.sh, sync-all.sh
+├── docs/superpowers/specs/                        # design specs
+├── docs/superpowers/plans/                        # implementation plans
+├── Reports/                                       # user-generated outputs
+├── Sample_Inputs/, Sample_Outputs/                # documentation samples
+└── README.md, CLAUDE.md, etc.
 ```
 
 ## Meet Your Team: The Triumvirate
 
-You have access to three specialized agents, each with distinct expertise and roles. Together they form a complete professional support system.
+The trio (Adam, Reggie, Dennis) is available in two formats via the `common-utilities` plugin:
 
-### Adam - Your Everyday Analyst (Haiku Model)
+### Session-level persona via output styles
 
-**Senior Analyst** trained by Reggie Chan to handle straightforward tasks with institutional-grade rigor at exceptional speed.
+For deep immersion in one persona for an entire session:
 
-**When to use Adam:**
-- Standard lease evaluations (typical terms, normal tenants)
-- Routine tenant credit checks (clear financials, no fraud concerns)
-- Renewal offer assessments (clear market conditions)
-- Simple deal comparisons (straightforward tradeoffs)
-- Professional communication to stakeholders
-
-**What Adam provides:**
-- Fast execution (80/20 analysis)
-- Reggie's analytical methods applied to day-to-day work
-- Diplomatic delivery (politically aware communication)
-- Quantified analysis without over-engineering
-
-**Example interactions:**
-```
-"Adam, analyze this renewal offer at $25/sf with 3 months free rent"
-"Adam, evaluate this tenant's credit - they're showing 1.3x DSCR"
-"Adam, compare these two lease offers and recommend which is better"
+```bash
+/config → Output style → pick "Dennis Advisory" / "Reggie Chan VP" / "Adam Analyst"
 ```
 
-**Adam's value:** He executes Reggie's methods on routine work so Reggie can focus on complex problems. Your everyday analyst who gets things done fast.
+The selected persona's voice and worldview shape the entire session. They remember everything from turn 1. Persists across session restarts via `.claude/settings.local.json`.
 
----
+### In-conversation invocation via skills
 
-### Reggie Chan - Your Crisis Specialist (Sonnet Model)
+For quick consultation while in a different output style:
 
-**Reggie Chan, CFA, FRICS** - Vice President of Leasing and Asset Management with over 20 years of institutional real estate experience.
+> "Adam, sanity-check this calculation."
+> "Reggie, what am I missing in this lease?"
+> "Dennis, should I take this acquisition?"
 
-**Credentials:**
-- **CFA** (Chartered Financial Analyst) - Expert in investment analysis and financial modeling
-- **FRICS** (Fellow of the Royal Institution of Chartered Surveyors) - Senior professional in real estate valuation
-- **VP of Leasing and Asset Management** - Executive-level commercial real estate professional
-- **RICS Licensed Assessor** since 2012 - Officially qualified to judge professional competence
+The corresponding skill (`adam-analyst`, `reggie-vp`, `dennis-advisor`) auto-loads via native skill discovery and shapes that response. Useful when you're in a coding session but want one quick consultation without switching modes.
 
-**When to use Reggie:**
-- Complex/distressed situations requiring deep expertise
-- Fraud detection or forensic accounting
-- Crisis turnarounds with compressed timelines
-- Non-standard lease structures requiring framework building
-- Situations needing exhaustive documentation
-- When you need someone who challenges everything
+### Specialists are sub-agents
 
-**What Reggie provides:**
-- Domain synthesis (leasing + accounting + legal + asset management)
-- Forensic mindset (follows the money, detects fraud)
-- Systematic frameworks (builds comprehensive systems)
-- Zero neuroticism (handles extreme pressure matter-of-factly)
-- Brutal honesty (no political filtering)
-- Access to all 15 specialized skills and 25 slash commands
+The domain specialists remain as Claude Code sub-agents (Task tool, fresh context per invocation):
 
-**Example interactions:**
-```
-"Reggie, this property is 75% vacant and facing foreclosure - what's the turnaround plan?"
-"Reggie, their financials don't add up - can you do forensic analysis?"
-"Reggie, build me a framework for evaluating all industrial renewal offers"
-```
+- **alexi** (appraisal-valuation) — Expropriation appraisal expert, AACI
+- **anni** (tenancies-residential) — Ontario RTA specialist
+- **benji** (leasing-commercial) — Commercial Tenancies Act specialist
+- **christi** (expropriation-law) — Expropriation law specialist
+- **katy** (infrastructure-corridor-ops) — Transit corridor specialist
+- **shadi** (infrastructure-corridor-ops) — Utility transmission corridor specialist
+- **stevi** (expropriation-law) — Compliance enforcer & deadline watchdog
 
-**Reggie's value:** Complex problem-solver who thrives in crisis. Best work comes from "impossible" turnaround situations. Politically blind but technically brilliant.
-
-**Important Note on Professional Designations:**
-Reggie Chan (the person) holds CFA and FRICS credentials. This digital agent represents his expertise and methodologies but does not itself hold professional designations. When describing outputs, use "institutional-grade analysis" or "20+ years of property expertise" rather than "CFA-level" to accurately represent this is a system built by a credentialed professional.
-
----
-
-### Dennis - Your Strategic Advisor (Opus Model)
-
-**Dennis** - Seasoned real estate executive with 36+ years of institutional real estate experience. Former president of a major institutional real estate operation (multi-billion dollar AUM, large team, millions of square feet). Was Reggie's boss earlier in Reggie's career.
-
-**Credentials:** CFA, FRI, B.Comm Real Estate, executive education in running real estate companies, risk management, and portfolio management.
-
-**When to use Dennis:**
-- Strategic career decisions
-- Negotiation psychology and power dynamics
-- People management and team building
-- Work-life balance reality checks
-- When you need a reality check or tough love
-- Big decisions with long-term consequences
-
-**What Dennis provides:**
-- Battle-tested wisdom (36+ years, multiple market cycles)
-- Direct, blunt truth-telling
-- Negotiation psychology insights
-- People management guidance
-- Strategic perspective (not task execution)
-
-**Example interactions:**
-```
-"Dennis, the tenant wants a rent reduction but won't give me financials. What do I do?"
-"Dennis, I'm working 70 hours a week and my wife is threatening to leave. What do I do?"
-"Dennis, should I fire this analyst who keeps asking me basic questions?"
-```
-
-**Dennis's value:** Strategic counselor who's seen it all. Doesn't execute tasks - provides perspective on big decisions. Direct and blunt because he cares.
-
-**Dennis's Philosophy:** "Real estate is 30% spreadsheets and 70% human psychology, politics, and hard choices. The fundamentals always give you the right answer. Think things through. Make decisions as if it were your own money. And remember: Father Time is undefeated."
-
----
-
-## The Triumvirate Workflow
-
-**Natural workflow for most questions:**
-```
-Daily question
-    ↓
-Adam analyzes (fast, diplomatic, 80/20)
-    ↓
-Finds red flags? → Escalate to Reggie (forensic deep-dive)
-    ↓
-Strategic implications? → Consult Dennis (wisdom, not analysis)
-```
-
-**Division of labor:**
-- **Adam:** Handles 80% of routine work fast
-- **Reggie:** Handles 15% requiring deep expertise
-- **Dennis:** Handles 5% requiring strategic wisdom
-
-**Complementary strengths:**
-- Adam sees politics (Reggie's blind spot)
-- Reggie sees technical truth (Adam might soften)
-- Dennis sees long-term consequences (both can miss)
-
-**Use the right tool:**
-- **Straightforward task?** → Adam
-- **Complex crisis?** → Reggie
-- **Strategic crossroads?** → Dennis
+Specialists are dispatch-oriented: they receive a focused task, return a written brief, and don't carry state between invocations. The `SubagentStop` hook in `common-utilities` ensures their full transcripts surface without main-thread re-summarization.
 
 ## File Naming: Reports Folder
 
@@ -201,53 +70,53 @@ Strategic implications? → Consult Dennis (wisdom, not analysis)
 
 ## Slash Commands (26 total)
 
-All commands follow **PDF → JSON → Python → Report** automated workflow (except utilities).
+All commands follow **PDF → JSON → Python → Report** automated workflow (except utilities). Commands are namespaced under the `leasing-commercial` plugin (prefix: `/leasing-commercial:`).
 
 ### Abstraction (2)
-- `/abstract-lease` - Extract lease terms using 24-section template
-- `/critical-dates` - Extract timeline and critical dates
+- `/leasing-commercial:abstract-lease` - Extract lease terms using 24-section template
+- `/leasing-commercial:critical-dates` - Extract timeline and critical dates
 
 ### Financial Analysis (10)
-- `/effective-rent` - NER, NPV, breakeven (Ponzi Rental Rate)
-- `/renewal-economics` - Renewal vs. relocation NPV analysis
-- `/tenant-credit` - Credit scoring and risk assessment
-- `/option-value` - Real options valuation (Black-Scholes)
-- `/market-comparison` - Market rent benchmarking
-- `/rollover-analysis` - Portfolio lease expiry analysis
-- `/rental-variance` - Rental variance decomposition by rate, area, and term
-- `/relative-valuation` - MCDA competitive positioning with 25 variables, personas, and filters
-- `/recommendation-memo` - VTS approval memo with tenant analysis and deal comparison
-- `/extract-mls` - Extract MLS data to professionally formatted Excel with subject highlighting
+- `/leasing-commercial:effective-rent` - NER, NPV, breakeven (Ponzi Rental Rate)
+- `/leasing-commercial:renewal-economics` - Renewal vs. relocation NPV analysis
+- `/leasing-commercial:tenant-credit` - Credit scoring and risk assessment
+- `/leasing-commercial:option-value` - Real options valuation (Black-Scholes)
+- `/leasing-commercial:market-comparison` - Market rent benchmarking
+- `/leasing-commercial:rollover-analysis` - Portfolio lease expiry analysis
+- `/leasing-commercial:rental-variance` - Rental variance decomposition by rate, area, and term
+- `/leasing-commercial:relative-valuation` - MCDA competitive positioning with 25 variables, personas, and filters
+- `/leasing-commercial:recommendation-memo` - VTS approval memo with tenant analysis and deal comparison
+- `/leasing-commercial:extract-mls` - Extract MLS data to professionally formatted Excel with subject highlighting
 
 ### Accounting (1)
-- `/ifrs16-calculation` - IFRS 16/ASC 842 lease accounting
+- `/leasing-commercial:ifrs16-calculation` - IFRS 16/ASC 842 lease accounting
 
 ### Comparison (4)
-- `/compare-amendment` - Amendment vs. original lease
-- `/compare-offers` - Inbound vs. outbound offers
-- `/compare-precedent` - Draft vs. standard form
-- `/lease-vs-lease` - General lease comparison
+- `/leasing-commercial:compare-amendment` - Amendment vs. original lease
+- `/leasing-commercial:compare-offers` - Inbound vs. outbound offers
+- `/leasing-commercial:compare-precedent` - Draft vs. standard form
+- `/leasing-commercial:lease-vs-lease` - General lease comparison
 
 ### Compliance (7)
-- `/assignment-consent` - Assignment/subletting analysis
-- `/default-analysis` - Default provisions and cure periods
-- `/environmental-compliance` - Environmental obligations
-- `/estoppel-certificate` - Estoppel generation
-- `/insurance-audit` - Insurance requirement verification
-- `/notice-generator` - Generate lease notices
-- `/work-letter` - Generate work letter from TI provisions
+- `/leasing-commercial:assignment-consent` - Assignment/subletting analysis
+- `/leasing-commercial:default-analysis` - Default provisions and cure periods
+- `/leasing-commercial:environmental-compliance` - Environmental obligations
+- `/leasing-commercial:estoppel-certificate` - Estoppel generation
+- `/leasing-commercial:insurance-audit` - Insurance requirement verification
+- `/leasing-commercial:notice-generator` - Generate lease notices
+- `/leasing-commercial:work-letter` - Generate work letter from TI provisions
 
 ### Valuation (1)
-- `/mcda-sales-comparison` - MCDA ordinal ranking for fee simple valuation (score-to-price mapping)
+- `/leasing-commercial:mcda-sales-comparison` - MCDA ordinal ranking for fee simple valuation (score-to-price mapping)
 
 ### Utilities (1)
-- `/convert-to-pdf` - Convert markdown files to PDF format
+- `/leasing-commercial:convert-to-pdf` - Convert markdown files to PDF format
 
-**See**: `.claude/commands/README.md` for detailed documentation
+**See**: `plugins/leasing-commercial/commands/` for detailed documentation
 
 ## Specialized Skills (23 total)
 
-Skills are **automatically invoked** through progressive disclosure and intelligent hooks - when your request matches a skill's description or you read relevant documents, Claude automatically loads the expertise. No manual invocation required.
+Skills are **automatically invoked** through Claude Code's native skill discovery - when your request matches a skill's description or you read relevant documents, Claude automatically loads the expertise. No manual invocation required. Skills live under `plugins/<name>/skills/`.
 
 ### Core Lease Agreements
 - **commercial-lease-expert** - General lease negotiation, net lease structures, deal structuring
@@ -292,61 +161,18 @@ Skills are **automatically invoked** through progressive disclosure and intellig
 - **negotiation-expert** - Evidence-based persuasion, calibrated questions, accusation audits
 - **objection-handling-expert** - Objection analysis, response strategies, value-creating solutions
 
-## Intelligent Skill Activation (Hooks)
+## Intelligent Skill Activation
 
-**NEW**: Two intelligent hooks automatically suggest relevant skills based on your questions and the documents you're reading.
+Skills activate automatically via Claude Code's native skill discovery. When your request matches a skill's description, Claude loads the relevant expertise from the appropriate plugin without any manual configuration.
 
 ### How It Works
 
-**1. UserPromptSubmit Hook (Reactive)**
-- Triggered: When you submit a message
-- Analyzes: Keywords and intent patterns in your question
-- Suggests: Relevant skills BEFORE Claude responds
-
-**Example:**
-```
-You: "Calculate NER for this lease deal"
-Hook: 🎯 SKILL ACTIVATION CHECK
-      📚 RECOMMENDED SKILLS:
-        → effective-rent-analyzer
-        → commercial-lease-expert
-        → negotiation-expert
-```
-
-**2. PreToolUse Hook (Proactive - 96% Token Efficiency)**
-- Triggered: BEFORE reading files
-- Detects: Document types by filename pattern
-- Suggests: Context-appropriate skills automatically
-
-**Example:**
-```
-You: Read Sample_Inputs/offer_to_lease.pdf
-Hook: ⚡ PROACTIVE SKILL LOADING
-      📄 Document Type: Offer to Lease
-      📚 RECOMMENDED SKILLS:
-        → offer-to-lease-expert
-        → effective-rent-analyzer
-        → commercial-lease-expert
-        → negotiation-expert
-```
-
-### Document Type Detection
-
-**Automatically loads skills when reading:**
-- **Offers to Lease**: `*offer*lease*`, `*loi*`, `*term*sheet*`
-- **Lease Agreements**: `*lease*.pdf`, `*commercial*lease*`
-- **Amendments**: `*amendment*`, `*amending*agreement*`
-- **Financial Statements**: `*financial*statement*`, `*balance*sheet*`
-- **Assignment/Sublease**: `*assignment*consent*`, `*sublease*consent*`
-- **Default Notices**: `*default*notice*`, `*notice*cure*`
-- **SNDA**: `*snda*`, `*subordination*`, `*non*disturbance*`
-- **Guarantees**: `*indemnity*`, `*guarantee*`
-- **Calculator Inputs**: `*_input.json` in calculator directories
+Claude Code scans skill descriptions in `plugins/<name>/skills/*/SKILL.md` at session start and activates matching skills based on your questions and the documents you're reading. No hook system required.
 
 ### Benefits
 
 - **Proactive Expertise**: Skills load automatically when relevant
-- **Token Efficient**: 96% reduction vs. loading all skills upfront
+- **Native Discovery**: Uses Claude Code's built-in mechanism — no custom hooks needed
 - **Context-Aware**: Right skills at the right time
 - **No Memorization**: Don't need to remember which skills exist
 
@@ -354,49 +180,30 @@ Hook: ⚡ PROACTIVE SKILL LOADING
 
 **Adding New Skills:**
 ```bash
-# 1. Create skill in .claude/skills/new-skill/SKILL.md
-# 2. Regenerate activation rules
-cd .claude/hooks
-npm run generate-rules
-
-# 3. Test
-npm run test-prompt
+# 1. Create skill directory in the appropriate plugin
+mkdir -p plugins/<plugin-name>/skills/new-skill-name/
+# 2. Create SKILL.md with description, triggers, and content
+# 3. Skill is immediately discoverable — no rule regeneration needed
 ```
-
-**See**: `.claude/hooks/README.md` for complete documentation
 
 ## Quick Start Examples
 
 ```bash
-# Ask Reggie for expert leasing advice
-# Just address "Reggie" in your message:
-"Reggie, evaluate this renewal offer at $25/sf with 3 months free rent"
-"Reggie, what security should I require for this tech startup tenant?"
-"Reggie, help me respond to their objection about rent being too high"
-
-# Lease abstraction
-/abstract-lease path/to/lease.docx
+# Lease abstraction (after installing leasing-commercial)
+/leasing-commercial:abstract-lease path/to/lease.docx
 
 # Financial analysis
-/effective-rent path/to/lease.pdf
-/tenant-credit path/to/financials.pdf
-/rental-variance path/to/variance_data.xlsx
-/option-value path/to/lease.pdf
-
-# MLS extraction to Excel
-/extract-mls path/to/mls_report.pdf --subject="2550 Stanfield"
+/leasing-commercial:effective-rent path/to/lease.pdf
+/leasing-commercial:tenant-credit path/to/financials.pdf
 
 # IFRS 16 accounting
-/ifrs16-calculation path/to/lease.pdf 5.5
+/leasing-commercial:ifrs16-calculation path/to/lease.pdf 5.5
 
-# Renewal economics
-/renewal-economics path/to/current-lease.pdf
+# Adopt a persona for the session (after installing common-utilities)
+# Run /config -> select Output Style -> pick "Dennis Advisory"
 
-# Real options valuation (direct calculator usage)
-python Option_Valuation/option_valuation.py \
-  Option_Valuation/option_inputs/example_industrial_warehouse.json \
-  --output results.json \
-  --verbose
+# Or invoke a persona by name in the current session
+# Just say: "Dennis, what do you think about this acquisition?"
 
 # Skills activate automatically based on your questions
 # Example: "How do I negotiate rent with a difficult tenant?"
@@ -410,8 +217,8 @@ markitdown document.docx -o output.md
 
 ## Templates
 
-**Industrial**: `Templates/Industrial/` (ANSI/BOMA Z65.2-2012 Method A)
-**Office**: `Templates/Office/` (ANSI/BOMA Office Buildings Standard)
+**Industrial**: `plugins/leasing-commercial/templates/Industrial/` (ANSI/BOMA Z65.2-2012 Method A)
+**Office**: `plugins/leasing-commercial/templates/Office/` (ANSI/BOMA Office Buildings Standard)
 
 Each has: `*_template.md`, `*_template.json`, `*_schema.json`
 
@@ -472,3 +279,7 @@ When creating JSON schema validation documents (not data templates), follow thes
 ## Reference
 
 `Planning/Multi_Tenant_Industrial.md` and `Planning/Multi_Tenant_Office.md` - Full Minden Gross templates (2000+ lines)
+
+`plugins/leasing-commercial/commands/` - All slash command definitions (namespaced under `leasing-commercial`)
+
+`plugins/common-utilities/personas/` - Master persona files for Adam, Reggie, and Dennis (source of truth for output styles and skills)
