@@ -16,6 +16,7 @@
     "plugins/infrastructure-corridor-ops/skills/cropland-out-of-production-agreements/scripts/shared_utils",
     "plugins/infrastructure-corridor-ops/skills/land-assembly-expert/scripts/shared_utils",
     "plugins/infrastructure-corridor-ops/skills/right-of-way-expert/scripts/shared_utils",
+    "plugins/infrastructure-corridor-ops/skills/right-of-way-expert/shared_utils",
     "plugins/infrastructure-corridor-ops/skills/stakeholder-management-expert/scripts/shared_utils",
     "plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/shared_utils",
     "plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/shared_utils",
