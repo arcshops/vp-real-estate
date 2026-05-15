@@ -1,6 +1,6 @@
 ---
 name: commercial-lease-expert
-description: Expert in commercial real estate lease agreements for industrial and office properties. Use when reviewing lease terms, negotiating base rent/operating expenses, analyzing tenant improvements and free rent, structuring net lease vs gross lease deals, evaluating renewal options, or advising on landlord/tenant rights. Key terms include base rent, operating expenses, proportionate share, TI allowance, net lease, triple net, lease economics, rent escalation, use clause, assignment restrictions, default remedies, Schedule G
+description: Expert in commercial real estate lease agreements for industrial and office properties. Use when reviewing lease terms, negotiating base rent/operating expenses, analyzing tenant improvements and free rent, structuring net lease vs gross lease deals, evaluating renewal options, advising on landlord/tenant rights, or preparing VTS-style lease recommendation/approval memos with tenant profile, financial covenant analysis, market positioning, and accretive/dilutive NER conclusions. Key terms include base rent, operating expenses, proportionate share, TI allowance, net lease, triple net, lease economics, rent escalation, use clause, assignment restrictions, default remedies, Schedule G, recommendation memo, approval memo, deal approval, accretive, dilutive
 tags: [commercial-real-estate, lease-negotiation, net-lease, industrial-lease, office-lease, deal-structuring]
 capability: Provides comprehensive expertise in commercial lease agreements including net lease structures, lease economics, tenant improvements, operating cost recovery, renewal options, assignment/subletting, default provisions, and strategic negotiation for both landlords and tenants
 proactive: true
@@ -273,6 +273,106 @@ If tenant remains after lease expiry without landlord consent:
 - Renewal options with FMV arbitration (not landlord's "fair determination")
 - Audit rights for operating expenses
 
+## Lease Recommendation / Approval Memos (VTS Format)
+
+A recommendation memo is the executive-level approval package that translates lease economics, tenant covenant, and market positioning into a clear **APPROVE / APPROVE WITH CONDITIONS / REJECT** decision. It is advisory synthesis — not a deterministic pipeline — and is the standard deliverable to an Investment Committee, asset manager, or VTS approval workflow.
+
+### Inputs Required (and Optional)
+
+**Required**:
+- Offer to lease or executed lease agreement (the deal terms being approved)
+
+**Strongly recommended**:
+- Tenant financial statements (most recent FYE; note whether audited, reviewed, or NTR)
+- Tenant credit check (Equifax, D&B, or equivalent)
+- Market comparables (recent transactions in same building/submarket)
+
+**Useful context**:
+- Asset plan / budgeted NER for the unit
+- Vacancy history and prior dead-deal log for the unit
+- Tenant website / business description
+
+### Memo Structure (8 sections)
+
+#### 1. Tenant Profile
+One-paragraph identity statement: legal entity name, entity type (sole prop / partnership / corporation), business description, years operating, geographic footprint. If an indemnifier or guarantor exists, mirror the same identity statement for that party.
+
+#### 2. Financial Covenant & Credit Analysis
+Cover four sub-topics:
+- **Statements**: Type (audited/reviewed/NTR), period, revenue, EBITDA, balance-sheet strength, working capital, liquidity.
+- **Key ratios**: Current Ratio, Debt-to-Equity, **EBITDA-to-Rent Coverage** (EBITDA ÷ proposed annual rent — the single most important affordability metric).
+- **Credit report**: Score, payment history, public records (liens, judgments, bankruptcies), red flags.
+- **Cash-flow adequacy conclusion**: Can the tenant service the proposed rent? Compare to existing rent if known.
+
+**Z-score / M-score discipline**: If statements are **audited or reviewed**, skip — the auditor has already opined. If statements are **NTR or manually prepared and appear suspect**, calculate Altman Z-score (solvency) and Beneish M-score (manipulation detection) and interpret:
+- Altman Z: > 2.99 safe, 1.81–2.99 grey, < 1.81 distress
+- Beneish M: > -2.22 suggests possible manipulation
+
+Close with a one-line covenant conclusion: position is **strong / adequate / weak**, and tenant **is / is not** capable of meeting lease obligations.
+
+#### 3. Premises Description
+Address, unit, rentable SF, current occupancy status. If vacant: how long, and previous tenant if known.
+
+#### 4. Deal History & Context
+Date unit was listed; count of deal attempts ("this is the Nth deal in play"); summary of any dead deals and the reasons they died (price, covenant, environmental, etc.).
+
+#### 5. Multiple Offers Comparison (if applicable)
+Comparison table of competing offers across rent, term, free rent, TI, security, total consideration; then a paragraph explaining why the recommended offer was selected and the trade-offs accepted.
+
+#### 6. Proposed Deal Terms vs. Market
+- **Deal summary table**: Base Rent, TMI, Total Occupancy Cost, Term, Free Rent, TI Allowance, Security.
+- **Market comps table**: For each comp — property, date, SF, rent $/sf, TMI $/sf, total $/sf, free rent, TI $/sf, term — with the **proposed deal as the bottom row in bold** for direct visual comparison.
+- **Positioning conclusion**: Is the deal at/above/below market on rent, free rent, TI? Reference specific comps.
+
+#### 7. Proposed Deal Terms vs. Budget & NER Analysis
+- **Budget variance table** (Base Rent, NER, Total Consideration: Budget vs. Proposed vs. Variance $ and %). If no budget exists, state why explicitly (new development, opportunistic deal, market re-set).
+- **Breakeven NER**: Compute or reference the breakeven NER for the unit; compare to the proposed deal's NER.
+- **Accretive vs. dilutive conclusion**:
+  - **Accretive** → proposed NER exceeds breakeven by $X/sf or Y%.
+  - **Dilutive** → proposed NER is below breakeven by $X/sf or Y%. A dilutive deal **must** be justified: portfolio stabilization rationale, tenant quality, limited alternative uses, market conditions — and must show mitigations (shorter term, reduced TI, enhanced security, etc.).
+
+#### 8. Recommendation
+- **Decision**: APPROVE / APPROVE WITH CONDITIONS / REJECT.
+- **Rationale**: Summarize strengths (covenant, market positioning, NER), address risks and their mitigations, confirm alignment with the asset plan.
+- **Conditions** (if "with conditions"): Enhanced security (larger LC, personal guarantee), financial reporting covenants, indemnity from parent, specific conditions precedent.
+
+### Approval Document Checklist
+
+Every memo ends with a checklist confirming the supporting documents are in the file:
+- Tenant financial statements (FY, type)
+- Credit check (provider, date)
+- Market comparables (count of transactions analyzed)
+- Draft waiver (if waiving any standard provision)
+- Final executed offer to lease (signed by tenant, awaiting landlord)
+
+Flag the package as **Complete** or **Pending** with a list of missing items.
+
+### Decision Framework: When to Recommend What
+
+| Signal | APPROVE | APPROVE WITH CONDITIONS | REJECT |
+|--------|---------|--------------------------|--------|
+| EBITDA-to-rent coverage | ≥ 3x | 1.5–3x | < 1.5x without guarantee |
+| Statement quality | Audited/reviewed, clean | NTR with reasonable Z-score | NTR with Z-score < 1.81 and no guarantee |
+| NER vs. breakeven | At or above breakeven | Slightly dilutive with strong covenant or stabilization rationale | Materially dilutive with weak covenant |
+| Market positioning | At or above market on net economics | Below market but justified by covenant/term | Below market with no strategic rationale |
+| Credit report | Clean | Minor flags addressed via security | Bankruptcy, recent judgments, no guarantor |
+
+### Critical Authoring Requirements
+
+- **Tenant entity description** must include business type, years operating, and location — not a generic paragraph.
+- **Financial analysis** must explicitly address cash-flow adequacy for the proposed rent, not just describe ratios.
+- **Market comparison** must reference *specific* comparable transactions (address, date, $/sf) — never "market is around $X."
+- **NER analysis** must conclude clearly: accretive or dilutive, by how much.
+- **If dilutive**: justification and mitigations are mandatory, not optional.
+- **If no budget**: explain why (don't just omit).
+- **If multiple offers**: explain why this one was selected, not just that it was.
+- All dollar figures presented consistently ($/sf annual and total $ where applicable).
+- Recommendation must be unambiguous and traceable to the analysis above it.
+
+### Tone
+
+Executive-level, objective, balanced. Surface both strengths and concerns. If data is missing, state it explicitly and describe the impact on confidence in the recommendation. Investment committees punish memos that hide risk and reward memos that name it and price it.
+
 ---
 
 **This skill activates when you**:
@@ -283,3 +383,5 @@ If tenant remains after lease expiry without landlord consent:
 - Draft or review lease schedules (especially Schedule G special provisions)
 - Assess landlord or tenant negotiating position
 - Compare lease terms to market standards
+- Prepare a VTS-style recommendation memo or lease approval package
+- Decide whether a deal is accretive or dilutive and frame the approval rationale
