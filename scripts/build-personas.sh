@@ -42,6 +42,9 @@ generate_for() {
   description=$(awk '/^---$/{f++; next} f==1 && /^description:/{sub(/^description: */, ""); print; exit}' "$master")
   local body
   body=$(awk '/^---$/{f++; next} f==2' "$master")
+  if [[ -z "$body" ]]; then
+    echo "WARNING: $master has empty body — malformed frontmatter or empty master?" >&2
+  fi
 
   local os_file="$OUTPUT_STYLES_DIR/$slug.md"
   local os_content

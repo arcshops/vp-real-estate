@@ -10,7 +10,7 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_ROOT"
 
 MAP="scripts/shared-utils-vendor-map.json"
-CANONICAL=$(python3 -c "import json; print(json.load(open('$MAP'))['canonical'])")
+CANONICAL=$(python3 -c "import sys,json; print(json.load(open(sys.argv[1]))['canonical'])" "$MAP")
 CHECK_MODE=0
 
 if [[ "${1:-}" == "--check" ]]; then
@@ -22,7 +22,7 @@ if [[ ! -d "$CANONICAL" ]]; then
   exit 1
 fi
 
-CONSUMERS=$(python3 -c "import json; consumers = json.load(open('$MAP')).get('consumers', []); print('\n'.join(consumers))")
+CONSUMERS=$(python3 -c "import sys,json; print('\n'.join(json.load(open(sys.argv[1])).get('consumers', [])))" "$MAP")
 EXIT_CODE=0
 
 while IFS= read -r consumer; do
