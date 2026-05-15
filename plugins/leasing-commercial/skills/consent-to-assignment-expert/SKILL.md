@@ -216,6 +216,148 @@ Landlord provides recent operating expense reconciliation within 30 days. Assign
 
 ---
 
+## Slash Command Workflow: Assignment Consent Analysis (`/assignment-consent`)
+
+**Invocation**: `/assignment-consent <lease-path> <assignment-request> [assignee-financials]`
+
+### Step 1: Extract Assignment/Subletting Provisions from Lease
+
+- Consent requirements and standard (absolute vs. "not unreasonably withheld")
+- Timeline for landlord response
+- Permitted transfers (no-consent-required exceptions: affiliates, corporate reorganization, business sale)
+- Landlord's right to recapture
+- Profit-sharing / excess rent splits
+- Assignee creditworthiness standards and security requirements
+- Processing fees
+
+### Step 2: Analyze Proposed Transfer
+
+- Transfer type: full assignment / sublease / partial sublease / license
+- Assignee profile: legal name, jurisdiction, years in business, business type, public/private
+- Transfer terms: effective date, rent, TI requirements, assignment fee offered
+
+### Step 3: Evaluate Assignee Credit
+
+Apply tenant credit analysis:
+- Current ratio, debt-to-equity, profitability, EBITDA-to-rent coverage
+- Credit Score: A / B / C / D / F
+- Comparison to original tenant (stronger / similar / weaker)
+- Required security based on relative credit:
+  - Weaker: require guarantee, increased deposit, or LC
+  - Comparable: maintain existing security
+  - Stronger: possible reduction
+
+### Step 4: Assess Use Compatibility
+
+- Same/similar use ✓ — likely acceptable
+- Different use ✗ — review zoning compliance, lease permitted use, conflicts with exclusivity provisions, higher insurance/environmental risk, more intensive parking/loading/traffic demands
+
+### Step 5: Determine Recommendation
+
+- **Approve**: Credit acceptable, use compatible, all conditions met
+- **Approve with Conditions**: Weaker credit → guarantee/security; use concerns → restrict activities; market rent higher → increase rent or profit participation
+- **Decline**: Unacceptable credit, prohibited use, material lease violations, or landlord exercises recapture
+
+### Step 6: Draft Consent Agreement Template
+
+```
+CONSENT TO ASSIGNMENT OF LEASE
+
+THIS CONSENT made as of [DATE]
+
+AMONG:
+[LANDLORD NAME] ("Landlord")
+- and -
+[CURRENT TENANT NAME] ("Assignor")
+- and -
+[PROPOSED ASSIGNEE NAME] ("Assignee")
+
+RECITALS:
+A. Landlord and Assignor are parties to a lease dated [DATE] for premises at [ADDRESS].
+B. Assignor wishes to assign all rights and obligations under the Lease to Assignee.
+C. Assignee wishes to accept the assignment and assume all Lease obligations.
+D. Pursuant to Section [X] of the Lease, Landlord's consent is required.
+
+1. CONSENT
+Landlord consents to the assignment effective [DATE] ("Effective Date"), on the following terms and conditions:
+
+2. ASSUMPTION OF OBLIGATIONS
+Assignee accepts the assignment and assumes all of Assignor's obligations from the Effective Date:
+(a) Payment of all rent and additional rent
+(b) Compliance with all covenants and conditions
+(c) Maintenance and repair obligations
+(d) Insurance requirements
+(e) All other tenant obligations
+
+3. CONTINUING LIABILITY
+Assignor acknowledges:
+(a) Assignor remains jointly and severally liable with Assignee throughout the term
+(b) Landlord may amend the Lease with Assignee without Assignor's consent; Assignor remains liable
+(c) If Assignee goes bankrupt and disclaims the Lease, Assignor must execute a new lease for the unexpired term
+(d) Assignor's liability survives even if Landlord loses Assignee's security deposit
+
+4. REPRESENTATIONS AND WARRANTIES OF ASSIGNEE
+(a) Duly incorporated and validly existing under laws of [JURISDICTION]
+(b) Full power and authority to enter into this Consent
+(c) Financial statements provided are true and accurate
+(d) No pending proceedings that would materially adversely affect Assignee
+(e) Will use Premises only for [PERMITTED USE]
+
+5. CONDITIONS PRECEDENT
+(a) Payment of assignment fee of $[AMOUNT] on or before [DATE]
+(b) Delivery of financial statements [specify]
+(c) Updated insurance certificates naming Landlord as additional insured
+(d) [If applicable] Personal or corporate guarantee
+(e) [If applicable] Increase of security deposit to $[AMOUNT]
+(f) Execution of this Consent by all parties
+
+6. ADDITIONAL REQUIREMENTS [if applicable]
+- Annual financial statements within 90 days of year-end
+- Guarantee by [GUARANTOR NAME] attached as Schedule A
+- [If rent differs] Profit Participation: Assignor pays Landlord [50%] of any excess rent over base rent within 10 days of receipt
+- [If higher-risk use] Permitted Use limited to [SPECIFIC USE], excluding [PROHIBITED ACTIVITIES]
+
+7. LEASE REMAINS IN FORCE
+Except as expressly modified, all Lease terms remain binding upon Assignee.
+
+8. NO FURTHER ASSIGNMENT
+Any further assignment or subletting requires Landlord's prior written consent per the Lease.
+
+9. AMENDMENT TO LEASE
+(a) All references to "Tenant" mean Assignee from and after the Effective Date
+(b) Notices to Tenant: [ASSIGNEE ADDRESS]
+
+10. COSTS
+Assignor and Assignee jointly and severally liable for Landlord's reasonable legal fees ($[AMOUNT]).
+
+[SIGNATURE BLOCKS — Landlord / Assignor / Assignee]
+
+SCHEDULE A — GUARANTEE [if required]
+SCHEDULE B — ENVIRONMENTAL COMPLIANCE CERTIFICATE [if required]
+```
+
+### Output Report
+
+Save to `Reports/YYYY-MM-DD_HHMMSS_[tenant]_assignment_analysis.md`
+
+Report includes:
+- Summary of assignment request and lease provisions
+- Assignee credit analysis with score and security recommendation
+- Use compatibility assessment
+- Landlord concerns and risks
+- Recommendation (approve / conditional / decline)
+- Draft consent agreement
+- Timeline and next steps
+
+### Example Usage
+
+```
+/assignment-consent /path/to/lease.md "Tenant ABC Corp wants to assign to XYZ Inc, 3-year-old manufacturing company"
+/assignment-consent /path/to/lease.md /path/to/request.pdf /path/to/assignee_financials.pdf
+```
+
+---
+
 **This skill activates when you**:
 - Draft or review consent to assignment agreements
 - Advise on assignment vs sublease decisions
