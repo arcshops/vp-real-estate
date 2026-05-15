@@ -202,7 +202,7 @@ Create the `renewal_inputs/` directory if it doesn't exist.
 Execute the renewal analysis using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/Renewal_Analysis
+cd "${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts"
 
 # Create Python script to run analysis
 cat > run_renewal_analysis.py << 'SCRIPT'

@@ -50,10 +50,10 @@ Load the appropriate template:
 
 | Lease Type | Markdown Template | JSON Template |
 |---|---|---|
-| Industrial | `Templates/Industrial/industrial_lease_abstract_template.md` | `Templates/Industrial/industrial_lease_abstract_template.json` |
-| Office | `Templates/Office/office_lease_abstract_template.md` | `Templates/Office/office_lease_abstract_template.json` |
+| Industrial | `${CLAUDE_PLUGIN_ROOT}/templates/Industrial/industrial_lease_abstract_template.md` | `${CLAUDE_PLUGIN_ROOT}/templates/Industrial/industrial_lease_abstract_template.json` |
+| Office | `${CLAUDE_PLUGIN_ROOT}/templates/Office/office_lease_abstract_template.md` | `${CLAUDE_PLUGIN_ROOT}/templates/Office/office_lease_abstract_template.json` |
 
-For JSON output, also reference the schema: `Templates/{type}/{type}_lease_abstract_schema.json`
+For JSON output, also reference the schema: `${CLAUDE_PLUGIN_ROOT}/templates/{type}/{type}_lease_abstract_schema.json`
 
 ## Step 5: Extract Using REIXS Rules
 

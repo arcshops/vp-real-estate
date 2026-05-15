@@ -210,7 +210,7 @@ Create the `ifrs16_inputs/` directory if it doesn't exist.
 Execute the IFRS 16 analysis using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/IFRS16_Calculator
+cd "${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts"
 
 # Run the analysis using existing script
 # The run_ifrs16_analysis.py script is already available in this directory

@@ -14,7 +14,7 @@ Comprehensive before/after analysis for partial property acquisitions, quantifyi
 
 **Skills**: `severance-damages-quantification`, `injurious-affection-assessment`
 **Related Skills**: `expropriation-compensation-entitlement-analysis`, `comparable-sales-adjustment-methodology`
-**Shared Utils**: `Shared_Utils/financial_utils.py` (NPV, capitalization)
+**Shared Utils**: `shared_utils/financial_utils.py` (NPV, capitalization)
 
 ## Purpose
 
@@ -238,7 +238,7 @@ Combined output from both calculators:
 
 - `severance_calculator.py` - Remainder impairment (access, shape, utility, farm ops)
 - `injurious_affection_calculator.py` - Construction and proximity impacts
-- `Shared_Utils/financial_utils.py` - NPV, capitalization calculations
+- `shared_utils/financial_utils.py` - NPV, capitalization calculations
 
 ## Related Skills
 

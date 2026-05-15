@@ -106,5 +106,5 @@ Example:
 ```
 ✓ Successfully converted README.md to PDF
 
-Output: /workspaces/lease-abstract/README.pdf (122KB)
+Output: $CLAUDE_PROJECT_DIR/README.pdf (122KB)
 ```

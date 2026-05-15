@@ -173,7 +173,7 @@ Create the `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/` direc
 Execute the calculator using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract
+cd "$CLAUDE_PROJECT_DIR"
 python3 ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/rental_variance_calculator.py ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_input_[timestamp].json -o ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_results_[timestamp].json
 ```
 

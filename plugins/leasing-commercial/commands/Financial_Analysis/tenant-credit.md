@@ -154,7 +154,7 @@ Create the `credit_inputs/` directory if it doesn't exist.
 Execute the credit analysis using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/Credit_Analysis
+cd "${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts"
 
 # Create Python script to run analysis
 cat > run_credit_analysis.py << 'SCRIPT'

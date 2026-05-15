@@ -216,7 +216,7 @@ Prompt user for market parameters (or extract from provided data):
 Before running calculator, validate using the validator:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/comparable-sales-adjustment-methodology/
+cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/
 python3 validate_comparables.py input_file.json
 ```
 
@@ -299,7 +299,7 @@ Create a JSON file with structure compliant with `comparable_sales_input_schema.
 5. Include all physical characteristics that differ from subject
 
 **Save the JSON file as**:
-`/workspaces/lease-abstract/.claude/skills/comparable-sales-adjustment-methodology/inputs/comps_input_[YYYY-MM-DD]_[HHMMSS].json`
+`${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/inputs/comps_input_[YYYY-MM-DD]_[HHMMSS].json`
 
 Create the `inputs/` directory if it doesn't exist.
 
@@ -308,7 +308,7 @@ Create the `inputs/` directory if it doesn't exist.
 Execute the calculator using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/comparable-sales-adjustment-methodology/
+cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/
 python3 comparable_sales_calculator.py inputs/comps_input_[timestamp].json --output results/comps_results_[timestamp].json --verbose
 ```
 
@@ -946,7 +946,7 @@ After creating all files, provide the user with:
 
 **Related Calculators:**
 - `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/` - Effective rent and NPV analysis
-- `Shared_Utils/financial_utils.py` - PV, NPV, IRR calculations
+- `shared_utils/financial_utils.py` - PV, NPV, IRR calculations
 
 **Related Skills:**
 - `comparable-sales-adjustment-methodology` - Sequential adjustment framework (auto-loads)

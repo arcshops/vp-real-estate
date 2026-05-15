@@ -129,7 +129,7 @@ Create JSON file with 6 sections following schema:
 
 3. **Run scoring calculator**
    ```bash
-   cd /workspaces/lease-abstract/.claude/skills/transit-station-site-acquisition-strategy
+   cd ${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy
    python transit_station_scorer.py <site-input-json> --output <results.json>
    ```
 

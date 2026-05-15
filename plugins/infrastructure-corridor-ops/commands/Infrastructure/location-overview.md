@@ -37,8 +37,7 @@ The output must be written in **flowing prose** (not tables or bullet points) su
 
 2. **Run the Location Overview module** to collect API data:
    ```bash
-   cd $CLAUDE_PLUGIN_ROOT
-   python -m skills.location-overview.scripts.location_overview "$ARGUMENTS"
+   python "${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/location_overview.py" "$ARGUMENTS"
    ```
 
 3. **Read the generated report** to get the base data including:

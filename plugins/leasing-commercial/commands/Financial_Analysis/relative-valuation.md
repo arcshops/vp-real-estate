@@ -711,7 +711,7 @@ pandoc $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.m
 User: "Analyze competitive positioning for 7381 Pacific Circ using this CoStar report"
 [Attaches PDF]
 
-ARGUMENTS: --full 7381 Pacific Circ Mississauga is subject property /workspaces/lease-abstract/skillsdevdocs/availabilities.pdf
+ARGUMENTS: --full 7381 Pacific Circ Mississauga is subject property $CLAUDE_PROJECT_DIR/skillsdevdocs/availabilities.pdf
 
 Assistant:
 1. Extracts 70 properties from PDF

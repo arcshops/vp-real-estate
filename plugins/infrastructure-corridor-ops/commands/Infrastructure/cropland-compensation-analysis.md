@@ -300,7 +300,7 @@ Extract the input JSON file path from arguments:
 Execute the calculator using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/cropland-out-of-production-agreements
+cd ${CLAUDE_PLUGIN_ROOT}/skills/cropland-out-of-production-agreements
 
 # Run calculator with verbose output
 python3 cropland_calculator.py /path/to/input.json --output results.json --verbose
@@ -1599,7 +1599,7 @@ Shortfall: $172,719 (Ontario doesn't cover actual needs)
 ## Example Usage
 
 ```
-/cropland-compensation-analysis /workspaces/lease-abstract/.claude/skills/cropland-out-of-production-agreements/sample_inputs/ontario_grain_farm_500kv_line.json
+/cropland-compensation-analysis ${CLAUDE_PLUGIN_ROOT}/skills/cropland-out-of-production-agreements/sample_inputs/ontario_grain_farm_500kv_line.json
 ```
 
 This will:

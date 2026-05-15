@@ -151,7 +151,7 @@ Commands invoke Python calculators in these directories:
 - **Tenant Credit**: `${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/`
 - **Renewal Economics**: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/`
 - **Rental Variance**: `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/`
-- **Shared Utilities**: `Shared_Utils/`
+- **Shared Utilities**: `shared_utils/`
 
 **Property Valuation:**
 - **Comparable Sales**: `.claude/skills/comparable-sales-adjustment-methodology/`

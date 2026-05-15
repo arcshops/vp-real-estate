@@ -23,7 +23,7 @@ The user will provide:
 
 **Example:**
 ```
-/easement-valuation /workspaces/lease-abstract/.claude/skills/easement-valuation-methods/sample_500kv_transmission.json
+/easement-valuation ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods/sample_500kv_transmission.json
 /easement-valuation /path/to/pipeline_easement_input.json --output /path/to/results.json
 ```
 
@@ -139,7 +139,7 @@ with open(input_file, 'r') as f:
 Execute the Python calculator:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/easement-valuation-methods
+cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods
 
 python3 easement_calculator.py <input-json-path> --output <output-json-path> --verbose
 ```
@@ -151,7 +151,7 @@ python3 easement_calculator.py <input-json-path> --output <output-json-path> --v
 
 **Example:**
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/easement-valuation-methods
+cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods
 
 python3 easement_calculator.py sample_500kv_transmission.json \
   --output $CLAUDE_PROJECT_DIR/Reports/easement_valuation_results.json \
@@ -576,7 +576,7 @@ METHODOLOGY:
 ### 500kV Transmission Line Easement
 
 ```bash
-/easement-valuation /workspaces/lease-abstract/.claude/skills/easement-valuation-methods/sample_500kv_transmission.json
+/easement-valuation ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods/sample_500kv_transmission.json
 ```
 
 **Input characteristics:**

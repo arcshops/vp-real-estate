@@ -47,7 +47,7 @@ The user will provide:
 Read the input JSON file:
 
 ```bash
-cd /workspaces/lease-abstract/MCDA_Sales_Comparison
+cd "${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts"
 python -c "from validation import validate_input_data; import json; print(validate_input_data(json.load(open('INPUT_PATH'))))"
 ```
 
@@ -104,7 +104,7 @@ python -c "from validation import validate_input_data; import json; print(valida
 ### Step 2: Run MCDA Calculator
 
 ```bash
-cd /workspaces/lease-abstract/MCDA_Sales_Comparison
+cd "${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts"
 python mcda_sales_calculator.py INPUT_PATH --output RESULTS_PATH --profile PROFILE --verbose
 ```
 

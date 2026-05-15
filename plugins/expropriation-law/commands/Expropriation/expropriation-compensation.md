@@ -11,7 +11,7 @@ Calculate comprehensive statutory compensation under the Ontario Expropriations 
 **Python Calculator**: `.claude/skills/expropriation-compensation-entitlement-analysis/expropriation_compensation_calculator.py`
 **Skill**: `expropriation-compensation-entitlement-analysis`
 **Related Skills**: `ontario-expropriations-act-statutory-interpretation`, `expropriation-procedural-defect-analysis`
-**Shared Utils**: `Shared_Utils/financial_utils.py` (NPV, interest calculations)
+**Shared Utils**: `shared_utils/financial_utils.py` (NPV, interest calculations)
 
 ## Purpose
 
@@ -217,7 +217,7 @@ The calculator returns:
 
 - `expropriation_compensation_calculator.py` - Main statutory calculator
 - `injurious_affection_calculator.py` - For s.18(2) impacts
-- `Shared_Utils/financial_utils.py` - Interest and NPV calculations
+- `shared_utils/financial_utils.py` - Interest and NPV calculations
 
 ## Related Skills
 

@@ -369,7 +369,7 @@ Create the `deals/` directory if it doesn't exist.
 Execute the calculator using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/Eff_Rent_Calculator
+cd "${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts"
 python3 eff_rent_calculator.py deals/[filename]_input.json -o deals/[filename]_results.json
 ```
 
@@ -679,7 +679,7 @@ After creating all files, provide the user with:
 ### Basic Usage (Lease + Landlord Parameters)
 
 ```
-/effective-rent /workspaces/lease-abstract/Sample_Inputs/sample_offer_to_lease.pdf ${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/landlord_investment_parameters.json
+/effective-rent $CLAUDE_PROJECT_DIR/Sample_Inputs/sample_offer_to_lease.pdf ${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/landlord_investment_parameters.json
 ```
 
 This will:

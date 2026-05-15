@@ -320,7 +320,7 @@ Create a JSON file following the easement valuation calculator schema:
 ```
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/.claude/skills/easement-valuation-methods/row_inputs/[property_name]_[corridor_type]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods/row_inputs/[property_name]_[corridor_type]_input.json`
 
 Create the directory if it doesn't exist.
 
@@ -329,7 +329,7 @@ Create the directory if it doesn't exist.
 Execute the calculator using Bash tool:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/easement-valuation-methods
+cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods
 python3 easement_valuation_calculator.py row_inputs/[filename]_input.json -o row_outputs/[filename]_results.json --verbose
 ```
 
