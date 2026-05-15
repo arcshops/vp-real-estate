@@ -316,6 +316,100 @@ Assessment: Favorable expansion - retains tenant, adds revenue, modest TI invest
 
 ---
 
+## Slash Command Workflow: Amendment Comparison (`/compare-amendment`)
+
+**Invocation**: `/compare-amendment <new-amendment> <lease-history-folder>`
+
+### Input Handling
+- First argument: path to the new amendment file
+- Second argument: path to folder containing original lease + previous amendments
+- If only one argument provided, prompt user for missing path
+
+### Step 1: Load Lease History
+- Original lease: look for `lease.pdf`, `lease.docx`, `original_lease.*`
+- Previous amendments: `amendment*.pdf`, `amending*.pdf`, `*amendment*.md` — sort chronologically
+- Convert to markdown via `markitdown` if needed
+
+### Step 2: Recitals Verification (CRITICAL)
+
+Before substantive analysis, verify recitals in the new amendment:
+
+| Recital Element | Stated in Amendment | Actual (from History) | Match? | Issue |
+|-----------------|---------------------|----------------------|--------|-------|
+| Original Lease Date | [Date from recitals] | [Date from file] | ✓/✗ | |
+| Landlord Name | [Name from recitals] | [Name from original] | ✓/✗ | |
+| Tenant Name | [Name from recitals] | [Name from original] | ✓/✗ | |
+| Property Address | [Address from recitals] | [Address from original] | ✓/✗ | |
+| Amendment 1 Date | [Date from recitals] | [Date from file] | ✓/✗ | |
+| Amendment Number | [Number from recitals] | [Actual sequence] | ✓/✗ | |
+| Stated Purpose | [What recitals say] | [What amendment does] | ✓/✗ | |
+
+Flag all discrepancies prominently. Common recital errors:
+1. **Missing Amendments** — Amendment 3 recites 1 and 2 but a 2A exists
+2. **Wrong Dates** — Recitals state June 15, 2018 but actual amendment is 2017
+3. **Wrong Party Names** — "ABC Corp." in lease vs. "ABC Corporation" in recitals
+4. **Outdated Party Names** — Tenant was assigned but recitals still name original tenant
+5. **Wrong Amendment Numbers** — Calls it "Third Amendment" but it's actually the fourth
+6. **Purpose Mismatch** — Recitals say "to extend the term" but amendment also changes rent
+7. **Copy/Paste Errors** — Recitals reference a completely different property from a template
+
+### Step 3: Build Current Lease State
+Apply each previous amendment in chronological order to establish the state before the new amendment. Track sections amended multiple times.
+
+### Step 4: Section-by-Section Analysis
+
+For each modified section, capture:
+- **Current text** (before amendment)
+- **New text** (after amendment)
+- **Amendment history** for sections changed multiple times
+- **Impact**: Financial / Term / Rights / Obligations / Use / Critical Dates
+
+### Step 5: Report Structure
+
+```
+# LEASE AMENDMENT COMPARISON REPORT
+## [Property Address]
+
+## Executive Summary
+## Amendment Information (number, dates, parties, previous amendments)
+## Recitals Verification [table above]
+## ⚠️ Recital Issues Identified
+## Lease History Timeline [table]
+## Summary of Changes (What's Changed / Added / Deleted)
+## Detailed Change Analysis [per-section: current → new → impact]
+## Critical Changes Summary (🔴 High / 🟡 Medium / 🟢 Low)
+## Issues and Concerns (conflicts, ambiguities, missing elements)
+## Financial Impact Summary [table]
+## Updated Critical Dates
+## Recommendations (For Landlord / For Tenant / For Both)
+## Checklist Before Execution
+```
+
+### Pre-Execution Checklist
+
+**Recitals:**
+- [ ] Original lease date correct in recitals
+- [ ] Landlord name matches original lease exactly
+- [ ] Tenant name matches current tenant (or assignment documented)
+- [ ] Property address/description accurate
+- [ ] ALL previous amendments listed in recitals with correct dates
+- [ ] Amendment numbering sequential and correct
+- [ ] Stated purpose aligns with actual changes
+
+**Substantive Provisions:**
+- [ ] No conflicts with existing provisions
+- [ ] Financial impacts calculated and acceptable
+- [ ] Effective date clear and appropriate
+- [ ] All referenced exhibits/schedules attached
+- [ ] Both parties have authority to execute
+- [ ] All blanks filled in (no TBD items)
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_amendment_comparison_[property].md`
+
+---
+
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, effective-rent-analyzer, negotiation-expert, offer-to-lease-expert
