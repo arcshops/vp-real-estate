@@ -3,10 +3,6 @@ name: commercial-tenancies-act-enforcement-remedies
 description: Use when advising landlords on enforcement strategy under Ontario Commercial Tenancies Act, executing distress for rent, weighing re-entry vs. acceleration vs. termination, calculating overholding double-rent liability, applying the election doctrine (Highway Properties) or mitigation duty (Southcott Estates), or defending against relief from forfeiture motions.
 ---
 
-## Granular Focus
-
-Commercial landlord remedies under CTA (subset of Benji's capabilities). This skill provides enforcement strategy for commercial tenancies - NOT residential (covered by RTA).
-
 ## Distress for Rent (s.19-22)
 
 Ancient common law remedy allowing landlord to seize and sell tenant's goods to recover rent arrears.

@@ -3,10 +3,6 @@ name: agricultural-easement-negotiation-frameworks
 description: Use when negotiating transmission line, pipeline, or drainage easements with agricultural landowners, assessing farm operation impacts (crop production, livestock, equipment, irrigation), designing compensation structures (one-time, recurring rental, mitigation works, hybrid), or navigating multi-generational farm family dynamics and succession.
 ---
 
-## Granular Focus
-
-Negotiating utility easements with farmers (subset of Shadi's capabilities). This skill provides detailed protocols for agricultural easement negotiations - NOT general easement valuation or commercial/residential easements.
-
 ## Farm Operation Impact Assessment
 
 Detailed analysis of how easement affects farm productivity, operations, and economics.

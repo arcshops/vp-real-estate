@@ -3,10 +3,6 @@ name: commercial-lease-assignment-consent-framework
 description: Use when analyzing assignment or subletting consent requests under Ontario Commercial Tenancies Act s.24, evaluating whether a landlord's refusal is unreasonable, drafting "consent not to be unreasonably withheld" clauses, structuring recapture rights, or applying case law (Citibank, Lehndorff, Mendleson) to assignment disputes.
 ---
 
-## Granular Focus
-
-Assignment/subletting law under CTA (subset of Benji's capabilities). This skill provides legal framework for assignment consent - NOT commercial negotiation tactics.
-
 ## Statutory Framework (s.24)
 
 ### Default Rule: Tenant May Assign/Sublet Freely

@@ -3,10 +3,6 @@ name: residential-displacement-mitigation-protocols
 description: Use when managing residential displacement for transit corridors or infrastructure projects, scoring household vulnerability (seniors, low-income, disabilities, cultural ties), designing mitigation packages (enhanced compensation, relocation assistance, buyback options, phased timelines), or coordinating sensitive communication with displaced households (one-on-one meetings, language access, support services).
 ---
 
-## Granular Focus
-
-Managing homeowner impacts in infrastructure projects (subset of Katy's capabilities). This skill provides detailed protocols for residential displacement - NOT commercial displacement or general relocation.
-
 ## Impact Assessment Framework
 
 Systematic evaluation of displacement impacts to identify vulnerable households and tailor mitigation approaches.

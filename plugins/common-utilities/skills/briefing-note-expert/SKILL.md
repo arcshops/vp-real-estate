@@ -3,10 +3,6 @@ name: briefing-note-expert
 description: Use when drafting a 1-2 page executive briefing note for an infrastructure acquisition, framing a decision memo for board or C-suite approval, synthesizing financial and risk analysis into a recommendation, or preparing time-sensitive authorization requests.
 ---
 
-## Granular Focus
-
-Executive briefing note preparation for infrastructure acquisitions (subset of general executive communication). This skill provides structured methodology for decision-focused briefing notes - NOT general report writing or project documentation.
-
 ## Purpose and Use Cases
 
 **Executive briefing notes** are concise (1-2 page) decision documents that synthesize complex acquisition decisions into clear recommendations for board approval or executive authorization.

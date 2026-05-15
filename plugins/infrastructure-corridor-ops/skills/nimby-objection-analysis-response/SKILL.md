@@ -3,10 +3,6 @@ name: nimby-objection-analysis-response
 description: Use when managing organized community opposition to infrastructure projects, classifying objections (legitimate concerns, misinformation, fundamental opposition, hidden motivations), designing evidence-based responses with impact studies and comparable outcomes, or building supporter coalitions to counter or neutralize organized opposition.
 ---
 
-## Granular Focus
-
-Understanding and responding to community opposition (subset of Katy's capabilities). This skill provides strategic analysis of NIMBY dynamics - NOT general community relations.
-
 ## Objection Classification Framework
 
 Systematic categorization of objections to determine appropriate response strategy.

@@ -3,10 +3,6 @@ name: board-memo-expert
 description: Use when preparing board approval memoranda, drafting authorization or ratification resolutions, structuring decision memoranda for infrastructure projects or land acquisitions, or formalizing governance documentation with NPV, risk assessment, and resolution language.
 ---
 
-## Granular Focus
-
-Board approval documentation and governance processes. This skill provides technical depth on structuring decision memoranda, quantifying financial impacts, assessing and communicating risks, and generating formal board resolution language - NOT general project management or strategic planning.
-
 ## Core Competencies
 
 ### 1. Board Approval Framework

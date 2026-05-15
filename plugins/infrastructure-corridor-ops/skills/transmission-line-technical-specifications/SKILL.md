@@ -3,10 +3,6 @@ name: transmission-line-technical-specifications
 description: Use when defining transmission easement widths by voltage (69kV-500kV), calculating NESC conductor clearances and sag, optimizing tower placement for span limits and topography, documenting land use restrictions (building prohibitions, height limits, excavation), or coordinating environmental and regulatory approvals (wetlands, species at risk, archaeological, conservation authorities).
 ---
 
-## Granular Focus
-
-Technical requirements for utility corridors (subset of Shadi's capabilities). This skill provides engineering specifications - NOT negotiation tactics or valuation methods.
-
 ## Easement Width Calculations
 
 Voltage-based corridor width requirements accounting for safety clearances and operational needs.

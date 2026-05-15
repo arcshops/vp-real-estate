@@ -3,10 +3,6 @@ name: public-consultation-process-design
 description: Use when designing consultation programs for controversial infrastructure projects, mapping stakeholders and choosing engagement levels via the IAP2 spectrum, facilitating hostile public meetings, capturing and analyzing community feedback by theme, or preparing "What We Heard" reports documenting consultation outcomes.
 ---
 
-## Granular Focus
-
-Designing and executing effective public consultation (subset of Katy's capabilities). This skill provides operational protocols for consultation - NOT general stakeholder theory.
-
 ## Consultation Framework Design
 
 Systematic planning of consultation activities aligned with project phase and stakeholder needs.

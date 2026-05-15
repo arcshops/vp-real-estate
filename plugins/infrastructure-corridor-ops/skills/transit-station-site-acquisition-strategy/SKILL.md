@@ -3,10 +3,6 @@ name: transit-station-site-acquisition-strategy
 description: Use when evaluating alternative transit station sites using TOD potential and multi-modal scoring, planning multi-parcel station assembly, profiling holdout risk per parcel, deciding negotiation vs. expropriation sequencing, or integrating station area planning with joint development, zoning coordination, and community benefits packages.
 ---
 
-## Granular Focus
-
-Site selection and property assembly for transit stations (subset of Katy's capabilities). This skill provides strategic depth on transit station acquisition - NOT general infrastructure procurement.
-
 ## Site Selection Criteria Scoring
 
 Systematic evaluation framework for comparing alternative transit station sites using transit-oriented development (TOD) principles.
