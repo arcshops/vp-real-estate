@@ -1113,9 +1113,77 @@ This skill is automatically loaded when:
 - `/settlement-analysis` - Analyze environmental liability settlement scenarios
 
 **Related Calculators**:
-- Environmental Risk Calculator (planned) - Automated contamination risk scoring and cleanup cost estimation
-  - Input: Phase II ESA data (contaminants, concentrations, volumes)
-  - Output: Risk score, cleanup cost scenarios, timeline, price adjustment recommendation
+- `${CLAUDE_PLUGIN_ROOT}/skills/environmental-due-diligence-expert/environmental_risk_calculator.py` - Automated contamination risk scoring and cleanup cost estimation
+
+**JSON Input Schema** (`environmental_input_schema.json`):
+
+```json
+{
+  "site_address": "123 Industrial Ave",
+  "phase_1_esa": {
+    "findings": ["AST present", "Historical dry cleaner use"],
+    "recs": [
+      {
+        "description": "Underground storage tank",
+        "severity": "HIGH",
+        "location": "Northeast corner"
+      }
+    ],
+    "data_gaps": ["Historical chain of title incomplete"]
+  },
+  "phase_2_esa": {
+    "soil_samples": [
+      {
+        "sample_id": "SS-01",
+        "location": "Former UST area",
+        "depth_m": 2.5,
+        "contaminants": ["Petroleum hydrocarbons"],
+        "exceedance": true
+      }
+    ],
+    "groundwater_samples": [],
+    "exceedances": [
+      {
+        "contaminant": "Petroleum F2",
+        "location": "SS-01",
+        "measured_value": 850,
+        "standard_limit": 260,
+        "exceedance_factor": 3.27,
+        "description": "Tier 1 Table 3 exceedance",
+        "severity": "HIGH"
+      }
+    ],
+    "contaminants": ["Petroleum hydrocarbons", "VOCs"]
+  },
+  "cleanup_scenarios": {
+    "risk_assessment": {
+      "cost_low": 50000,
+      "cost_high": 150000,
+      "description": "Risk assessment only"
+    },
+    "remediation": {
+      "cost_low": 200000,
+      "cost_high": 500000,
+      "description": "Full excavation and disposal"
+    },
+    "brownfield": {
+      "cost_low": 500000,
+      "cost_high": 1000000,
+      "description": "Comprehensive brownfield redevelopment"
+    }
+  }
+}
+```
+
+**Calculator Output**: Risk score (0-100), cleanup cost scenarios, regulatory pathway timeline (0-24 months), acquisition price adjustment recommendation
+
+**Usage**:
+```bash
+/environmental-due-diligence path/to/site_data.json
+/environmental-due-diligence path/to/site_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_environmental_analysis.md
+```
+
+**Report Naming**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_environmental_risk_{site}.md`
 
 ## Examples
 
