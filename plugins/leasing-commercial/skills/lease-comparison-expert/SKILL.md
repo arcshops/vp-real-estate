@@ -316,6 +316,82 @@ Assessment: Favorable expansion - retains tenant, adds revenue, modest TI invest
 
 ---
 
+## Slash Command Workflow: Offer Comparison (`/compare-offers`)
+
+**Invocation**: `/compare-offers <inbound-offer> <outbound-offer>`
+
+### Input Handling
+- First argument: path to the inbound offer (received from the other party)
+- Second argument: path to your outbound offer (what you sent)
+- Determine perspective (Landlord or Tenant) from file names, headers, or document content
+
+### Movement Classification
+
+For each term, classify movement:
+- **Accepted** ✓ — Their offer matches your position
+- **Rejected** ✗ — Explicitly rejected or ignored
+- **Countered** ⟷ — Different value/approach proposed
+- **Partially Accepted** ◐ — Moved toward you but not all the way
+- **New Issue** ⊕ — Raised something not in your outbound offer
+- **Withdrawn** ⊖ — Something in your outbound not in their inbound
+
+### Scorecard Table
+
+| Category | Terms Changed | You Won | They Won | Compromised | New Issues | Still Open |
+|----------|---------------|---------|----------|-------------|------------|------------|
+| Financial | | | | | | |
+| Term & Renewal | | | | | | |
+| Flexibility | | | | | | |
+| Risk Allocation | | | | | | |
+| **TOTALS** | | | | | | |
+
+### Deal-Breakers vs. Trading Chips
+
+Classify each open issue:
+- **Deal-Breakers** 🔴 — Both parties far apart, fundamental economics
+- **Trading Chips** 🔄 — Stated positions but flexible; tradeable for bigger wins
+- **Quick Wins** ✓ — Positions very close; capture to build momentum
+
+### Negotiation Tactics to Watch For
+
+1. **Salami Tactics** — Tiny concessions on many fronts to appear reasonable
+   - Counter: Focus on key issues, don't get distracted by minor movement
+2. **Anchoring** — Extreme opening to make real target seem reasonable
+   - Counter: Re-anchor with market standards and comparables
+3. **Good Cop/Bad Cop** — Different team members take conflicting positions
+   - Counter: Stay focused on offer terms, not personalities
+4. **Deadline Pressure** — Artificial deadlines forcing concessions
+   - Counter: Set timeline based on real constraints
+5. **Nibbling** — After major issues resolved, asking for "one more small thing"
+   - Counter: Be clear about what's final, resist reopening settled issues
+
+### Reading Between the Lines
+- **Quick turnaround** = High interest or pressure on them
+- **Slow turnaround** = Less interest, shopping other deals, or internal approval issues
+- **Accepting most financial terms** = They need the space, financial terms less critical
+- **Fighting flexibility clauses** = They want a locked-in tenant/landlord
+- **Adding complexity** = They want negotiation leverage
+
+### Pre-Counteroffer Checklist
+
+**Content Verification:**
+- [ ] Every term in their inbound addressed (accepted/rejected/countered)
+- [ ] Every term in your outbound either accepted or re-raised
+- [ ] New issues responded to with clear positions
+- [ ] All numbers correct and consistent
+
+**Strategic Verification:**
+- [ ] Concessions align with priorities (giving on low-value, holding on high-value)
+- [ ] Trade proposals clearly articulated
+- [ ] Walk-away issues protected
+- [ ] Tone is professional and collaborative
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_offer_comparison_[property]_round[N].md`
+
+---
+
 ## Slash Command Workflow: Amendment Comparison (`/compare-amendment`)
 
 **Invocation**: `/compare-amendment <new-amendment> <lease-history-folder>`
