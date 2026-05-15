@@ -193,7 +193,7 @@ rent_year_2 = rent_year_1 * 1.025
 | Renovation ($/sf) | $5-15 | $15-30 | $20-40 |
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/Renewal_Analysis/renewal_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/renewal_inputs/[tenant_name]_[date]_input.json`
 
 Create the `renewal_inputs/` directory if it doesn't exist.
 
@@ -306,7 +306,7 @@ Capture the console output for the markdown report.
 
 ### Step 5: Generate Comprehensive Economic Report
 
-Create a markdown report in `/workspaces/lease-abstract/Reports/` with filename following the timestamp convention:
+Create a markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename following the timestamp convention:
 
 **Format**: `YYYY-MM-DD_HHMMSS_[tenant_name]_renewal_analysis.md`
 
@@ -1011,12 +1011,12 @@ This will:
 1. Extract lease terms, renewal offer, and market alternative from PDFs
 2. Generate JSON input file in `renewal_inputs/`
 3. Run renewal_analysis.py calculator (NPV, IRR, breakeven, sensitivity)
-4. Create comprehensive markdown economic analysis report in `Reports/` with timestamp
+4. Create comprehensive markdown economic analysis report in `$CLAUDE_PROJECT_DIR/Reports/` with timestamp
 5. Provide recommendation (Renew/Relocate/Negotiate) with financial justification
 
 **Output files**:
 - `renewal_inputs/[tenant_name]_[date]_input.json`
 - `renewal_inputs/[tenant_name]_[date]_results.json`
-- `Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_renewal_analysis.md`
+- `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_renewal_analysis.md`
 
 Begin the renewal economics analysis now with the provided documents.

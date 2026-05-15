@@ -45,7 +45,7 @@ Calculate critical path schedule for expropriation projects with OEA statutory d
 /expropriation-timeline project_milestones.json
 
 # Custom output
-/expropriation-timeline samples/transit_corridor_timeline.json --output Reports/timeline.md
+/expropriation-timeline samples/transit_corridor_timeline.json --output $CLAUDE_PROJECT_DIR/Reports/timeline.md
 ```
 
 ## Output

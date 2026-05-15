@@ -151,7 +151,7 @@ Landlord loses $XXX,XXX before re-leasing
 
 ### Step 6: Generate Compliance Report
 
-Create report in `/workspaces/lease-abstract/Reports/`:
+Create report in `$CLAUDE_PROJECT_DIR/Reports/`:
 `[tenant_name]_insurance_audit_[date].md`
 
 **Report includes:**

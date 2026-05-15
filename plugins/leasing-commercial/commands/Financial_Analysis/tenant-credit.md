@@ -145,7 +145,7 @@ Create a JSON file for the credit analysis calculator following this structure:
 If multiple years of financials are provided, create multiple entries in `financial_data` array, most recent year first.
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/Credit_Analysis/credit_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/credit_inputs/[tenant_name]_[date]_input.json`
 
 Create the `credit_inputs/` directory if it doesn't exist.
 
@@ -252,7 +252,7 @@ Capture the console output for the markdown report.
 
 ### Step 5: Generate Comprehensive Credit Report
 
-Create a markdown report in `/workspaces/lease-abstract/Reports/` with filename following the timestamp convention:
+Create a markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename following the timestamp convention:
 
 **Format**: `YYYY-MM-DD_HHMMSS_[tenant_name]_credit_analysis.md`
 
@@ -540,7 +540,7 @@ TZ='America/New_York' date '+%Y-%m-%d_%H%M%S'
 
 - Input JSON: `credit_inputs/[tenant_name]_[date]_input.json`
 - Results JSON: `credit_inputs/[tenant_name]_[date]_results.json`
-- Credit Report: `Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_credit_analysis.md`
+- Credit Report: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_credit_analysis.md`
 - Source Documents: [List PDF paths]
 
 ---
@@ -573,7 +573,7 @@ After creating all files, provide the user with:
 - Red flags count
 
 **4. Next Steps:**
-- Review detailed report in `/Reports/`
+- Review detailed report in `/$CLAUDE_PROJECT_DIR/Reports/`
 - Verify extracted financials against source PDFs
 - Adjust security recommendations if needed
 - Prepare lease with recommended security package
@@ -663,12 +663,12 @@ This will:
 2. Extract lease terms from proposal
 3. Generate JSON input file in `credit_inputs/`
 4. Run credit_analysis.py calculator
-5. Create comprehensive markdown credit report in `Reports/` with timestamp prefix (Eastern time)
+5. Create comprehensive markdown credit report in `$CLAUDE_PROJECT_DIR/Reports/` with timestamp prefix (Eastern time)
 6. Provide summary with rating, recommendation, and security amount
 
 **Output files**:
 - `credit_inputs/[tenant_name]_[date]_input.json`
 - `credit_inputs/[tenant_name]_[date]_results.json`
-- `Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_credit_analysis.md`
+- `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_credit_analysis.md`
 
 Begin the credit analysis now with the provided financial statements.

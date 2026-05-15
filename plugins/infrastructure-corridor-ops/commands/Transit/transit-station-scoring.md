@@ -152,7 +152,7 @@ Create JSON file with 6 sections following schema:
    - Strategic recommendations
    - Mitigation strategies for challenges
 
-   Save to: `/workspaces/lease-abstract/Reports/YYYY-MM-DD_HHMMSS_transit_station_scoring_<site_id>.md`
+   Save to: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_transit_station_scoring_<site_id>.md`
 
 ## Example Commands
 
@@ -166,7 +166,7 @@ Create JSON file with 6 sections following schema:
 /transit-station-scoring .claude/skills/transit-station-site-acquisition-strategy/samples/site_a_urban_infill.json
 
 # Score complex urban site with custom output
-/transit-station-scoring samples/site_c_complex_urban.json --output Reports/2025-11-15_143000_site_c_analysis.md
+/transit-station-scoring samples/site_c_complex_urban.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-15_143000_site_c_analysis.md
 ```
 
 ### Multi-Site Comparison

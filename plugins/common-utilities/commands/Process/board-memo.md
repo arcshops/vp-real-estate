@@ -33,7 +33,7 @@ Generate formal board approval memo for major infrastructure acquisitions. Inclu
 1. Read and validate JSON input file
 2. Run `python .claude/skills/board-memo-expert/board_memo_generator.py {{arg0}}`
 3. Generate formal board memo with resolution language
-4. Save timestamped markdown report in `Reports/`
+4. Save timestamped markdown report in `$CLAUDE_PROJECT_DIR/Reports/`
 
 ## Example Commands
 
@@ -42,7 +42,7 @@ Generate formal board approval memo for major infrastructure acquisitions. Inclu
 /board-memo project_details.json
 
 # Custom output location
-/board-memo samples/transmission_corridor.json --output Reports/board_memo.md
+/board-memo samples/transmission_corridor.json --output $CLAUDE_PROJECT_DIR/Reports/board_memo.md
 ```
 
 ## Output

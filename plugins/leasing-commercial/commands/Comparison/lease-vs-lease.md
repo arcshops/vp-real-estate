@@ -110,7 +110,7 @@ Determine if differences are:
 
 ### Step 6: Generate Comparison Report
 
-Create detailed report in `/workspaces/lease-abstract/Reports/`:
+Create detailed report in `$CLAUDE_PROJECT_DIR/Reports/`:
 `lease_comparison_[tenant1]_vs_[tenant2]_[date].md`
 
 **Report includes:**

@@ -48,7 +48,7 @@ Comprehensive settlement vs. hearing decision analysis. Calculate BATNA (Best Al
 /settlement-analysis offer_counteroffer.json
 
 # Custom output path
-/settlement-analysis samples/transmission_easement.json --output Reports/settlement.md
+/settlement-analysis samples/transmission_easement.json --output $CLAUDE_PROJECT_DIR/Reports/settlement.md
 ```
 
 ## Output

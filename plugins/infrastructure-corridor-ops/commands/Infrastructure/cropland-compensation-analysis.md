@@ -354,7 +354,7 @@ python3 cropland_calculator.py /path/to/input.json --output results.json --verbo
 
 ### Step 5: Generate Comprehensive Markdown Report
 
-Create a markdown report in `/workspaces/lease-abstract/Reports/` with filename following the timestamp convention:
+Create a markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename following the timestamp convention:
 
 **Format**: `YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md`
 
@@ -1469,7 +1469,7 @@ After generating all files, provide the user with:
 
 **1. Files Created:**
 - Results JSON file path: `results.json`
-- Comprehensive markdown report path (with ET timestamp): `Reports/YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md`
+- Comprehensive markdown report path (with ET timestamp): `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md`
 
 **2. Quick Summary:**
 - Compensation models compared: Ontario / Alberta / Farmer Required
@@ -1606,12 +1606,12 @@ This will:
 1. Load farm and infrastructure data from JSON input
 2. Validate all required fields and data quality
 3. Run cropland_calculator.py (Ontario/Alberta/Farmer Required models, NPV, sensitivity)
-4. Generate comprehensive markdown report in `Reports/` with ET timestamp
+4. Generate comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with ET timestamp
 5. Provide counter-offer strategy and negotiation guidance
 
 **Output files:**
 - `results.json` (calculator output)
-- `Reports/YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md` (comprehensive report)
+- `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md` (comprehensive report)
 
 **Key insights:**
 - Ontario vs Farmer Required shortfall ($ and %)

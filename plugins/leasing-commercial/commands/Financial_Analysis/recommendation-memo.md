@@ -285,7 +285,7 @@ Generate a checklist of approval documents required:
 
 ## Output Format
 
-**File Naming**: `Reports/YYYY-MM-DD_HHMMSS_recommendation_memo_[tenant_name].md`
+**File Naming**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_recommendation_memo_[tenant_name].md`
 
 **Report Structure**:
 ```markdown
@@ -345,7 +345,7 @@ Generate a checklist of approval documents required:
 5. **Calculate NER** and determine if deal is accretive or dilutive
 6. **Generate memo** following the exact structure above
 7. **Create checklist** of approval documents with status
-8. **Save report** to `Reports/` with proper timestamp naming convention
+8. **Save report** to `$CLAUDE_PROJECT_DIR/Reports/` with proper timestamp naming convention
 
 ---
 

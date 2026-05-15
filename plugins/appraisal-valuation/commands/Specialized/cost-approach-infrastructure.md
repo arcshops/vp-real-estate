@@ -15,7 +15,7 @@ Value specialized infrastructure using replacement cost new less depreciation (p
 /cost-approach-infrastructure path/to/construction_data.json
 
 # With custom output path
-/cost-approach-infrastructure path/to/construction_data.json --output Reports/2025-11-17_infrastructure_valuation.md
+/cost-approach-infrastructure path/to/construction_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_infrastructure_valuation.md
 ```
 
 ## Input Structure
@@ -95,7 +95,7 @@ The command generates:
 - **Depreciated Replacement Cost**: RCN less total depreciation
 - **Market Reconciliation**: Variance analysis with comparable sales
 - **Confidence Assessment**: 7-factor confidence score (0-100)
-- **Timestamped Report**: `Reports/YYYY-MM-DD_HHMMSS_cost_approach_{asset_type}.md`
+- **Timestamped Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_cost_approach_{asset_type}.md`
 
 ## Related Skills
 

@@ -119,7 +119,7 @@ python mcda_sales_calculator.py INPUT_PATH --output RESULTS_PATH --profile PROFI
 
 ### Step 3: Generate Markdown Report
 
-Create a comprehensive markdown report in `/workspaces/lease-abstract/Reports/` with filename:
+Create a comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_mcda_sales_comparison.md`
 
 **Report Structure:**
@@ -260,7 +260,7 @@ Provide the user with:
 
 1. **Files Created:**
    - Results JSON path
-   - Markdown report path (in Reports/)
+   - Markdown report path (in $CLAUDE_PROJECT_DIR/Reports/)
 
 2. **Value Conclusion:**
    - Indicated value: $XX/SF ($X,XXX,XXX total)
@@ -278,7 +278,7 @@ Provide the user with:
 2. **Weight Profiles:** Match profile to property type for best results
 3. **Validation:** Non-arm's length sales automatically excluded
 4. **Time Adjustments:** Validate using market_parameters.appreciation_rate_annual
-5. **Report Timestamp:** Always use Eastern Time for Reports/ filename
+5. **Report Timestamp:** Always use Eastern Time for $CLAUDE_PROJECT_DIR/Reports/ filename
 
 ## Example Usage
 
@@ -290,7 +290,7 @@ Provide the user with:
 /mcda-sales-comparison inputs/warehouse_data.json --profile industrial_logistics
 
 # With custom output
-/mcda-sales-comparison inputs/data.json --output Reports/2025-12-16_analysis.md
+/mcda-sales-comparison inputs/data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-12-16_analysis.md
 ```
 
 ## Related Commands

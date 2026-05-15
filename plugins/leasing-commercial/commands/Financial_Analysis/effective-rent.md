@@ -17,7 +17,7 @@ The user will provide:
 
 **Example:**
 ```
-/effective-rent /path/to/offer.pdf /workspaces/lease-abstract/Eff_Rent_Calculator/landlord_investment_parameters.json
+/effective-rent /path/to/offer.pdf ${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/landlord_investment_parameters.json
 /effective-rent /path/to/lease.pdf /path/to/landlord_params.json /path/to/ti-quote.pdf
 ```
 
@@ -360,7 +360,7 @@ Always document in the `notes` field how parameters were determined:
 6. Add detailed notes explaining assumptions or missing data
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/Eff_Rent_Calculator/deals/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/deals/[tenant_name]_[date]_input.json`
 
 Create the `deals/` directory if it doesn't exist.
 
@@ -377,7 +377,7 @@ Capture the console output for the markdown report.
 
 ### Step 9: Generate Markdown Report
 
-Create a comprehensive markdown report in `/workspaces/lease-abstract/Reports/` with filename:
+Create a comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_[tenant_name]_[property]_analysis.md`
 
 **CRITICAL**: Use Eastern Time timestamp prefix format per repository standards.
@@ -611,8 +611,8 @@ Chan, R. (2015). "Understanding the Ponzi Rental Rate: The Challenges with Using
 
 ### C. Supporting Files
 
-- **JSON Input**: `Eff_Rent_Calculator/deals/[filename]_input.json`
-- **JSON Results**: `Eff_Rent_Calculator/deals/[filename]_results.json`
+- **JSON Input**: `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/deals/[filename]_input.json`
+- **JSON Results**: `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/deals/[filename]_results.json`
 - **Landlord Parameters Database**: [path to landlord_investment_parameters.json]
 - **Source Documents**: [list document paths]
 
@@ -679,7 +679,7 @@ After creating all files, provide the user with:
 ### Basic Usage (Lease + Landlord Parameters)
 
 ```
-/effective-rent /workspaces/lease-abstract/Sample_Inputs/sample_offer_to_lease.pdf /workspaces/lease-abstract/Eff_Rent_Calculator/landlord_investment_parameters.json
+/effective-rent /workspaces/lease-abstract/Sample_Inputs/sample_offer_to_lease.pdf ${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/landlord_investment_parameters.json
 ```
 
 This will:

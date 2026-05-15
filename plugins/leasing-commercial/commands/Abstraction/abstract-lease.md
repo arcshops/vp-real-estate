@@ -117,7 +117,7 @@ Run the REIXS quality checks (from the runtime payload's autofail conditions):
    - Use underscores, include lease commencement date
    - Example: `El_Monte_Lease_Abstract_2013-12-01.md`
 
-2. Save to: `Reports/[filename]` (relative to repository root)
+2. Save to: `$CLAUDE_PROJECT_DIR/Reports/[filename]` (relative to repository root)
    - Create directory if needed: `mkdir -p Reports`
 
 3. Confirm save and provide the file path

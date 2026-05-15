@@ -31,7 +31,7 @@ Generate complete statutory compensation breakdown for expropriation under the O
 ## Arguments
 
 - `<property-data-path>`: Path to property data JSON file (or PDF to extract from)
-- `[--output]`: Optional output path for compensation report (default: timestamped in Reports/)
+- `[--output]`: Optional output path for compensation report (default: timestamped in $CLAUDE_PROJECT_DIR/Reports/)
 
 ## Input Format
 
@@ -111,7 +111,7 @@ The property data JSON should include:
    - Statutory compliance checklist
 
 5. **Return formatted report**
-   - Save to Reports/ with timestamp prefix
+   - Save to $CLAUDE_PROJECT_DIR/Reports/ with timestamp prefix
    - Display summary to user
    - Provide calculation details and methodology
 
@@ -122,7 +122,7 @@ The property data JSON should include:
 /expropriation-compensation expropriation_samples/commercial_full_taking.json
 
 # With custom output path
-/expropriation-compensation expropriation_samples/residential_partial.json --output Reports/2025-11-15_expropriation_123_main.md
+/expropriation-compensation expropriation_samples/residential_partial.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-15_expropriation_123_main.md
 ```
 
 ## Output Format
@@ -160,10 +160,10 @@ Timeline:
   Interest Period:   137 days
 
 ✓ OEA Compliance: All statutory requirements satisfied
-✓ Report saved to: Reports/2025-11-15_143022_expropriation_compensation_123_main.md
+✓ Report saved to: $CLAUDE_PROJECT_DIR/Reports/2025-11-15_143022_expropriation_compensation_123_main.md
 ```
 
-**Detailed Report** (markdown file in Reports/):
+**Detailed Report** (markdown file in $CLAUDE_PROJECT_DIR/Reports/):
 - Property identification and legal description
 - Market value methodology and comparable sales
 - Disturbance damages itemization with supporting documentation

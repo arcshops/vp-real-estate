@@ -306,7 +306,7 @@ SCHEDULE B - ENVIRONMENTAL COMPLIANCE CERTIFICATE
 
 ### Step 8: Generate Assignment Analysis Report
 
-Create report in `/workspaces/lease-abstract/Reports/`:
+Create report in `$CLAUDE_PROJECT_DIR/Reports/`:
 `[tenant]_assignment_analysis_[date].md`
 
 **Report includes:**

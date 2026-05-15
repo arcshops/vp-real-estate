@@ -201,7 +201,7 @@ If "2 months free rent at commencement":
 ```
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/IFRS16_Calculator/ifrs16_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/ifrs16_inputs/[tenant_name]_[date]_input.json`
 
 Create the `ifrs16_inputs/` directory if it doesn't exist.
 
@@ -221,7 +221,7 @@ Capture the console output for the markdown report.
 
 ### Step 5: Generate Comprehensive Accounting Report
 
-Create a markdown report in `/workspaces/lease-abstract/Reports/` with filename following the timestamp convention:
+Create a markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename following the timestamp convention:
 
 **Format**: `YYYY-MM-DD_HHMMSS_[tenant_name]_ifrs16_accounting.md`
 
@@ -820,7 +820,7 @@ This will:
 1. Extract lease payment schedule from PDF
 2. Generate JSON input file with 5.5% discount rate, $12,000 initial direct costs
 3. Run ifrs16_calculator.py (liability, ROU asset, schedules)
-4. Create comprehensive markdown accounting report in `Reports/` with timestamp
+4. Create comprehensive markdown accounting report in `$CLAUDE_PROJECT_DIR/Reports/` with timestamp
 5. Export CSV schedules for Excel analysis
 
 **Output files**:
@@ -829,6 +829,6 @@ This will:
 - `ifrs16_inputs/[tenant_name]_[date]_amortization.csv`
 - `ifrs16_inputs/[tenant_name]_[date]_depreciation.csv`
 - `ifrs16_inputs/[tenant_name]_[date]_annual_summary.csv`
-- `Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_ifrs16_accounting.md`
+- `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_ifrs16_accounting.md`
 
 Begin the IFRS 16 lease accounting analysis now with the provided lease document.

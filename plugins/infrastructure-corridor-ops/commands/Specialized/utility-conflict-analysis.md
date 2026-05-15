@@ -15,7 +15,7 @@ Systematic utility conflict detection, relocation requirements analysis, cost es
 /utility-conflict-analysis path/to/project_design.json
 
 # With custom output path
-/utility-conflict-analysis path/to/project_design.json --output Reports/2025-11-17_utility_conflicts.md
+/utility-conflict-analysis path/to/project_design.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_utility_conflicts.md
 ```
 
 ## Input Structure
@@ -92,7 +92,7 @@ The command generates:
 - **Cost Estimate Range**: By utility and total (low/high with 25% contingency)
 - **Coordination Timeline**: Critical path showing 12-month workflow
 - **Risk Assessment**: Schedule, cost, and coordination risks with mitigation
-- **Timestamped Report**: `Reports/YYYY-MM-DD_HHMMSS_utility_conflicts_{project}.md`
+- **Timestamped Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_utility_conflicts_{project}.md`
 
 ## Related Skills
 

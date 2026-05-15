@@ -32,17 +32,17 @@ Generate concise executive briefing note (1-2 pages) for infrastructure acquisit
 
 1. Read and validate JSON input file
 2. Run `python .claude/skills/briefing-note-expert/briefing_note_generator.py {{arg0}}`
-3. Generate timestamped markdown report in `Reports/`
+3. Generate timestamped markdown report in `$CLAUDE_PROJECT_DIR/Reports/`
 4. Display success message with file path
 
 ## Example Commands
 
 ```bash
-# Basic usage (auto-generates output in Reports/)
+# Basic usage (auto-generates output in $CLAUDE_PROJECT_DIR/Reports/)
 /briefing-note acquisition_summary.json
 
 # Custom output path
-/briefing-note samples/transit_station.json --output Reports/briefing.md
+/briefing-note samples/transit_station.json --output $CLAUDE_PROJECT_DIR/Reports/briefing.md
 ```
 
 ## Output

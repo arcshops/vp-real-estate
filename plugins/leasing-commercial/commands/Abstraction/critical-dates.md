@@ -304,7 +304,7 @@ Year 4 (YYYY-MM to YYYY-MM)
 
 ### Step 10: Generate Comprehensive Report
 
-Create detailed report in `/workspaces/lease-abstract/Reports/`:
+Create detailed report in `$CLAUDE_PROJECT_DIR/Reports/`:
 `[property]_critical_dates_[date].md`
 
 And supporting files:

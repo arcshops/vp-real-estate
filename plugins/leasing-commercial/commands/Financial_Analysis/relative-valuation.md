@@ -285,7 +285,7 @@ Filter out properties that don't meet minimum requirements **before** ranking. T
    - Example: `"hvac_coverage": 1` - Full HVAC only (1=Y, 2=Part, 3=N)
 
 ### JSON Schema Reference
-- Full input specification: `Relative_Valuation/schema_template.json` (Draft 2020-12 JSON Schema).  
+- Full input specification: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/schema_template.json` (Draft 2020-12 JSON Schema).  
   Validate incoming payloads against this file so future schema changes only require updating one location.
 
 **Filter Snippet Example**
@@ -435,8 +435,8 @@ The user will provide one or more PDF documents containing:
 
 Build a properly formatted JSON file following the schema.
 
-**📄 Schema Reference:** See `Relative_Valuation/schema_template.json` for complete JSON template
-**📖 Field Documentation:** See `Relative_Valuation/SCHEMA.md` for detailed field descriptions
+**📄 Schema Reference:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/schema_template.json` for complete JSON template
+**📖 Field Documentation:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/SCHEMA.md` for detailed field descriptions
 
 **Quick Start Template:**
 
@@ -488,7 +488,7 @@ Build a properly formatted JSON file following the schema.
 - Optional fields can be omitted or set to defaults: 0 for numbers, false for booleans, empty string for dates
 - Parking ratio in spaces per 1,000 SF (convert if needed)
 
-**Save to**: `Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json`
+**Save to**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json`
 
 ### Step 3: Calculate Distances (If Missing)
 
@@ -502,9 +502,9 @@ if [ -z "$DISTANCEMATRIX_API_KEY" ]; then
   echo "Get free API key at https://distancematrix.ai/ (1,000 elements/month free)"
 else
   # Calculate distances and update JSON in place
-  python3 Relative_Valuation/calculate_distances.py \
-    --input Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
-    --output Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+  python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/calculate_distances.py \
+    --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+    --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
     --verbose
 fi
 ```
@@ -533,30 +533,30 @@ Execute the relative valuation calculator:
 
 ```bash
 # Standard report (top 10 competitors)
-python3 Relative_Valuation/relative_valuation_calculator.py \
-  --input Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
-  --output Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
-  --output-json Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+  --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
+  --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json
 
 # Full report (all competitors) - use for large datasets (50+ properties)
-python3 Relative_Valuation/relative_valuation_calculator.py \
-  --input Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
-  --output Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
-  --output-json Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+  --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
+  --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
   --full
 
 # With statistical analysis (Phase 3 - regression, correlation, z-scores)
-python3 Relative_Valuation/relative_valuation_calculator.py \
-  --input Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
-  --output Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
-  --output-json Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+  --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
+  --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
   --stats
 
 # Full report with statistical analysis (comprehensive)
-python3 Relative_Valuation/relative_valuation_calculator.py \
-  --input Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
-  --output Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
-  --output-json Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+  --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
+  --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
   --full \
   --stats
 ```
@@ -670,19 +670,19 @@ All files must use timestamp prefix `YYYY-MM-DD_HHMMSS` in **Eastern Time (ET)**
 **Format**: `YYYY-MM-DD_HHMMSS` where timestamp is in Eastern Time (America/New_York)
 **Example**: `2025-11-05_225428` (November 5, 2025 at 10:54:28 PM ET)
 
-1. **Input JSON**: `Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json`
-2. **Output JSON**: `Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json`
-3. **Markdown Report**: `Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md`
-4. **PDF Report (Landscape)**: `Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.pdf`
+1. **Input JSON**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json`
+2. **Output JSON**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json`
+3. **Markdown Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md`
+4. **PDF Report (Landscape)**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.pdf`
 
 ### PDF Generation (Landscape Format)
 
 After generating the markdown report, convert to PDF in **landscape** orientation with professional styling to accommodate the expanded competitor table with all columns:
 
 ```bash
-pandoc Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
-  -o Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.pdf \
-  --css Relative_Valuation/pdf_style.css \
+pandoc $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
+  -o $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.pdf \
+  --css ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/pdf_style.css \
   --pdf-engine=wkhtmltopdf \
   --pdf-engine-opt=--orientation --pdf-engine-opt=Landscape \
   --pdf-engine-opt=--margin-top --pdf-engine-opt=5mm \

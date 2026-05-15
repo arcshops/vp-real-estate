@@ -315,7 +315,7 @@ For each notice, provide specific delivery instructions:
 
 ### Step 5: Generate Notice Package
 
-Create comprehensive package in `/workspaces/lease-abstract/Reports/`:
+Create comprehensive package in `$CLAUDE_PROJECT_DIR/Reports/`:
 `[tenant]_[notice_type]_[date].md`
 
 **Package includes:**

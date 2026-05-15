@@ -188,7 +188,7 @@ Injurious Affection:                       $  175,000
 TOTAL COMPENSATION:                        $1,613,400
 ================================================================================
 
-✓ Report saved to: Reports/2025-11-15_151234_partial_taking_rural_farm.md
+✓ Report saved to: $CLAUDE_PROJECT_DIR/Reports/2025-11-15_151234_partial_taking_rural_farm.md
 ```
 
 ## Calculator Output Structure

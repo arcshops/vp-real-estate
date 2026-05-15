@@ -50,7 +50,7 @@ Analyze owner psychology to classify owner type (5 types), assess holdout risk (
 /negotiation-strategy owner_profile.json property_data.json
 
 # Custom output
-/negotiation-strategy samples/farmer_profile.json --output Reports/strategy.md
+/negotiation-strategy samples/farmer_profile.json --output $CLAUDE_PROJECT_DIR/Reports/strategy.md
 ```
 
 ## Output

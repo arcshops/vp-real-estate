@@ -171,7 +171,7 @@ Provide brief market positioning - comparable values, market trends, and factors
 #### 10. Conclusion (1 paragraph)
 Summarize the location's strengths and any limitations relevant to value or marketability.
 
-**Save the narrative to**: `Reports/[timestamp]_location_overview_narrative_[address_slug].md`
+**Save the narrative to**: `$CLAUDE_PROJECT_DIR/Reports/[timestamp]_location_overview_narrative_[address_slug].md`
 
 **Present to user**:
 1. The full narrative text (display in chat)
@@ -277,4 +277,4 @@ The subject property benefits from an excellent location within an emerging Urba
 ## See Also
 
 - Implementation plan: `Planning/location-overview-implementation-plan.md`
-- Module documentation: `Location_Overview/README.md`
+- Module documentation: `${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/README.md`

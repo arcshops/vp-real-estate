@@ -110,15 +110,15 @@ Build JSON file:
 }
 ```
 
-**Save to**: `Default_Calculator/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json`
+**Save to**: `${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json`
 
 ### Step 3: Run Python Damage Calculator
 
 Execute the default calculator:
 
 ```bash
-python3 Default_Calculator/default_calculator.py \
-  Default_Calculator/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_calculator.py \
+  ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json
 
 # Output: *_results.json (automatically generated in same directory)
 ```
@@ -145,9 +145,9 @@ Bankruptcy expected loss: $1,819,577
 Execute the notice generator:
 
 ```bash
-python3 Default_Calculator/notice_generator.py \
-  Default_Calculator/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json \
-  /workspaces/lease-abstract/Reports/YYYY-MM-DD_HHMMSS_default_notice_[tenant_name].md \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/notice_generator.py \
+  ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_inputs/YYYY-MM-DD_HHMMSS_[tenant_name]_default.json \
+  $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_default_notice_[tenant_name].md \
   [jurisdiction]
 
 # jurisdiction: "Ontario", "Alberta", "New York", etc. (default: "Ontario")
@@ -338,13 +338,13 @@ Create concise summary for landlord:
 
 All files use timestamp prefix `YYYY-MM-DD_HHMMSS` in **Eastern Time (ET)**:
 
-1. **Input JSON**: `Default_Calculator/default_inputs/YYYY-MM-DD_HHMMSS_[tenant]_default.json`
-2. **Results JSON**: `Default_Calculator/default_inputs/YYYY-MM-DD_HHMMSS_[tenant]_default_results.json`
-3. **Default Notice**: `Reports/YYYY-MM-DD_HHMMSS_default_notice_[tenant].md`
+1. **Input JSON**: `${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_inputs/YYYY-MM-DD_HHMMSS_[tenant]_default.json`
+2. **Results JSON**: `${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/default_inputs/YYYY-MM-DD_HHMMSS_[tenant]_default_results.json`
+3. **Default Notice**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_default_notice_[tenant].md`
 
 ## Damage Calculation Methodology
 
-See `Default_Calculator/METHODOLOGY.md` for complete mathematical framework:
+See `${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor/scripts/METHODOLOGY.md` for complete mathematical framework:
 
 ### Accelerated Rent NPV
 ```

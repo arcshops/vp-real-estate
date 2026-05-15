@@ -339,7 +339,7 @@ Capture the console output for the markdown report.
 
 ### Step 7: Generate Markdown Report
 
-Create a comprehensive markdown report in `/workspaces/lease-abstract/Reports/` with filename:
+Create a comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_row_analysis_[property_name]_[corridor_type].md` (timestamp in Eastern Time)
 
 **Report Structure:**

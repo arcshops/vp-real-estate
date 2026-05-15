@@ -158,7 +158,7 @@ Recommended adjustments:
 
 ### Step 8: Generate Market Comparison Report
 
-Create report in `/workspaces/lease-abstract/Reports/`:
+Create report in `$CLAUDE_PROJECT_DIR/Reports/`:
 `[property]_market_comparison_[date].md`
 
 **Report includes:**

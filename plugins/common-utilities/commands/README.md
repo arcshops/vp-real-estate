@@ -117,7 +117,7 @@ All commands follow the **PDF → JSON → Python → Report** workflow:
 1. **Extract** data from PDF/DOCX documents
 2. **Generate** JSON input files
 3. **Run** Python calculators
-4. **Create** timestamped markdown reports in `Reports/` folder
+4. **Create** timestamped markdown reports in `$CLAUDE_PROJECT_DIR/Reports/` folder
 
 ### Example
 
@@ -139,18 +139,18 @@ All commands follow the **PDF → JSON → Python → Report** workflow:
 
 - **JSON Inputs**: `[Calculator]/[type]_inputs/`
 - **CSV Schedules**: `[Calculator]/[type]_inputs/`
-- **Reports**: `Reports/YYYY-MM-DD_HHMMSS_[description].md`
+- **Reports**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[description].md`
 
 ## Calculator Directories
 
 Commands invoke Python calculators in these directories:
 
 **Commercial Real Estate:**
-- **Effective Rent**: `Eff_Rent_Calculator/`
-- **IFRS 16**: `IFRS16_Calculator/`
-- **Tenant Credit**: `Credit_Analysis/`
-- **Renewal Economics**: `Renewal_Analysis/`
-- **Rental Variance**: `Rental_Variance/`
+- **Effective Rent**: `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/`
+- **IFRS 16**: `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/`
+- **Tenant Credit**: `${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/`
+- **Renewal Economics**: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/`
+- **Rental Variance**: `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/`
 - **Shared Utilities**: `Shared_Utils/`
 
 **Property Valuation:**

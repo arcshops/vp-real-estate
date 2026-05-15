@@ -15,7 +15,7 @@ Comprehensive title search analysis identifying registered instruments, encumbra
 /title-analysis path/to/title_search.json
 
 # With custom output path
-/title-analysis path/to/title_search.json --output Reports/2025-11-17_title_analysis.md
+/title-analysis path/to/title_search.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_title_analysis.md
 ```
 
 ## Input Structure
@@ -83,7 +83,7 @@ The command generates:
 - **Marketability Assessment**: EXCELLENT/GOOD/FAIR/POOR/UNMARKETABLE (0-100 score)
 - **Recommended Actions**: Priority-ranked discharge, postponement, rectification steps
 - **Valuation Impact Estimate**: Percentage discount range (min/likely/max)
-- **Timestamped Report**: `Reports/YYYY-MM-DD_HHMMSS_title_analysis_{pin}.md`
+- **Timestamped Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_title_analysis_{pin}.md`
 
 ## Related Skills
 

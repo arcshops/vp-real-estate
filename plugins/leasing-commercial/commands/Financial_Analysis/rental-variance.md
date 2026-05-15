@@ -164,9 +164,9 @@ Create a JSON file with structure:
 5. Use 0.0 for manual_adjustment if none provided
 
 **Save the JSON file as:**
-`/workspaces/lease-abstract/Rental_Variance/variance_input_[YYYY-MM-DD]_[HHMMSS].json`
+`${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_input_[YYYY-MM-DD]_[HHMMSS].json`
 
-Create the `Rental_Variance/` directory if it doesn't exist.
+Create the `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/` directory if it doesn't exist.
 
 ### Step 4: Run the Variance Calculator
 
@@ -174,14 +174,14 @@ Execute the calculator using Bash tool:
 
 ```bash
 cd /workspaces/lease-abstract
-python3 Rental_Variance/rental_variance_calculator.py Rental_Variance/variance_input_[timestamp].json -o Rental_Variance/variance_results_[timestamp].json
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/rental_variance_calculator.py ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_input_[timestamp].json -o ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_results_[timestamp].json
 ```
 
 Capture the console output for the markdown report.
 
 ### Step 5: Generate Markdown Report
 
-Create a comprehensive markdown report in `/workspaces/lease-abstract/Reports/` with filename:
+Create a comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_rental_variance_analysis.md` (timestamp in Eastern Time)
 
 **Report Structure:**
@@ -399,8 +399,8 @@ Where:
 
 ### D. Supporting Files
 
-- JSON Input: `Rental_Variance/variance_input_[timestamp].json`
-- JSON Results: `Rental_Variance/variance_results_[timestamp].json`
+- JSON Input: `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_input_[timestamp].json`
+- JSON Results: `${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts/variance_results_[timestamp].json`
 - Source Documents: [list source file paths]
 
 ---

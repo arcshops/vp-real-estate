@@ -29,7 +29,7 @@ Extract landlord and tenant work obligations from lease schedules, create constr
 
 ## Output
 
-- Formal work letter document in `Reports/YYYY-MM-DD_HHMMSS_[tenant]_work_letter.md`
+- Formal work letter document in `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant]_work_letter.md`
 - Construction timeline with milestones
 - Approval process flowchart
 - Cost allocation summary
@@ -457,7 +457,7 @@ Create clear allocation of costs between landlord and tenant.
 
 Create comprehensive work letter document with Eastern Time timestamp.
 
-**Report filename**: `Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_work_letter.md`
+**Report filename**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_[tenant_name]_work_letter.md`
 
 Use bash to generate timestamp:
 ```bash
@@ -836,7 +836,7 @@ Provide summary of generated work letter.
 ## Work Letter Generated Successfully
 
 **Files Created**:
-- Reports/[timestamp]_[tenant]_work_letter.md
+- $CLAUDE_PROJECT_DIR/Reports/[timestamp]_[tenant]_work_letter.md
 
 **Key Provisions Extracted**:
 

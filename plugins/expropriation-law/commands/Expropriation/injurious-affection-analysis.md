@@ -38,7 +38,7 @@ Generate detailed technical assessment of injurious affection damages from infra
 ## Arguments
 
 - `<impact-data-path>`: Path to impact assessment JSON file (or PDF to extract from)
-- `[--output]`: Optional output path for impact report (default: timestamped in Reports/)
+- `[--output]`: Optional output path for impact report (default: timestamped in $CLAUDE_PROJECT_DIR/Reports/)
 
 ## Input Format
 
@@ -138,7 +138,7 @@ The impact assessment JSON should include:
    - Generate total damage assessment
 
 6. **Return formatted report**
-   - Save to Reports/ with timestamp prefix
+   - Save to $CLAUDE_PROJECT_DIR/Reports/ with timestamp prefix
    - Display summary with technical metrics
    - Provide detailed methodology and calculations
 
@@ -152,7 +152,7 @@ The impact assessment JSON should include:
 /injurious-affection-analysis expropriation_samples/commercial_traffic_impact.json
 
 # With custom output path
-/injurious-affection-analysis expropriation_samples/industrial_vibration_damage.json --output Reports/2025-11-15_injurious_affection_123_industrial.md
+/injurious-affection-analysis expropriation_samples/industrial_vibration_damage.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-15_injurious_affection_123_industrial.md
 
 # Direct calculator usage with verbose output
 cd .claude/skills/injurious-affection-assessment
@@ -248,10 +248,10 @@ ASSESSMENT CONFIDENCE:                   High
   ✓ Dust impact zone consistent with construction proximity
   ✓ No business operation - revenue loss not applicable
 
-✓ Report saved to: Reports/2025-11-15_143022_injurious_affection_42_maple.md
+✓ Report saved to: $CLAUDE_PROJECT_DIR/Reports/2025-11-15_143022_injurious_affection_42_maple.md
 ```
 
-**Detailed Report** (markdown file in Reports/):
+**Detailed Report** (markdown file in $CLAUDE_PROJECT_DIR/Reports/):
 - Property identification and characteristics
 - Construction activity description and timeline
 - **Noise Impact Analysis**:

@@ -154,7 +154,7 @@ python3 easement_calculator.py <input-json-path> --output <output-json-path> --v
 cd /workspaces/lease-abstract/.claude/skills/easement-valuation-methods
 
 python3 easement_calculator.py sample_500kv_transmission.json \
-  --output /workspaces/lease-abstract/Reports/easement_valuation_results.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/easement_valuation_results.json \
   --verbose
 ```
 
@@ -232,7 +232,7 @@ Value Range:             $      114,286 - $      360,000
 
 ### Step 4: Generate Markdown Appraisal Report
 
-Create comprehensive appraisal report in `/workspaces/lease-abstract/Reports/` with filename:
+Create comprehensive appraisal report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_easement_valuation_[property_identifier].md`
 
 **CRITICAL**: Use Eastern Time timestamp prefix per repository standards.
@@ -551,7 +551,7 @@ VALUATION RESULTS:
   Value Range:            $XXX,XXX - $XXX,XXX
 
 FILES CREATED:
-  Report: /workspaces/lease-abstract/Reports/YYYY-MM-DD_HHMMSS_easement_valuation_[property].md
+  Report: $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_easement_valuation_[property].md
   Results: [output JSON path if specified]
 
 METHODOLOGY:

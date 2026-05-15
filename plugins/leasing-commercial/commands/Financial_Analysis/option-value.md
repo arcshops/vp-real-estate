@@ -20,7 +20,7 @@ The user will provide:
 1. Extract option provisions from lease
 2. Determine market parameters
 3. Generate JSON input file
-4. Run Python calculator (`Option_Valuation/option_valuation.py`)
+4. Run Python calculator (`${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/option_valuation.py`)
 5. Create comprehensive report from calculator output
 
 ---
@@ -100,7 +100,7 @@ If historical data available (10-20 years), calculate actual volatility.
 
 ## Step 3: Generate JSON Input File
 
-Create `Option_Valuation/option_inputs/[tenant_name]_options.json`:
+Create `${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/option_inputs/[tenant_name]_options.json`:
 
 ```json
 {
@@ -189,9 +189,9 @@ Create `Option_Valuation/option_inputs/[tenant_name]_options.json`:
 Execute the Black-Scholes calculator:
 
 ```bash
-python Option_Valuation/option_valuation.py \
-  Option_Valuation/option_inputs/[tenant_name]_options.json \
-  --output Reports/[timestamp]_[tenant]_option_valuation.json \
+python ${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/option_valuation.py \
+  ${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/option_inputs/[tenant_name]_options.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/[timestamp]_[tenant]_option_valuation.json \
   --verbose
 ```
 
@@ -208,13 +208,13 @@ python Option_Valuation/option_valuation.py \
 - ✅ Utilization-adjusted values for expansion options
 - ✅ Validated accuracy (36 tests, 100% passing)
 
-See `Option_Valuation/README.md` for complete calculator documentation.
+See `${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/README.md` for complete calculator documentation.
 
 ---
 
 ## Step 5: Generate Comprehensive Report
 
-Create report in `Reports/[timestamp]_[tenant_name]_option_valuation.md` using calculator output.
+Create report in `$CLAUDE_PROJECT_DIR/Reports/[timestamp]_[tenant_name]_option_valuation.md` using calculator output.
 
 **Report Template**:
 
@@ -423,7 +423,7 @@ The rent premium fairly compensates for option value. This is market-rate pricin
 
 ## References
 
-- Calculator: `Option_Valuation/option_valuation.py` (794 lines, 36 tests passing)
+- Calculator: `${CLAUDE_PLUGIN_ROOT}/skills/real-options-valuation-expert/scripts/option_valuation.py` (794 lines, 36 tests passing)
 - Methodology: Black-Scholes adapted for commercial real estate
 - Academic: Black & Scholes (1973), Grenadier (1995)
 - Validation: Tested against published Black-Scholes calculators

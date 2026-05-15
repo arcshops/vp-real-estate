@@ -45,7 +45,7 @@ Analyze stakeholder feedback from public consultation meetings and written submi
 /public-consultation-summary consultation_data.json
 
 # Custom output path
-/public-consultation-summary samples/station_meeting.json --output Reports/consultation_summary.md
+/public-consultation-summary samples/station_meeting.json --output $CLAUDE_PROJECT_DIR/Reports/consultation_summary.md
 ```
 
 ## Output

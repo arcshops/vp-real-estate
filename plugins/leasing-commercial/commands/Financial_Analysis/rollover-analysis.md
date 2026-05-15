@@ -80,15 +80,15 @@ Build JSON file following schema:
 }
 ```
 
-**Save to**: `Rollover_Analysis/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json`
+**Save to**: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json`
 
 ### Step 3: Run Python Calculator
 
 Execute the rollover calculator:
 
 ```bash
-python3 Rollover_Analysis/rollover_calculator.py \
-  Rollover_Analysis/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_calculator.py \
+  ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json
 
 # Output: *_results.json (automatically generated)
 ```
@@ -104,9 +104,9 @@ This generates JSON results with:
 Execute the report generator:
 
 ```bash
-python3 Rollover_Analysis/report_generator.py \
-  Rollover_Analysis/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json \
-  /workspaces/lease-abstract/Reports/YYYY-MM-DD_HHMMSS_rollover_analysis_[portfolio_name].md
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/report_generator.py \
+  ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio_name].json \
+  $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_rollover_analysis_[portfolio_name].md
 ```
 
 This generates executive-ready markdown report with:
@@ -259,13 +259,13 @@ Create concise summary for portfolio manager:
 
 All files use timestamp prefix `YYYY-MM-DD_HHMMSS` in **Eastern Time (ET)**:
 
-1. **Input JSON**: `Rollover_Analysis/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio].json`
-2. **Results JSON**: `Rollover_Analysis/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio]_results.json`
-3. **Markdown Report**: `Reports/YYYY-MM-DD_HHMMSS_rollover_analysis_[portfolio].md`
+1. **Input JSON**: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio].json`
+2. **Results JSON**: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/rollover_inputs/YYYY-MM-DD_HHMMSS_[portfolio]_results.json`
+3. **Markdown Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_rollover_analysis_[portfolio].md`
 
 ## Methodology Reference
 
-See `Rollover_Analysis/README.md` for:
+See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/README.md` for:
 - Priority scoring algorithm details
 - Credit rating mapping (AAA to D)
 - Scenario modeling assumptions

@@ -15,7 +15,7 @@ Value land by capitalizing rental income using market rent analysis, capitalizat
 /income-approach-land path/to/rental_data.json
 
 # With custom output path
-/income-approach-land path/to/rental_data.json --output Reports/2025-11-17_land_valuation.md
+/income-approach-land path/to/rental_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_land_valuation.md
 ```
 
 ## Input Structure
@@ -86,7 +86,7 @@ The command generates:
 - **Land Value by Income Approach**: NOI ÷ Cap Rate
 - **Reconciliation**: With sales comparison approach (variance analysis)
 - **Sensitivity Analysis**: ±0.5% cap rate impact table
-- **Timestamped Report**: `Reports/YYYY-MM-DD_HHMMSS_income_approach_{site_type}.md`
+- **Timestamped Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_income_approach_{site_type}.md`
 
 ## Related Skills
 

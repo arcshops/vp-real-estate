@@ -328,7 +328,7 @@ Capture the console output for the markdown report.
 
 ### Step 8: Generate Markdown Report
 
-Create a comprehensive markdown report in `/workspaces/lease-abstract/Reports/` with filename:
+Create a comprehensive markdown report in `$CLAUDE_PROJECT_DIR/Reports/` with filename:
 `YYYY-MM-DD_HHMMSS_comparable_sales_analysis.md` (timestamp in Eastern Time)
 
 **Report Structure**:
@@ -945,7 +945,7 @@ After creating all files, provide the user with:
 - `/renewal-economics` - Renewal vs. relocation NPV analysis
 
 **Related Calculators:**
-- `Eff_Rent_Calculator/` - Effective rent and NPV analysis
+- `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/` - Effective rent and NPV analysis
 - `Shared_Utils/financial_utils.py` - PV, NPV, IRR calculations
 
 **Related Skills:**

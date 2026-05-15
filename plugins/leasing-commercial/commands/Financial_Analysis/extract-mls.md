@@ -90,9 +90,9 @@ For each property, calculate:
 
 ### Step 5: Create JSON Output
 
-Write extracted data to JSON file in Reports/ folder:
+Write extracted data to JSON file in $CLAUDE_PROJECT_DIR/Reports/ folder:
 
-**Format**: `Reports/YYYY-MM-DD_HHMMSS_mls_extraction_input.json` (Eastern Time)
+**Format**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_mls_extraction_input.json` (Eastern Time)
 
 **JSON Structure**:
 ```json
@@ -149,7 +149,7 @@ Write extracted data to JSON file in Reports/ folder:
 Run the Python formatter to create the perfect Excel file:
 
 ```bash
-python MLS_Extractor/excel_formatter.py <json-input-path> <excel-output-path>
+python ${CLAUDE_PLUGIN_ROOT}/skills/lease-abstraction-specialist/scripts/excel_formatter.py <json-input-path> <excel-output-path>
 ```
 
 The formatter will:
@@ -167,7 +167,7 @@ Tell the user:
 ```
 ✅ Extracted {N} properties from {PDF filename}
 ✅ Subject property: {address}
-✅ Excel file: Reports/{timestamp}_mls_extraction_{market}.xlsx
+✅ Excel file: $CLAUDE_PROJECT_DIR/Reports/{timestamp}_mls_extraction_{market}.xlsx
 
 Open the Excel file to review the data. The subject property is highlighted in yellow.
 ```

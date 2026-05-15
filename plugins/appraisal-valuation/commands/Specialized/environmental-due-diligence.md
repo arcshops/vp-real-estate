@@ -15,7 +15,7 @@ Generate comprehensive environmental risk assessment for property acquisitions i
 /environmental-due-diligence path/to/site_data.json
 
 # With custom output path
-/environmental-due-diligence path/to/site_data.json --output Reports/2025-11-17_environmental_analysis.md
+/environmental-due-diligence path/to/site_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_environmental_analysis.md
 ```
 
 ## Input Structure
@@ -95,7 +95,7 @@ This command executes the following workflow:
 5. **Determine Regulatory Pathway**: Maps MOE approval pathway and timeline
 6. **Recommend Liability Allocation**: Structures vendor indemnity, holdback, insurance
 7. **Calculate Price Adjustment**: NPV-based acquisition price discount
-8. **Generate Report**: Timestamped markdown report in Reports/
+8. **Generate Report**: Timestamped markdown report in $CLAUDE_PROJECT_DIR/Reports/
 
 ## Output
 
@@ -106,7 +106,7 @@ The command generates:
 - **Regulatory Pathway**: MOE approval process and timeline (0-24 months)
 - **Liability Allocation**: Vendor indemnity, holdback %, insurance recommendations
 - **Acquisition Price Adjustment**: Recommended discount based on cleanup NPV
-- **Timestamped Report**: `Reports/YYYY-MM-DD_HHMMSS_environmental_risk_{site}.md`
+- **Timestamped Report**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_environmental_risk_{site}.md`
 
 ## Related Skills
 
