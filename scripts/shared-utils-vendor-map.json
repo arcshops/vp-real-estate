@@ -1,5 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "canonical": "plugins/common-utilities/shared_utils",
-  "consumers": []
+  "consumers": [
+    "plugins/appraisal-valuation/skills/cost-approach-expert/scripts/shared_utils",
+    "plugins/appraisal-valuation/skills/environmental-due-diligence-expert/scripts/shared_utils",
+    "plugins/appraisal-valuation/skills/income-approach-expert/scripts/shared_utils",
+    "plugins/appraisal-valuation/skills/title-expert/scripts/shared_utils",
+    "plugins/common-utilities/skills/briefing-note-expert/scripts/shared_utils",
+    "plugins/common-utilities/skills/negotiation-expert-infrastructure/scripts/shared_utils",
+    "plugins/infrastructure-corridor-ops/skills/right-of-way-expert/scripts/shared_utils",
+    "plugins/infrastructure-corridor-ops/skills/stakeholder-management-expert/scripts/shared_utils",
+    "plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/shared_utils",
+    "plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/shared_utils",
+    "plugins/leasing-commercial/skills/tenant-credit-analyst/scripts/shared_utils"
+  ]
 }
