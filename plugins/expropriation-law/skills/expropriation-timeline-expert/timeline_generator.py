@@ -6,8 +6,8 @@ Simplified wrapper for slash command use. Generates Gantt charts and milestone
 reports for expropriation timelines using critical path analysis.
 
 Uses:
-- Shared_Utils/timeline_utils.py - critical path, resource allocation, risk flags
-- Shared_Utils/report_utils.py - Gantt charts, document headers, markdown formatting
+- shared_utils/timeline_utils.py - critical path, resource allocation, risk flags
+- shared_utils/report_utils.py - Gantt charts, document headers, markdown formatting
 
 Author: Claude Code
 Version: 1.0.0
@@ -20,8 +20,8 @@ from pathlib import Path
 from typing import Dict, List, Optional
 from datetime import datetime, timedelta
 
-# Add Shared_Utils to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / 'Shared_Utils'))
+# Add shared_utils to path
+sys.path.insert(0, str(Path(__file__).parent / "scripts/shared_utils"))
 
 from timeline_utils import (
     calculate_critical_path,

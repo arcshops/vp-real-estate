@@ -15,12 +15,12 @@ from typing import Dict, List
 import sys
 from pathlib import Path
 
-# Add Shared_Utils to path
+# Add shared_utils to path
 current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
-from Shared_Utils.negotiation_utils import calculate_concession_strategy
+from shared_utils.negotiation_utils import calculate_concession_strategy
 
 
 def recommend_opening_offer(
@@ -187,7 +187,7 @@ def generate_concession_plan(
     """
     Generate concession plan from opening to target.
 
-    Uses diminishing concessions (50%, 25%, 12.5% pattern) from Shared_Utils.
+    Uses diminishing concessions (50%, 25%, 12.5% pattern) from shared_utils.
 
     Adjusts number of rounds based on risk level:
     - HIGH/CRITICAL: More rounds (slower pace)

@@ -23,7 +23,7 @@ import pandas as pd
 from typing import Dict, List, Tuple, Optional, Literal
 from dataclasses import dataclass
 
-from Shared_Utils.financial_utils import (
+from shared_utils.financial_utils import (
     npv,
     irr,
     annual_to_monthly_rate,

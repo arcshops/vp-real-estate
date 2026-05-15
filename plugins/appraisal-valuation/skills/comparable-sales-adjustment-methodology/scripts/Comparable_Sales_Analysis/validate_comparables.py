@@ -31,7 +31,7 @@ class ComparableValidator:
     """Validates and optionally fixes LLM-extracted comparable sales JSON data."""
 
     # Default schema location (shared across calculators)
-    DEFAULT_SCHEMA = Path(__file__).parent.parent / "Shared_Utils" / "schemas" / "comparable_sales_input_schema.json"
+    DEFAULT_SCHEMA = Path(__file__).parent / "../shared_utils" / "schemas" / "comparable_sales_input_schema.json"
 
     def __init__(self, schema_path: str = None):
         """Initialize validator with JSON schema.

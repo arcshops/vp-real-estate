@@ -24,7 +24,7 @@ from typing import Dict, List, Optional
 
 # Add modules to path
 modules_path = Path(__file__).resolve().parent / 'modules'
-shared_utils_path = Path(__file__).resolve().parents[2] / 'Shared_Utils'
+shared_utils_path = Path(__file__).parent / "scripts/shared_utils"
 
 if str(modules_path) not in sys.path:
     sys.path.insert(0, str(modules_path))

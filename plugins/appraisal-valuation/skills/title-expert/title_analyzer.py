@@ -28,7 +28,7 @@ from typing import Dict
 
 # Add modules to path
 sys.path.insert(0, str(Path(__file__).parent / 'modules'))
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / 'Shared_Utils'))
+sys.path.insert(0, str(Path(__file__).parent / "scripts/shared_utils"))
 
 # Import modules
 from validators import (

@@ -9,8 +9,8 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import logging
 
-# Add Shared_Utils to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent / "Shared_Utils"))
+# Add shared_utils to path
+sys.path.insert(0, str(Path(__file__).parent / "../scripts/shared_utils"))
 from negotiation_utils import (
     calculate_batna,
     calculate_zopa,

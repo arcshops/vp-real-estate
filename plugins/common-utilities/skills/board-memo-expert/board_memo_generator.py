@@ -17,8 +17,8 @@ import argparse
 from pathlib import Path
 from typing import Dict
 
-# Add Shared_Utils to path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent / 'Shared_Utils'))
+# Add shared_utils to path
+sys.path.insert(0, str(Path(__file__).parent / "scripts/shared_utils"))
 
 from report_utils import (
     generate_executive_summary,

@@ -28,8 +28,8 @@ from pathlib import Path
 from typing import Dict, List, Optional
 from datetime import datetime
 
-# Add Shared_Utils to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "Shared_Utils"))
+# Add shared_utils to path
+sys.path.insert(0, str(Path(__file__).parent / "scripts/shared_utils"))
 from financial_utils import pv_annuity, npv, annual_to_monthly_rate
 
 

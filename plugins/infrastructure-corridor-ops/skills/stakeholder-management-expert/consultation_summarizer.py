@@ -21,7 +21,7 @@ from typing import Dict
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 # Import shared utilities
-from Shared_Utils.stakeholder_utils import (
+from shared_utils.stakeholder_utils import (
     categorize_themes,
     sentiment_analysis,
     frequency_weighting,
@@ -29,7 +29,7 @@ from Shared_Utils.stakeholder_utils import (
     commitments_matrix,
     extract_key_quotes
 )
-from Shared_Utils.report_utils import eastern_timestamp
+from shared_utils.report_utils import eastern_timestamp
 
 # Import local modules
 from modules.validators import validate_input, validate_demographics, validate_output_options

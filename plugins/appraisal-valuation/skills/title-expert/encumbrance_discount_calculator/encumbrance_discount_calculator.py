@@ -15,8 +15,8 @@ from typing import Dict, Optional
 # Add parent directories to path for imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..')))
 
-from Shared_Utils.financial_utils import npv
-from Shared_Utils.report_utils import eastern_timestamp
+from shared_utils.financial_utils import npv
+from shared_utils.report_utils import eastern_timestamp
 
 # Import calculator modules
 from modules.validators import validate_input

@@ -50,7 +50,7 @@ from modules.analysis import (
 
 from modules.output_formatters import generate_briefing_note
 
-from Shared_Utils.report_utils import eastern_timestamp
+from shared_utils.report_utils import eastern_timestamp
 
 
 def load_input_data(input_path: str) -> Dict:

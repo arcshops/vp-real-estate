@@ -16,7 +16,7 @@ sys.path.insert(0, root_dir)
 
 # Optional imports - only used for property assembly context
 try:
-    from Shared_Utils.risk_utils import assess_holdout_risk, litigation_risk_assessment
+    from shared_utils.risk_utils import assess_holdout_risk, litigation_risk_assessment
     RISK_UTILS_AVAILABLE = True
 except ImportError:
     RISK_UTILS_AVAILABLE = False

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 # Add parent directory to path for shared utilities
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / 'Shared_Utils'))
+sys.path.insert(0, str(Path(__file__).parent / "../scripts/shared_utils"))
 
 from land_assembly_utils import calculate_phasing_strategy
 from typing import Dict, List

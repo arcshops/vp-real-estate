@@ -19,8 +19,8 @@ import numpy_financial as npf
 import pandas as pd
 from datetime import datetime
 
-import Shared_Utils.financial_utils as financial_utils_module
-from Shared_Utils.financial_utils import (
+import shared_utils.financial_utils as financial_utils_module
+from shared_utils.financial_utils import (
     present_value,
     pv_annuity,
     npv,

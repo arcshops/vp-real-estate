@@ -7,9 +7,9 @@ from typing import Dict, List, Optional
 import sys
 import os
 
-# Add Shared_Utils to path for imports
+# Add shared_utils to path for imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../..')))
-from Shared_Utils.report_utils import eastern_timestamp, format_markdown_table
+from shared_utils.report_utils import eastern_timestamp, format_markdown_table
 
 
 def format_report(

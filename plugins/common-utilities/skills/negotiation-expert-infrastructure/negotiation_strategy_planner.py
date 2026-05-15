@@ -5,8 +5,8 @@ Develops negotiation approach and settlement strategy based on owner psychology,
 property characteristics, and market conditions.
 
 Uses:
-- Shared_Utils/negotiation_utils.py (BATNA, ZOPA, concession strategy)
-- Shared_Utils/risk_utils.py (holdout risk assessment)
+- shared_utils/negotiation_utils.py (BATNA, ZOPA, concession strategy)
+- shared_utils/risk_utils.py (holdout risk assessment)
 - modules/owner_profiling.py (owner psychology analysis)
 - modules/negotiation_tactics.py (opening offers, tactics)
 
@@ -28,13 +28,13 @@ project_root = current_dir.parent.parent.parent
 sys.path.insert(0, str(project_root))
 sys.path.insert(0, str(current_dir))
 
-from Shared_Utils.negotiation_utils import (
+from shared_utils.negotiation_utils import (
     calculate_batna,
     calculate_zopa,
     optimal_settlement_range,
     calculate_concession_strategy
 )
-from Shared_Utils.risk_utils import assess_holdout_risk
+from shared_utils.risk_utils import assess_holdout_risk
 
 from modules.owner_profiling import analyze_owner_psychology, recommend_communication_strategy
 from modules.negotiation_tactics import (

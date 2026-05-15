@@ -46,7 +46,7 @@ from modules.output_formatters import format_cost_report, format_summary_table
 
 # Import shared utilities
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
-from Shared_Utils.report_utils import eastern_timestamp
+from shared_utils.report_utils import eastern_timestamp
 
 
 def calculate_infrastructure_cost(input_data: Dict, verbose: bool = False) -> Dict:

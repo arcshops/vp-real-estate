@@ -138,7 +138,7 @@ def _format_sentiment_analysis(sentiment: Dict) -> str:
     sentiment_pcts = sentiment['sentiment_percentages']
 
     # Build sentiment table data
-    from Shared_Utils.report_utils import format_markdown_table
+    from shared_utils.report_utils import format_markdown_table
 
     table_data = []
     for sentiment_type in ['support', 'opposition', 'neutral', 'mixed']:
@@ -171,7 +171,7 @@ def _format_key_themes(weighted_themes: Dict, categorization: Dict) -> str:
     themes = weighted_themes['weighted_themes']
     categorized = categorization['categorized_feedback']
 
-    from Shared_Utils.report_utils import format_markdown_table
+    from shared_utils.report_utils import format_markdown_table
 
     # Build themes table
     table_data = []
@@ -264,7 +264,7 @@ def _format_commitments_matrix(commitments: List[Dict]) -> str:
 
     section = "## Commitments Tracking Matrix\n\n"
 
-    from Shared_Utils.report_utils import format_markdown_table
+    from shared_utils.report_utils import format_markdown_table
 
     table_data = []
     for commit in commitments:

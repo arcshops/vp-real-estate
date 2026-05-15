@@ -25,7 +25,7 @@ from typing import Dict, List, Tuple, Optional, Literal
 from datetime import datetime
 from dataclasses import dataclass
 
-from Shared_Utils.financial_utils import (
+from shared_utils.financial_utils import (
     pv_annuity,
     annual_to_monthly_rate,
     amortization_schedule as create_amortization_schedule,

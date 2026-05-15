@@ -28,7 +28,7 @@ from Renewal_Analysis.renewal_analysis import (
     sensitivity_analysis,
     generate_recommendation
 )
-from Shared_Utils.financial_utils import npv
+from shared_utils.financial_utils import npv
 
 
 # ============================================================================

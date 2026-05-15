@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-# Add Shared_Utils to path
-shared_utils_path = Path(__file__).resolve().parents[4] / 'Shared_Utils'
+# Add shared_utils to path
+shared_utils_path = Path(__file__).parent / "../scripts/shared_utils"
 if str(shared_utils_path) not in sys.path:
     sys.path.insert(0, str(shared_utils_path))
 

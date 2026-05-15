@@ -83,8 +83,8 @@ from modules.output_formatters import (
     generate_markdown_report
 )
 
-# Import from Shared_Utils
-from Shared_Utils.report_utils import eastern_timestamp
+# Import from shared_utils
+from shared_utils.report_utils import eastern_timestamp
 
 
 def setup_logging(verbose: bool = False) -> None:

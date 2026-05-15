@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-# Add Shared_Utils to path
-shared_utils_path = Path(__file__).resolve().parents[4] / 'Shared_Utils'
+# Add shared_utils to path
+shared_utils_path = Path(__file__).parent / "../scripts/shared_utils"
 if str(shared_utils_path) not in sys.path:
     sys.path.insert(0, str(shared_utils_path))
 
@@ -21,7 +21,7 @@ def calculate_critical_path_analysis(tasks: List[Dict], dependencies: List[List[
     """
     Calculate critical path using PERT/CPM methodology.
 
-    Delegates to Shared_Utils/timeline_utils.py for computation.
+    Delegates to shared_utils/timeline_utils.py for computation.
 
     Args:
         tasks: List of task dicts with id, name, duration

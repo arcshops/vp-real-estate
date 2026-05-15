@@ -8,10 +8,10 @@ from typing import Dict, List
 import sys
 import os
 
-# Add parent directory to path for Shared_Utils imports
+# Add parent directory to path for shared_utils imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../')))
 
-from Shared_Utils.report_utils import (
+from shared_utils.report_utils import (
     eastern_timestamp,
     format_markdown_table,
     generate_document_header

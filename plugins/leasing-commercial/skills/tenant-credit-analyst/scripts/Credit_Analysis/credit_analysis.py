@@ -28,7 +28,7 @@ import pandas as pd
 from typing import Dict, List, Tuple, Optional, Literal
 from dataclasses import dataclass, field
 
-from Shared_Utils.financial_utils import calculate_financial_ratios, safe_divide
+from shared_utils.financial_utils import calculate_financial_ratios, safe_divide
 
 
 @dataclass

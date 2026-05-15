@@ -6,7 +6,7 @@ Thin orchestration layer for utility conflict detection and relocation analysis
 ARCHITECTURE:
 - Main file: Thin orchestration (<400 lines)
 - modules/: All business logic
-- Shared_Utils/: Reusable financial, timeline, report utilities
+- shared_utils/: Reusable financial, timeline, report utilities
 
 USAGE:
     python utility_conflict_analyzer.py <input.json> [--output report.md] [--verbose]
@@ -38,9 +38,9 @@ from modules import (
     format_conflict_report
 )
 
-# Import Shared_Utils
-from Shared_Utils.timeline_utils import calculate_critical_path
-from Shared_Utils.report_utils import eastern_timestamp
+# Import shared_utils
+from shared_utils.timeline_utils import calculate_critical_path
+from shared_utils.report_utils import eastern_timestamp
 
 
 def load_input_data(input_path: str) -> Dict[str, Any]:

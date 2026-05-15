@@ -14,7 +14,7 @@ skills_dir = os.path.dirname(os.path.dirname(current_dir))
 root_dir = os.path.dirname(os.path.dirname(skills_dir))
 sys.path.insert(0, root_dir)
 
-from Shared_Utils.report_utils import (
+from shared_utils.report_utils import (
     generate_document_header,
     format_financial_summary,
     format_risk_assessment,

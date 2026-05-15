@@ -12,10 +12,10 @@ import logging
 import sys
 import os
 
-# Add Shared_Utils to path
+# Add shared_utils to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..')))
 
-from Shared_Utils.financial_utils import npv, present_value
+from shared_utils.financial_utils import npv, present_value
 
 logger = logging.getLogger(__name__)
 

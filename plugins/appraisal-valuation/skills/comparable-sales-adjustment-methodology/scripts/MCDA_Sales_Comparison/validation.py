@@ -28,7 +28,7 @@ except ImportError:
     JSONSCHEMA_AVAILABLE = False
 
 # Shared schema location (unified schema for both DCA and MCDA calculators)
-SHARED_SCHEMA_PATH = Path(__file__).parent.parent / "Shared_Utils" / "schemas" / "comparable_sales_input_schema.json"
+SHARED_SCHEMA_PATH = Path(__file__).parent / "../shared_utils" / "schemas" / "comparable_sales_input_schema.json"
 
 
 # =============================================================================

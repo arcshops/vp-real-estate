@@ -34,8 +34,8 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-# Add Shared_Utils to path (one level up from Comparable_Sales_Analysis to repo root)
-sys.path.insert(0, str(Path(__file__).parent.parent / "Shared_Utils"))
+# Add shared_utils to path (one level up from Comparable_Sales_Analysis to repo root)
+sys.path.insert(0, str(Path(__file__).parent / "../shared_utils"))
 from financial_utils import pv_annuity, npv, descriptive_statistics
 
 # Import adjustment modules

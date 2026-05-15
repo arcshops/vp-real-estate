@@ -31,7 +31,7 @@ from IFRS16_Calculator.ifrs16_calculator import (
     sensitivity_analysis,
     export_to_csv
 )
-from Shared_Utils.financial_utils import annual_to_monthly_rate
+from shared_utils.financial_utils import annual_to_monthly_rate
 
 
 # ============================================================================

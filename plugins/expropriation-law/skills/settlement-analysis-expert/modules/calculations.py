@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-# Add Shared_Utils to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / 'Shared_Utils'))
+# Add shared_utils to path
+sys.path.insert(0, str(Path(__file__).parent / "../scripts/shared_utils"))
 
 from negotiation_utils import calculate_batna, probability_weighted_ev, hearing_cost_benefit
 from financial_utils import npv

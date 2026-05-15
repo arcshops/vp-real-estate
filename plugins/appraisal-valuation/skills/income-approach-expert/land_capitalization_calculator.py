@@ -18,7 +18,7 @@ import argparse
 
 # Add shared utils to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
-from Shared_Utils.report_utils import eastern_timestamp
+from shared_utils.report_utils import eastern_timestamp
 
 # Import local modules
 from modules import (
