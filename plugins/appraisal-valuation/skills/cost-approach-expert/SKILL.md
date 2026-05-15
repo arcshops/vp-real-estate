@@ -684,24 +684,84 @@ Rounded Final Value: $75,000
 
 ## Using the Slash Command
 
-**Command**: `/cost-approach-infrastructure <input-json-path>`
+**Command**: `/cost-approach-infrastructure <input-json-path> [--output <report-path>]`
 
-**Example**:
+**Examples**:
 ```bash
-/cost-approach-infrastructure /path/to/transmission_tower_input.json
+/cost-approach-infrastructure path/to/construction_data.json
+
+/cost-approach-infrastructure path/to/construction_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_infrastructure_valuation.md
 ```
 
-**What the command does**:
-1. Validates input JSON against schema
-2. Executes `infrastructure_cost_calculator.py`
-3. Generates comprehensive cost approach report
-4. Creates output JSON with all calculations
-5. Produces markdown summary for stakeholder communication
+**Input Schema**: `infrastructure_cost_input_schema.json`
+
+**Sample JSON input**:
+```json
+{
+  "asset_type": "Transmission tower",
+  "specifications": {
+    "voltage": "500kV",
+    "height_meters": 45,
+    "foundation_type": "Caisson",
+    "conductor_type": "ACSR",
+    "number_of_circuits": 2
+  },
+  "construction_costs": {
+    "materials": 150000,
+    "labor": 80000,
+    "overhead_percentage": 0.15,
+    "profit_percentage": 0.12
+  },
+  "depreciation": {
+    "age_years": 15,
+    "effective_age_years": 12,
+    "economic_life_years": 50,
+    "physical_condition": "Good",
+    "functional_obsolescence": 0,
+    "external_obsolescence": 0
+  },
+  "market_data": {
+    "comparable_sales": [
+      {
+        "sale_price": 185000,
+        "asset_type": "Transmission tower",
+        "sale_date": "2024-03-15",
+        "condition": "Good",
+        "location": "Similar rural setting"
+      }
+    ]
+  }
+}
+```
+
+**7-Step Workflow**:
+
+1. **Validate Input**: Validates JSON against `infrastructure_cost_input_schema.json`
+2. **Calculate Replacement Cost New (RCN)**:
+   - Direct costs: Materials + Labor
+   - Overhead: 12-18% of direct costs
+   - Profit: 10-15% of subtotal
+3. **Analyze Physical Depreciation**:
+   - Age/Life method: (Effective Age ÷ Economic Life) × RCN
+   - Observed condition method: Based on physical condition rating
+4. **Assess Functional Obsolescence**:
+   - Design inefficiency (curable/incurable)
+   - Excess capacity
+   - Operational deficiencies
+5. **Assess External Obsolescence**:
+   - Market conditions
+   - Regulatory changes
+   - Economic factors
+6. **Calculate Depreciated Replacement Cost**: RCN − Total Depreciation
+7. **Reconcile with Market**: Compare with comparable sales (if available) and generate timestamped markdown report
+
+**Report Naming**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_cost_approach_{asset_type}.md`
 
 **Output includes**:
 - RCN breakdown by component and labor category
 - Depreciation analysis (physical, functional, external)
 - Depreciated replacement cost calculation
+- Market reconciliation with confidence assessment (7-factor, 0-100 score)
 - Reconciliation framework (if comparables provided)
 - USPAP/CUSPAP compliance certification
 - Professional appraisal report format
