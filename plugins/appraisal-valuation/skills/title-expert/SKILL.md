@@ -669,6 +669,94 @@ Recommended actions to resolve or mitigate encumbrance impact before property ac
 
 ---
 
+## Calculator Tools
+
+### Scripts
+
+- `${CLAUDE_PLUGIN_ROOT}/skills/title-expert/title_analyzer.py` - Title search analysis: parses 14+ registered instrument types, detects registration defects, and generates encumbrance summary tables
+- `${CLAUDE_PLUGIN_ROOT}/skills/title-expert/encumbrance_discount_calculator.py` - Quantifies percentage discount ranges for encumbrances; produces before/after value analysis
+
+### Usage
+
+```bash
+/title-analysis path/to/title_search.json
+/title-analysis path/to/title_search.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_title_analysis.md
+```
+
+**Report Naming**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_title_analysis_{pin}.md`
+
+### JSON Input Schema (`title_input_schema.json`)
+
+```json
+{
+  "property_identifier": "PIN 12345-6789",
+  "property_address": "100 Industrial Road, Toronto, ON",
+  "registered_instruments": [
+    {
+      "instrument_number": "AB123456",
+      "instrument_type": "Easement",
+      "parties": {
+        "grantor": "John Smith",
+        "grantee": "Hydro One Networks Inc."
+      },
+      "description": "Hydro transmission easement 20m wide",
+      "registration_date": "1985-03-15",
+      "area_affected": "2.5 acres"
+    },
+    {
+      "instrument_number": "CD789012",
+      "instrument_type": "Covenant",
+      "parties": {
+        "grantor": "Original Developer",
+        "grantee": "Municipality"
+      },
+      "description": "Restriction to industrial use only",
+      "registration_date": "1975-06-20"
+    }
+  ],
+  "restrictions": [
+    {
+      "type": "Zoning",
+      "description": "M2 - General Industrial",
+      "impact": "Restricts to industrial uses"
+    }
+  ],
+  "encumbrances": [],
+  "defects": []
+}
+```
+
+### Marketability Scoring Rubric (0-100)
+
+Assessed across 4 dimensions; score derived from weighted combination:
+
+| Score Range | Rating | Description |
+|-------------|--------|-------------|
+| 90-100 | EXCELLENT | No material encumbrances; clear title; broad buyer pool; financing readily available |
+| 75-89 | GOOD | Minor encumbrances only; easily discharged or insured; no restriction on primary use |
+| 60-74 | FAIR | Moderate encumbrances; restricted buyer pool; some financing complexity |
+| 40-59 | POOR | Significant encumbrances; development potential impaired; specialized buyer required |
+| 0-39 | UNMARKETABLE | Severe encumbrances (environmental lien, unresolvable defect); highly restricted; transaction not feasible without remediation |
+
+**Scoring Dimensions**:
+1. **Encumbrance Impact** (35%): Physical and use restrictions on primary highest and best use
+2. **Defect Risk** (25%): Registration completeness, party identification, authorization quality
+3. **Buyer Pool** (25%): Breadth of potential purchasers given encumbrances
+4. **Financing Impact** (15%): Lender willingness and LTV impact
+
+### Severity Matrix
+
+Each encumbrance or defect is classified by severity before scoring:
+
+| Severity | Definition | Examples | Recommended Action |
+|----------|-----------|---------|-------------------|
+| CRITICAL | Immediately prevents closing or renders title unmarketable | Missing discharge for paid mortgage; active environmental enforcement order; unresolved priority dispute | Must resolve before closing |
+| HIGH | Significantly impairs use, value, or financing; requires action before or at closing | Environmental contamination lien; covenant blocking proposed development use; unregistered easement in operation | Should resolve before closing; obtain title insurance minimum |
+| MEDIUM | Moderate impact on use or buyer pool; addressable with legal opinion or insurance | Stale restrictive covenant (enforceability uncertain); minor easement reducing development area by 5-10% | Address before closing or obtain covenant insurance |
+| LOW | Minimal impact; unlikely to affect transaction or financing | Infrequent access easement; clerical/typographical registration error with clear intent | Monitor; obtain title insurance if lender requires |
+
+---
+
 **This skill activates when you**:
 - Review title reports for real estate acquisitions
 - Identify encumbrances (easements, covenants, liens) affecting property
