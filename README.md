@@ -224,9 +224,8 @@ Simply address **"Reggie"** for most situations. For routine work, ask **"Adam"*
 **Daily question → Adam handles routine work → Red flags? → Escalate to Reggie → Strategic implications? → Consult Dennis**
 
 Reggie and his team have access to:
-- **23 specialized skills** for every lease situation (NEW: effective rent analysis, tenant credit, compliance auditing, portfolio strategy, real options valuation, and more)
-- **Intelligent hooks** that automatically load the right skills when you ask questions or read documents (96% token efficiency)
-- **28 slash commands** that automate everything from lease abstraction to IFRS 16 accounting
+- **24 leasing-commercial skills (59 across the full marketplace)** for every lease, tenancy, expropriation, appraisal, and infrastructure situation (NEW: effective rent analysis, tenant credit, compliance auditing, portfolio strategy, real options valuation, and more)
+- **23 slash commands** that automate everything from lease abstraction to IFRS 16 accounting
 - **11 financial calculators** including NPV, effective rent, credit scoring, and Black-Scholes option valuation
 
 You get executive-level judgment, institutional financial rigor, and 20+ years of property expertise—with the right team member for every situation.
@@ -377,7 +376,7 @@ sudo apt-get install -y pandoc wkhtmltopdf  # Linux/Ubuntu
 ### First Workflow: Abstract & Analyze
 
 ```bash
-# 1. Extract lease terms into the 24-section template
+# 1. Extract lease terms into the 25-section template
 /leasing-commercial:abstract-lease path/to/lease.docx
 
 # 2. Run an effective-rent analysis on the same deal
@@ -407,8 +406,8 @@ python -m pytest plugins/leasing-commercial/skills/effective-rent-analyzer/scrip
 
 Reggie's expertise is backed by a complete suite of analytical tools and specialized knowledge systems that he and his team can deploy instantly:
 
-### Specialized Skills (15 Expert Systems)
-When you ask Reggie, Adam, or Dennis about specific situations, they automatically activate the relevant expert system:
+### Specialized Skills (24 in leasing-commercial; 59 across the full marketplace)
+When you ask Reggie, Adam, or Dennis about specific situations, they automatically activate the relevant expert system. The bullets below highlight the leasing-commercial subset; the full marketplace adds residential tenancy, expropriation, appraisal, and infrastructure-corridor skills across six plugins (see `CLAUDE.md` for the cross-plugin inventory):
 
 - **Core leasing**: Deal structuring and negotiation strategy for industrial/office leases
 - **Transfers & modifications**: Assignment consent, sublease analysis, share transfers, surrenders, waivers
@@ -421,17 +420,17 @@ Each skill provides checklists, negotiation angles, risk flags, and recommended 
 
 ### Reggie's Financial Toolkit (11 Analytical Engines)
 These are the quantitative tools Reggie and his team use to back up their recommendations with institutional-grade analysis:
-1. **Effective Rent Calculator** (`Eff_Rent_Calculator/`)  
+1. **Effective Rent Calculator** (`plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/Eff_Rent_Calculator/`)  
    - Inputs: rent schedule (annual $/sf), incentives (TI, cash allowances, free rent), leasing costs, REIT capital assumptions.  
    - Outputs: Net/Gross Effective Rent, NPV vs. costs, breakeven rents, Ponzi Rental Rate comparison, payback, sensitivity tables.  
    - Use Cases: Offer structuring, investment committee packages, renegotiation analysis.
-2. **Rental Yield Curve** (`Rental_Yield_Curve/`)  
+2. **Rental Yield Curve** (`plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/Rental_Yield_Curve/`)  
    - Models implied termination options to build a rent term structure, forecasting market rent shifts across maturities.  
    - Supports “what-if” scenarios for escalation clauses, early termination rights, and renewal probabilities.
-3. **Rental Variance Analysis** (`Rental_Variance/`)  
+3. **Rental Variance Analysis** (`plugins/leasing-commercial/skills/lease-comparison-expert/scripts/Rental_Variance/`)  
    - Decomposes revenue variance into rate, area, and term components using DAYS360 methodology; reconciles budget vs. actuals with audit-ready tables.  
    - Ideal for monthly/quarterly reporting packs and leasing scorecards.
-4. **Relative Valuation Engine** (`Relative_Valuation/`)
+4. **Relative Valuation Engine** (`plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/`)
    - Weighted MCDA rankings across up to 25 variables (9 core + 16 optional) with dynamic weight allocation based on data availability.
    - Core variables: rent, TMI, parking, clear height, office %, distance, building age, class, area match.
    - Optional variables: shipping doors (TL/DI), power, trailer parking, secure shipping, excess land, bay depth, lot size, HVAC, sprinkler, rail, crane, occupancy, grade-level doors, days on market, zoning.
@@ -439,35 +438,35 @@ These are the quantitative tools Reggie and his team use to back up their recomm
    - **Auto-Load Defaults** - Weights automatically loaded when not provided in input JSON.
    - **Complete Transparency** - All weights displayed in reports with mathematical 100% verification.
    - Outputs competitive status, pricing gap to Top 3, rent/TMI adjustment scenarios, and landscape PDF reports with professional formatting and page break controls.
-5. **IFRS 16 / ASC 842 Calculator** (`IFRS16_Calculator/`)  
+5. **IFRS 16 / ASC 842 Calculator** (`plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/IFRS16_Calculator/`)  
    - Generates present value of lease liabilities, ROU asset schedules, journal entries, and CSV amortization/depreciation tables.  
    - Used for monthly close, audit support, and disclosure packages.
-6. **Tenant Credit Analysis** (`Credit_Analysis/`)  
+6. **Tenant Credit Analysis** (`plugins/leasing-commercial/skills/tenant-credit-analyst/scripts/Credit_Analysis/`)  
    - Calculates 15+ ratios, produces a 100-point credit score, assigns rating band, estimates PD/LGD, and recommends security amounts.  
    - Supports underwriting, renewal risk reviews, and portfolio credit surveillance.
-7. **Renewal Economics** (`Renewal_Analysis/`)
+7. **Renewal Economics** (`plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/Renewal_Analysis/`)
    - Compares renewal vs. relocation scenarios incorporating relocation capex, downtime, IRR, payback, and blended NER.
    - Guides negotiation stance on expiring leases and capital allocation.
-8. **Portfolio Rollover Calculator** (`Rollover_Analysis/`)
+8. **Portfolio Rollover Calculator** (`plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/Rollover_Analysis/`)
    - Aggregates lease expiries by year/quarter with concentration risk flags (>20% HIGH, >30% CRITICAL).
    - Priority scoring (0-1 normalized) based on rent contribution, urgency, below-market status, and credit rating.
    - Three-scenario modeling (optimistic/base/pessimistic) with scenario-specific downtime and NPV discounting.
    - Use Cases: Portfolio planning, renewal prioritization, budget forecasting, expiry cliff risk management.
    - **37 tests passing** (100% coverage) including edge cases (empty portfolio, 0%/100% renewal rates).
-9. **Default Damage Calculator** (`Default_Calculator/`)
+9. **Default Damage Calculator** (`plugins/leasing-commercial/skills/default-and-remedies-advisor/scripts/Default_Calculator/`)
    - Quantifies landlord damages from tenant defaults: arrears (with interest), future rent NPV, re-letting costs, mitigation credits.
    - Business day cure period calculations with jurisdiction-aware legal framework.
    - Bankruptcy cap analysis (§502(b)(6)) for Chapter 11 scenarios.
    - Net exposure calculation after security deposits and letters of credit.
    - Use Cases: Default notices, settlement negotiations, litigation support, security adequacy reviews.
    - **32 tests passing** (100% coverage) with comprehensive METHODOLOGY.md documentation (1,850 lines).
-10. **Statistical Analysis Module** (`Relative_Valuation/statistics_module.py`)
+10. **Statistical Analysis Module** (`plugins/leasing-commercial/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/statistics_module.py`)
     - Supplements MCDA rankings with traditional statistical analysis (multiple linear regression, correlation, z-scores).
     - Identifies rent drivers, data quality issues, and market outliers.
     - Activated via `--stats` flag on relative valuation calculator.
     - Key Insights: Most variable factor (CV), rent predictability (R²), strongest driver, strongest correlation.
     - Use Cases: Large datasets (20+ properties), understanding rent drivers, validating MCDA results, data quality checks.
-11. **Real Options Valuation Calculator** (`Option_Valuation/`)
+11. **Real Options Valuation Calculator** (`plugins/leasing-commercial/skills/real-options-valuation-expert/scripts/Option_Valuation/`)
     - Black-Scholes option pricing for lease flexibility (renewal, expansion, termination, purchase options).
     - Calculates option value, Greeks (Delta, Gamma, Vega, Theta, Rho), and probability in-the-money.
     - Portfolio valuation for multiple concurrent options with sensitivity analysis.
@@ -475,42 +474,33 @@ These are the quantitative tools Reggie and his team use to back up their recomm
     - Use Cases: Valuing embedded lease options, negotiation support, lease vs. purchase decisions, portfolio option value aggregation.
     - **36 tests passing** (100% coverage) validated against published Black-Scholes calculators.
 
-### Reggie's Automated Workflows (25 Slash Commands)
-Reggie and his team have 25 automated workflows at their disposal. Each slash command packages data extraction instructions, domain expertise, calculator invocation, and report formatting. Commands are grouped into Abstraction (2), Financial Analysis (10), Accounting (1), Comparison (4), Compliance (7), and Utilities (1).
+### Reggie's Automated Workflows (23 Slash Commands)
+Reggie and his team have 23 automated workflows at their disposal across the marketplace. Each slash command packages data extraction instructions, domain expertise, calculator invocation, and report formatting. The table below highlights the leasing-commercial commands (14 total: Abstraction (2), Financial Analysis (9), Accounting (1), Compliance (4)). For the cross-plugin inventory (appraisal-valuation, expropriation-law, common-utilities), see `CLAUDE.md`.
 
 | Category | Command | Primary Output |
 |----------|---------|----------------|
-| Abstraction | `/abstract-lease` | 24-section lease abstract + JSON schema |
-| Abstraction | `/critical-dates` | Timeline of renewals, expiries, and notice trigger dates |
-| Financial Analysis | `/effective-rent` | Deal economics report with NER/GER, PRR, sensitivities |
-| Financial Analysis | `/tenant-credit` | Credit memo with ratios, PD/LGD, security recommendation |
-| Financial Analysis | `/rental-variance` | Budget vs. actual variance decomposition |
-| Financial Analysis | `/market-comparison` | Market rent benchmarks and pricing gap analysis |
-| Financial Analysis | `/rollover-analysis` | Portfolio expiry risk dashboard with action plan |
-| Financial Analysis | `/option-value` | Real options valuation (renewal, expansion, termination) |
-| Financial Analysis | `/renewal-economics` | Renewal vs. relocation recommendation matrix |
-| Financial Analysis | `/relative-valuation` | Competitive ranking report and pricing adjustments |
-| Financial Analysis | `/extract-mls` | Extract MLS data to professionally formatted Excel with subject property highlighting |
-| Accounting | `/ifrs16-calculation` | IFRS/ASC 842 schedules and journal entries |
-| Comparison | `/compare-amendment` | Amendment vs. original summary with key deltas |
-| Comparison | `/compare-offers` | Side-by-side economics for multiple offers |
-| Comparison | `/compare-precedent` | Deviations against standard precedent language |
-| Comparison | `/lease-vs-lease` | Clause-by-clause comparison across two leases |
-| Compliance | `/assignment-consent` | Consent package checklist, risk commentary |
-| Compliance | `/default-analysis` | Default and cure provisions analysis |
-| Compliance | `/environmental-compliance` | Environmental obligations summary |
-| Compliance | `/estoppel-certificate` | Draft estoppel certificate populated from abstract |
-| Compliance | `/insurance-audit` | Insurance requirement verification log |
-| Compliance | `/notice-generator` | Draft lease notices (renewal, termination, default) |
-| Compliance | `/work-letter` | Work letter outline from TI provisions |
-| Utilities | `/convert-to-pdf` | Convert markdown files to professionally formatted PDF |
+| Abstraction | `/leasing-commercial:abstract-lease` | 25-section lease abstract + JSON schema |
+| Abstraction | `/leasing-commercial:critical-dates` | Timeline of renewals, expiries, and notice trigger dates |
+| Financial Analysis | `/leasing-commercial:effective-rent` | Deal economics report with NER/GER, PRR, sensitivities |
+| Financial Analysis | `/leasing-commercial:tenant-credit` | Credit memo with ratios, PD/LGD, security recommendation |
+| Financial Analysis | `/leasing-commercial:rental-variance` | Budget vs. actual variance decomposition |
+| Financial Analysis | `/leasing-commercial:rollover-analysis` | Portfolio expiry risk dashboard with action plan |
+| Financial Analysis | `/leasing-commercial:option-value` | Real options valuation (renewal, expansion, termination) |
+| Financial Analysis | `/leasing-commercial:renewal-economics` | Renewal vs. relocation recommendation matrix |
+| Financial Analysis | `/leasing-commercial:relative-valuation` | Competitive ranking report and pricing adjustments |
+| Financial Analysis | `/leasing-commercial:extract-mls` | Extract MLS data to professionally formatted Excel with subject property highlighting |
+| Accounting | `/leasing-commercial:ifrs16-calculation` | IFRS/ASC 842 schedules and journal entries |
+| Compliance | `/leasing-commercial:default-analysis` | Default and cure provisions analysis |
+| Compliance | `/leasing-commercial:estoppel-certificate` | Draft estoppel certificate populated from abstract |
+| Compliance | `/leasing-commercial:notice-generator` | Draft lease notices (renewal, termination, default) |
+| Compliance | `/leasing-commercial:work-letter` | Work letter outline from TI provisions |
 
-> **Tip:** Every workflow writes outputs to `Reports/` with standardized timestamps, making it easy to hand off bundles to executives, lenders, or auditors. Commands are namespaced under their plugin (e.g. `/leasing-commercial:effective-rent`). See `plugins/leasing-commercial/commands/` for arguments, required supporting documents, and validation steps.
+> **Tip:** Every workflow writes outputs to `Reports/` with standardized timestamps, making it easy to hand off bundles to executives, lenders, or auditors. Commands are namespaced under their plugin (e.g. `/leasing-commercial:effective-rent`). See `plugins/leasing-commercial/commands/` for arguments, required supporting documents, and validation steps. Additional commands live under the appraisal-valuation, expropriation-law, and common-utilities plugins — see `CLAUDE.md` for the full 23-command inventory.
 
 See `plugins/leasing-commercial/commands/` for full instructions and input templates.
 
 ### Templates & Reporting
-- Industrial and office 24-section abstracts (Markdown + JSON + schema).  
+- Industrial and office 25-section abstracts (Markdown + JSON + schema).  
 - Markdown reports stored in `Reports/YYYY-MM-DD_HHMMSS_[description].md`.  
 - CSV exports for amortization schedules, variance breakdowns, and credit outputs.
 
