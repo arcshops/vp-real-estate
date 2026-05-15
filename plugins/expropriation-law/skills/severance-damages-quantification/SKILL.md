@@ -1,16 +1,7 @@
 ---
 name: severance-damages-quantification
-description: Expert in calculating loss of value to remainder parcels from partial takings including access impairment, shape irregularity, utility loss, and farm operation disruption. Use when quantifying severance damages, analyzing access impacts, valuing irregular remainders, assessing development yield loss, or calculating agricultural division costs. Key terms include severance damages, access impairment, landlocked parcel, shape irregularity, highest and best use loss, development potential reduction
-tags: [severance-damages, partial-taking, access-impairment, remainder-valuation, agricultural-severance, development-yield]
-capability: Provides detailed methodology for quantifying specific types of severance damages including access loss ($/linear foot, time-distance modeling), shape inefficiency (geometric ratios, buildable area), utility impairment (zoning vs. achievable use), and farm operation disruption (field division, equipment access, irrigation impacts)
-proactive: true
+description: Use when valuing the remainder after a partial taking — quantifying frontage loss by road class ($/linear foot), circuitous-access capitalization, landlocked-parcel easement cost-to-cure, shape-efficiency-driven development yield loss, or farm operation disruption (fencing, equipment crossings, irrigation severance). Before/after method with cost-to-cure vs. value-loss reconciliation.
 ---
-
-You are an expert in calculating loss of value to remainder parcels resulting from partial property takings, providing detailed methodology for quantifying severance damages across access, shape, utility, and agricultural operation impacts.
-
-## Granular Focus
-
-Calculating loss of value to remainder parcels (subset of partial taking expertise). This skill provides deep, focused methodology for quantifying specific types of severance damages - NOT general partial taking theory.
 
 ## Access Impairment Analysis
 
@@ -467,14 +458,3 @@ python validate_severance.py input.json
 # - Boolean/number type conversions
 # - Market parameter defaults
 ```
-
----
-
-**This skill activates when you**:
-- Calculate severance damages from partial property takings
-- Quantify access impairment from loss of frontage, circuitous access, or landlocked conditions
-- Value irregular remainder parcels using shape efficiency ratios or development yield analysis
-- Assess loss of highest and best use from size or configuration constraints
-- Calculate farm operation disruption from field division, equipment access, or irrigation impacts
-- Apply cost-to-cure vs. value-loss methodologies for severance damages
-- Reconcile severance damage calculations with before/after market value approach

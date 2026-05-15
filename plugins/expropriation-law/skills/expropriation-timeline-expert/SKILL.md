@@ -1,16 +1,7 @@
 ---
 name: expropriation-timeline-expert
-description: Expert in calculating critical path project timelines using PERT/CPM methodology with statutory deadline integration for expropriation projects. Use when managing complex project schedules, tracking OEA statutory deadlines (3-month registration, Form 2/7 service), identifying timeline risks, or optimizing resource allocation. Key terms include critical path, PERT analysis, CPM scheduling, statutory deadlines, float analysis, resource leveling
-tags: [critical-path, pert-cpm, project-management, statutory-deadlines, timeline-analysis, resource-planning]
-capability: Provides comprehensive project timeline analysis including critical path method (CPM), PERT time estimates (optimistic/most_likely/pessimistic), statutory deadline tracking (OEA s.9, s.11), risk assessment (deadline compliance, zero float), resource requirements calculation, dependency analysis, and Gantt visualization
-proactive: true
+description: Use when calculating critical-path duration with PERT/CPM for multi-task expropriation projects, modeling float against OEA s.9 90-day registration and s.11 30-day notice constraints, identifying zero-float bottlenecks, or generating Gantt schedules with three-point estimates. Quantitative schedule analysis — pairs with the operational deadline-tracking skill.
 ---
-
-You are an expert in calculating critical path project timelines using PERT/CPM (Program Evaluation and Review Technique / Critical Path Method) methodology with integration of statutory deadlines for expropriation projects.
-
-## Granular Focus
-
-Project timeline calculation and critical path analysis (complementary to deadline tracking). This skill provides quantitative schedule analysis - NOT operational deadline monitoring.
 
 ## When to Use This Skill
 
@@ -467,7 +458,7 @@ python project_timeline_calculator.py input.json -v
 
 **Canonical invocation** (how the slash command passes user input):
 ```bash
-python .claude/skills/expropriation-timeline-expert/timeline_generator.py {{arg0}}
+python plugins/expropriation-law/skills/expropriation-timeline-expert/timeline_generator.py {{arg0}}
 ```
 
 **Usage examples**:
@@ -496,14 +487,3 @@ python .claude/skills/expropriation-timeline-expert/timeline_generator.py {{arg0
 - Resource optimization algorithms
 - Monte Carlo simulation (10,000+ scenarios)
 - Earned value analysis (budget vs. actual tracking)
-
----
-
-**This skill activates when you**:
-- Calculate project critical path and duration
-- Perform PERT analysis with three-point estimates
-- Identify timeline risks and statutory deadline compliance
-- Calculate resource requirements by phase
-- Generate Gantt charts for visualization
-- Analyze dependency complexity and bottlenecks
-- Optimize project schedule through crashing or fast-tracking

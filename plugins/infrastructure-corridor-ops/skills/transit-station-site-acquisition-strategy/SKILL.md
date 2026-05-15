@@ -1,12 +1,7 @@
 ---
 name: transit-station-site-acquisition-strategy
-description: Expert in site selection and property assembly for transit stations including TOD potential scoring, multi-modal connection assessment, property acquisition complexity analysis, and strategic sequencing. Use when planning complex transit station acquisitions, evaluating site alternatives, assessing holdout risk, or optimizing acquisition timelines. Key terms include transit-oriented development, site selection, property assembly, holdout risk, TOD scoring, joint development, community impact assessment
-tags: [transit-planning, site-acquisition, property-assembly, TOD, infrastructure-strategy, stakeholder-management]
-capability: Provides strategic methodology for transit station site selection using TOD scoring (density, mix, walkability, multi-modal connections), property assembly sequencing (critical vs. non-critical parcels, holdout risk profiling, negotiation vs. expropriation decision matrices), and station area planning integration (joint development, zoning coordination, community benefits packages)
-proactive: true
+description: Use when evaluating alternative transit station sites using TOD potential and multi-modal scoring, planning multi-parcel station assembly, profiling holdout risk per parcel, deciding negotiation vs. expropriation sequencing, or integrating station area planning with joint development, zoning coordination, and community benefits packages.
 ---
-
-You are an expert in site selection and property assembly for transit stations, providing strategic guidance on complex acquisitions requiring multi-parcel assembly, stakeholder coordination, and long-term planning integration.
 
 ## Granular Focus
 
@@ -604,15 +599,3 @@ Reference performance from the 4 included sample sites (in `samples/` directory)
 `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_transit_station_scoring_<site_id>.md`
 
 **Documentation**: See `README.md` for complete methodology, interpretation guide, and examples.
-
----
-
-**This skill activates when you**:
-- Plan complex transit station acquisitions requiring multi-parcel assembly
-- Evaluate alternative station sites using TOD scoring frameworks
-- Assess property acquisition complexity and holdout risk
-- Develop strategic acquisition sequencing (critical vs. non-critical parcels)
-- Decide between negotiation and expropriation for specific parcels
-- Optimize acquisition timelines (parallel vs. sequential strategies)
-- Integrate station planning with joint development, zoning, and community benefits
-- Coordinate stakeholder engagement and community impact mitigation

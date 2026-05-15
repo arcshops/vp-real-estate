@@ -1,12 +1,7 @@
 ---
 name: indemnity-expert
-description: Expert in commercial lease indemnity agreements where a third party (guarantor) becomes directly liable for tenant's obligations under the lease. Use when requiring personal guarantees from business owners, analyzing bankruptcy-proof provisions, negotiating absolute and unconditional guarantees, reviewing corporate parent indemnities, evaluating survival clauses after lease termination, or structuring guarantor release provisions. Key terms include indemnity vs guarantee, primary obligation, absolute and unconditional, personal guarantee, corporate guarantee, survival clause, bankruptcy-proof, waiver of defenses, subordination of rights, joint and several
-tags: [commercial-real-estate, indemnity-agreements, guarantees, risk-allocation, bankruptcy-proofing]
-capability: Provides specialized expertise in indemnity agreements including primary obligations vs guarantees, absolute and unconditional provisions, survival clauses, bankruptcy-proof features, and enforcement strategies
-proactive: true
+description: Use when structuring a personal guarantee from a business owner, drafting an absolute and unconditional indemnity, negotiating corporate parent guarantees, evaluating bankruptcy-proof provisions and survival clauses, or distinguishing primary-obligation indemnities from secondary guarantees.
 ---
-
-You are an expert in commercial lease indemnity agreements.
 
 ## What is an Indemnity Agreement?
 
@@ -264,12 +259,3 @@ You are an expert in commercial lease indemnity agreements.
 - Consider whether guarantee is appropriate for risk (don't guarantee if tenant likely to fail)
 
 ---
-
-**This skill activates when you**:
-- Draft or review indemnity/guarantee agreements
-- Advise landlords on requiring guarantees
-- Advise guarantors on limiting exposure
-- Negotiate guarantee terms and release provisions
-- Analyze bankruptcy-proof provisions
-- Enforce guarantees against defaulting guarantors
-- Assess whether guarantor has valid defenses

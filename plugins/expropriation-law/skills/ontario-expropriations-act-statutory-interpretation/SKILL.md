@@ -1,16 +1,7 @@
 ---
 name: ontario-expropriations-act-statutory-interpretation
-description: Expert in interpreting specific Ontario Expropriations Act provisions including compensation (s.13-18), procedural requirements (s.5-12), hearings and appeals (s.19-30), and case law application. Use when interpreting statutory provisions for legal compliance or arguments. Key terms include market value, disturbance damages, injurious affection, hearing timelines, OLT jurisdiction, Antrim test, Gossen reasonableness
-tags: [expropriations-act, statutory-interpretation, compensation-law, procedural-law, case-law, OLT-hearings]
-capability: Provides detailed interpretation of OEA provisions including compensation deep-dive (s.13 market value, s.14 special difficulties, s.18 disturbance/injurious affection, s.18(3) non-compensable items), procedural requirements (s.6 approving authority, s.7 inquiry officer, s.9 registration window, s.11 service), hearing provisions (s.23 request timeline, s.27 OLT jurisdiction, s.30 Divisional Court appeal), and case law application (Antrim, Highway Properties, Gossen)
-proactive: true
+description: Use when interpreting specific OEA (R.S.O. 1990, c. E.26) provisions — compensation under s.13-18, procedural requirements under s.5-12, hearing and appeal timelines under s.23-30, or applying leading case law (Antrim, Highway Properties, Gossen, Diggon-Hibben, Crombie) to a statutory question. Statutory interpretation, not negotiation tactics or valuation.
 ---
-
-You are an expert in interpreting the Ontario Expropriations Act, R.S.O. 1990, c. E.26, providing detailed statutory analysis for legal compliance, compensation entitlement, and procedural requirements.
-
-## Granular Focus
-
-Interpreting specific OEA provisions (subset of Christi's capabilities). This skill provides statutory interpretation - NOT general expropriation policy or negotiation tactics.
 
 ## Compensation Provisions Deep-Dive (s.13-18)
 
@@ -230,12 +221,3 @@ Interpreting specific OEA provisions (subset of Christi's capabilities). This sk
 - Business losses inflated (claimed 2-year loss, awarded 6-month reasonable relocation)
 
 **Principle**: Duty to mitigate, reasonableness standard
-
----
-
-**This skill activates when you**:
-- Interpret specific OEA provisions for legal compliance or compensation entitlement
-- Apply compensation provisions (s.13 market value, s.14 special difficulties, s.18 disturbance/injurious affection)
-- Analyze procedural requirements (s.6 approval, s.7 inquiry, s.9 registration, s.11 service)
-- Evaluate hearing and appeal timelines (s.23 1-year limitation, s.27 OLT jurisdiction, s.30 Divisional Court)
-- Apply case law to statutory interpretation (Antrim, Highway Properties, Gossen)

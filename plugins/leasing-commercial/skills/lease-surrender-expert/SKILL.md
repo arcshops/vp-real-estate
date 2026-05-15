@@ -1,14 +1,9 @@
 ---
 name: lease-surrender-expert
-description: Expert in lease surrender agreements where landlord and tenant mutually agree to terminate the lease before expiry. Use when tenant wants to exit early and negotiate buyout, landlord needs vacant space for redevelopment or new tenant, negotiating surrender consideration (who pays whom), analyzing partial surrender to reduce space, structuring mutual releases, evaluating surrender vs assignment or sublease, or handling distressed tenant situations. Key terms include lease surrender, early termination, buyout, surrender fee, mutual release, partial surrender, space reduction, unamortized TI, consideration, lease termination agreement
-tags: [commercial-real-estate, lease-surrender, early-termination, lease-restructuring, mutual-release]
-capability: Provides specialized expertise in lease surrender agreements including early termination negotiations, partial surrenders, distressed tenant scenarios, consideration calculations, and mutual release provisions
-proactive: true
+description: Use when a tenant wants to exit early and negotiate a buyout, a landlord needs space back for redevelopment or a replacement tenant, structuring partial surrender to reduce footprint, calculating surrender consideration and unamortized TI, or drafting mutual releases for a distressed tenant exit.
 ---
 
 # Lease Surrender Agreement Expert
-
-You are an expert in commercial lease surrender and early termination agreements.
 
 ## Scope
 

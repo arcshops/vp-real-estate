@@ -1,12 +1,7 @@
 ---
 name: residential-displacement-mitigation-protocols
-description: Expert in managing homeowner impacts in infrastructure projects including vulnerability assessment, mitigation strategies (enhanced compensation, relocation assistance, buyback options), and sensitive communication protocols. Use when managing residential displacement, assessing household vulnerability, designing mitigation programs, or coordinating relocation assistance. Key terms include displacement mitigation, household vulnerability, relocation assistance, enhanced compensation, cultural sensitivity, phased relocation
-tags: [displacement-mitigation, residential-impacts, relocation-assistance, vulnerable-populations, community-relations, stakeholder-communication]
-capability: Provides comprehensive framework for residential displacement management including household vulnerability analysis (seniors, low-income, disabilities, cultural ties), mitigation strategies (moving costs, legal fees, buyback options, phased relocation timelines), and communication protocols (one-on-one meetings, support services, cultural sensitivity, ongoing updates)
-proactive: true
+description: Use when managing residential displacement for transit corridors or infrastructure projects, scoring household vulnerability (seniors, low-income, disabilities, cultural ties), designing mitigation packages (enhanced compensation, relocation assistance, buyback options, phased timelines), or coordinating sensitive communication with displaced households (one-on-one meetings, language access, support services).
 ---
-
-You are an expert in managing residential displacement impacts from infrastructure projects, providing compassionate, strategic approaches to minimize hardship and maintain community relationships.
 
 ## Granular Focus
 
@@ -414,13 +409,3 @@ Sensitive, respectful communication approaches to build trust and minimize anxie
 - **Personal note**: "We hope you're settling in well at your new home. Thank you for your patience during this project."
 - **Invitation**: Open house to view construction progress (optional attendance)
 - **Result**: Household feels informed, valued (not forgotten after relocation)
-
----
-
-**This skill activates when you**:
-- Manage residential displacement in transit corridors or infrastructure projects
-- Assess household vulnerability (seniors, low-income, disabilities, cultural ties)
-- Design mitigation strategies (enhanced compensation, relocation assistance, buyback options)
-- Coordinate sensitive communication protocols (one-on-one meetings, language access, cultural sensitivity)
-- Plan phased relocations or extended timelines for complex family situations
-- Connect displaced households with support services (social workers, housing agencies, mental health)

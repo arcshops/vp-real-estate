@@ -1,12 +1,7 @@
 ---
 name: commercial-tenancies-act-enforcement-remedies
-description: Expert in commercial landlord remedies under Ontario Commercial Tenancies Act including distress for rent (goods seizure, sale process, tenant redemption, wrongful distress liability), re-entry and lease termination (peaceable re-entry, acceleration of rent, relief from forfeiture), overholding tenant liability (double rent, damages beyond double rent), and case law on remedy selection (distress vs. termination election, mitigation duty). Use when advising on enforcement strategy and remedies. Key terms include distress for rent, re-entry, acceleration, relief from forfeiture, overholding, double rent, election doctrine, mitigation
-tags: [commercial-tenancies-act, landlord-remedies, distress-for-rent, lease-termination, overholding, election-doctrine, mitigation-duty]
-capability: Provides detailed framework for commercial lease enforcement including distress for rent procedures (seizure-eligible goods, bailiff appointment, sale process, tenant redemption rights, wrongful distress damages), re-entry/termination (peaceable re-entry requirements, acceleration of rent vs. mitigation duty, relief from forfeiture court discretion), overholding liability (double rent calculation, damages for lost incoming tenant), and remedy selection case law (Highway Properties election doctrine, Southcott Estates mitigation requirement)
-proactive: true
+description: Use when advising landlords on enforcement strategy under Ontario Commercial Tenancies Act, executing distress for rent, weighing re-entry vs. acceleration vs. termination, calculating overholding double-rent liability, applying the election doctrine (Highway Properties) or mitigation duty (Southcott Estates), or defending against relief from forfeiture motions.
 ---
-
-You are an expert in commercial lease enforcement remedies under the Ontario Commercial Tenancies Act, R.S.O. 1990, c. L.7, providing strategic guidance on landlord remedies for tenant defaults.
 
 ## Granular Focus
 
@@ -307,11 +302,3 @@ Tenant who remains in possession after lease expiry without landlord consent.
 - Failing to advertise
 
 ---
-
-**This skill activates when you**:
-- Advise landlords on commercial lease enforcement strategies
-- Evaluate distress for rent (seizure procedures, redemption rights, wrongful distress risks)
-- Analyze re-entry and termination (peaceable re-entry, acceleration clauses, relief from forfeiture)
-- Calculate overholding tenant damages (double rent, lost incoming tenant)
-- Apply election doctrine (distress vs. termination choice) and mitigation duty
-- Develop remedy selection strategy (balance speed, cost, risk, enforceability)

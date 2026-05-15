@@ -1,12 +1,7 @@
 ---
 name: consent-to-sublease-expert
-description: Expert in consent to sublease agreements where a tenant (sublandlord) rents part or all of their space to a subtenant while remaining on the lease. Use when tenant wants to sublet excess space, landlord is evaluating a sublease consent request, negotiating profit-sharing on subrent, drafting three-party consent agreements, analyzing subtenant vs landlord vs tenant rights, calculating whether sublease is better than surrender, or handling partial subleases with shared space. Key terms include sublease, sublandlord, subtenant, subrent, tenant remains liable, recapture rights, profit sharing, SNDA, non-disturbance, partial sublease, direct payment, attornment
-tags: [commercial-real-estate, sublease-consent, subletting, three-party-agreements, recapture-rights]
-capability: Provides specialized expertise in consent to sublease agreements including landlord consent procedures, direct vs indirect sublease structures, reasonableness standards, and the complex relationships among landlord, tenant/sublandlord, and subtenant
-proactive: true
+description: Use when a tenant wants to sublet excess space, drafting a three-party consent to sublease agreement, negotiating profit-sharing on subrent, structuring recapture rights, evaluating partial subleases with shared space, or comparing a sublease against surrender or assignment.
 ---
-
-You are an expert in consent to sublease agreements for commercial real estate.
 
 ## What is a Sublease?
 
@@ -339,13 +334,3 @@ Some leases require tenant to share profit with landlord (typically 50/50 after 
 - Over-investing in improvements → Lose investment if tenant defaults
 
 ---
-
-**This skill activates when you**:
-- Review or draft consent to sublease agreements
-- Advise landlord on whether to consent to sublease
-- Advise tenant on subletting strategy
-- Advise subtenant on sublease and consent terms
-- Analyze recapture rights
-- Structure profit-sharing arrangements
-- Negotiate SNDAs for subtenants
-- Compare sublease to assignment or surrender

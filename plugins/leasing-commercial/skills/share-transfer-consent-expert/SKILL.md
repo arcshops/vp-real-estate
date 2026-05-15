@@ -1,15 +1,9 @@
 ---
 name: share-transfer-consent-expert
-description: Expert in consent to share transfer agreements where tenant's ownership changes but the corporate tenant remains the same (unlike assignment). Use when reviewing change of control provisions in leases, analyzing whether share sale triggers landlord consent, drafting tripartite consent agreements between landlord/tenant/new shareholder, structuring privacy consent provisions, negotiating landlord conditions for share transfers, or distinguishing share sales from asset sales/assignments. Key terms include share transfer, change of control, voting control, new shareholder, tripartite agreement, privacy consent, share sale vs assignment, corporate tenant remains same, beneficial ownership change
-tags: [commercial-real-estate, share-transfer, change-of-control, landlord-consent, corporate-restructuring]
-capability: Provides specialized expertise in consent to share transfer agreements including change of control analysis, new shareholder representations, privacy consent provisions, and distinguishing share transfers from assignments
-proactive: true
+description: Use when a corporate tenant's ownership is changing through a share sale, reviewing change-of-control provisions to determine whether landlord consent is triggered, drafting a tripartite consent among landlord/tenant/new shareholder, or distinguishing share transfers from assignments or asset sales.
 ---
 
 # Share Transfer Consent Expert
-
-## Skill Identity
-You are a specialized expert in **Consent to Share Transfer Agreements** for commercial real estate leases (industrial, office, retail). You provide comprehensive guidance on analyzing, drafting, reviewing, and negotiating these tripartite agreements between Landlord, Tenant, and New Shareholder.
 
 ## Core Expertise
 

@@ -1,12 +1,7 @@
 ---
 name: lease-arbitration-expert
-description: Expert in lease arbitration agreements that create binding dispute resolution when parties cannot agree on renewal rent or fair market value. Use when drafting renewal option clauses with rent arbitration, negotiating arbitrator selection procedures, analyzing baseball vs conventional arbitration, structuring rent determination frameworks, evaluating market rent disputes, or creating enforceable arbitration provisions for lease renewals. Key terms include renewal rent, fair market value, arbitration, arbitrator, baseball arbitration, conventional arbitration, binding decision, market rent determination, expert appraiser, rent dispute
-tags: [commercial-real-estate, arbitration-agreements, dispute-resolution, rent-determination, expert-selection]
-capability: Provides specialized expertise in lease arbitration agreements including binding arbitration frameworks, market rent determination, arbitrator selection procedures, baseball vs conventional arbitration, cost allocation, and enforceable award structures
-proactive: true
+description: Use when drafting a renewal option clause with rent arbitration, choosing between baseball and conventional arbitration, structuring arbitrator selection procedures, resolving a fair market rent dispute on renewal, or testing an arbitration clause for enforceability.
 ---
-
-You are an expert in lease arbitration agreements for resolving rent disputes in commercial leases.
 
 ## What is Lease Arbitration?
 
@@ -280,13 +275,3 @@ Most leases specify arbitration rules:
 **Key difference from arbitration**: Expert determination may not be enforceable as arbitration award under arbitration legislation (varies by jurisdiction)
 
 ---
-
-**This skill activates when you**:
-- Draft renewal option clauses with rent arbitration
-- Negotiate arbitrator selection procedures
-- Analyze baseball vs conventional arbitration structures
-- Advise on arbitration costs and risk allocation
-- Structure interim rent provisions pending arbitration
-- Review arbitration clauses for enforceability
-- Represent parties in rent arbitration proceedings
-- Resolve disputes over arbitrator qualifications or process

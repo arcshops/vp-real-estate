@@ -1,12 +1,9 @@
 ---
 name: negotiation-expert
-description: Expert in commercial lease negotiation strategy using evidence-based persuasion techniques. Use when crafting responses to tenant objections, defending rent and lease terms, structuring counter-offers, negotiating with difficult parties, overcoming deadlocks, responding to competitive pressure, or formulating calibrated questions that shift burden of proof. Expert in evidence-based anchoring, tactical empathy, uncovering hidden constraints, and value-creating solutions. Key terms include calibrated questions, accusation audit, labeling, tactical empathy, evidence-based anchoring, market comparables, burden of proof, negotiation tactics
-tools: Read, Glob, Grep, Write, Bash, SlashCommand, TodoWrite
+description: Use when crafting responses to tenant objections, defending rent or lease terms, structuring counter-offers, formulating calibrated questions, breaking deadlocks, or applying evidence-based anchoring and tactical empathy to commercial lease negotiations.
 ---
 
 # Negotiation Expert
-
-You are a senior commercial real estate negotiation specialist with deep expertise in evidence-based persuasion techniques adapted for lease negotiations. Your role is to help structure negotiations, respond to objections, and craft communications that advance deals while maintaining professional integrity.
 
 ## Core Philosophy
 
@@ -139,7 +136,7 @@ The best negotiators:
 **Examples in CRE context**:
 
 *Rent proposal*:
-- "Based on these 8 comparable transactions [attach `/relative-valuation` results], market rent for this type of space is $18-20/sf. How do you arrive at $16/sf?"
+- "Based on these 8 comparable transactions [attach `/leasing-commercial:relative-valuation` results], market rent for this type of space is $18-20/sf. How do you arrive at $16/sf?"
 
 *Defending rent*:
 - "Every Class A industrial property built after 2015 in this submarket with 30'+ clear height is leasing for $18-20/sf [attach market comp table]. What makes this building different in your analysis?"
@@ -148,7 +145,7 @@ The best negotiators:
 - "Standard TI allowances for office space in this market are running $25-30/sf for 5-year terms [attach comparable deal data]. What specifically about your requirements justifies $40/sf?"
 
 *Security deposit*:
-- "Based on the credit analysis [reference `/tenant-credit` results], comparable tenants with similar financial profiles are providing 6 months security. How do you see us mitigating the credit risk with less?"
+- "Based on the credit analysis [reference `/leasing-commercial:tenant-credit` results], comparable tenants with similar financial profiles are providing 6 months security. How do you see us mitigating the credit risk with less?"
 
 **Key principle**: Anchor with data first, then make them challenge your evidence
 
@@ -211,23 +208,23 @@ Now you know the real issue is timing, not total concession value.
 
 **Leverage analytical tools to support negotiation positions:**
 
-### Use `/relative-valuation` Results
+### Use `/leasing-commercial:relative-valuation` Results
 When defending rent or rejecting rent reduction requests:
 - "Based on the competitive analysis [reference relative valuation report], this property ranks #3 out of 12 comparables on weighted criteria. How am I supposed to justify pricing below market when we offer objectively superior value?"
 
-### Use `/effective-rent` Analysis
+### Use `/leasing-commercial:effective-rent` Analysis
 When evaluating concession trade-offs:
 - "I ran the NER analysis [reference effective rent report]. If we increase TI to $35/sf, I need $19/sf base rent to maintain the same effective rent. Does that trade-off work for you?"
 
-### Use `/market-comparison` Data
+### Use `/leasing-commercial:market-comparison` Data
 When they claim "market is lower":
 - "I pulled market comps [reference market comparison report]. The median rent for comparable space is $18.50/sf. What specific properties are you using to arrive at $16?"
 
-### Use `/tenant-credit` Results
+### Use `/leasing-commercial:tenant-credit` Results
 When justifying security requirements:
 - "Based on the credit analysis [reference tenant credit report], your current ratio puts you in the moderate-risk category. How do we address the security gap—larger deposit, guarantor, or letter of credit?"
 
-### Use `/renewal-economics` Analysis
+### Use `/leasing-commercial:renewal-economics` Analysis
 When negotiating renewals:
 - "I modeled your renewal economics [reference renewal analysis]. Even at $18/sf, renewing is $4.25/sf NER cheaper than relocating when you factor in downtime and moving costs. How does that change the conversation?"
 
@@ -269,7 +266,7 @@ When asked to help with a negotiation situation, follow this process:
 **Response Strategy**:
 1. **Mirror** to gather information: "Market is $16?"
 2. **Calibrated question** to make them justify: "What specific comparables are you using? I want to make sure we're comparing similar buildings."
-3. **Evidence-based anchor**: "I'm seeing [X comparables from `/relative-valuation`] all at $18-20 for similar clear height, dock doors, and parking. How do you account for those?"
+3. **Evidence-based anchor**: "I'm seeing [X comparables from `/leasing-commercial:relative-valuation`] all at $18-20 for similar clear height, dock doors, and parking. How do you account for those?"
 4. **Label** if they push back: "It sounds like you're seeing different market data than I am..."
 
 **Key**: Don't defend your number. Make them justify theirs with data.
@@ -305,7 +302,7 @@ When asked to help with a negotiation situation, follow this process:
 **Response Strategy**:
 1. **Label** to understand: "It sounds like cash flow during build-out is a major concern..."
 2. **Calibrated question** to uncover need: "What's driving the 6-month requirement—is it construction timeline, budget timing, or something else?"
-3. **Evidence anchor**: "Market deals for 5-year terms are giving 2-3 months free [cite `/market-comparison` data]. The gap between that and 6 months is about $75K in lost rent."
+3. **Evidence anchor**: "Market deals for 5-year terms are giving 2-3 months free [cite `/leasing-commercial:market-comparison` data]. The gap between that and 6 months is about $75K in lost rent."
 4. **Value trade**: "If cash flow is the issue, what if we did 3 months free plus deferred first-year rent payments? That gets you the cash flow relief without the same NPV hit on my side."
 
 **Key**: Understand the underlying need (cash flow vs total economics), then create value through structure.

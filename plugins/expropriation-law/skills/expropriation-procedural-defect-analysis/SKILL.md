@@ -1,16 +1,7 @@
 ---
 name: expropriation-procedural-defect-analysis
-description: Expert in identifying and remedying procedural errors including jurisdictional defects (ultra vires, improper authority, invalid purpose, bad faith), procedural defects (defective notice, insufficient inquiry, missed registration, form errors), consequences and remedies (void vs. voidable, cure strategies, limitation periods), and case law on procedural challenges. Use when analyzing procedural compliance or defending challenges. Key terms include void expropriation, voidable expropriation, ultra vires, defective notice, cure strategies, limitation periods
-tags: [procedural-defects, jurisdictional-errors, void-expropriation, voidable-expropriation, cure-strategies, limitation-periods]
-capability: Provides systematic framework for identifying procedural errors including jurisdictional defects (ultra vires statutory authority, improper approving authority level, invalid public purpose, bad faith motive), procedural defects (defective notice service/content, insufficient inquiry investigation, registration deadline expiry, form completeness errors), consequences/remedies (void = no legal effect requiring restart, voidable = challengeable but curable, cure strategies via supplementary notice/court validation/fresh approval), and limitation periods (1-year s.23 limit, extension grounds)
-proactive: true
+description: Use when diagnosing whether a procedural error renders an expropriation void or voidable, evaluating ultra vires or bad-faith challenges, designing cure strategies (supplementary notice, court validation, fresh approval), or applying the s.23 one-year limitation period. Covers case law (Snider service, Fraser form defects, Crombie deadline enforcement) for procedural challenges.
 ---
-
-You are an expert in identifying procedural defects in expropriations and developing cure strategies to remedy errors or defend against challenges.
-
-## Granular Focus
-
-Identifying and remedying procedural errors (subset of Christi's capabilities). This skill provides procedural analysis - NOT substantive compensation or valuation issues.
 
 ## Jurisdictional Defects (Void Expropriation)
 
@@ -269,13 +260,3 @@ Non-jurisdictional errors that make expropriation challengeable but potentially 
 **No cure**: Approval expired June 13, registration void - must obtain fresh approval
 
 **Principle**: Mandatory statutory deadlines cannot be extended by court discretion
-
----
-
-**This skill activates when you**:
-- Identify jurisdictional defects (ultra vires, improper authority, invalid purpose, bad faith)
-- Analyze procedural defects (defective notice, insufficient inquiry, missed deadlines, form errors)
-- Distinguish void expropriations (no legal effect) from voidable (challengeable but curable)
-- Develop cure strategies (supplementary notice, court validation, fresh approval)
-- Apply limitation periods (1-year s.23 deadline, extension grounds)
-- Defend procedural challenges using case law (Snider service test, Fraser form defects, Crombie deadline enforcement)

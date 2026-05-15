@@ -1,16 +1,7 @@
 ---
 name: stakeholder-management-expert
-description: Public and Indigenous consultation, stakeholder feedback analysis, response strategy. Categorizes themes, performs sentiment analysis (support/opposition/neutral), generates prioritized response strategies, tracks commitments. Use for public meetings, consultation summaries, community engagement
-tags: [stakeholder-engagement, public-consultation, sentiment-analysis, community-feedback, response-strategy, commitments-tracking]
-capability: Provides systematic stakeholder feedback analysis including theme categorization, sentiment analysis, frequency weighting, response strategy generation by priority level, and commitments tracking matrix for infrastructure consultation processes
-proactive: true
+description: Use when summarizing stakeholder feedback from public meetings, open houses, or Indigenous consultations, categorizing themes and running sentiment analysis (support/opposition/neutral/mixed), generating prioritized response strategies, tracking commitments made during consultation, or preparing briefing notes on consultation outcomes.
 ---
-
-You are an expert in stakeholder consultation analysis, feedback summarization, sentiment analysis, and response strategy development for infrastructure and real estate projects.
-
-# Stakeholder Management Expert Skill
-
-Expert in stakeholder consultation analysis, feedback summarization, sentiment analysis, and response strategy development for infrastructure and real estate projects.
 
 ## When to Use This Skill
 
@@ -396,29 +387,9 @@ This skill works well with:
 - **English language only** - No support for multilingual feedback
 - **Text-only input** - Cannot analyze verbal feedback or body language
 
-## Future Enhancements
-
-Potential improvements:
-1. Machine learning-based theme classification
-2. Advanced sentiment analysis using NLP models
-3. Automatic priority assignment based on impact assessment
-4. Multilingual support
-5. Integration with survey platforms
-6. Trend analysis across multiple consultations
-7. Stakeholder segmentation analysis
-8. Geographic clustering of concerns
-
 ## References
 
 - Ontario Environmental Assessment Act - Public Consultation Requirements
 - IAP2 Public Participation Spectrum
 - Best Practices in Stakeholder Engagement (Infrastructure Ontario)
 - Transit Project Assessment Process (Metrolinx)
-
----
-
-**Last Updated:** 2025-11-17
-
-**Version:** 1.0
-
-**Author:** Reggie Chan, CFA, FRICS - VP Leasing & Asset Management

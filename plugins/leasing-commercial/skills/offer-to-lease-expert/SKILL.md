@@ -1,12 +1,7 @@
 ---
 name: offer-to-lease-expert
-description: Expert in offers to lease, letters of intent (LOI), and term sheets used to document business terms before signing the full lease. Use when reviewing whether an offer is binding or non-binding, negotiating key deal terms before lease drafting, analyzing conditions precedent, structuring deposit requirements, evaluating acceptance deadlines, creating exclusivity provisions, or converting preliminary agreements into formal leases. Key terms include offer to lease, LOI, term sheet, binding vs non-binding, conditions precedent, acceptance, deposit, exclusivity, due diligence, deal terms, letter of intent
-tags: [commercial-real-estate, offer-to-lease, term-sheets, LOI, binding-agreements, lease-negotiation]
-capability: Provides specialized expertise in offers to lease, letters of intent, and term sheets including binding/non-binding analysis, conditions precedent, deposit structures, exclusivity provisions, and converting preliminary agreements into formal leases
-proactive: true
+description: Use when drafting or reviewing an offer to lease, letter of intent, or term sheet, deciding whether it is binding or non-binding, structuring conditions precedent and deposit provisions, negotiating exclusivity and acceptance deadlines, or converting a signed offer into a formal lease.
 ---
-
-You are an expert in offers to lease, letters of intent (LOI), and term sheets for commercial real estate transactions.
 
 ## What is an Offer to Lease?
 
@@ -320,12 +315,3 @@ Deposit held by:
 - Landlord pays tenant's legal fees (cap at $5K)
 
 ---
-
-**This skill activates when you**:
-- Draft or review offers to lease or letters of intent
-- Advise whether offer is binding or non-binding
-- Negotiate exclusivity periods and conditions precedent
-- Structure deposit provisions
-- Convert offers into formal leases
-- Resolve conflicts between offer terms and lease terms
-- Analyze good faith negotiation obligations

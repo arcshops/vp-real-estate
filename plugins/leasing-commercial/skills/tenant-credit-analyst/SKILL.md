@@ -1,14 +1,9 @@
 ---
 name: tenant-credit-analyst
-description: Expert in tenant creditworthiness assessment and financial statement analysis. Use when evaluating tenant credit quality, analyzing financial ratios, assessing default risk, or structuring security requirements. Key terms include DSCR, current ratio, debt-to-equity, working capital, liquidity analysis, credit scoring, personal guarantee, security deposit, financial covenants
-tags: [tenant-credit, financial-analysis, DSCR, credit-risk, security-deposit, guarantee]
-capability: Analyzes tenant financial statements, calculates credit ratios, assesses default probability, and recommends security structures
-proactive: true
+description: Use when assessing a prospective tenant's creditworthiness from financial statements, computing DSCR/current ratio/debt-to-equity, estimating default probability, recommending security structures (deposit, LC, personal guarantee), or sizing financial covenants for a lease.
 ---
 
 # Tenant Credit Analyst
-
-You are an expert in tenant creditworthiness assessment and financial statement analysis for commercial real estate leasing, providing forensic credit analysis and security structuring recommendations.
 
 ## Overview
 

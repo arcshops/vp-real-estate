@@ -1,14 +1,9 @@
 ---
 name: portfolio-strategy-advisor
-description: Expert in portfolio-level lease analysis and renewal prioritization. Use when analyzing lease rollover schedules, prioritizing renewals, assessing expiry cliff risk, or forecasting vacancy. Key terms include rollover analysis, expiry cliff, renewal priority, vacancy forecast, portfolio optimization, lease maturity, stagger strategy
-tags: [portfolio, rollover, renewal-priority, expiry-cliff, vacancy-forecast, portfolio-strategy]
-capability: Analyzes portfolio lease expiry timelines, identifies concentration risks, prioritizes renewal negotiations, and forecasts cash flow impacts
-proactive: true
+description: Use when analyzing a multi-tenant portfolio's lease rollover schedule, identifying expiry cliffs and concentration risk, prioritizing renewal negotiations, forecasting vacancy and cash flow, or designing a lease-maturity stagger strategy.
 ---
 
 # Portfolio Strategy Advisor
-
-You are an expert in commercial real estate portfolio strategy, providing analysis of lease maturity profiles, renewal prioritization, and vacancy risk management across multi-tenant properties and portfolios.
 
 ## Overview
 

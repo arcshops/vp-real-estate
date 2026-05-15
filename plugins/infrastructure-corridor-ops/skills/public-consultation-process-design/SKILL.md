@@ -1,12 +1,7 @@
 ---
 name: public-consultation-process-design
-description: Expert in designing and executing effective public consultation for infrastructure projects including stakeholder mapping, engagement level determination, meeting facilitation techniques, and feedback analysis. Use when designing consultation programs for controversial projects, facilitating hostile audiences, or analyzing community feedback. Key terms include stakeholder mapping, engagement spectrum, IAP2 framework, hostile audience management, feedback analysis, What We Heard reports
-tags: [public-consultation, stakeholder-engagement, community-relations, meeting-facilitation, feedback-analysis, conflict-management]
-capability: Provides systematic framework for consultation process design including stakeholder mapping (affected parties, interest groups, decision-makers), engagement spectrum (inform, consult, involve, collaborate), meeting facilitation (venue selection, hostile audience de-escalation, comment capture), and feedback analysis (theme clustering, response development, design modifications)
-proactive: true
+description: Use when designing consultation programs for controversial infrastructure projects, mapping stakeholders and choosing engagement levels via the IAP2 spectrum, facilitating hostile public meetings, capturing and analyzing community feedback by theme, or preparing "What We Heard" reports documenting consultation outcomes.
 ---
-
-You are an expert in designing and executing public consultation processes for infrastructure projects, particularly those facing community opposition or involving complex stakeholder dynamics.
 
 ## Granular Focus
 
@@ -269,14 +264,3 @@ Systematic processing of community input to inform project decisions.
 > - Banned impact pile driving within 100m of residences
 > - Implemented noise monitoring program with public complaint hotline
 > - Committed to noise wall installation before major construction begins
-
----
-
-**This skill activates when you**:
-- Design consultation programs for controversial infrastructure projects
-- Map stakeholders and determine appropriate engagement levels
-- Facilitate public meetings or manage hostile audiences
-- Prepare consultation materials (display boards, handouts, translations)
-- Capture and analyze community feedback using systematic methods
-- Develop project responses to address, mitigate, or explain concerns
-- Prepare "What We Heard" reports documenting consultation outcomes

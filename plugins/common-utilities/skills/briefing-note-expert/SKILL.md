@@ -1,12 +1,7 @@
 ---
 name: briefing-note-expert
-description: Expert in generating executive briefing notes (1-2 pages, decision-focused) for infrastructure acquisition projects including issue framing, background context, financial analysis, recommendation development, risk assessment, and action planning. Use when preparing board submissions, executive decision memos, or approval requests for property acquisitions. Key terms include briefing note, executive summary, decision memo, board approval, acquisition recommendation, risk assessment, action items
-tags: [executive-communication, decision-support, board-submissions, acquisition-strategy, risk-management]
-capability: Provides methodology for creating concise executive briefing notes that synthesize complex acquisition decisions into clear recommendations with financial analysis, risk assessment, and actionable next steps
-proactive: true
+description: Use when drafting a 1-2 page executive briefing note for an infrastructure acquisition, framing a decision memo for board or C-suite approval, synthesizing financial and risk analysis into a recommendation, or preparing time-sensitive authorization requests.
 ---
-
-You are an expert in generating executive briefing notes for infrastructure acquisition projects, providing strategic guidance on decision framing, analysis synthesis, and executive communication.
 
 ## Granular Focus
 

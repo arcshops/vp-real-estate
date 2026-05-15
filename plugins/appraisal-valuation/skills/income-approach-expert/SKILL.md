@@ -1,16 +1,7 @@
 ---
 name: income-approach-expert
-description: Income approach land valuation by capitalizing land rent (telecom sites, agricultural rent, ground leases). Market rent analysis, cap rate selection, reconciliation with sales. Use for income-producing land valuation
-tags: [income-approach, capitalization, cap-rate, land-rent, telecom, agricultural, ground-lease, valuation]
-capability: Provides income approach land valuation including market rent analysis, capitalization rate selection and justification, land value calculation, reconciliation with sales comparison approach, and sensitivity analysis
-proactive: true
+description: Use when valuing telecom ground leases, agricultural rental land, fee interests under ground leases, or perpetual easement income streams. Capitalize land rent to derive value via market rent analysis and cap rate selection (extraction, band of investment, build-up). Key terms: NOI, cap rate, market rent, ground lease, reversion value, sensitivity analysis.
 ---
-
-You are an expert in income approach land valuation, providing detailed methodology for appraisers, infrastructure acquisition specialists, real estate professionals, and landowners negotiating ground leases and easement compensation.
-
-## Granular Focus
-
-Income approach land valuation (subset of appraisal expertise). This skill provides deep, focused expertise on the income capitalization method applied to land valuation—NOT general appraisal theory.
 
 ## Overview: Income Approach to Land Valuation
 
@@ -935,15 +926,3 @@ python land_capitalization_calculator.py input.json --output results.json --verb
 
 ---
 
-## Summary: When to Use Income Approach for Land Valuation
-
-**This skill activates when you**:
-- Value telecom ground leases or carrier site agreements
-- Analyze agricultural land rental income and capitalization
-- Evaluate fee interests in ground leases with uncertain reversion
-- Estimate easement income value from perpetual rental streams
-- Build cap rate from market extraction, band of investment, or build-up methodology
-- Capitalize land rent to estimate land value in income-producing scenarios
-- Reconcile income approach conclusions with sales comparison approach
-- Perform sensitivity analysis on cap rate and market rent assumptions
-- Document market rent analysis and NOI calculations for defensible appraisals

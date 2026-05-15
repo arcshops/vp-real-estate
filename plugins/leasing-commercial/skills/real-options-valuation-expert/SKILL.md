@@ -1,14 +1,9 @@
 ---
 name: real-options-valuation-expert
-description: Expert in real options valuation for lease flexibility features. Use when valuing renewal options, expansion rights, termination clauses, or other lease optionality using Black-Scholes methodology. Key terms include real options, option premium, renewal option value, expansion option, termination right, volatility, strike price, option pricing
-tags: [real-options, option-value, renewal-option, expansion-right, black-scholes, flexibility]
-capability: Values lease flexibility using real options theory, calculates option premiums, and quantifies strategic optionality embedded in leases
-proactive: true
+description: Use when valuing a renewal option, expansion right, early-termination clause, or other embedded lease optionality with Black-Scholes or binomial models, calibrating volatility inputs from market rent data, or pricing the cost of granting flexibility in negotiations.
 ---
 
 # Real Options Valuation Expert
-
-You are an expert in real options valuation for commercial real estate leases, applying Black-Scholes and binomial option pricing models to quantify the value of lease flexibility features.
 
 ## Overview
 

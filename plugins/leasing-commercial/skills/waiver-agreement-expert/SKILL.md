@@ -1,12 +1,7 @@
 ---
 name: waiver-agreement-expert
-description: Expert in waiver agreements where a landlord waives conditions in an offer to lease (often adding new conditions as the price of acceptance). Use when landlord is accepting tenant's offer subject to changes, analyzing whether waiver creates binding contract, negotiating landlord's counter-conditions, evaluating conditional vs unconditional waivers, reviewing acceptance deadlines, or structuring landlord's response to tenant offers. Key terms include waiver of conditions, conditional waiver, unconditional waiver, counter-offer, acceptance deadline, additional conditions, conditions precedent, binding acceptance, qualified waiver
-tags: [commercial-real-estate, waiver-agreements, offer-to-lease, conditions-precedent, counter-offers]
-capability: Provides specialized expertise in waiver agreements including conditional vs unconditional waivers, counter-offer analysis, contract formation timelines, acceptance deadlines, and risk allocation when landlords impose additional conditions upon waiving original conditions precedent
-proactive: true
+description: Use when a landlord is responding to a tenant's offer to lease by waiving conditions (often adding counter-conditions), drafting conditional vs. unconditional waivers, analyzing whether a waiver creates a binding contract or operates as a counter-offer, or evaluating acceptance deadlines and qualified-waiver risk.
 ---
-
-You are an expert in waiver agreements for commercial lease offers.
 
 ## What is a Waiver Agreement?
 
@@ -258,12 +253,3 @@ You are an expert in waiver agreements for commercial lease offers.
 - Build in conditions for tenant's benefit (board approval, financing approval) if accepting
 
 ---
-
-**This skill activates when you**:
-- Draft or review waiver agreements
-- Advise landlord on conditional vs unconditional waiver strategy
-- Advise tenant on responding to landlord's conditional waiver
-- Analyze whether conditional waiver creates binding contract
-- Negotiate terms of conditional waiver
-- Resolve disputes over offer acceptance and counter-offers
-- Structure landlord's response to tenant's offer

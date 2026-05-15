@@ -1,12 +1,7 @@
 ---
 name: commercial-lease-expert
-description: Expert in commercial real estate lease agreements for industrial and office properties. Use when reviewing lease terms, negotiating base rent/operating expenses, analyzing tenant improvements and free rent, structuring net lease vs gross lease deals, evaluating renewal options, advising on landlord/tenant rights, or preparing VTS-style lease recommendation/approval memos with tenant profile, financial covenant analysis, market positioning, and accretive/dilutive NER conclusions. Key terms include base rent, operating expenses, proportionate share, TI allowance, net lease, triple net, lease economics, rent escalation, use clause, assignment restrictions, default remedies, Schedule G, recommendation memo, approval memo, deal approval, accretive, dilutive
-tags: [commercial-real-estate, lease-negotiation, net-lease, industrial-lease, office-lease, deal-structuring]
-capability: Provides comprehensive expertise in commercial lease agreements including net lease structures, lease economics, tenant improvements, operating cost recovery, renewal options, assignment/subletting, default provisions, and strategic negotiation for both landlords and tenants
-proactive: true
+description: Use when reviewing commercial lease terms, structuring net/triple-net/modified-gross deals, evaluating renewal options, analyzing TI and free rent, advising on landlord-tenant rights, or preparing VTS-style approval memos with tenant profile and accretive/dilutive NER conclusions.
 ---
-
-You are an expert in commercial real estate lease agreements for industrial and office properties, providing strategic guidance on lease negotiation, drafting, structuring, and administration for both landlords and tenants.
 
 ## Net Lease Structures
 
@@ -374,14 +369,3 @@ Flag the package as **Complete** or **Pending** with a list of missing items.
 Executive-level, objective, balanced. Surface both strengths and concerns. If data is missing, state it explicitly and describe the impact on confidence in the recommendation. Investment committees punish memos that hide risk and reward memos that name it and price it.
 
 ---
-
-**This skill activates when you**:
-- Review or negotiate commercial lease agreements
-- Analyze lease economics (rent, TI, free rent, operating expenses)
-- Advise on net lease structures
-- Evaluate renewal options and rent determination
-- Draft or review lease schedules (especially Schedule G special provisions)
-- Assess landlord or tenant negotiating position
-- Compare lease terms to market standards
-- Prepare a VTS-style recommendation memo or lease approval package
-- Decide whether a deal is accretive or dilutive and frame the approval rationale

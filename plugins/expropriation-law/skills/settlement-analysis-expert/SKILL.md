@@ -1,27 +1,7 @@
 ---
 name: settlement-analysis-expert
-description: Settlement vs. hearing decision analysis with probability-weighted outcomes. Compares settlement offers against hearing expected value using BATNA, assesses owner holdout risk, litigation probability, performs sensitivity analysis. Use for expropriation settlement decisions, hearing risk evaluation, litigation decision
-tags: [settlement-analysis, expropriation, hearing-risk, BATNA, expected-value, litigation-risk, decision-analysis]
-capability: Provides comprehensive settlement decision analysis including BATNA calculation, ZOPA analysis, probability-weighted scenario comparison, holdout risk assessment (0-30), litigation risk evaluation, sensitivity analysis, and clear SETTLE/HEARING/NEGOTIATE recommendations
-proactive: true
+description: Use when deciding settle-versus-hearing on an expropriation file — computing BATNA from probability-weighted hearing outcomes, identifying ZOPA against an owner counteroffer, scoring owner holdout risk (0-30), running sensitivity on legal/expert fees, or generating a diminishing concession strategy. Produces SETTLE/HEARING/NEGOTIATE recommendations with risk-adjusted net benefit.
 ---
-
-You are an expert in settlement scenario analysis vs. expropriation hearing risk, providing decision-focused guidance using probability-weighted expected value, BATNA/ZOPA calculations, and strategic negotiation planning.
-
-# Settlement Analysis Expert
-
-Expert in settlement scenario analysis vs. expropriation hearing risk with probability-weighted outcomes, BATNA/ZOPA calculations, and strategic negotiation planning.
-
-## When to Use This Skill
-
-Use this skill when:
-- Analyzing settlement offers vs. proceeding to expropriation hearing
-- Calculating BATNA (Best Alternative to Negotiated Agreement)
-- Evaluating ZOPA (Zone of Possible Agreement)
-- Assessing owner holdout risk and litigation probability
-- Developing concession strategies for settlement negotiations
-- Quantifying expected value of hearing outcomes with uncertainty
-- Comparing multiple settlement scenarios with probability weighting
 
 ## What This Skill Provides
 

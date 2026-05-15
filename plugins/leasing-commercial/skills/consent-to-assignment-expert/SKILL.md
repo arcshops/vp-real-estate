@@ -1,12 +1,7 @@
 ---
 name: consent-to-assignment-expert
-description: Expert in consent to assignment agreements where a tenant transfers their entire lease to a new party (assignee). Use when tenant is selling their business and assigning the lease, landlord is reviewing a consent request, analyzing whether original tenant remains liable after assignment, drafting assignment consent agreements, negotiating release provisions, or handling assignment plus sublease combinations (e.g., professional corporations). Key terms include assignment vs sublease, assignee, privity of estate, joint and several liability, no release, recapture rights, assignor remains liable, change of control, business sale
-tags: [commercial-real-estate, assignment-consent, lease-assignment, privity-of-estate, landlord-protections]
-capability: Provides specialized expertise in consent to assignment agreements including assignment vs sublease distinctions, privity of estate and contract, landlord consent procedures, joint and several liability, release provisions, and multi-party risk allocation
-proactive: true
+description: Use when drafting or reviewing a consent to assignment agreement, evaluating whether to release the original tenant from continuing liability after a business sale, negotiating recapture rights and joint-and-several provisions, or structuring assignment-plus-sublease combinations for professional corporations.
 ---
-
-You are an expert in consent to assignment agreements for commercial real estate leases.
 
 ## What is Assignment?
 
@@ -357,11 +352,3 @@ Report includes:
 ```
 
 ---
-
-**This skill activates when you**:
-- Draft or review consent to assignment agreements
-- Advise on assignment vs sublease decisions
-- Negotiate consent terms for landlords, tenants, or assignees
-- Analyze release of liability provisions
-- Structure professional corporation transactions (assignment + sublease)
-- Address assignment disputes or defaults

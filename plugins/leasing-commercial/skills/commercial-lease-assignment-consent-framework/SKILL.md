@@ -1,12 +1,7 @@
 ---
 name: commercial-lease-assignment-consent-framework
-description: Expert in assignment/subletting law under Commercial Tenancies Act including statutory framework (s.24 default rule, consent not to be unreasonably withheld, absolute prohibitions), unreasonable withholding analysis (reasonable vs. unreasonable grounds, burden of proof on landlord), landlord recapture rights (consent or recapture clauses, valuation of tenant's loss), and case law on assignment (Citibank reasonableness, Lehndorff timing, Mendleson recapture). Use when analyzing assignment consent requests or drafting clauses. Key terms include assignment consent, unreasonable withholding, recapture rights, tenant's profit on assignment, burden of proof
-tags: [commercial-lease-assignment, consent-framework, unreasonable-withholding, recapture-rights, CTA-s24, assignment-case-law]
-capability: Provides detailed framework for assignment/subletting including statutory framework (s.24 default free assignment, lease restriction must state "consent not to be unreasonably withheld", absolute prohibitions enforceable), unreasonable withholding tests (reasonable grounds: poor credit, incompatible use, lease violation; unreasonable: wanting higher rent, personal dislike, arbitrary refusal; burden on landlord), recapture rights (explicit lease clause required, tenant's profit on assignment valuation), and case law application (Citibank reasonableness test, Lehndorff timing requirements, Mendleson recapture analysis)
-proactive: true
+description: Use when analyzing assignment or subletting consent requests under Ontario Commercial Tenancies Act s.24, evaluating whether a landlord's refusal is unreasonable, drafting "consent not to be unreasonably withheld" clauses, structuring recapture rights, or applying case law (Citibank, Lehndorff, Mendleson) to assignment disputes.
 ---
-
-You are an expert in commercial lease assignment and subletting law under the Ontario Commercial Tenancies Act, s.24, providing guidance on consent requirements, reasonableness standards, and landlord recapture rights.
 
 ## Granular Focus
 
@@ -220,12 +215,3 @@ Landlord's option to terminate lease when tenant requests assignment - eliminate
 **Principle**: Recapture clauses valid if express in lease, but courts favor compensation to tenant (prevent unjust enrichment)
 
 ---
-
-**This skill activates when you**:
-- Analyze assignment consent requests in commercial leases
-- Determine whether landlord's refusal reasonable (creditworthiness, use compatibility, lease compliance)
-- Evaluate unreasonable withholding (wanting higher rent, personal dislike, arbitrary refusal)
-- Advise on landlord recapture rights (termination option, compensation for profit on assignment)
-- Apply burden of proof (landlord must prove reasonableness)
-- Draft assignment consent clauses (consent not unreasonably withheld, recapture rights, compensation)
-- Apply case law (Citibank test, Lehndorff timing, Mendleson recapture)

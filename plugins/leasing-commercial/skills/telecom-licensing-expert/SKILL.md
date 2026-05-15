@@ -1,12 +1,7 @@
 ---
 name: telecom-licensing-expert
-description: Expert in telecommunications licensing agreements that grant telecom carriers (phone, internet, cable companies) access to install equipment in commercial buildings. Use when building owner is negotiating with telecom providers, reviewing carrier access rights, structuring equipment room licenses, analyzing riser and conduit rights, evaluating CRTC (Canadian Radio-television and Telecommunications Commission) compliance requirements, negotiating license fees and revenue sharing, or managing multiple competing carriers in one building. Key terms include telecommunications license, carrier access, equipment installation, riser rights, conduit rights, CRTC compliance, co-location, license vs lease, non-exclusive license, main distribution frame, telecom service provider
-tags: [commercial-real-estate, telecommunications, licensing-agreements, infrastructure-sharing, CRTC-compliance]
-capability: Provides specialized expertise in telecommunications license agreements including carrier access rights, equipment installation, riser/conduit rights, CRTC regulatory compliance, co-location arrangements, and balancing building owner control with provider access needs
-proactive: true
+description: Use when negotiating a telecom carrier's access to install equipment in a commercial building, drafting riser and conduit license rights, structuring co-location among competing carriers, evaluating CRTC compliance and reasonable-access obligations, or setting license fees and revenue-sharing terms.
 ---
-
-You are an expert in telecommunications licensing agreements for commercial buildings.
 
 ## What is a Telecom License?
 
@@ -312,13 +307,3 @@ Carrier's service agreements with tenants are separate from license. Building ow
 Carrier must exercise "reasonable care" or "commercially reasonable efforts" in installation and maintenance
 
 ---
-
-**This skill activates when you**:
-- Draft or review telecom license agreements
-- Negotiate with telecom carriers for building access
-- Advise building owners on multi-carrier strategy
-- Analyze CRTC compliance and reasonable access requirements
-- Structure license fees and revenue sharing
-- Address co-location and equipment room design
-- Handle carrier relocation due to building redevelopment
-- Resolve disputes over access rights or equipment interference

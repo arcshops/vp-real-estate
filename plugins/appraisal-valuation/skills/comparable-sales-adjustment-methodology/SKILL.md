@@ -1,12 +1,7 @@
 ---
 name: comparable-sales-adjustment-methodology
-description: Expert in technical adjustment grid construction for comparable sales analysis including adjustment hierarchy, quantification methods (paired sales, regression, cost, income), and validation techniques. Use when constructing detailed comparable sales grids, quantifying specific adjustments, applying statistical validation, or reconciling adjusted sale prices. Key terms include adjustment grid, paired sales analysis, hedonic regression, gross adjustment limits, net adjustment, sensitivity analysis
-tags: [comparable-sales, adjustment-grid, paired-sales-analysis, statistical-validation, appraisal-methodology, market-analysis]
-capability: Provides technical rigor in comparable sales adjustments including proper adjustment sequence (property rights through physical characteristics), quantification methodologies (paired sales isolation, statistical regression, cost/income approaches), validation testing (gross/net limits, R-squared, coefficient significance), and sensitivity analysis for key adjustments
-proactive: true
+description: Use when constructing comparable sales adjustment grids, quantifying adjustments via paired sales or hedonic regression, validating gross/net adjustment limits, or reconciling adjusted sale prices. Triggers on sales comparison appraisals, sales grid construction, market-extracted adjustments. Key terms: adjustment hierarchy, paired sales, hedonic regression, gross/net adjustment limits, sensitivity analysis.
 ---
-
-You are an expert in technical adjustment grid construction for comparable sales analysis, providing detailed methodology for appraisers and property professionals performing market-based valuation.
 
 ## Implementation
 
@@ -110,10 +105,6 @@ Located in `Comparable_Sales_Analysis/sample_inputs/`:
 - Industrial building (clear height, loading docks, column spacing)
 - Office building (building class, parking ratio, floor plate efficiency)
 - Statistical validation and compliance flags
-
-## Granular Focus
-
-Technical adjustment grid construction (subset of appraisal expertise). This skill provides deep, focused methodology for quantifying and validating comparable sales adjustments - NOT general sales comparison theory.
 
 ## Adjustment Hierarchy and Sequence
 
@@ -538,13 +529,3 @@ Gross % = $390,000 ÷ $1,500,000 = 26.0%
 - **Action**: Seek additional paired sales or regression analysis to tighten frontage adjustment estimate
 - **If unavailable**: Widen value conclusion range to reflect uncertainty (e.g., $125K-$145K/acre)
 
----
-
-**This skill activates when you**:
-- Construct detailed comparable sales adjustment grids
-- Apply proper adjustment sequence (property rights through physical characteristics)
-- Quantify adjustments using paired sales, regression, cost, income, or judgment
-- Validate adjustment grids with gross/net limits, statistical tests, sensitivity analysis
-- Reconcile adjusted sale prices to support value conclusion
-- Document adjustment methodology for defensibility in litigation or arbitration
-- Test reliability of regression models (R-squared, coefficient significance, multicollinearity)

@@ -1,12 +1,7 @@
 ---
 name: non-disturbance-expert
-description: Expert in SNDA agreements (Subordination, Non-Disturbance, and Attornment) that protect tenants from eviction if the landlord's lender forecloses. Use when tenant is negotiating lease for major space requiring significant investment, lender is requiring subordination, analyzing tenant's foreclosure protection, drafting three-party SNDA agreements, evaluating whether tenant can survive foreclosure, or negotiating with lenders for non-disturbance protection. Key terms include SNDA, non-disturbance, attornment, subordination, foreclosure, lender priority, tenant protection, mortgage, charge, tripartite agreement, lease survival
-tags: [commercial-real-estate, SNDA, non-disturbance, attornment, subordination, foreclosure-protection]
-capability: Provides specialized expertise in non-disturbance and attornment agreements including tripartite SNDA structures, tenant protection mechanisms, lender foreclosure scenarios, subordination analysis, and negotiation strategies for tenants and lenders
-proactive: true
+description: Use when drafting or reviewing an SNDA (Subordination, Non-Disturbance, Attornment) agreement, negotiating tenant protection against lender foreclosure, evaluating subordination clauses in a lease, or coordinating tripartite execution among landlord, tenant, and mortgagee for a major-space deal.
 ---
-
-You are an expert in SNDA agreements (Subordination, Non-Disturbance, and Attornment) for commercial real estate.
 
 ## What is an SNDA?
 
@@ -235,12 +230,3 @@ Without it, SNDA is one-sided (lender gets subordination, tenant gets nothing).
 - Execute SNDAs promptly (delays frustrate landlords and tenants)
 
 ---
-
-**This skill activates when you**:
-- Draft or review SNDA agreements
-- Advise tenants on foreclosure protection
-- Negotiate non-disturbance provisions with lenders
-- Analyze subordination risks
-- Structure lease provisions requiring SNDAs
-- Resolve disputes over lender's obligations after foreclosure
-- Coordinate SNDA execution among landlord, tenant, and lender

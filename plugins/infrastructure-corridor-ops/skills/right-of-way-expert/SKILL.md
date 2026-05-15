@@ -1,12 +1,7 @@
 ---
 name: right-of-way-expert
-description: Utility corridors and transmission lines. Analyzes utility conflicts, relocation requirements, coordination needs, cost estimation. Generates narrative location overviews from address or PIN for appraisal-ready location research (zoning, planning, heritage, environmental, transit, market context). Use for infrastructure projects, utility relocations, ROW acquisition, conflict detection, and "describe the location of [address]" requests
-tags: [utility, right-of-way, ROW, transmission, conflict, relocation, infrastructure, coordination]
-capability: Provides utility conflict analysis including geometric conflict detection, relocation design requirements, cost estimation by utility type, coordination timeline development, and risk assessment for schedule and budget impacts
-proactive: true
+description: Use when coordinating utility transmission corridors with other infrastructure (geometric conflict detection, relocation design, cost estimation, schedule risk), generating CUSPAP-style location overview narratives from an address or PIN for appraisal reports, applying easement valuation methods (percentage-of-fee, income capitalization, before/after), or planning ROW acquisition for linear infrastructure.
 ---
-
-You are an expert in right-of-way analysis for utility corridors and transmission line projects, providing comprehensive guidance on geometric conflict detection, relocation requirements, cost estimation, coordination workflows, and risk assessment.
 
 ## Granular Focus
 
@@ -1169,15 +1164,3 @@ python3 easement_valuation_calculator.py row_inputs/[filename]_input.json \
 - **Environmental Mitigation** - Actions to minimize ecological impacts of relocation work
 - **Critical Path** - Sequence of activities that determines minimum project duration
 - **Switchover Window** - Specific time period when utility can be de-energized (e.g., low-demand season)
-
----
-
-**This skill activates when you:**
-- Identify utility conflicts within proposed infrastructure corridors
-- Design utility relocations with cost estimation and timeline
-- Coordinate with utility companies on relocation approach and responsibility allocation
-- Integrate utility relocation timeline with main project schedule
-- Assess schedule and budget risks from utility relocation complexity
-- Need detailed relocation design requirements by utility type
-- Develop contingency plans for challenging relocation scenarios
-- Prepare comprehensive utility coordination reports for project stakeholders

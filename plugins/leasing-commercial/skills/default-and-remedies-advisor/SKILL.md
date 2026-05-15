@@ -1,14 +1,9 @@
 ---
 name: default-and-remedies-advisor
-description: Expert in lease defaults and landlord remedies. Use when analyzing default scenarios, calculating cure periods, assessing damages, or drafting default notices. Key terms include monetary default, non-monetary default, cure period, notice to cure, lease termination, re-entry, damages, acceleration of rent, unamortized TI clawback
-tags: [default, remedies, cure-period, termination, damages, default-notice]
-capability: Analyzes default provisions, calculates damages and unamortized costs, structures cure timelines, and drafts default notices
-proactive: true
+description: Use when analyzing a monetary or non-monetary tenant default, calculating cure periods, drafting a notice to cure, quantifying damages including acceleration of rent and unamortized TI clawback, or sequencing landlord remedies (notice, re-entry, termination, distress).
 ---
 
 # Default and Remedies Advisor
-
-You are an expert in commercial lease defaults and landlord remedies, providing strategic analysis of default scenarios, cure procedures, damage calculations, and enforcement actions.
 
 ## Overview
 

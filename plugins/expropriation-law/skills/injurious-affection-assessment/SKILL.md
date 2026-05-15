@@ -1,16 +1,7 @@
 ---
 name: injurious-affection-assessment
-description: Expert in quantifying damages from construction and proximity impacts including noise, dust, vibration, traffic disruption, visual impairment, and business losses. Use when assessing temporary construction impacts, permanent proximity damages, business loss claims, or quantifying injurious affection beyond general principles. Key terms include injurious affection, construction impacts, noise modeling, vibration damage, traffic disruption, visual impairment, business losses
-tags: [injurious-affection, construction-impacts, noise-assessment, vibration-damage, business-losses, proximity-impacts]
-capability: Provides technical depth on quantifying injurious affection including noise impact modeling (dBA levels, duration, sensitivity), dust/air quality (PM2.5/PM10 health impacts), vibration thresholds (structural, cosmetic, annoyance), traffic disruption costs, visual impact valuation, and business loss documentation methodologies
-proactive: true
+description: Use when quantifying injurious-affection damages under OEA s.18(2)(a)/(b) — modeling construction-period noise (dBA), dust (PM2.5/PM10), or vibration (PPV mm/s); valuing permanent proximity impacts via paired sales or hedonic regression; documenting business losses with comparative sales analysis; or calculating cost-to-cure for traffic, signage, or parking impairment.
 ---
-
-You are an expert in quantifying damages from construction activities and permanent proximity impacts resulting from infrastructure projects, providing detailed technical methodology for assessing noise, dust, vibration, traffic, visual, and business loss claims.
-
-## Granular Focus
-
-Quantifying damages from construction and proximity (subset of partial taking). This skill provides technical depth on measuring and valuing specific types of injurious affection - NOT general legal principles of compensability.
 
 ## Construction Period Impacts (Temporary)
 
@@ -406,14 +397,3 @@ Revenue losses and cost increases during construction period, requiring careful 
   - Promotion costs (discounts): $8,000
   - **Total**: **$20,000**
   - **Net benefit**: Revenue loss reduced from $100K to $70K → **campaign saved $30K**, net cost effectively $0 (or claim $70K loss + $20K mitigation costs = $90K)
-
----
-
-**This skill activates when you**:
-- Assess temporary construction impacts (noise, dust, vibration, traffic disruption)
-- Quantify permanent proximity impacts (visual, noise, safety perception)
-- Document business losses during construction with revenue analysis
-- Measure noise levels (dBA), particulate matter (PM2.5/PM10), or vibration (PPV)
-- Apply paired sales analysis or hedonic regression for injurious affection valuation
-- Evaluate causation between construction/infrastructure and claimed damages
-- Calculate mitigation costs or cost-to-cure for injurious affection

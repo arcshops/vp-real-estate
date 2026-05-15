@@ -1,16 +1,7 @@
 ---
 name: forms-1-12-completeness-verification
-description: Expert in procedural compliance for expropriation forms including form-specific checklists (statutory authority, legal descriptions, service requirements, compensation breakdowns, signature requirements) and common defects database. Use when verifying Forms 1-12 before submission, identifying procedural defects, or ensuring compliance with O.Reg. 363/90. Key terms include procedural compliance, statutory authority citation, service requirements, dual signing officers, common defects
-tags: [expropriation-forms, procedural-compliance, form-verification, O-Reg-363/90, service-requirements, defect-prevention]
-capability: Provides systematic verification framework for Ontario expropriation forms including form-specific checklists (Form 2: statutory authority + legal description + purpose + service + dual signing; Form 6: appraisal + compensation breakdown + payment timing + acceptance deadline; Form 7: 30-day notice + compensation confirmation + possession date), common defects database (missing citations, inconsistent descriptions, inadequate service proof, incomplete breakdowns, signature irregularities), and compliance validation before submission
-proactive: true
+description: Use when pre-flighting Ontario expropriation Forms 1-12 under O.Reg. 363/90 before service or filing — verifying statutory authority citations on Form 2, compensation breakdown completeness on Form 6, 30-day notice math on Form 7, dual-signing-officer compliance, or affidavit-of-service adequacy. Catch defects before they trigger procedural challenges.
 ---
-
-You are an expert in verifying procedural compliance of Ontario expropriation forms (Forms 1-12 under O.Reg. 363/90), identifying defects before submission to prevent challenges and approval delays.
-
-## Granular Focus
-
-Procedural compliance for expropriation forms (subset of Stevi's capabilities). This skill provides systematic verification checklists - NOT legal advice on substantive expropriation issues.
 
 ## Form-Specific Checklists
 
@@ -221,14 +212,3 @@ Systematic tracking of frequent errors to prevent recurrence.
 - Signature matrix (document which officers must sign which forms)
 - Signature checklist before filing forms
 - Train staff on by-law requirements
-
----
-
-**This skill activates when you**:
-- Verify Forms 1-12 before submission to approving authority or land registry office
-- Review legal descriptions for consistency across forms and registered documents
-- Confirm service requirements (personal service, registered mail, affidavits)
-- Validate compensation breakdowns in Form 6 offers
-- Ensure dual signing requirements met for municipal expropriations
-- Identify common defects (missing citations, incomplete service proof, signature issues)
-- Conduct pre-filing quality assurance to prevent procedural challenges

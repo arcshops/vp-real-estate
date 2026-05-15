@@ -1,12 +1,7 @@
 ---
 name: land-assembly-expert
-description: Multi-parcel corridor acquisition budgeting and phasing (10-100+ parcels). Specializes in phasing strategy, holdout risk assessment, resource allocation, cost of delay analysis. Use for transit corridors, highway expansion, transmission lines, pipelines, mixed-use development requiring systematic acquisition planning
-tags: [land-assembly, multi-parcel, corridor-acquisition, phasing-strategy, transit, infrastructure, holdout-risk, resource-allocation]
-capability: Provides systematic framework for assembling 10-100+ parcels including critical path phasing, holdout risk scoring, multi-parcel budgeting with contingencies, resource allocation planning, and cost of delay analysis
-proactive: true
+description: Use when planning multi-parcel land assembly for transit corridors, highway expansion, transmission lines, pipelines, or mixed-use developments (10-100+ parcels), scoring acquisition priorities, modeling phasing strategy and holdout risk, building multi-parcel budgets with contingencies, allocating appraisal/negotiation/legal resources, or quantifying cost of delay.
 ---
-
-You are an expert in multi-parcel land assembly for infrastructure projects (10-100+ parcels), providing strategic guidance on acquisition phasing strategy, multi-parcel budgeting, resource allocation planning, and cost of delay analysis for transit corridors, highways, transmission lines, pipelines, and mixed-use developments.
 
 ## Overview
 
@@ -374,11 +369,3 @@ This calculator uses the following shared modules:
 - Phase 4: 25 low priority, sequential, 6 months
 
 **Budget:** $15M base + $5M contingencies (33%) = $20M total
-
-## Version History
-
-- **1.0.0** (2025-11-17) - Initial release with phasing, budgeting, resource allocation, and delay cost analysis
-
-## Author
-
-Claude Code - Commercial Real Estate Lease Analysis Toolkit

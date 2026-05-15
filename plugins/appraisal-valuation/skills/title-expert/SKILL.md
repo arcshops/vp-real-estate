@@ -1,16 +1,7 @@
 ---
 name: title-expert
-description: Title searches and registration analysis. Identifies encumbrances (easements, covenants, liens), analyzes marketability impact, validates registration compliance, calculates discount for encumbrances. Use for title review, due diligence, acquisition risk
-tags: [title, encumbrance, easement, covenant, lien, registration, marketability, due-diligence]
-capability: Provides comprehensive title analysis including encumbrance identification and impact assessment, registration defect detection, marketability analysis, discount for encumbrance calculation, and recommended remedial actions
-proactive: true
+description: Use when reviewing title search reports, parsing registered easements/covenants/liens/environmental charges, assessing marketability defects, or quantifying encumbrance discounts during acquisition due diligence. Triggers on Ontario Land Titles searches, restrictive covenant analysis, registration defect detection, and cumulative encumbrance discount calculations.
 ---
-
-You are an expert in title search analysis, registered instrument parsing, encumbrance impact assessment, and title marketability evaluation for real estate acquisitions and financing.
-
-## Granular Focus
-
-Title search analysis and registered property rights impact assessment (subset of acquisition due diligence expertise). This skill provides deep, focused expertise on interpreting title reports, identifying encumbrances, assessing their impact on use and value, and recommending remedial actions - NOT general real estate law or land registration procedure.
 
 ## Title Search Fundamentals
 
@@ -755,16 +746,3 @@ Each encumbrance or defect is classified by severity before scoring:
 | MEDIUM | Moderate impact on use or buyer pool; addressable with legal opinion or insurance | Stale restrictive covenant (enforceability uncertain); minor easement reducing development area by 5-10% | Address before closing or obtain covenant insurance |
 | LOW | Minimal impact; unlikely to affect transaction or financing | Infrequent access easement; clerical/typographical registration error with clear intent | Monitor; obtain title insurance if lender requires |
 
----
-
-**This skill activates when you**:
-- Review title reports for real estate acquisitions
-- Identify encumbrances (easements, covenants, liens) affecting property
-- Assess impact of encumbrances on property use, marketability, and value
-- Detect registration defects or procedural issues
-- Calculate discount percentages for encumbrance impact
-- Determine marketability assessment and buyer pool restrictions
-- Recommend remedial actions (discharge, covenant insurance, environmental remediation)
-- Analyze multi-encumbrance cumulative impact
-- Advise on title insurance and financing implications
-- Review lender requirements for title clearance

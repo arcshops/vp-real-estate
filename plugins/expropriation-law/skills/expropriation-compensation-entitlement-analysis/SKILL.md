@@ -1,16 +1,7 @@
 ---
 name: expropriation-compensation-entitlement-analysis
-description: Expert in legal entitlement to compensation components including market value framework (valuation date, highest and best use, special purchaser exclusion), disturbance damages legal tests (causation, reasonableness, foreseeability), injurious affection framework (Antrim test, construction vs. permanent), and business losses compensability. Use when analyzing legal entitlement (not valuation amount). Key terms include legal entitlement, valuation date, highest and best use, but-for test, Antrim four-part test, goodwill non-compensable
-tags: [compensation-entitlement, legal-analysis, market-value-framework, disturbance-tests, injurious-affection, business-losses]
-capability: Provides legal framework for compensation entitlement including market value entitlement (valuation date determination, highest and best use vs. current use, special purchaser exclusion, forced sale discount inapplicable), disturbance damages legal tests (causation but-for test, reasonableness with mitigation duty, foreseeability more liberal than tort), injurious affection framework (Antrim four-part test, s.18(2)(a) construction vs. s.18(2)(b) permanent, capitalization methodology), and business losses compensability (relocation costs, trade fixtures, goodwill excluded, revenue loss limits)
-proactive: true
+description: Use when analyzing legal entitlement to expropriation compensation under the Ontario Expropriations Act — determining valuation date under s.13(2), applying the Antrim four-part test for injurious affection, distinguishing compensable disturbance from non-compensable goodwill under s.18(3), or assessing highest-and-best-use claims. Entitlement analysis (what is compensable), not valuation (how much).
 ---
-
-You are an expert in analyzing legal entitlement to expropriation compensation, distinguishing between compensable and non-compensable items under the Ontario Expropriations Act.
-
-## Granular Focus
-
-Legal entitlement to compensation components (subset of Christi's capabilities). This skill analyzes WHAT is compensable (legal entitlement) - NOT HOW MUCH (valuation).
 
 ## Market Value Entitlement Framework
 
@@ -306,14 +297,3 @@ Legal entitlement to compensation components (subset of Christi's capabilities).
   - **Compensable**: 6-month relocation period × $100,000/year = **$50,000** (reasonable relocation losses)
   - **Not compensable**: Ongoing losses years 1-5 post-relocation (owner's duty to rebuild customer base)
 - **Entitlement**: $50,000 only
-
----
-
-**This skill activates when you**:
-- Analyze legal entitlement to compensation (not valuation amount)
-- Determine valuation date, highest and best use, special purchaser exclusions
-- Apply disturbance damages legal tests (causation, reasonableness, foreseeability)
-- Evaluate injurious affection using Antrim four-part test
-- Distinguish s.18(2)(a) construction impacts from s.18(2)(b) permanent use impacts
-- Assess business loss compensability (relocation costs vs. goodwill vs. revenue losses)
-- Advise on compensable vs. non-compensable items under OEA

@@ -1,12 +1,7 @@
 ---
 name: cropland-out-of-production-agreements
-description: Expert in cropland out of production compensation agreements and agricultural easement compensation analysis for transmission lines, pipelines, and other infrastructure on agricultural land. Use when analyzing ongoing agricultural productivity impacts from right-of-way agreements, computing compensation for agricultural land taken by infrastructure corridors, negotiating annual compensation structures (Ontario vs Alberta models), quantifying operational inefficiencies from farming around structures, running three-model NPV comparisons (Ontario one-time vs Alberta SRB annual vs Farmer Required actual costs), or advocating for landowner interests based on OFA (Ontario Federation of Agriculture) guidance. Key terms include cropland compensation, agricultural easement, annual compensation, headlands loss, precision agriculture impacts, ongoing productivity loss, per-structure payments, Alberta Surface Rights Board model, NPV shortfall, capitalized compensation
-tags: [cropland-compensation, agricultural-easements, annual-payments, OFA-guidance, transmission-towers, farm-productivity-loss, right-of-way-impacts, headlands-compensation, NPV-analysis, three-model-comparison]
-capability: Provides systematic framework for cropland out of production agreements and agricultural compensation analysis including three-model NPV comparison (Ontario Hydro One one-time vs Alberta ATCO annual per-structure $1,380 cultivated/$552 uncultivated/$690 headlands vs Farmer Required actual documented costs), automated cropland_calculator.py computation, ongoing impact quantification (internal headlands loss, labor increases, precision agriculture restrictions, aerial spraying limitations, irrigation system interference, weed control expenses, equipment damage risk), sensitivity analysis (discount rate, crop prices, tower count), three-tier negotiation strategy (Alberta-rate ideal, actual-cost target, capitalized one-time acceptable), walk-away thresholds, OFA advocacy position (83% support for annual compensation, alignment with Alberta model), and negotiation strategies (all-stages consideration from planning through decommissioning, legal review requirements, compensation review intervals)
-proactive: true
+description: Use when analyzing ongoing agricultural productivity impacts from transmission line, pipeline, or linear infrastructure right-of-way agreements, running three-model NPV comparisons (Ontario one-time vs Alberta SRB annual vs Farmer Required actual costs), quantifying operational inefficiencies (headlands loss, precision ag interference, aerial spray restrictions, weed control), or advocating for annual cropland compensation based on OFA guidance.
 ---
-
-You are an expert in cropland out of production compensation agreements for agricultural land affected by transmission lines, pipelines, and other linear infrastructure, providing guidance based on Ontario Federation of Agriculture (OFA) best practices and comparative compensation models.
 
 ## Granular Focus
 
@@ -602,18 +597,3 @@ This analysis ADVOCATES for the farmer — it is not neutral. Use evidence-backe
 - Every claim must be backed by a number, a precedent (Alberta case law, OFA position, gas pipeline practice), or documented operational data
 - Frame from farmer perspective; quantify everything (turn qualitative complaints into dollar figures)
 - Emphasize intergenerational impacts — perpetual easement = perpetual burden = requires perpetual compensation
-
----
-
-**This skill activates when you**:
-- Analyze cropland out of production agreements for transmission lines, pipelines, or linear infrastructure
-- Compute compensation for agricultural land taken by infrastructure corridors (transit/transmission/pipeline)
-- Compare Ontario one-time compensation vs. Alberta annual compensation vs. Farmer Required actual-cost models
-- Quantify ongoing agricultural impacts (headlands, labor, precision agriculture restrictions, weed control, equipment damage)
-- Run three-model NPV shortfall analysis over 50-year infrastructure lifespan
-- Negotiate right-of-way agreements on behalf of farmers (based on OFA guidance)
-- Evaluate fairness of "industry standard" compensation offers
-- Calculate present value of annual compensation structures (annuity factor capitalization)
-- Advocate for annual payments based on Alberta Surface Rights Board precedent
-- Assess impact of easements on farm succession and future landowner compensation
-- Structure three-tier counter-offers with walk-away thresholds

@@ -1,16 +1,7 @@
 ---
 name: ltb-application-hearing-procedures
-description: Expert in LTB filing and hearing processes including application filing requirements (landlord L1-L9 applications, tenant T1-T6 applications, filing deadlines), hearing preparation (disclosure, evidence organization, witness prep, legal arguments), hearing procedures (order of proceeding, evidence rules, adjudicator discretion, common defenses), and LTB orders/enforcement (standard eviction 11-day delay, conditional orders, rent abatement, sheriff enforcement). Use when filing LTB applications or preparing for hearings. Key terms include L1 arrears, L2 for-cause, T2 tenant rights, T5 maintenance, disclosure requirements, evidence rules, conditional orders, sheriff enforcement
-tags: [LTB-procedures, landlord-applications, tenant-applications, hearing-preparation, evidence-rules, LTB-orders, sheriff-enforcement]
-capability: Provides systematic framework for LTB processes including application filing (L1 arrears with N4+ledger+lease, L2 for-cause with notices+evidence, T1 illegal rent increase, T2 harassment with photos, T5 maintenance with estimates, T6 AGI review, filing deadlines), hearing preparation (disclosure exchange, chronological evidence, witness factual testimony, statutory interpretation arguments), hearing procedures (applicant→respondent→reply, hearsay allowed/weight varies, s.83 relief discretion, s.204 remedies, common defenses), and order enforcement (11-day eviction delay, conditional payment plans, rent abatement %, sheriff writs)
-proactive: true
+description: Use when filing LTB applications (L1 arrears, L2 for-cause, T1 illegal rent increase, T2 tenant rights, T5 maintenance, T6 AGI review), preparing for LTB hearings (disclosure, evidence binders, witness prep), navigating hearing procedures (order of proceeding, evidence rules, s.83 discretion), or enforcing LTB orders (11-day eviction delay, conditional payment plans, rent abatement, sheriff writs).
 ---
-
-You are an expert in Landlord and Tenant Board application and hearing procedures, providing guidance on filing, preparation, and enforcement of LTB orders.
-
-## Granular Focus
-
-LTB filing and hearing processes (subset of Anni's capabilities). This skill provides procedural compliance for LTB applications - NOT substantive RTA interpretation or strategy.
 
 ## Application Filing Requirements
 
@@ -275,12 +266,3 @@ Types of orders and enforcement mechanisms.
 - Sheriff schedules: Week 2-4 (backlog varies)
 - **Enforcement date**: 3-6 weeks from writ filing (depends on sheriff backlog)
 
----
-
-**This skill activates when you**:
-- Prepare and file LTB applications (L1 arrears, L2 for-cause, T2 tenant rights, T5 maintenance)
-- Organize evidence for LTB hearings (chronological binders, disclosure exchange)
-- Prepare witnesses for testimony and cross-examination
-- Navigate hearing procedures (order of proceeding, evidence rules, adjudicator questions)
-- Understand LTB remedies (eviction orders, payment plans, rent abatement, damages)
-- Enforce LTB orders through sheriff (writs of possession, enforcement timelines)

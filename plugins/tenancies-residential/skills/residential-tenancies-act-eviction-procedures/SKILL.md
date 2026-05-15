@@ -1,16 +1,7 @@
 ---
 name: residential-tenancies-act-eviction-procedures
-description: Expert in eviction grounds and procedures under Ontario Residential Tenancies Act including non-payment evictions (N4 notice, 14-day termination, tenant void right per s.74, L1 application), for-cause evictions (N5 damage, N6 illegal act, N7 impaired safety, N8 persistent late rent), and no-fault evictions (N12 landlord own use with compensation and good faith requirement, N13 demolition/renovation with right to return). Use when advising on proper eviction procedures. Key terms include N4 notice, void right, LTB hearing, N12 own use, good faith, bad faith penalties, renoviction protections
-tags: [residential-tenancies-act, eviction-procedures, N4-notice, LTB-hearings, landlord-own-use, for-cause-eviction, no-fault-eviction]
-capability: Provides systematic framework for RTA evictions including non-payment procedures (N4 requirements, 14-day termination + void right, arrears calculation, L1 evidence, relief from eviction), for-cause evictions (N5 damage 20+7 days, N6 illegal 10 days, N7 safety 10 days, N8 persistent late 60 days, void rights by notice type), and no-fault evictions (N12 landlord/family use 60 days + 1 month compensation + good faith test + $25K+ bad faith penalties, N13 demolition 120 days + permits + right to return at old rent)
-proactive: true
+description: Use when serving or analyzing N4/N5/N6/N7/N8/N12/N13 notices under Ontario RTA, computing s.74 termination dates and tenant void rights, advising on for-cause or no-fault eviction strategy, or evaluating s.57 bad-faith remedies for pretextual N12/N13 evictions.
 ---
-
-You are an expert in residential eviction procedures under the Ontario Residential Tenancies Act, 2006, providing guidance on proper notice requirements, termination grounds, and Landlord and Tenant Board (LTB) processes.
-
-## Granular Focus
-
-Eviction grounds and procedures under RTA (subset of Anni's capabilities). This skill provides procedural compliance for residential evictions - NOT commercial evictions (covered by CTA).
 
 ## Non-Payment of Rent Evictions (s.59, N4/L1)
 
@@ -182,7 +173,7 @@ Evictions not based on tenant fault - landlord's need to recover possession.
 
 **Penalties for bad faith** (s.57):
 - If LTB finds landlord acted in bad faith (pretextual N12), tenant entitled to:
-  - **Moving costs** + **Rent differential** (if new rent higher) + **Damages up to $25,000+**
+  - **Moving costs** + **Rent differential** (if new rent higher) + **Damages up to $35,000**
 - **Example**: Landlord claims own use, evicts tenant, re-rents unit at 30% higher rent 1 month later
   - **Bad faith**: LTB awards tenant $28,000 ($3,000 moving + $15,000 rent differential for 2 years + $10,000 damages)
 
@@ -213,13 +204,3 @@ Evictions not based on tenant fault - landlord's need to recover possession.
 - **Abuse**: Landlord falsely claims major renovation to evict rent-controlled tenant, re-rents at market rent
   - **Penalty**: Tenant entitled to damages, right to return, LTB fines
 
----
-
-**This skill activates when you**:
-- Advise landlords on proper residential eviction procedures (N4, N5-N8, N12, N13)
-- Calculate notice periods, void rights, and termination dates
-- Prepare evidence for LTB hearings (rent ledgers, service affidavits)
-- Evaluate good faith for N12 landlord own use evictions
-- Assess N13 demolition/renovation requirements (permits, right to return)
-- Advise tenants on void rights (s.74 N4 void, N5 7-day void) and defenses
-- Navigate bad faith penalties and tenant remedies ($25K+ damages for pretextual evictions)

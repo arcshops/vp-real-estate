@@ -1,16 +1,7 @@
 ---
 name: tenant-relief-from-eviction-analysis
-description: Expert in s.83 discretionary relief under RTA including discretion framework (having regard to all circumstances, LTB can refuse or delay eviction, mandatory and discretionary factors), factors favoring relief (tenant circumstances: length of tenancy, payment history, personal circumstances, children/vulnerable persons, housing difficulty; landlord circumstances: financial position, good faith, alternative remedies), factors against relief (repeat defaults, significant arrears, breached plans, ongoing issues, prejudice to landlord), and adjudicator patterns (first N4 60% relief, second N4 rare, N8 almost never, N12 cannot delay beyond 60 days). Use when assessing likelihood of relief or preparing arguments. Key terms include s.83 discretion, relief from eviction, payment plan, tenant circumstances, landlord prejudice, adjudicator patterns
-tags: [s83-discretion, relief-from-eviction, payment-plans, tenant-circumstances, landlord-prejudice, adjudicator-patterns, LTB-discretion]
-capability: Provides analytical framework for s.83 relief including discretion test (all circumstances considered, refuse or delay eviction, mandatory s.83(2) factors + discretionary), factors favoring relief (long tenancy, good payment history except crisis, illness/job loss, children/vulnerable occupants, housing scarcity/discrimination barriers, landlord financially secure, landlord contributed to problem, payment plan viable), factors against relief (repeat conditional order breaches, 3+ months arrears, no payment plan or breached previous plans, ongoing behavior, prejudice to landlord with new tenant/mortgage arrears), and adjudicator patterns by notice type (N4 first offense 60% relief/payment plans, N4 second rare, N8 persistent late almost never, N12 no delay beyond 60-day compensation period)
-proactive: true
+description: Use when assessing likelihood of s.83 discretionary relief from eviction under Ontario RTA, preparing tenant relief arguments (personal circumstances, payment plans, children, housing scarcity), countering relief on behalf of a landlord (repeat defaults, prejudice, financial viability), or predicting adjudicator patterns by notice type (first vs. second N4, N8 persistent late, N12 own use).
 ---
-
-You are an expert in analyzing s.83 discretionary relief from eviction under the Ontario Residential Tenancies Act, providing strategic assessment of relief likelihood and argument preparation.
-
-## Granular Focus
-
-s.83 discretionary relief under RTA (subset of Anni's capabilities). This skill analyzes RELIEF FROM EVICTION - NOT grounds for eviction or procedural compliance.
 
 ## s.83 Discretion Framework
 
@@ -281,12 +272,3 @@ Empirical trends in LTB relief decisions (based on adjudicator practice, not sta
 - **LTB**: Grants delay to July 31 (2 months beyond May 1 termination - allows tenant time to find place)
 - **Cannot grant**: November delay (too long, prejudices landlord's own use)
 
----
-
-**This skill activates when you**:
-- Assess likelihood of s.83 relief from eviction
-- Prepare tenant's relief arguments (personal circumstances, payment plan, children, housing difficulty)
-- Prepare landlord's arguments against relief (repeat defaults, prejudice, tenant financial viability)
-- Evaluate payment plan proposals for realism and LTB acceptance
-- Understand adjudicator patterns by notice type (N4 first vs. second, N8, N12)
-- Develop relief strategy tailored to specific circumstances and adjudicator trends

@@ -1,14 +1,9 @@
 ---
 name: lease-comparison-expert
-description: Expert in lease-to-lease comparison and deviation analysis. Use when comparing lease amendments to originals, analyzing competing offers, benchmarking against precedents, or identifying deal term variations. Key terms include lease comparison, amendment analysis, offer comparison, precedent deviation, market benchmarking, competitive analysis
-tags: [comparison, amendment, offer-analysis, precedent, benchmarking, deviation-analysis]
-capability: Compares lease documents side-by-side, highlights deviations from standards, and benchmarks terms against market comparables
-proactive: true
+description: Use when comparing a lease amendment to its original, evaluating competing inbound vs. outbound offers, benchmarking a draft against a standard precedent form, or producing a side-by-side deviation analysis to support a deal recommendation.
 ---
 
 # Lease Comparison Expert
-
-You are an expert in commercial lease comparison and deviation analysis, providing systematic side-by-side analysis to identify differences, assess market positioning, and evaluate negotiation outcomes.
 
 ## Overview
 

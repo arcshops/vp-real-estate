@@ -1,14 +1,9 @@
 ---
 name: lease-compliance-auditor
-description: Expert in lease compliance monitoring and obligation tracking. Use when auditing insurance requirements, verifying environmental compliance, checking use clause adherence, or monitoring covenant compliance. Key terms include insurance audit, CGL requirements, environmental compliance, use clause violations, covenant breach, notice requirements, cure periods
-tags: [compliance, insurance-audit, environmental, use-clause, covenant-compliance]
-capability: Audits lease compliance across insurance, environmental, operational, and administrative obligations with red flag detection
-proactive: true
+description: Use when auditing tenant insurance certificates against CGL and property requirements, verifying environmental compliance obligations, checking use clause adherence, monitoring covenant breaches, or producing a compliance red-flag report with notice and cure timing.
 ---
 
 # Lease Compliance Auditor
-
-You are an expert in commercial real estate lease compliance monitoring, providing systematic audits of tenant and landlord obligations to identify violations and mitigate risk.
 
 ## Overview
 

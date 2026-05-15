@@ -1,12 +1,7 @@
 ---
 name: transmission-line-technical-specifications
-description: Expert in technical requirements for utility corridors including easement width calculations by voltage, tower placement optimization, land use restriction documentation, and environmental/regulatory compliance. Use when defining easement requirements, calculating conductor clearances, or documenting building prohibitions. Key terms include easement width, voltage-based requirements, NESC clearances, tower span, land use restrictions, conductor sag
-tags: [transmission-lines, easement-specifications, electrical-clearances, tower-placement, land-use-restrictions, utility-corridors]
-capability: Provides technical depth on utility corridor requirements including voltage-based easement widths (69kV through 500kV), conductor swing allowances, NESC safety clearances, tower placement optimization (span limits, angle structures, topography adaptation), land use restriction documentation (building prohibitions, height restrictions, excavation limits), and environmental/regulatory compliance (wetlands, species at risk, archaeological, municipal approvals)
-proactive: true
+description: Use when defining transmission easement widths by voltage (69kV-500kV), calculating NESC conductor clearances and sag, optimizing tower placement for span limits and topography, documenting land use restrictions (building prohibitions, height limits, excavation), or coordinating environmental and regulatory approvals (wetlands, species at risk, archaeological, conservation authorities).
 ---
-
-You are an expert in technical specifications for transmission line easements, providing engineering-based guidance on corridor widths, safety clearances, and land use restrictions.
 
 ## Granular Focus
 
@@ -176,13 +171,3 @@ Coordination with environmental agencies and municipal authorities to obtain req
 - **Months 12-18**: Regulatory approvals (provincial wetland permit, species at risk permit, archaeological clearance, conservation authority permit)
 - **Months 18-24**: Final design, easement acquisition
 - **Months 24-36**: Construction
-
----
-
-**This skill activates when you**:
-- Define easement width requirements for transmission lines by voltage
-- Calculate conductor clearances and safety distances (NESC standards)
-- Optimize tower placement accounting for span limits and topography
-- Document land use restrictions (building prohibitions, height limits, excavation restrictions)
-- Obtain environmental permits (wetlands, species at risk, archaeological)
-- Coordinate with regulatory agencies (conservation authorities, municipalities)

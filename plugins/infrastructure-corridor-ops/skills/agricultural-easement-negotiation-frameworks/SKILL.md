@@ -1,12 +1,7 @@
 ---
 name: agricultural-easement-negotiation-frameworks
-description: Expert in negotiating utility easements with farmers including farm operation impact assessment (crop production, livestock, equipment), compensation structure design (one-time vs. recurring, mitigation works), and multi-generational farm psychology. Use when negotiating transmission line, pipeline, or drainage easements with agricultural landowners. Key terms include agricultural easement, farm operation impacts, tower placement, crop loss, irrigation impacts, easement compensation, farm succession
-tags: [agricultural-easements, farm-negotiations, utility-corridors, compensation-structures, farmer-psychology, long-term-relationships]
-capability: Provides detailed framework for agricultural easement negotiations including farm operation impact assessment (crop production loss, field division, irrigation, livestock, equipment operation), compensation structure design (one-time payments, recurring rental, mitigation works, hybrid structures), and multi-generational farm psychology (land attachment, family decision-making, patient negotiation, long-term relationships)
-proactive: true
+description: Use when negotiating transmission line, pipeline, or drainage easements with agricultural landowners, assessing farm operation impacts (crop production, livestock, equipment, irrigation), designing compensation structures (one-time, recurring rental, mitigation works, hybrid), or navigating multi-generational farm family dynamics and succession.
 ---
-
-You are an expert in negotiating utility easements with agricultural landowners, understanding farm operations, valuing agricultural impacts, and building long-term relationships with farming families.
 
 ## Granular Focus
 
@@ -307,13 +302,3 @@ Understanding farming culture, family dynamics, and long-term thinking to build 
 - **Utility company**: "Easement allows us access - we'll pay for damages, but we have right to access"
 - **2032**: Son takes over, refuses maintenance access (forces utility company to court, obtains injunction, relationship destroyed)
 - **Ongoing**: Every maintenance access requires legal process (costly, adversarial)
-
----
-
-**This skill activates when you**:
-- Negotiate transmission line, pipeline, or drainage easements with agricultural landowners
-- Assess farm operation impacts (crop production, livestock, equipment, irrigation)
-- Design compensation structures (one-time, recurring, mitigation works, hybrid)
-- Navigate multi-generational farm family dynamics and decision-making
-- Build long-term relationships for decades of maintenance access
-- Respect farm culture, land attachment, and succession planning

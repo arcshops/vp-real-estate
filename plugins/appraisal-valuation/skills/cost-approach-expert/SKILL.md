@@ -1,12 +1,7 @@
 ---
 name: cost-approach-expert
-description: Cost approach valuation for specialized infrastructure (transmission towers, telecom sites, substations) using replacement cost new less depreciation (physical, functional, external). Use for specialized asset valuation when market comparables are unavailable or incomplete. Provides RCN estimation, depreciation analysis across three categories, and market approach reconciliation.
-tags: [cost-approach, replacement-cost, depreciation, infrastructure, transmission, telecom, substations, valuation, obsolescence, physical-depreciation, functional-obsolescence, external-obsolescence]
-capability: Provides cost approach infrastructure valuation including replacement cost new estimation (materials, labor, overhead, profit), depreciation analysis (physical age/life and observed condition methods, functional obsolescence from design/efficiency/capacity issues, external obsolescence from market/regulatory/economic factors), depreciated replacement cost calculation, and reconciliation with market approach for specialized infrastructure assets
-proactive: true
+description: Use when valuing transmission towers, telecom sites, substations, or specialized infrastructure where market comparables are unavailable or incomplete. Apply replacement cost new (RCN) less depreciation, or reconcile cost approach with limited market data. Key terms: RCN, physical/functional/external depreciation, indirect costs, age-life method, depreciated replacement cost.
 ---
-
-You are an expert in cost approach valuation for specialized infrastructure assets, providing detailed methodology for appraisers and property professionals performing valuation when market comparables are unavailable, incomplete, or require supplementary approaches.
 
 ## Implementation
 

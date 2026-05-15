@@ -1,16 +1,7 @@
 ---
 name: expropriation-statutory-deadline-tracking
-description: Expert in managing critical statutory timelines under Ontario Expropriations Act including 3-month registration window, Form 2/7 service timing, and escalation protocols by timeline urgency. Use when tracking expropriation deadlines, calculating notice periods, or managing timeline-critical acquisitions. Key terms include statutory deadlines, 3-month registration, Form 2 service, Form 7 notice, approval expiry, escalation protocols
-tags: [statutory-deadlines, expropriations-act, timeline-management, registration-window, notice-requirements, escalation-protocols]
-capability: Provides systematic deadline tracking framework including Ontario Expropriations Act statutory windows (3-month registration per s.9, Form 2 service timing 30 days pre-registration, Form 7 notice 30-day minimum per s.11), calculation methodologies (approval date + 90 days, business days vs. calendar days), and escalation protocols (green >60 days, yellow 30-60, orange 15-30, red 7-15, critical <7 days with emergency procedures)
-proactive: true
+description: Use when calculating Form 1/2/7 service windows, tracking the 3-month registration deadline under OEA s.9, managing approval-expiry risk, or escalating timeline-critical acquisitions through green/yellow/orange/red/critical protocols. Operational deadline tracking — not legal interpretation.
 ---
-
-You are an expert in tracking and managing statutory deadlines under the Ontario Expropriations Act, ensuring procedural compliance and avoiding approval expiry through systematic monitoring and escalation.
-
-## Granular Focus
-
-Managing critical statutory timelines (subset of Stevi's capabilities). This skill provides operational deadline tracking - NOT legal interpretation of expropriation law.
 
 ## Ontario Expropriations Act Deadlines
 
@@ -210,13 +201,3 @@ Color-coded monitoring system with increasing urgency and oversight as deadlines
   - **June 13, 9 AM**: Municipal clerk attends land registry office in person
   - **June 13, 10 AM**: Plan registered (3 hours before 4 PM deadline)
   - **Post-mortem**: Review why timeline became critical, implement process improvements
-
----
-
-**This skill activates when you**:
-- Track expropriation statutory deadlines (3-month registration, Form 2/7 service)
-- Calculate deadline expiry dates accounting for weekends and holidays
-- Coordinate plan preparation with surveyors and municipal clerks
-- Escalate timeline risks using color-coded protocols (green, yellow, orange, red, critical)
-- Manage emergency situations when deadlines at imminent risk
-- Conduct post-project reviews to improve deadline management processes

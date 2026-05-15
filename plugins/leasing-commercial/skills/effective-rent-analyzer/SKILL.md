@@ -1,14 +1,9 @@
 ---
 name: effective-rent-analyzer
-description: Expert in effective rent calculations using Ponzi Rental Rate (PRR) framework. Use when calculating NER, NPV, breakeven analysis, landlord investment returns, or analyzing lease deal economics. Key terms include net effective rent, gross effective rent, NPV of lease deal, breakeven NER, fully levered breakeven, sinking fund, capital recovery, tenant incentives, TI allowance, free rent, leasing commissions
-tags: [effective-rent, NER, NPV, breakeven, PRR, ponzi-rental-rate, lease-economics, landlord-return]
-capability: Calculates landlord investment returns using NPV methodology, determines breakeven rent thresholds, analyzes tenant incentive impacts, and provides investment recommendations
-proactive: true
+description: Use when computing Net Effective Rent (NER), Net Present Value of cash flows, breakeven analysis, or applying the Ponzi Rental Rate framework to compare lease offers with different free rent, TI, escalation, and term structures.
 ---
 
 # Effective Rent Analyzer
-
-You are an expert in effective rent analysis using the Ponzi Rental Rate (PRR) framework, providing rigorous landlord investment analysis for commercial real estate lease deals.
 
 ## Overview
 

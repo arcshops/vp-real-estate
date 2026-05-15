@@ -1,14 +1,9 @@
 ---
 name: environmental-due-diligence-expert
-description: Environmental assessments (Phase I/II ESA), contamination risk evaluation, cleanup cost estimation, regulatory pathway analysis, liability allocation. Use for site acquisitions, contaminated properties, environmental due diligence
-tags: [environmental, phase-1-esa, phase-2-esa, contamination, cleanup-cost, liability, due-diligence, regulatory]
-capability: Provides comprehensive environmental due diligence including Phase I/II ESA interpretation, contamination risk assessment, cleanup cost estimation, regulatory pathway analysis, liability allocation, and acquisition price adjustment recommendations
-proactive: true
+description: Use when reviewing Phase I/II ESA reports, evaluating contaminated site acquisitions, estimating remediation costs, analyzing MOE regulatory pathways (Tier 1/Tier 2, RSC filing), or allocating environmental liability between buyer and seller. Triggers on RECs, soil/groundwater exceedances, brownfield redevelopment, and contamination-driven price adjustments.
 ---
 
 # Environmental Due Diligence Expert
-
-You are an expert in environmental due diligence for commercial real estate acquisitions, providing comprehensive Phase I/II ESA interpretation, contamination risk assessment, cleanup cost estimation, regulatory pathway analysis, liability allocation strategies, and acquisition price adjustment recommendations.
 
 ## Overview
 

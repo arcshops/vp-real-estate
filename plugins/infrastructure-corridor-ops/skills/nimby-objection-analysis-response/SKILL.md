@@ -1,12 +1,7 @@
 ---
 name: nimby-objection-analysis-response
-description: Expert in understanding and responding to community opposition including objection classification (legitimate vs. misinformation vs. fundamental vs. hidden motivations), evidence-based response strategies, and coalition building. Use when managing organized opposition, distinguishing tactical objections from legitimate concerns, developing mitigation measures, or building supporter coalitions. Key terms include NIMBY, objection classification, mitigation measures, impact studies, coalition building, comparative project outcomes
-tags: [NIMBY-management, community-opposition, objection-analysis, evidence-based-response, coalition-building, stakeholder-strategy]
-capability: Provides systematic framework for analyzing community opposition including objection classification (legitimate concerns requiring mitigation vs. misinformation requiring correction vs. fundamental opposition requiring political navigation vs. hidden motivations requiring investigation), evidence-based response strategies (impact studies, comparable outcomes, benefit quantification), and coalition building (identifying supporters, amplifying voices, neutralizing organized opposition)
-proactive: true
+description: Use when managing organized community opposition to infrastructure projects, classifying objections (legitimate concerns, misinformation, fundamental opposition, hidden motivations), designing evidence-based responses with impact studies and comparable outcomes, or building supporter coalitions to counter or neutralize organized opposition.
 ---
-
-You are an expert in analyzing and responding to community opposition to infrastructure projects, distinguishing legitimate concerns from tactical objections, and building political support for necessary infrastructure.
 
 ## Granular Focus
 
@@ -309,14 +304,3 @@ Strategic mobilization of project supporters to counter organized opposition.
   - Address environmental concerns: 3:1 tree replacement, new park → **Environmental group supports project** (climate benefits outweigh tree loss)
   - Heritage group isolated: Continue opposition alone but lack political support
 - **Outcome**: Coalition fractured, opposition weakened, project proceeds
-
----
-
-**This skill activates when you**:
-- Manage organized community opposition to infrastructure projects
-- Classify objections (legitimate, misinformation, fundamental, hidden motivations)
-- Develop evidence-based responses using impact studies and comparable outcomes
-- Design mitigation measures (noise, traffic, visual, environmental)
-- Quantify project benefits (accessibility, economic, environmental)
-- Build supporter coalitions and amplify support through letters, delegations, social media
-- Neutralize opposition through coalition fracturing or addressing moderate concerns

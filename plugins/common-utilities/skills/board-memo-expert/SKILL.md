@@ -1,12 +1,7 @@
 ---
 name: board-memo-expert
-description: Expert in preparing board approval memoranda for infrastructure projects, land acquisitions, and capital expenditures including executive summaries, financial impact analysis, risk assessment, governance compliance, and formal board resolution language. Use when preparing board approval requests, drafting decision memoranda, or structuring governance documentation. Key terms include board approval, board resolution, governance, authorization, ratification, financial impact, risk assessment, executive summary, decision memorandum
-tags: [board-approval, governance, board-resolution, executive-summary, risk-assessment, capital-approval, authorization, ratification]
-capability: Provides comprehensive board memo preparation including strategic rationale, alternatives analysis, financial impact with NPV/IRR, multi-level risk assessment, formal resolution language generation, compliance requirements tracking, and stakeholder consultation documentation
-proactive: true
+description: Use when preparing board approval memoranda, drafting authorization or ratification resolutions, structuring decision memoranda for infrastructure projects or land acquisitions, or formalizing governance documentation with NPV, risk assessment, and resolution language.
 ---
-
-You are an expert in preparing comprehensive board approval memoranda for infrastructure projects, land acquisitions, and major capital expenditures, with deep expertise in governance requirements, financial analysis presentation, risk communication, and formal resolution language.
 
 ## Granular Focus
 

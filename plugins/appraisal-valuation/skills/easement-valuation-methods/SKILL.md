@@ -1,12 +1,7 @@
 ---
 name: easement-valuation-methods
-description: Expert in technical valuation approaches for easements including percentage of fee method, income capitalization, and before/after comparison. Use when valuing utility transmission easements, pipeline corridors, access easements, telecom sites, or when detailed methodology beyond basic percentage ranges is required. Key terms include easement valuation, percentage of fee, income capitalization, paired sales analysis, discount rate selection, agricultural rent analysis
-tags: [easement-valuation, appraisal, utility-easements, pipeline-corridors, real-property-rights, comparable-sales]
-capability: Provides deep technical expertise in easement valuation methodology including percentage of fee analysis (5-35% by type), income capitalization approach, and before/after market extraction with statistical validation
-proactive: true
+description: Use when valuing utility transmission easements, pipeline corridors, rail/transit corridors, access easements, telecom sites, or temporary construction easements. Apply percentage of fee method, income capitalization, before/after paired sales, or rate-of-return for TCEs. Key terms: percentage of fee, income capitalization, paired sales, discount rate, agricultural rent, TCE.
 ---
-
-You are an expert in technical valuation approaches for easements and partial property rights, providing detailed methodology for appraisers, infrastructure acquisition specialists, and property owners negotiating easement compensation.
 
 ## Professional Standards Compliance
 
@@ -24,15 +19,9 @@ This skill provides methodology compliant with:
 - **Reconciliation**: Weight approaches based on data quality and reliability, not simple averaging
 - **Market Extraction**: When possible, extract easement percentages empirically from paired sales rather than relying solely on published ranges
 
-## Granular Focus
+## Specialized Calculators
 
-Technical valuation approaches for easements (subset of appraisal expertise). This skill provides deep, focused expertise on specific easement valuation methods - NOT general appraisal theory.
-
-## Specialized Calculators (v2.1 - MARKET-ALIGNED)
-
-**VERSION 2.1 (2025-11-17)**: All calculators updated to **MARKET-ALIGNED** values based on IRWA standards (25-50% range), professional research, and documented market evidence. Previous v2.0 values were conservative baseline estimates.
-
-**Methodology Change**: Values now align with documented market ranges for permanent easements rather than conservative budget estimates.
+<!-- Calculator values are MARKET-ALIGNED based on IRWA standards (25-50% range), professional research, and documented market evidence. -->
 
 ### When to Use Each Calculator
 
@@ -657,18 +646,3 @@ This skill focuses specifically on **easement valuation methodology**. For compr
 
 **Total Compensation** = Permanent Easement Value + Severance Damages + TCE Value + Construction Impacts ± Negotiated Adjustments
 
----
-
-**This skill activates when you**:
-- Value **permanent easements** for utility transmission lines, pipelines, access rights, or telecom sites
-- Value **temporary construction easements** (TCEs) for staging, access, or construction duration
-- Need technical depth on easement valuation methodology beyond basic percentage ranges
-- Apply **percentage of fee method** with voltage/product-specific adjustments (5-35% by easement type)
-- Use **income capitalization** to convert agricultural rent loss or telecom rental to capital value
-- Perform **before/after paired sales analysis** with statistical validation and adjustment methodology
-- Apply **take-plus-damages method** (itemized: land taken + severance damages to remainder)
-- Extract empirical easement percentages from market data using regression analysis
-- **Reconcile multiple valuation approaches** using USPAP/CUSPAP-compliant weighting (NOT simple averaging)
-- Calculate **rate-of-return compensation** for temporary easements (6-10% annual return)
-- Integrate easement valuation with severance damages, injurious affection, and agricultural impacts
-- Ensure **USPAP 2024 / CUSPAP 2024 compliance** for appraisal assignments
