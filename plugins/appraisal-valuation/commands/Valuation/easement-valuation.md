@@ -75,7 +75,7 @@ Create JSON file with this structure:
 - **69kV**: 10-15% (20-30m width)
 - **115kV**: 12-18% (30-40m width)
 - **230kV**: 15-20% (45-60m width)
-- **500kV**: 20-25% (80-100m width)
+- **500kV**: 37.5% (80-100m width; 35-40% range)
 
 **Adjustments** (+/- 1-5%):
 - Width impact (wider corridors = higher %)
@@ -136,24 +136,32 @@ with open(input_file, 'r') as f:
 
 ### Step 2: Run Easement Calculator
 
-Execute the Python calculator:
+Execute the appropriate specialized v2.1 calculator based on easement type:
 
 ```bash
 cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods
 
-python3 easement_calculator.py <input-json-path> --output <output-json-path> --verbose
+# Utility/hydro transmission easements (69kV–500kV):
+python3 hydro_easement_calculator.py <input-json-path> --output <output-json-path> --verbose
+
+# Pipeline corridor easements (gas, crude oil, petroleum):
+python3 pipeline_easement_calculator.py <input-json-path> --pipeline_type <type> --output <output-json-path> --verbose
+
+# Rail/transit corridor easements:
+python3 rail_easement_calculator.py <input-json-path> --output <output-json-path> --verbose
 ```
 
 **Command Structure:**
 - `input-json-path` - Path to input JSON file
 - `--output` or `-o` - Path to save results JSON (optional)
 - `--verbose` or `-v` - Print detailed output (optional)
+- `--pipeline_type` - Required for pipeline calculator (e.g. `natural_gas_high_pressure`, `crude_oil`)
 
-**Example:**
+**Example (500kV transmission):**
 ```bash
 cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods
 
-python3 easement_calculator.py sample_500kv_transmission.json \
+python3 hydro_easement_calculator.py sample_500kv_transmission.json \
   --output $CLAUDE_PROJECT_DIR/Reports/easement_valuation_results.json \
   --verbose
 ```
@@ -507,7 +515,7 @@ This value represents fair market value for a [perpetual/temporary] [easement ty
 - 69kV: 10-15% (20-30m width)
 - 115kV: 12-18% (30-40m width)
 - 230kV: 15-20% (45-60m width)
-- 500kV: 20-25% (80-100m width)
+- 500kV: 37.5% (80-100m width; 35-40% range; v2.1 market-aligned)
 
 **Pipeline Corridors:**
 - Natural gas (low pressure): 15-20%
@@ -527,7 +535,7 @@ This value represents fair market value for a [perpetual/temporary] [easement ty
 ---
 
 **Report Generated:** [Timestamp ET]
-**Calculator:** easement_calculator.py v1.0.0
+**Calculator:** hydro_easement_calculator.py / pipeline_easement_calculator.py / rail_easement_calculator.py v2.1
 **Framework:** Three-method reconciliation approach
 **Skill:** easement-valuation-methods
 ```
@@ -630,7 +638,10 @@ METHODOLOGY:
 
 ## Related Calculators
 
-- `easement_calculator.py` - This calculator (three methods)
+- `hydro_easement_calculator.py` - Utility/transmission easements (69kV–500kV); v2.1 market-aligned
+- `pipeline_easement_calculator.py` - Pipeline corridor easements (gas, crude oil, petroleum); v2.1 market-aligned
+- `rail_easement_calculator.py` - Rail/transit corridor easements; v2.1 market-aligned
+- `easement_calculator_base.py` - Shared core logic used by all three specialized calculators
 - `comparable_sales_calculator.py` - Market extraction analysis
 - `disturbance_damages_calculator.py` - Construction impact valuation
 
