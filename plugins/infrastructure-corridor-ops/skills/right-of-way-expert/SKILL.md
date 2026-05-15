@@ -726,6 +726,24 @@ The `/right-of-way-analysis` slash command integrates utility conflict detection
 }
 ```
 
+## Location Overview Generator
+
+Generates a location overview for an Ontario property given a PIN (9 digits) or municipal address. Orchestrates geocoding, queries provincial/municipal/heritage/brownfield/TRCA/GTFS/census providers, and produces a consolidated markdown or JSON report — useful for scoping ROW conflicts, heritage constraints, and environmental flags before detailed conflict analysis.
+
+**Run location overview:**
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts
+python3 -m Location_Overview.main "100 Queen Street West, Toronto"
+python3 -m Location_Overview.main --format json "150 King Street West, Toronto"
+python3 -m Location_Overview.main --no-save "123 Main Street, Mississauga"
+```
+
+**CLI flags:**
+- `input` (positional) - PIN (9 digits) or municipal address
+- `--format` / `-f` - Output format: `markdown` (default) or `json`
+- `--no-save` - Don't save the report to file (print only)
+- `--verbose` / `-v` - Enable verbose logging
+
 ## Best Practices
 
 ### 1. Early Utility Engagement

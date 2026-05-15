@@ -258,7 +258,25 @@ This skill is automatically loaded when:
 - Commands invoked: `/default-analysis`, `/notice-generator`
 - Reading files: Default notices, demand letters
 
-**Related Commands**:
+**Embedded Scripts** (primary entry points):
+
+Run the default damage calculator:
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor
+python3 scripts/Default_Calculator/default_calculator.py <input.json> [output.json]
+```
+Computes gross damages, credits, net damages, and bankruptcy recovery scenarios. If `output.json` is omitted, results are written to `<input>_results.json`.
+
+Run the default notice generator:
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/default-and-remedies-advisor
+python3 scripts/Default_Calculator/notice_generator.py <input.json> [output.md] [jurisdiction]
+```
+Drafts a formal default notice with damage figures embedded. `jurisdiction` defaults to `Ontario`. If `output.md` is omitted, the notice is timestamped and saved under `Reports/`.
+
+Sample input JSON files live in `scripts/Default_Calculator/default_inputs/`.
+
+**Related Commands** (thin wrappers around the scripts above):
 - `/default-analysis <lease-path> <default-description>` - Analyze default, calculate cure periods and damages
 - `/notice-generator <notice-type> <lease-path>` - Draft formal default notices
 
