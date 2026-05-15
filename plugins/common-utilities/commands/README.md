@@ -4,7 +4,7 @@ Automated workflows for commercial real estate lease analysis, property valuatio
 
 ## Structure
 
-Commands are organized into 12 categories (44 total):
+Commands are organized into 12 categories (42 total):
 
 ### 1. Abstraction (2 commands)
 
@@ -13,7 +13,7 @@ Extract and structure lease data from documents.
 - **`/abstract-lease`** - Extract key terms using 24-section template (industrial/office)
 - **`/critical-dates`** - Extract timeline and critical dates
 
-### 2. Financial Analysis (10 commands)
+### 2. Financial Analysis (9 commands)
 
 Economic calculations and investment analysis.
 
@@ -26,7 +26,6 @@ Economic calculations and investment analysis.
 - **`/rental-variance`** - Rental variance decomposition by rate, area, and term
 - **`/relative-valuation`** - MCDA competitive positioning with 25 variables, tenant personas, and landscape PDF reports
 - **`/extract-mls`** - Extract MLS property data to professional Excel spreadsheet (auto-detect subject, perfect formatting)
-- **`/recommendation-memo`** - VTS approval memo with tenant analysis, financial covenant review, and deal terms comparison
 
 ### 3. Accounting (1 command)
 
@@ -70,11 +69,10 @@ Statutory compensation and partial taking analysis under Ontario Expropriations 
 - **`/partial-taking-analysis`** - Before/after method for partial acquisitions with severance damages (access, shape, utility, farm ops) and injurious affection assessment
 - **`/injurious-affection-analysis`** - Quantify construction and proximity impacts (noise dBA modeling, dust PM2.5/PM10, vibration PPV, traffic disruption, business losses, visual impairment)
 
-### 8. Infrastructure (2 commands)
+### 8. Infrastructure (1 command)
 
-Agricultural easements and right-of-way analysis for transmission lines, pipelines, and transit corridors.
+Right-of-way analysis for transmission lines, pipelines, and transit corridors. (Agricultural easement / cropland compensation analysis is now provided by the `cropland-out-of-production-agreements` skill, which auto-loads on relevant questions.)
 
-- **`/cropland-compensation-analysis`** - Compare Ontario one-time vs. Alberta annual vs. Farmer Required compensation models for agricultural easements with NPV analysis over 50 years (headlands, aerial spray, precision ag, labor, equipment damage)
 - **`/right-of-way-analysis`** - Calculate ROW area, encumbrance impact, and easement compensation for utility transmission (69kV-500kV), pipeline, and transit corridors
 
 ### 9. Transit (1 command)

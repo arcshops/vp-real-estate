@@ -398,4 +398,4 @@ RECOMMENDATION: ACCEPT - Excellent economics, long-term stable tenant
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, offer-to-lease-expert, negotiation-expert, portfolio-strategy-advisor
-**Related Commands:** /effective-rent, /renewal-economics, /market-comparison, /recommendation-memo
+**Related Commands:** /effective-rent, /renewal-economics, /market-comparison (VTS approval memos are now generated via the `commercial-lease-expert` skill, which auto-loads on relevant questions)

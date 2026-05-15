@@ -1,8 +1,10 @@
 """
 Location Overview Main Module
 
-Entry point for the /location-overview slash command.
-Orchestrates geocoding, provider queries, and report generation.
+Entry point for the Location Overview pipeline. Called from the
+`right-of-way-expert` skill (auto-loads on relevant questions) or invoked
+directly via `python3 -m Location_Overview.main`. Orchestrates geocoding,
+provider queries, and report generation.
 """
 
 import asyncio
@@ -73,7 +75,8 @@ async def location_overview(
     """
     Generate a location overview for a PIN or address.
 
-    This is the main entry point for the /location-overview command.
+    This is the main entry point invoked by the `right-of-way-expert` skill
+    (or directly via `python3 -m Location_Overview.main`).
 
     Args:
         input_str: PIN (9 digits) or municipal address

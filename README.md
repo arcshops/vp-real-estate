@@ -120,7 +120,7 @@ Beyond commercial leasing, we've added a complete **infrastructure acquisition t
 
 ## NEW: Location Overview Module for Appraisal Research
 
-Automate the tedious research phase of property appraisals with the `/location-overview` command. Query 11 data providers in parallel to compile zoning, planning, environmental, and neighbourhood data.
+Automate the tedious research phase of property appraisals with the `right-of-way-expert` skill. Just ask about location/zoning/planning research for a property address and the skill auto-loads to query 11 data providers in parallel and compile zoning, planning, environmental, and neighbourhood data.
 
 ### Supported Municipalities (82% Coverage)
 
@@ -142,11 +142,9 @@ Automate the tedious research phase of property appraisals with the `/location-o
 
 ### Quick Example
 
-```bash
-/location-overview "100 Queen Street West, Toronto"
-```
+> "Generate a location overview for 100 Queen Street West, Toronto."
 
-Generates a comprehensive location overview report with:
+The `right-of-way-expert` skill auto-loads and produces a comprehensive location overview report with:
 - Zoning designation and permitted uses
 - Official Plan and Secondary Plan designations
 - Provincial plan overlays (Greenbelt, Growth Plan, etc.)
@@ -492,7 +490,6 @@ Reggie and his team have 25 automated workflows at their disposal. Each slash co
 | Financial Analysis | `/option-value` | Real options valuation (renewal, expansion, termination) |
 | Financial Analysis | `/renewal-economics` | Renewal vs. relocation recommendation matrix |
 | Financial Analysis | `/relative-valuation` | Competitive ranking report and pricing adjustments |
-| Financial Analysis | `/recommendation-memo` | VTS approval memo with tenant analysis, financial covenant review, deal comparison |
 | Financial Analysis | `/extract-mls` | Extract MLS data to professionally formatted Excel with subject property highlighting |
 | Accounting | `/ifrs16-calculation` | IFRS/ASC 842 schedules and journal entries |
 | Comparison | `/compare-amendment` | Amendment vs. original summary with key deltas |

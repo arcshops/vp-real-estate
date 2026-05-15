@@ -1,8 +1,10 @@
 """
 Location Overview Module
 
-A slash command that generates comprehensive location overviews for Ontario properties,
-suitable for inclusion in CUSPAP-compliant appraisal reports.
+Generates comprehensive location overviews for Ontario properties, suitable for
+inclusion in CUSPAP-compliant appraisal reports. Hosted by the
+`right-of-way-expert` skill, which auto-loads on relevant location/zoning/
+appraisal-research questions.
 
 Features:
 - Dual input support: 9-digit Ontario PIN or municipal address
@@ -13,9 +15,9 @@ Features:
 - CUSPAP compliance: formatted per appraisal report standards
 
 Usage:
-    /location-overview <PIN|address>
-    /location-overview 100 Queen Street West, Toronto
-    /location-overview 123456789
+    python3 -m Location_Overview.main "<PIN|address>"
+    python3 -m Location_Overview.main "100 Queen Street West, Toronto"
+    python3 -m Location_Overview.main 123456789
 """
 
 __version__ = "1.0.0"

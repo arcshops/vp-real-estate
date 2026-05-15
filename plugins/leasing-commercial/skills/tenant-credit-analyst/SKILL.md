@@ -473,4 +473,4 @@ Alternative: Only consider if:
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, indemnity-expert, default-and-remedies-advisor, effective-rent-analyzer
-**Related Commands:** /tenant-credit, /default-analysis, /recommendation-memo
+**Related Commands:** /tenant-credit, /default-analysis (VTS approval memos are now generated via the `commercial-lease-expert` skill, which auto-loads on relevant questions)

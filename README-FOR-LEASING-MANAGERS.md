@@ -220,13 +220,13 @@ The default Claude Code persona is still available for general questions. But wh
 
 ### Reggie's 28 Workflows
 
-Reggie and his team have 28 workflows ready for the questions you get asked every single week. One command, instant output, zero thinking required.
+Reggie and his team have 27 workflows ready for the questions you get asked every single week. One command, instant output, zero thinking required.
 
 **Abstraction** (2 commands)
 - `/leasing-commercial:abstract-lease` – Pull every term from a lease into a clean 24-section template
 - `/leasing-commercial:critical-dates` – Timeline of renewals, expirations, notice deadlines
 
-**Financial Analysis** (10 commands)
+**Financial Analysis** (9 commands)
 - `/leasing-commercial:effective-rent` – NER, GER, NPV, breakeven, Ponzi Rental Rate, sensitivities
 - `/leasing-commercial:tenant-credit` – Full credit analysis with ratios, score, security recommendation
 - `/leasing-commercial:rental-variance` – Budget vs. actuals decomposition (rate, area, term)
@@ -235,7 +235,6 @@ Reggie and his team have 28 workflows ready for the questions you get asked ever
 - `/leasing-commercial:option-value` – Real options valuation for flexibility clauses
 - `/leasing-commercial:renewal-economics` – Renewal vs. relocation recommendation matrix
 - `/leasing-commercial:relative-valuation` – Competitive positioning across 25 variables
-- `/leasing-commercial:recommendation-memo` – VTS approval package with deal comparison
 - `/leasing-commercial:extract-mls` – MLS data extraction to professionally formatted Excel
 
 **Accounting** (1 command)

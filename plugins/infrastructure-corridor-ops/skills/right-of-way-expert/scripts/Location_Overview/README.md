@@ -26,10 +26,16 @@ python -m Location_Overview.main --format json "150 King Street West, Toronto"
 python -m Location_Overview.main -v "200 University Avenue, Toronto"
 ```
 
-### Slash Command
+### Via the `right-of-way-expert` Skill
+
+Just ask Claude to generate a location overview for an address or PIN — the `right-of-way-expert` skill auto-loads and invokes this module:
+
+> "Generate a location overview for 100 Queen Street West, Toronto."
+
+You can also invoke the module directly:
 
 ```
-/location-overview 100 Queen Street West, Toronto
+python3 -m Location_Overview.main "100 Queen Street West, Toronto"
 ```
 
 ### Python API
@@ -169,4 +175,4 @@ Part of the Lease Abstract Toolkit. See main repository LICENSE.
 ## See Also
 
 - [Implementation Plan](../Planning/location-overview-implementation-plan.md)
-- [Slash Command](../.claude/commands/Infrastructure/location-overview.md)
+- Hosted by the `right-of-way-expert` skill (`plugins/infrastructure-corridor-ops/skills/right-of-way-expert/`)
