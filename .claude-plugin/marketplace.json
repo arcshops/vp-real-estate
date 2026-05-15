@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "vp-real-estate",
+  "owner": {
+    "name": "Reggie Chan",
+    "email": "reggie.chan@gmail.com"
+  },
+  "description": "Commercial real estate lease analysis, expropriation, appraisal, and linear infrastructure plugins for property professionals",
+  "version": "3.0.0",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "leasing-commercial",
+      "source": "./plugins/leasing-commercial",
+      "description": "Commercial lease analysis: abstraction, effective rent, tenant credit, options valuation, IFRS 16, consents, surrender, compliance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tenancies-residential",
+      "source": "./plugins/tenancies-residential",
+      "description": "Ontario Residential Tenancies Act: eviction procedures, LTB hearings, tenant relief analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "expropriation-law",
+      "source": "./plugins/expropriation-law",
+      "description": "Ontario Expropriations Act: statutory interpretation, compensation entitlement, procedural defects, deadline tracking, Forms 1-12, settlement, severance damages, injurious affection",
+      "version": "1.0.0"
+    },
+    {
+      "name": "appraisal-valuation",
+      "source": "./plugins/appraisal-valuation",
+      "description": "Property valuation: cost approach, income approach, easement valuation, comparable sales adjustment (DCA + MCDA), title, environmental due diligence",
+      "version": "1.0.0"
+    },
+    {
+      "name": "infrastructure-corridor-ops",
+      "source": "./plugins/infrastructure-corridor-ops",
+      "description": "Linear infrastructure acquisition: agricultural easements, cropland compensation, land assembly, public consultation, NIMBY response, transit station siting, transmission line specs, right-of-way",
+      "version": "1.0.0"
+    },
+    {
+      "name": "common-utilities",
+      "source": "./plugins/common-utilities",
+      "description": "Foundation plugin: analyst trio personas (Adam/Reggie/Dennis), cross-cutting skills, canonical Shared_Utils, subagent-stop hook",
+      "version": "1.0.0"
+    }
+  ]
+}

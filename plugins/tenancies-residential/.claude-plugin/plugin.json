@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "tenancies-residential",
+  "version": "1.0.0",
+  "description": "Ontario Residential Tenancies Act: eviction procedures, LTB hearings, tenant relief analysis",
+  "author": { "name": "Reggie Chan", "email": "reggie.chan@gmail.com" },
+  "repository": "https://github.com/reggiechan/vp-real-estate",
+  "license": "see LICENSE in repo root",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "dependencies": [
+    { "name": "common-utilities", "version": "^1.0.0" }
+  ]
+}

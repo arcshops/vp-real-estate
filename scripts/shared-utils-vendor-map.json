@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "canonical": "plugins/common-utilities/shared_utils",
+  "consumers": []
+}
