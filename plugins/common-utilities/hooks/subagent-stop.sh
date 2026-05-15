@@ -7,10 +7,14 @@ HOOK_INPUT=$(cat)
 AGENT_ID=$(echo "$HOOK_INPUT" | jq -r '.agent_id // empty')
 TRANSCRIPT_PATH=$(echo "$HOOK_INPUT" | jq -r '.agent_transcript_path // empty')
 
-# Check if it's one of the triumvirate
-if [[ "$AGENT_ID" == "adam" ]] || \
-   [[ "$AGENT_ID" == "reggie-chan-vp" ]] || \
-   [[ "$AGENT_ID" == "dennis" ]]; then
+# Check if it's one of the specialist sub-agents
+if [[ "$AGENT_ID" == "alexi" ]] || \
+   [[ "$AGENT_ID" == "anni" ]] || \
+   [[ "$AGENT_ID" == "benji" ]] || \
+   [[ "$AGENT_ID" == "christi" ]] || \
+   [[ "$AGENT_ID" == "katy" ]] || \
+   [[ "$AGENT_ID" == "shadi" ]] || \
+   [[ "$AGENT_ID" == "stevi" ]]; then
 
     # Display the ACTUAL transcript content
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
