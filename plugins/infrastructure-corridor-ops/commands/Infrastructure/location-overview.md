@@ -37,8 +37,8 @@ The output must be written in **flowing prose** (not tables or bullet points) su
 
 2. **Run the Location Overview module** to collect API data:
    ```bash
-   cd /workspaces/lease-abstract
-   python -m Location_Overview.main "$ARGUMENTS"
+   cd $CLAUDE_PLUGIN_ROOT
+   python -m skills.location-overview.scripts.location_overview "$ARGUMENTS"
    ```
 
 3. **Read the generated report** to get the base data including:
