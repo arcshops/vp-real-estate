@@ -316,6 +316,100 @@ Assessment: Favorable expansion - retains tenant, adds revenue, modest TI invest
 
 ---
 
+## Slash Command Workflow: Precedent Comparison (`/compare-precedent`)
+
+**Invocation**: `/compare-precedent <draft-lease> <precedent-lease>`
+
+### Input Handling
+- First argument: current draft lease being negotiated
+- Second argument: your organization's standard form/precedent lease
+- Determine perspective (Landlord or Tenant) and whose form the precedent is
+
+### Change Classification
+
+For each section:
+- **Identical** ✓ — Matches precedent exactly
+- **Modified** ⚠️ — Language changed
+- **Deleted** ❌ — Section removed entirely
+- **Added** ⊕ — New section not in precedent
+- **Moved** ↔️ — Section relocated
+- **Weakened** ⬇️ — Protective language diluted
+- **Strengthened** ⬆️ — Language made more favorable to you
+
+### Protective Provisions Status Table
+
+**If Landlord Form:**
+
+| Protection | Status | Issue | Recommendation |
+|------------|--------|-------|----------------|
+| Subordination Rights | ✓/⚠️/✗ | | |
+| Broad Default Definition | ✓/⚠️/✗ | | |
+| Holdover Penalty (150-200%) | ✓/⚠️/✗ | | |
+| Tenant Indemnification | ✓/⚠️/✗ | | |
+| Landlord Exculpation | ✓/⚠️/✗ | | |
+| No Rental Abatement Except as Expressed | ✓/⚠️/✗ | | |
+| Personal Guaranty Requirements | ✓/⚠️/✗ | | |
+
+**If Tenant Form:**
+
+| Protection | Status | Issue | Recommendation |
+|------------|--------|-------|----------------|
+| Quiet Enjoyment | ✓/⚠️/✗ | | |
+| Non-Disturbance from Lender | ✓/⚠️/✗ | | |
+| Rent Abatement Rights | ✓/⚠️/✗ | | |
+| Op Cost Audit Rights | ✓/⚠️/✗ | | |
+| Assignment for Affiliates (no consent) | ✓/⚠️/✗ | | |
+| Cap on Operating Cost Increases | ✓/⚠️/✗ | | |
+| Reasonable Consent Standards | ✓/⚠️/✗ | | |
+
+### Deviation Tiering
+
+**Tier 1 — Must Fix (Deal-Breakers)** 🔴
+- Fundamental changes eliminating key protections
+- Material shifts in risk allocation
+- Missing critical provisions
+
+**Tier 2 — Should Fix (Strong Push)** 🟡
+- Important protections weakened but not eliminated
+- Missing desirable provisions
+- Ambiguous language replacing clear terms
+
+**Tier 3 — Can Accept** 🟢
+- Reasonable deal-specific changes
+- Market-standard deviations
+- Stylistic preferences
+
+### Tiered Negotiation Strategy
+1. **Opening**: Lead with Tier 1 items, frame as non-negotiable corrections to standard protections
+2. **Follow-up**: Address Tier 2, prioritize by deal specifics, be prepared to trade
+3. **Final**: Concede Tier 3 if needed as goodwill
+4. **Package deals**: "We'll accept [their Tier 2 change] if you restore [our Tier 2 provision]"
+
+### Precedent Evolution Recommendations
+
+After completing review, flag if any of the draft's changes represent market evolution worth adopting into your standard form. Distinguish:
+- **Reasonable market evolution** — Worth updating precedent
+- **One-party advocacy** — Reject and maintain current form
+
+### Common Sources of Deviation
+1. **Other Party's Form** — Consider requesting they start over with your form
+2. **Prior Deal Markup** — Identify deal-specific vs. form provisions that carried over
+3. **Intentional Negotiation** — Expected; focus on restoring critical protections
+4. **Drafting Errors** — Point out politely as corrections
+
+### Red Flags
+- Wholesale changes to Remedies section (weakening enforcement rights)
+- Subtle definition changes (can alter entire deal economics)
+- Missing entire protective sections (likely intentional)
+- New vague terms ("reasonable", "material", "substantial") without definition
+- Changed cross-references (may break logical connections)
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_precedent_comparison_[property].md`
+
+---
+
 ## Slash Command Workflow: Offer Comparison (`/compare-offers`)
 
 **Invocation**: `/compare-offers <inbound-offer> <outbound-offer>`
