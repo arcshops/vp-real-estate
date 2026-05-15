@@ -478,6 +478,10 @@ Coordinating property acquisition with broader planning objectives to maximize t
 
 **transit_station_scorer.py** - Systematic evaluation tool for comparing transit station site alternatives.
 
+**Calculator path**: `${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy/transit_station_scorer.py`
+**Input schema**: `${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy/transit_station_site_input_schema.json`
+**Scoring config**: `${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy/config/scoring_criteria.py`
+
 ### Features
 
 **5 Scoring Categories** (all normalized to 0-100 scale):
@@ -497,28 +501,107 @@ Coordinating property acquisition with broader planning objectives to maximize t
 - Multi-Modal: Raw max 95 → 100
 - Exceptional sites score in high 90s (e.g., 96/100) rather than exceeding 100
 
+**Recommendation Tiers**:
+- **≥75**: HIGHLY RECOMMENDED — Strong overall performance
+- **60–74**: RECOMMENDED — Good balance of benefits and feasibility
+- **45–59**: CONSIDER WITH CAUTION — Moderate challenges present
+- **<45**: NOT RECOMMENDED — Significant obstacles
+
 ### Usage
 
 ```bash
 # Score a single site
-./transit_station_scorer.py samples/site_a_urban_infill.json
+cd ${CLAUDE_PLUGIN_ROOT}/skills/transit-station-site-acquisition-strategy
+python transit_station_scorer.py samples/site_a_urban_infill.json
 
-# Input format: JSON with 6 sections
-# - site_identification (ID, name, location, station type)
-# - tod_characteristics (density, mix, walkability, development)
-# - multi_modal_connections (bus, bike, pedestrian, parking)
-# - acquisition_complexity (ownership, displacement, environmental, legal)
-# - community_impact (displacement, gentrification, heritage, support)
-# - holdout_risk (motivation, sophistication, alternatives)
+# Score with custom output path
+python transit_station_scorer.py samples/site_b_suburban_greenfield.json \
+  --output $CLAUDE_PROJECT_DIR/Reports/2025-11-15_143000_site_b_analysis.md
+
+# Compare multiple sites side-by-side (--compare flag)
+python transit_station_scorer.py \
+  samples/site_a_urban_infill.json \
+  samples/site_b_suburban_greenfield.json \
+  samples/site_c_complex_urban.json \
+  samples/site_d_balanced_suburban.json \
+  --compare
+
+# Compare two finalists with custom output
+python transit_station_scorer.py finalist_1.json finalist_2.json \
+  --compare --output $CLAUDE_PROJECT_DIR/Reports/finalist_comparison.md
 ```
 
-**Output**: Console report + timestamped JSON file with detailed breakdowns
+**Input format**: JSON with 6 sections
+- `site_identification` (ID, name, location, station type)
+- `tod_characteristics` (density, mix, walkability, development)
+- `multi_modal_connections` (bus, bike, pedestrian, parking)
+- `acquisition_complexity` (ownership, displacement, environmental, legal)
+- `community_impact` (displacement, gentrification, heritage, support)
+- `holdout_risk` (motivation, sophistication, alternatives)
 
-**Sample Sites Available**:
-- Site A (Urban Infill): 64.9/100 - High TOD (96) but complex acquisition
-- Site B (Greenfield): 70.7/100 - Low TOD (36) but excellent feasibility
-- Site C (Complex Urban): 44.2/100 - Exceptional TOD (84) but severe challenges
-- Site D (Balanced Suburban): 63.3/100 - Moderate across all categories
+**Output**: Console report + timestamped JSON file with detailed breakdowns. When `--compare` is used, outputs a ranked comparison table with trade-off analysis.
+
+### Console Output Format
+
+```
+================================================================================
+TRANSIT STATION SITE SCORING: Meadowlands Greenfield Station
+================================================================================
+
+SCORING RESULTS:
+--------------------------------------------------------------------------------
+TOD Potential:              36.0/100  (higher is better)
+Multi-Modal Connections:    65.8/100  (higher is better)
+Acquisition Complexity:     28.5/100  (LOWER is better)
+Community Impact:           10.0/100  (LOWER is better)
+Holdout Risk:                3.0/30   (LOWER is better)
+
+COMPOSITE SCORES:
+--------------------------------------------------------------------------------
+Desirability Score:         50.9/100
+Feasibility Score:          80.8/100
+OVERALL SCORE:              70.7/100
+
+RECOMMENDATION:
+--------------------------------------------------------------------------------
+RECOMMENDED - Good balance of benefits and feasibility
+
+Key Strengths:
+  ✓ Low acquisition complexity (28/100)
+  ✓ Minimal community impact (10/100)
+  ✓ Low holdout risk (3/30)
+
+Key Challenges:
+  ⚠ Limited TOD potential (36/100)
+
+================================================================================
+
+✓ Assessment complete. Detailed results saved to site_b_scoring_results.json
+```
+
+### Sample Site Benchmarks
+
+Reference performance from the 4 included sample sites (in `samples/` directory):
+
+| Rank | Site | Overall | TOD | Multi-Modal | Complexity ↓ | Community ↓ | Holdout ↓ | Recommendation |
+|------|------|---------|-----|-------------|--------------|-------------|-----------|----------------|
+| 1 | **Site B: Greenfield** | **70.7** | 36.0 | 65.8 | 28.5 | 10.0 | 3.0 | RECOMMENDED — Good feasibility |
+| 2 | **Site A: Urban** | **64.9** | 83.6 | 84.2 | 69.3 | 36.5 | 20.0 | CONSIDER — High TOD, high complexity |
+| 3 | **Site D: Balanced** | **63.3** | 61.2 | 73.7 | 39.8 | 25.5 | 12.0 | RECOMMENDED — Balanced trade-offs |
+| 4 | **Site C: Complex** | **44.2** | 83.6 | 84.2 | 69.3 | 78.5 | 27.5 | CAUTION — High impacts |
+
+**↓ = Lower is better for this metric**
+
+**Key insights from benchmark data:**
+- **Site B (Greenfield)** wins on feasibility despite lower TOD potential — low complexity and low holdout overcome the TOD gap
+- **Site A (Urban)** has highest TOD (96) but acquisition/community scores drag overall result
+- **Site D (Balanced Suburban)** offers the best middle ground across all five categories
+- **Site C (Complex Urban)** demonstrates that TOD alone cannot overcome severe community/holdout challenges
+
+**When using `--compare` with multiple sites**, the output ranks all sites by overall score and highlights trade-offs (e.g., can low TOD be addressed through future development? Are acquisition challenges surmountable with additional budget or time?).
+
+**Save reports to:**
+`$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_transit_station_scoring_<site_id>.md`
 
 **Documentation**: See `README.md` for complete methodology, interpretation guide, and examples.
 
