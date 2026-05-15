@@ -1,8 +1,8 @@
 ---
 name: cropland-out-of-production-agreements
-description: Expert in cropland out of production compensation agreements for transmission lines, pipelines, and other infrastructure on agricultural land. Use when analyzing ongoing agricultural productivity impacts from right-of-way agreements, negotiating annual compensation structures (Ontario vs Alberta models), quantifying operational inefficiencies from farming around structures, or advocating for landowner interests based on OFA (Ontario Federation of Agriculture) guidance. Key terms include annual compensation, headlands loss, precision agriculture impacts, ongoing productivity loss, per-structure payments, Alberta Surface Rights Board model
-tags: [cropland-compensation, agricultural-easements, annual-payments, OFA-guidance, transmission-towers, farm-productivity-loss, right-of-way-impacts, headlands-compensation]
-capability: Provides systematic framework for cropland out of production agreements including compensation structures (one-time vs. annual models, Ontario Hydro One 6-year theoretical profit vs. Alberta ATCO annual per-structure $1,380 cultivated/$552 uncultivated/$690 headlands), ongoing impact quantification (internal headlands loss, labor increases, precision agriculture restrictions, aerial spraying limitations, irrigation system interference, weed control expenses, equipment damage risk), OFA advocacy position (83% support for annual compensation, alignment with Alberta model), and negotiation strategies (all-stages consideration from planning through decommissioning, legal review requirements, compensation review intervals)
+description: Expert in cropland out of production compensation agreements and agricultural easement compensation analysis for transmission lines, pipelines, and other infrastructure on agricultural land. Use when analyzing ongoing agricultural productivity impacts from right-of-way agreements, computing compensation for agricultural land taken by infrastructure corridors, negotiating annual compensation structures (Ontario vs Alberta models), quantifying operational inefficiencies from farming around structures, running three-model NPV comparisons (Ontario one-time vs Alberta SRB annual vs Farmer Required actual costs), or advocating for landowner interests based on OFA (Ontario Federation of Agriculture) guidance. Key terms include cropland compensation, agricultural easement, annual compensation, headlands loss, precision agriculture impacts, ongoing productivity loss, per-structure payments, Alberta Surface Rights Board model, NPV shortfall, capitalized compensation
+tags: [cropland-compensation, agricultural-easements, annual-payments, OFA-guidance, transmission-towers, farm-productivity-loss, right-of-way-impacts, headlands-compensation, NPV-analysis, three-model-comparison]
+capability: Provides systematic framework for cropland out of production agreements and agricultural compensation analysis including three-model NPV comparison (Ontario Hydro One one-time vs Alberta ATCO annual per-structure $1,380 cultivated/$552 uncultivated/$690 headlands vs Farmer Required actual documented costs), automated cropland_calculator.py computation, ongoing impact quantification (internal headlands loss, labor increases, precision agriculture restrictions, aerial spraying limitations, irrigation system interference, weed control expenses, equipment damage risk), sensitivity analysis (discount rate, crop prices, tower count), three-tier negotiation strategy (Alberta-rate ideal, actual-cost target, capitalized one-time acceptable), walk-away thresholds, OFA advocacy position (83% support for annual compensation, alignment with Alberta model), and negotiation strategies (all-stages consideration from planning through decommissioning, legal review requirements, compensation review intervals)
 proactive: true
 ---
 
@@ -392,12 +392,228 @@ Cropland out of production compensation agreements (subset of infrastructure acq
 
 ---
 
+## Automated Three-Model NPV Comparison (cropland_calculator.py)
+
+For systematic, repeatable agricultural easement compensation analysis, use the bundled calculator located alongside this skill.
+
+**Script path**: `${CLAUDE_PLUGIN_ROOT}/skills/cropland-out-of-production-agreements/cropland_calculator.py`
+
+**Purpose**: Compare three compensation models side-by-side with full NPV math and sensitivity analysis:
+
+1. **Ontario Hydro One (Current Practice)** — One-time easement payment + 6-year theoretical profit loss; NO annual ongoing compensation. Covers 6 years only despite 50+ year infrastructure lifespan.
+2. **Alberta Surface Rights Board (2021 Rates)** — One-time easement + per-structure annual compensation ($1,380 cultivated / $552 uncultivated / $690 headlands), paid for life of structure with 5-year review intervals.
+3. **Farmer Required (Documented Actual Costs)** — One-time easement + annual compensation calculated from farm-specific impact categories (headlands, aerial spray, precision ag, labor, weed control, equipment damage, irrigation).
+
+### Invocation
+
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/cropland-out-of-production-agreements
+python3 cropland_calculator.py /path/to/input.json --output results.json --verbose
+```
+
+Sample input: `sample_250acre_farm.json` (in same directory).
+
+### JSON Input Schema
+
+```json
+{
+  "farm_details": {
+    "total_acres": 250,
+    "crop_type": "Cash crops (corn/soybeans rotation)",
+    "land_value_per_acre": 35000,
+    "net_income_per_acre": 600
+  },
+  "infrastructure": {
+    "type": "Transmission line",
+    "voltage": "500kV",
+    "utility": "Hydro One",
+    "tower_count": 16,
+    "row_width_m": 80,
+    "crossing_length_km": 2.0,
+    "lifespan_years": 50,
+    "tower_classification": {
+      "cultivated": 14,
+      "uncultivated": 0,
+      "headlands": 2
+    }
+  },
+  "compensation_offer": {
+    "one_time_easement": 21000,
+    "theoretical_profit_6yr": 12000,
+    "total_one_time": 33000,
+    "notes": "Ontario Hydro One standard offer"
+  },
+  "ongoing_impacts": {
+    "headland_radius_m": 12.5,
+    "headland_productivity_loss_pct": 40,
+    "aerial_spray_restriction": true,
+    "ground_spray_cost_per_ha": 550,
+    "aerial_spray_cost_per_ha": 100,
+    "precision_ag_interference": true,
+    "gps_interference_width_m": 100,
+    "overlap_pct": 7,
+    "input_costs_per_ha": 800,
+    "labor_increase_pct": 10,
+    "hourly_labor_cost": 50,
+    "weed_control_per_tower": 50,
+    "equipment_damage_probability_pct": 2,
+    "average_damage_cost": 5000
+  },
+  "financial_parameters": {
+    "discount_rate_pct": 5.0,
+    "npv_horizon_years": 50
+  }
+}
+```
+
+### Data Validation Rules
+
+**Consistency checks**:
+- `tower_classification` cultivated + uncultivated + headlands must equal `tower_count`
+- `total_one_time` must equal `one_time_easement` + `theoretical_profit_6yr`
+- `npv_horizon_years` should align with `lifespan_years`
+
+**Reasonableness ranges** (flag if outside):
+- Land value: $10,000-$60,000/acre
+- Net income: $200-$1,200/acre
+- Tower count: 1-50
+- Headland productivity loss: 20-70%
+- Labor increase: 5-30%
+- Equipment damage probability: 1-5% per tower per year
+- Discount rate: 3-7% (5% institutional default)
+
+**Conditional fields**:
+- If `aerial_spray_restriction = true`, both spray cost fields required
+- If `precision_ag_interference = true`, GPS interference fields required
+
+### Calculator Output (results.json)
+
+For each model: total one-time, annual ongoing, NPV total over horizon.
+
+**Comparison metrics**:
+- Ontario vs Farmer Required shortfall ($ and % uncompensated)
+- Alberta vs Ontario delta ($ and multiplier, typically 6-20×)
+- Alberta vs Farmer Required (Alberta typically EXCEEDS actual needs - useful negotiation benchmark)
+
+**Sensitivity analysis** (±20% on each):
+- Discount rate (3% → 7%)
+- Crop prices / net income per acre
+- Tower count
+
+**Breakeven analysis**: Discount rate at which Ontario offer equals Farmer Required (typically unrealistic — proves Ontario inadequate at any reasonable rate).
+
+### NPV Convention (CRITICAL)
+
+NPV in this skill represents **total cost to farmer over infrastructure lifespan**, NOT compensation paid.
+
+- Higher NPV = more compensation REQUIRED to offset costs
+- Lower NPV = less compensation required
+- Ontario lower NPV is NOT "better" — it means Ontario compensates LESS and leaves more burden uncompensated
+
+**Common misreading to avoid**: Treating Ontario's lower NPV as favorable. It is the shortfall that defines inadequacy.
+
+### Annuity Factor Reference
+
+```
+Annuity Factor = (1 - (1 + r)^-n) / r
+
+50 years @ 5% = 18.26
+50 years @ 3% = 25.73
+50 years @ 7% = 13.80
+40 years @ 5% = 17.16
+80 years @ 5% = 19.60
+```
+
+Used to capitalize annual compensation into one-time equivalent (or convert one-time offer into annual equivalent).
+
+## Three-Tier Counter-Offer Strategy
+
+When the calculator confirms an Ontario offer is inadequate, structure the counter-offer in three tiers:
+
+### Tier 1 — IDEAL (Anchor High, Alberta Model)
+
+**Ask**: Accept one-time easement + Alberta per-structure annual compensation indexed to inflation, 5-year review intervals, transfers with land.
+
+**Justification**:
+- Hart v ATCO Electric Ltd (2021) Surface Rights Board precedent
+- Ontario natural gas pipelines (Enbridge, TCPL) already pay annual ROW compensation
+- OFA November 2024 AGM resolution (83% member support)
+- Equity: "Why do Alberta farmers receive annual but Ontario farmers don't?"
+
+**Expected pushback**: "Industry standard in Ontario is one-time."
+**Counter**: "Alberta utilities (ATCO, AltaLink, EPCOR) do annual. Ontario gas (Enbridge, TCPL) does annual. Precedent exists."
+
+### Tier 2 — TARGET (Actual Documented Costs)
+
+**Ask**: One-time easement + annual compensation equal to documented actual ongoing impacts (typically $5,000-$15,000/year depending on farm size and tower count).
+
+**Justification**: Calculator-quantified impacts (headlands, aerial spray, precision ag, labor, weed control, equipment damage) backed by farm records.
+
+**Expected pushback**: "Policy is one-time; can't set precedent for annual."
+**Counter**: "Then capitalize the NPV into the one-time payment. Don't externalize $XXX,XXX in documented ongoing costs."
+
+### Tier 3 — ACCEPTABLE (Capitalized One-Time)
+
+**Ask**: One-time payment = easement + 6-year theoretical profit + NPV of annual impacts over remaining lifespan, capitalized at 5%.
+
+**Formula**: `one_time_easement + theoretical_profit_6yr + (annual_impacts × annuity_factor)`
+
+**Example**: $21,000 + $12,000 + ($9,460 × 18.26) = **$205,719** minimum.
+
+### Walk-Away Threshold
+
+Reject any offer below NPV of (one-time easement + capitalized actual ongoing impacts). If utility refuses, escalate:
+- Legal challenge to compensation adequacy
+- OFA advocacy (media, political pressure)
+- Surface Rights Board (advocate for extension to Ontario)
+- Collective action with other affected landowners on same line
+
+### Negotiation Timeline
+
+- Day 0: Initial offer received
+- Day 14: Retain land law specialist (NOT general practice lawyer)
+- Day 30: Counter-offer deadline (with documented impact calculations)
+- Day 60: Utility response deadline
+- Day 90: Final negotiation deadline (before construction/expropriation)
+
+## Report Output Convention
+
+When generating compensation analysis reports, save to `$CLAUDE_PROJECT_DIR/Reports/` with ET timestamp prefix:
+
+**Filename format**: `YYYY-MM-DD_HHMMSS_[farm_name]_cropland_compensation_analysis.md`
+
+**Get timestamp**: `TZ='America/New_York' date '+%Y-%m-%d_%H%M%S'`
+
+**Report sections** (standard):
+1. Executive Summary with three-model comparison table and recommendation
+2. Farm & Infrastructure Summary
+3. Compensation Models Detailed Analysis (Ontario, Alberta, Farmer Required)
+4. Comparative Analysis (shortfall, multiplier, exceeds-needs analysis)
+5. Sensitivity Analysis (discount rate, crop prices, tower count, breakeven, scenario)
+6. Risk Assessment & Non-Financial Considerations (intergenerational equity, farm value impact, precedent)
+7. Negotiation Strategy (three-tier counter-offer, walk-away threshold, tactics, sequencing)
+8. Conclusion & Final Recommendation
+9. Appendices (calculation methodology, data sources, supporting files, assumptions/limitations)
+
+## Professional Tone Guidance
+
+This analysis ADVOCATES for the farmer — it is not neutral. Use evidence-backed advocacy language:
+- "Inadequate", "shortfall", "uncompensated burden", "cost externalization" are appropriate
+- Every claim must be backed by a number, a precedent (Alberta case law, OFA position, gas pipeline practice), or documented operational data
+- Frame from farmer perspective; quantify everything (turn qualitative complaints into dollar figures)
+- Emphasize intergenerational impacts — perpetual easement = perpetual burden = requires perpetual compensation
+
+---
+
 **This skill activates when you**:
 - Analyze cropland out of production agreements for transmission lines, pipelines, or linear infrastructure
-- Compare Ontario one-time compensation vs. Alberta annual compensation models
+- Compute compensation for agricultural land taken by infrastructure corridors (transit/transmission/pipeline)
+- Compare Ontario one-time compensation vs. Alberta annual compensation vs. Farmer Required actual-cost models
 - Quantify ongoing agricultural impacts (headlands, labor, precision agriculture restrictions, weed control, equipment damage)
+- Run three-model NPV shortfall analysis over 50-year infrastructure lifespan
 - Negotiate right-of-way agreements on behalf of farmers (based on OFA guidance)
 - Evaluate fairness of "industry standard" compensation offers
-- Calculate present value of annual compensation structures
+- Calculate present value of annual compensation structures (annuity factor capitalization)
 - Advocate for annual payments based on Alberta Surface Rights Board precedent
 - Assess impact of easements on farm succession and future landowner compensation
+- Structure three-tier counter-offers with walk-away thresholds
