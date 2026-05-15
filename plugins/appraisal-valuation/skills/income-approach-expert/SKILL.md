@@ -814,7 +814,10 @@ Fee Value = $909,091 + $309,788 = $1,218,879
   },
   "cap_rate_analysis": {
     "method": "market_extraction",
-    "extracted_rates": [0.060, 0.062, 0.058],
+    "cap_rate_range": {
+      "low": 0.06,
+      "high": 0.09
+    },
     "concluded_cap_rate": 0.060
   }
 }
@@ -823,7 +826,70 @@ Fee Value = $909,091 + $309,788 = $1,218,879
 **Usage**:
 
 ```bash
-cd /workspaces/lease-abstract/.claude/skills/income-approach-expert/
+/income-approach-land path/to/rental_data.json
+
+/income-approach-land path/to/rental_data.json --output $CLAUDE_PROJECT_DIR/Reports/2025-11-17_land_valuation.md
+```
+
+**Input Schema**: `land_rental_input_schema.json`
+
+**Sample JSON input**:
+```json
+{
+  "site_type": "Telecom tower site",
+  "land_rent": {
+    "annual_rent": 12000,
+    "lease_term": 20,
+    "escalations": "3% per 5 years",
+    "commencement_date": "2024-01-01"
+  },
+  "market_data": {
+    "comparable_rents": [
+      {"location": "Site A - 2km north", "annual_rent": 10000, "lease_term": 15},
+      {"location": "Site B - 5km east", "annual_rent": 14000, "lease_term": 20},
+      {"location": "Site C - 3km south", "annual_rent": 11500, "lease_term": 20}
+    ],
+    "cap_rate_range": {
+      "low": 0.06,
+      "high": 0.09
+    },
+    "comparable_sales": [
+      {"property_id": "Sale 1", "sale_price": 150000, "noi": 10500, "sale_date": "2024-06-15"},
+      {"property_id": "Sale 2", "sale_price": 180000, "noi": 12600, "sale_date": "2024-08-20"}
+    ],
+    "financing": {
+      "ltv": 0.75,
+      "debt_yield": 0.055,
+      "equity_yield": 0.12
+    }
+  },
+  "operating_expenses": {
+    "property_tax": 2000,
+    "insurance": 800,
+    "maintenance": 1200,
+    "management_fee": 600
+  }
+}
+```
+
+**7-Step Workflow**:
+
+1. **Validate Input**: Validates JSON against `land_rental_input_schema.json`
+2. **Analyze Market Rent**: Reconciles comparable rents to market rent conclusion
+3. **Select Capitalization Rate**: Uses 3 methods:
+   - **Market Extraction**: Cap Rate = NOI ÷ Sale Price from comparables
+   - **Band of Investment**: (LTV% × Debt Yield) + (Equity% × Equity Yield)
+   - **Buildup Method**: Risk-free + Liquidity + Inflation + Business Risk
+4. **Calculate NOI**: Market Rent − Operating Expenses
+5. **Calculate Land Value**: NOI ÷ Cap Rate
+6. **Reconcile with Sales**: Compare with sales comparison approach (if available)
+7. **Sensitivity Analysis**: Test ±0.5% cap rate impact on value; generate timestamped markdown report
+
+**Report Naming**: `$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_income_approach_{site_type}.md`
+
+**Direct calculator invocation**:
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/income-approach-expert/
 python land_capitalization_calculator.py input.json --output results.json --verbose
 ```
 
