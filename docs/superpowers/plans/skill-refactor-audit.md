@@ -93,4 +93,11 @@ Rewrite 59 descriptions to lead with "Use when..." third-person, ≤500 chars, w
 
 ## Execution log
 
-- 2026-05-15: Audit complete. Passes 1+2+3 dispatched in parallel (6 agents, one per plugin).
+- 2026-05-15: Audit complete. Passes 1+2+3 executed in parallel (6 plugin agents). Pass 4 surgical fixes done (section count, scope-boundary cross-refs, right-of-way dedup). Pass 4 body trim done (9 parallel agents). 11 residual Granular Focus blocks the Pass 3 agents missed were swept in a follow-up.
+
+Commits on `feat/plugin-marketplace`:
+- `e2b7a29` — Pass 1+2+3: align all 59 SKILL.md files with current spec
+- `0e32c2f` — Pass 4 surgical: reconcile cross-references, dedup duplicated content
+- `96465ca` — Pass 4 trim: 9 bloated skills extracted to sibling reference files
+
+Final state: 59 spec-compliant SKILL.md files; 9 trimmed to 1,500-1,900 words with ~28 new sibling reference files carrying the deep content. All four obsolete frontmatter fields (`tags`, `capability`, `proactive`, `tools`) are gone; all descriptions lead with "Use when..."; no residual Granular Focus blocks.
