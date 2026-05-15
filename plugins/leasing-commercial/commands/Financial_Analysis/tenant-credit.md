@@ -145,7 +145,7 @@ Create a JSON file for the credit analysis calculator following this structure:
 If multiple years of financials are provided, create multiple entries in `financial_data` array, most recent year first.
 
 **Save the JSON file as:**
-`${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/credit_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/Credit_Analysis/credit_inputs/[tenant_name]_[date]_input.json`
 
 Create the `credit_inputs/` directory if it doesn't exist.
 
@@ -154,7 +154,7 @@ Create the `credit_inputs/` directory if it doesn't exist.
 Execute the credit analysis using Bash tool:
 
 ```bash
-cd "${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts"
+cd "${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/Credit_Analysis"
 
 # Create Python script to run analysis
 cat > run_credit_analysis.py << 'SCRIPT'

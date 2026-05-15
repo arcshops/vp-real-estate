@@ -37,7 +37,7 @@ The output must be written in **flowing prose** (not tables or bullet points) su
 
 2. **Run the Location Overview module** to collect API data:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/location_overview.py" "$ARGUMENTS"
+   python "${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/Location_Overview/location_overview.py" "$ARGUMENTS"
    ```
 
 3. **Read the generated report** to get the base data including:
@@ -276,4 +276,4 @@ The subject property benefits from an excellent location within an emerging Urba
 ## See Also
 
 - Implementation plan: `Planning/location-overview-implementation-plan.md`
-- Module documentation: `${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/README.md`
+- Module documentation: `${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/scripts/Location_Overview/README.md`

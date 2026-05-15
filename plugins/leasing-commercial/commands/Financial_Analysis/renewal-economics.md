@@ -193,7 +193,7 @@ rent_year_2 = rent_year_1 * 1.025
 | Renovation ($/sf) | $5-15 | $15-30 | $20-40 |
 
 **Save the JSON file as:**
-`${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/renewal_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Renewal_Analysis/renewal_inputs/[tenant_name]_[date]_input.json`
 
 Create the `renewal_inputs/` directory if it doesn't exist.
 
@@ -202,7 +202,7 @@ Create the `renewal_inputs/` directory if it doesn't exist.
 Execute the renewal analysis using Bash tool:
 
 ```bash
-cd "${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts"
+cd "${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Renewal_Analysis"
 
 # Create Python script to run analysis
 cat > run_renewal_analysis.py << 'SCRIPT'

@@ -201,7 +201,7 @@ If "2 months free rent at commencement":
 ```
 
 **Save the JSON file as:**
-`${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/ifrs16_inputs/[tenant_name]_[date]_input.json`
+`${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/IFRS16_Calculator/ifrs16_inputs/[tenant_name]_[date]_input.json`
 
 Create the `ifrs16_inputs/` directory if it doesn't exist.
 
@@ -210,7 +210,7 @@ Create the `ifrs16_inputs/` directory if it doesn't exist.
 Execute the IFRS 16 analysis using Bash tool:
 
 ```bash
-cd "${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts"
+cd "${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/IFRS16_Calculator"
 
 # Run the analysis using existing script
 # The run_ifrs16_analysis.py script is already available in this directory

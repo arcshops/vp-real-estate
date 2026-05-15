@@ -149,7 +149,7 @@ Write extracted data to JSON file in $CLAUDE_PROJECT_DIR/Reports/ folder:
 Run the Python formatter to create the perfect Excel file:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/skills/lease-abstraction-specialist/scripts/excel_formatter.py <json-input-path> <excel-output-path>
+python ${CLAUDE_PLUGIN_ROOT}/skills/lease-abstraction-specialist/scripts/MLS_Extractor/excel_formatter.py <json-input-path> <excel-output-path>
 ```
 
 The formatter will:

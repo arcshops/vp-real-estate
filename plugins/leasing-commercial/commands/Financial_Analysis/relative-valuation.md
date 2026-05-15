@@ -285,7 +285,7 @@ Filter out properties that don't meet minimum requirements **before** ranking. T
    - Example: `"hvac_coverage": 1` - Full HVAC only (1=Y, 2=Part, 3=N)
 
 ### JSON Schema Reference
-- Full input specification: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/schema_template.json` (Draft 2020-12 JSON Schema).  
+- Full input specification: `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/schema_template.json` (Draft 2020-12 JSON Schema).  
   Validate incoming payloads against this file so future schema changes only require updating one location.
 
 **Filter Snippet Example**
@@ -435,8 +435,8 @@ The user will provide one or more PDF documents containing:
 
 Build a properly formatted JSON file following the schema.
 
-**📄 Schema Reference:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/schema_template.json` for complete JSON template
-**📖 Field Documentation:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/SCHEMA.md` for detailed field descriptions
+**📄 Schema Reference:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/schema_template.json` for complete JSON template
+**📖 Field Documentation:** See `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/SCHEMA.md` for detailed field descriptions
 
 **Quick Start Template:**
 
@@ -502,7 +502,7 @@ if [ -z "$DISTANCEMATRIX_API_KEY" ]; then
   echo "Get free API key at https://distancematrix.ai/ (1,000 elements/month free)"
 else
   # Calculate distances and update JSON in place
-  python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/calculate_distances.py \
+  python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/calculate_distances.py \
     --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
     --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
     --verbose
@@ -533,27 +533,27 @@ Execute the relative valuation calculator:
 
 ```bash
 # Standard report (top 10 competitors)
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/relative_valuation_calculator.py \
   --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
   --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
   --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json
 
 # Full report (all competitors) - use for large datasets (50+ properties)
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/relative_valuation_calculator.py \
   --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
   --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
   --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
   --full
 
 # With statistical analysis (Phase 3 - regression, correlation, z-scores)
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/relative_valuation_calculator.py \
   --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
   --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
   --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
   --stats
 
 # Full report with statistical analysis (comprehensive)
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/relative_valuation_calculator.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/relative_valuation_calculator.py \
   --input $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_input.json \
   --output $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
   --output-json $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_output.json \
@@ -682,7 +682,7 @@ After generating the markdown report, convert to PDF in **landscape** orientatio
 ```bash
 pandoc $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.md \
   -o $CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_relative_valuation_report.pdf \
-  --css ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/pdf_style.css \
+  --css ${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/pdf_style.css \
   --pdf-engine=wkhtmltopdf \
   --pdf-engine-opt=--orientation --pdf-engine-opt=Landscape \
   --pdf-engine-opt=--margin-top --pdf-engine-opt=5mm \
