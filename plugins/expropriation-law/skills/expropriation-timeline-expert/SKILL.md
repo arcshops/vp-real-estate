@@ -459,6 +459,30 @@ python project_timeline_calculator.py input.json -v
 
 **No manual intervention required** - fully automated from input to report.
 
+### Slash Command Integration
+
+**Argument hint**: `<project-milestones-json> [--output <report-path>]`
+
+**Required tools**: Read, Write, Bash
+
+**Canonical invocation** (how the slash command passes user input):
+```bash
+python .claude/skills/expropriation-timeline-expert/timeline_generator.py {{arg0}}
+```
+
+**Usage examples**:
+```bash
+# Generate timeline
+/expropriation-timeline project_milestones.json
+
+# Custom output path
+/expropriation-timeline samples/transit_corridor_timeline.json --output $CLAUDE_PROJECT_DIR/Reports/timeline.md
+```
+
+**Related commands**: `/briefing-note` (include timeline in executive briefing), `/board-memo` (include timeline in board approval memo), `/land-assembly` (multi-parcel timeline with phasing)
+
+**Related agents**: Stevi (compliance and deadline watchdog), Christi (legal procedures), Katy/Shadi (project planning)
+
 ## Limitations
 
 **Current implementation**:
