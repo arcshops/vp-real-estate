@@ -853,9 +853,209 @@ Total Estimated Budget:                  $7.15M (43% contingency)
 
 **Benefit:** Utility companies are more flexible and accommodating with trustworthy partners. Trust built early translates to smoother execution and fewer disputes.
 
+## Easement Valuation Methods
+
+Comprehensive methodology for determining fair compensation when a permanent or long-term easement is required across a property. Applies to utility transmission lines, pipelines, and transit corridors.
+
+### ROW Area and Encumbrance Calculation
+
+```
+ROW Area (hectares) = Width (meters) × Length (meters) ÷ 10,000
+ROW Area (acres)    = ROW Area (hectares) × 2.471
+Encumbrance %       = (ROW Area ÷ Total Property Area) × 100%
+```
+
+**Example** — 115kV transmission line, 40 m width, 2.5 km length, 100-acre farm:
+- ROW Area = 40 × 2,500 ÷ 10,000 = 10 ha = 24.71 acres
+- Encumbrance = 24.71 ÷ 100 = **24.71%**
+
+### Percentage-of-Fee Method
+
+Select a base percentage from the corridor-type ranges below, then apply adjustment factors.
+
+**Base Percentage Ranges by Corridor Type**
+
+| Corridor Type | Specification | Base % of Fee |
+|---------------|---------------|---------------|
+| Utility Transmission | 69 kV | 10–15% |
+| | 115 kV | 12–18% |
+| | 230 kV | 15–20% |
+| | 500 kV | 20–25% |
+| Pipeline | Water / Sewer | 15–20% |
+| | Natural gas (low pressure) | 15–20% |
+| | Natural gas (high pressure) | 20–25% |
+| | Petroleum products | 25–30% |
+| Transit | LRT (surface) | 25–30% |
+| | Subway (subsurface) | 20–25% |
+| | Commuter rail | 30–35% |
+| | BRT | 20–25% |
+
+**Common Adjustment Factors**
+
+*Transmission:*
+- +2–5% — Multiple towers per acre (high tower density)
+- +2–5% — Severe agricultural impacts (irrigation relocation, field division)
+- +1–3% — Regular maintenance access required
+- −2–5% — Minimal restrictions, infrequent access
+
+*Pipeline:*
+- +3–5% — Shallow depth (more restrictive surface conditions)
+- +5–10% — Building prohibitions extend beyond corridor
+- +2–5% — Cathodic protection equipment sites
+- −2–5% — Deep burial, minimal surface impact
+
+*Transit:*
+- +5–10% — Severe noise/vibration impacts
+- +5–10% — Access severely restricted (land-locking)
+- +3–5% — Significant visual/aesthetic impact
+- −5–10% — Subsurface only, surface rights retained by owner
+
+**Calculation:**
+```
+Easement Value = ROW Area (acres) × Fee Value ($/acre) × Adjusted % of Fee
+```
+
+**Example** (115 kV, 24.71 ROW acres, $10,000/acre, 21% adjusted):
+```
+Easement Value = 24.71 × $10,000 × 21.0% = $51,891
+```
+
+### Income Capitalization Method
+
+Used when the property generates measurable income (agriculture, commercial).
+
+**Step 1 — Estimate annual income loss:**
+```
+Annual Income Loss = Annual Rent ($/acre) × Productivity Loss % × ROW Area (acres)
+```
+
+**Productivity Loss Guidance by Zone:**
+- Tower/facility footprints: 100% loss
+- Restricted planting zones adjacent to towers: 15–25% loss
+- Remaining corridor subject to height/access restrictions: 5–15% loss
+
+**Step 2 — Select capitalization rate:**
+
+| Easement Term | Cap Rate Range |
+|---------------|----------------|
+| Perpetual (utility/government) | 4.0–5.0% |
+| Long-term (50+ years) | 5.0–6.0% |
+| Medium-term (20–49 years) | 6.0–8.0% |
+
+```
+Easement Value = Annual Income Loss ÷ Cap Rate
+```
+
+**Example** (24.71 acres × $300/acre × 20% loss = $1,482.60/yr ÷ 4.5% cap):
+```
+Easement Value = $1,482.60 ÷ 0.045 = $32,947
+```
+
+### Before/After Method
+
+Used when recent sales of comparable easement-encumbered properties are available.
+
+**Market Extraction from Comparable Sales:**
+```
+Implied Easement $/ROW Acre = (Comparable "before" value − Comparable sale price) ÷ Easement acres
+
+Application to Subject:
+Easement Value = Subject ROW Area × Implied $/ROW Acre
+```
+
+**Limitations:** Market participants may not fully reflect technical easement impacts; limited comparable data is common. Weight this method lower in reconciliation unless multiple strong comparables exist.
+
+### Reconciliation Framework
+
+Apply all available methods and reconcile with weights reflecting data quality and property type.
+
+| Valuation Method | Typical Weight | Notes |
+|------------------|----------------|-------|
+| Percentage of Fee | 35–45% | Most widely accepted; use when strong adjustment support exists |
+| Income Capitalization | 35–45% | Preferred for income-producing properties; directly measures economic loss |
+| Before/After | 10–25% | Use only when strong comparable data available; lower weight otherwise |
+
+**Reconciled value = Sum of (Method Value × Weight)**
+
+### Additional Compensation Components
+
+Beyond the permanent easement, the total compensation package may include:
+
+**Temporary Construction Easement:**
+```
+TCE Value = Construction Area (acres) × Annual Revenue ($/acre) × Growing Seasons Lost
+           + Restoration Costs + Crop Damage + Fence Repair
+```
+
+**Injurious Affection (Remainder Property):**
+- Access impairment to remainder lands
+- Field division efficiency loss (increased equipment operating costs)
+- Irrigation system relocation costs and ongoing efficiency reduction
+
+**Severance Damages:**
+- If easement changes highest and best use of remainder lands
+- ```Severance = (Before HBU Value/acre − After HBU Value/acre) × Remainder Acres```
+
+**Disturbance Allowance:**
+- Inconvenience, temporary disruption during construction period
+- Typically $500–$2,500 depending on magnitude of disruption
+
+### Calculator Integration
+
+**Input Schema** (JSON):
+```json
+{
+  "corridor_specifications": {
+    "corridor_type": "utility_transmission | pipeline | transit | access",
+    "voltage_kv": 115.0,
+    "width_meters": 40.0,
+    "length_meters": 2500.0,
+    "term": "perpetual | temporary",
+    "restrictions": ["no_buildings", "no_trees", "height_restrictions"]
+  },
+  "property": {
+    "total_acres": 100.0,
+    "fee_simple_value_per_acre": 10000.0,
+    "current_use": "Row crop agriculture",
+    "annual_rent_per_acre": 300.0
+  },
+  "valuation_methods": {
+    "percentage_of_fee": { "base_percentage": 0.15, "adjusted_percentage": 0.21 },
+    "income_capitalization": { "productivity_loss_percentage": 0.20, "cap_rate": 0.045 },
+    "before_after": { "value_before": 1000000.0, "value_after": 950000.0 }
+  }
+}
+```
+
+**Save input files to:**
+`${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert/row_inputs/[property_name]_[corridor_type]_input.json`
+
+**Run calculator:**
+```bash
+cd ${CLAUDE_PLUGIN_ROOT}/skills/right-of-way-expert
+python3 easement_valuation_calculator.py row_inputs/[filename]_input.json \
+  -o row_outputs/[filename]_results.json --verbose
+```
+
+**Save final report to:**
+`$CLAUDE_PROJECT_DIR/Reports/YYYY-MM-DD_HHMMSS_row_analysis_[property_name]_[corridor_type].md`
+
+### Negotiation Guidance
+
+**Landowner position** — Seek upper end of reconciled range; separately quantify irrigation relocation, fence repair, crop loss, and disturbance.
+
+**Infrastructure agency position** — Percentage of fee at lower end of base range; before/after market evidence; argue minimal agricultural impact; cap additional items to demonstrated invoiced costs.
+
+**Typical settlement structure:**
+- Base permanent easement: Reconciled mid-point value
+- Temporary construction easement: Separately negotiated
+- Demonstrated costs (fencing, tile drain repair): Actual invoices
+- Disturbance allowance: Lump-sum negotiated item
+
+---
+
 ## Related Slash Commands
 
-- `/right-of-way-analysis` - Comprehensive ROW analysis including conflict detection and cost estimation
 - `/expropriation-timeline` - Critical path scheduling with utility relocation integration
 - `/land-assembly-expert` - Multi-parcel land acquisition with utility relocation phasing
 
