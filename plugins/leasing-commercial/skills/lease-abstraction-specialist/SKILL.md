@@ -1,6 +1,6 @@
 ---
 name: lease-abstraction-specialist
-description: Use when abstracting a commercial lease into the standardized 24-section industrial or office template, extracting critical dates, identifying Schedule G special provisions, or building rent schedules and renewal-option summaries for downstream financial analysis.
+description: Use when abstracting a commercial lease into the standardized 25-section industrial or office template, extracting critical dates, identifying Schedule G special provisions, or building rent schedules and renewal-option summaries for downstream financial analysis.
 ---
 
 # Lease Abstraction Specialist
@@ -22,41 +22,38 @@ Before producing any abstraction output, load [Lease Abstraction DDD](./lease_ab
 
 ## Core Concepts
 
-### 24-Section Industrial/Office Template
+### 25-Section Industrial/Office Template
 
-Standard abstraction follows ANSI/BOMA measurement standards and covers:
+Section taxonomy and field definitions are authoritative in the DDD. Summary of the 25 sections (1-21 extracted from the lease, 22-25 derived/analytical):
 
-**Sections 1-6: Parties & Premises**
-1. Parties (landlord, tenant, guarantors)
-2. Premises (address, suite, area)
-3. Measurement Standard (ANSI/BOMA)
-4. Commencement & Term
-5. Renewal/Extension Options
-6. Expansion/Contraction Rights
+**Extracted (1-21)**
+1. documentInformation
+2. parties
+3. premises
+4. term
+5. rent
+6. depositsAndSecurity
+7. operatingCostsAndTaxes
+8. useAndOperations
+9. maintenanceAndRepairs
+10. alterationsAndImprovements
+11. insuranceAndIndemnity
+12. damageAndDestruction
+13. assignmentAndSubletting
+14. defaultAndRemedies
+15. servicesAndUtilities
+16. environmental
+17. subordinationAndAttornment
+18. notices
+19. endOfTerm
+20. specialProvisions (Schedule G)
+21. schedulesAndExhibits
 
-**Sections 7-12: Financial**
-7. Base Rent Schedule
-8. Operating Cost Recovery
-9. Additional Rent
-10. Security Deposit
-11. Tenant Improvements
-12. Landlord Services
-
-**Sections 13-18: Use & Operations**
-13. Permitted Use
-14. Operating Hours
-15. Parking
-16. Signage
-17. Assignment/Subletting
-18. Alterations
-
-**Sections 19-24: Legal & Compliance**
-19. Default & Remedies
-20. Insurance Requirements
-21. Indemnity/Liability
-22. Environmental Provisions
-23. Special Provisions (Schedule G)
-24. Critical Dates Timeline
+**Derived (22-25)**
+22. criticalDates
+23. financialObligations
+24. keyIssuesAndRisks
+25. notesAndComments (optional)
 
 ### Critical Dates
 
@@ -226,7 +223,7 @@ This skill is automatically loaded when:
 - Reading files: `*lease*.pdf`, `*lease*.docx`, `*agreement*.pdf`
 
 **Related Commands**:
-- `/abstract-lease <lease-path>` - Full 24-section abstraction (industrial/office)
+- `/abstract-lease <lease-path>` - Full 25-section abstraction (industrial/office)
 - `/critical-dates <lease-path>` - Extract timeline and generate calendar reminders
 
 ## Examples

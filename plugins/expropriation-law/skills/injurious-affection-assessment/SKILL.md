@@ -3,6 +3,8 @@ name: injurious-affection-assessment
 description: Use when quantifying injurious-affection damages under OEA s.18(2)(a)/(b) — modeling construction-period noise (dBA), dust (PM2.5/PM10), or vibration (PPV mm/s); valuing permanent proximity impacts via paired sales or hedonic regression; documenting business losses with comparative sales analysis; or calculating cost-to-cure for traffic, signage, or parking impairment.
 ---
 
+**Scope boundary**: This skill covers *external* impacts from the works on remaining property (sensory, proximity, business disruption). For *structural/configurational* loss to the remainder after a partial taking (frontage, shape, access, utilities, farm severance), use `severance-damages-quantification`. Both fall under OEA s.18.
+
 ## Construction Period Impacts (Temporary)
 
 Temporary damages during construction period, typically quantified as percentage rent reduction or lump-sum business loss.

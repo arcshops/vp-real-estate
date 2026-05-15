@@ -3,6 +3,8 @@ name: severance-damages-quantification
 description: Use when valuing the remainder after a partial taking — quantifying frontage loss by road class ($/linear foot), circuitous-access capitalization, landlocked-parcel easement cost-to-cure, shape-efficiency-driven development yield loss, or farm operation disruption (fencing, equipment crossings, irrigation severance). Before/after method with cost-to-cure vs. value-loss reconciliation.
 ---
 
+**Scope boundary**: This skill covers *structural/configurational* loss to the remainder after a partial taking (frontage, shape, access, utilities, farm severance). For *external* impacts from the works (noise, dust, vibration, proximity, business loss during construction), use `injurious-affection-assessment`. Both fall under OEA s.18.
+
 ## Access Impairment Analysis
 
 Quantifying reduced access value from loss of frontage, circuitous access, or landlocked conditions.
