@@ -1,13 +1,42 @@
 # Meet Reggie Chan and His Team
 
-[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://github.com/reggiechan74/vp-real-estate/releases)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/reggiechan74/vp-real-estate/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-brightgreen.svg)](https://www.python.org/downloads/)
-[![Tests](https://img.shields.io/badge/tests-450%2B%20passing-success.svg)](Eff_Rent_Calculator/Tests/)
 [![Code Style](https://img.shields.io/badge/code%20style-typed-black.svg)](https://docs.python.org/3/library/typing.html)
 [![GitHub Stars](https://img.shields.io/github/stars/reggiechan74/vp-real-estate?style=social)](https://github.com/reggiechan74/vp-real-estate)
 
-**Version 2.2.0** • Released 2026-01-15
+**Version 3.0.0** • Released 2026-05-15
+
+## Installation
+
+This repository is a Claude Code plugin marketplace. To install:
+
+```bash
+# Add the marketplace
+/plugin marketplace add reggiechan/vp-real-estate
+
+# Install the plugins you need
+/plugin install leasing-commercial@vp-real-estate
+/plugin install common-utilities@vp-real-estate    # foundation plugin — recommended
+
+# Optional plugins for specialized domains
+/plugin install tenancies-residential@vp-real-estate
+/plugin install expropriation-law@vp-real-estate
+/plugin install appraisal-valuation@vp-real-estate
+/plugin install infrastructure-corridor-ops@vp-real-estate
+```
+
+## Plugins
+
+| Plugin | Purpose |
+|---|---|
+| **common-utilities** | Foundation: trio personas (Adam/Reggie/Dennis), shared utilities, cross-cutting skills |
+| **leasing-commercial** | Commercial lease analysis: abstraction, effective rent, tenant credit, options, IFRS 16, consents, compliance |
+| **tenancies-residential** | Ontario RTA: eviction procedures, LTB hearings |
+| **expropriation-law** | Ontario Expropriations Act: compensation, forms, deadlines, settlement |
+| **appraisal-valuation** | Cost approach, income approach, easement valuation, comparable sales, environmental DD |
+| **infrastructure-corridor-ops** | Linear infrastructure acquisition: easements, land assembly, public consultation, transit, transmission |
 
 ## The Digital Embodiment of a 20-Year Real Estate Veteran—And His Team
 
@@ -351,13 +380,13 @@ sudo apt-get install -y pandoc wkhtmltopdf  # Linux/Ubuntu
 
 ```bash
 # 1. Extract lease terms into the 24-section template
-/abstract-lease path/to/lease.docx
+/leasing-commercial:abstract-lease path/to/lease.docx
 
 # 2. Run an effective-rent analysis on the same deal
-/effective-rent path/to/lease.pdf
+/leasing-commercial:effective-rent path/to/lease.pdf
 
 # 3. Extract MLS data to Excel for competitive analysis
-/extract-mls path/to/mls_report.pdf --subject="2550 Stanfield"
+/leasing-commercial:extract-mls path/to/mls_report.pdf --subject="2550 Stanfield"
 ```
 
 Each command follows the same pipeline:
@@ -369,7 +398,7 @@ Each command follows the same pipeline:
 ### Run the Test Suite
 
 ```bash
-python -m pytest Eff_Rent_Calculator/Tests/ -v
+python -m pytest plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/Eff_Rent_Calculator/Tests/ -v
 ```
 
 ---
@@ -479,9 +508,9 @@ Reggie and his team have 25 automated workflows at their disposal. Each slash co
 | Compliance | `/work-letter` | Work letter outline from TI provisions |
 | Utilities | `/convert-to-pdf` | Convert markdown files to professionally formatted PDF |
 
-> **Tip:** Every workflow writes outputs to `Reports/` with standardized timestamps, making it easy to hand off bundles to executives, lenders, or auditors. Review `.claude/commands/README.md` for arguments, required supporting documents, and validation steps.
+> **Tip:** Every workflow writes outputs to `Reports/` with standardized timestamps, making it easy to hand off bundles to executives, lenders, or auditors. Commands are namespaced under their plugin (e.g. `/leasing-commercial:effective-rent`). See `plugins/leasing-commercial/commands/` for arguments, required supporting documents, and validation steps.
 
-See `.claude/commands/README.md` for full instructions and input templates.
+See `plugins/leasing-commercial/commands/` for full instructions and input templates.
 
 ### Templates & Reporting
 - Industrial and office 24-section abstracts (Markdown + JSON + schema).  
@@ -541,45 +570,24 @@ Short-term priorities:
 ## Project Structure
 
 ```
-vp-real-estate/
-├── Shared_Utils/              # NPV, IRR, ratio utilities + schemas
-│   └── schemas/               # Unified JSON schemas for validators
-├── Eff_Rent_Calculator/       # Effective rent + yield curve engines
-├── IFRS16_Calculator/         # Lease accounting workflows
-├── Credit_Analysis/           # Tenant credit scoring
-├── Renewal_Analysis/          # Renewal vs relocation modelling
-├── Rental_Variance/           # Variance decomposition
-├── Comparable_Sales_Analysis/ # Traditional DCA with dollar adjustments (49 adjustments)
-├── MCDA_Sales_Comparison/     # MCDA ordinal ranking for fee simple valuation
-├── Relative_Valuation/        # MCDA competitive positioning (25 variables) + statistical analysis
-├── Rollover_Analysis/         # Portfolio lease expiry and renewal prioritization
-├── Default_Calculator/        # Tenant default damage quantification
-├── Option_Valuation/          # Real options valuation (Black-Scholes)
-├── MLS_Extractor/             # MLS PDF to Excel with subject highlighting
-├── Location_Overview/         # NEW: Appraisal location research (11 providers, 4 municipalities)
-│   ├── providers/             # Data providers (Toronto, Ottawa, Mississauga, Hamilton, etc.)
-│   ├── aggregator/            # Result merging and validation
-│   └── output/                # Report generation + CUSPAP compliance
-├── Templates/                 # Lease abstract templates (Industrial/Office)
-├── Reports/                   # Timestamped analysis outputs
-├── Repository_Dev_Plans/      # Development planning documents
-│   └── archive/               # Archived utilities and completed projects
-├── Sample_Inputs/             # Example lease documents and data files
-├── Sample_Outputs/            # Reference outputs for validation
-├── Research_Reports/          # Research papers and technical documentation
-├── requirements.txt           # Python dependencies
-└── .claude/                   # Automation commands, skills, agents, hooks
-    ├── commands/              # 30+ slash commands (7 categories)
-    ├── skills/                # 23+ specialized expert systems
-    ├── agents/                # Reggie and His Team + Infrastructure Specialists
-    │   ├── reggie-chan-vp.md  # Reggie Chan, CFA, FRICS - VP (Sonnet)
-    │   ├── adam.md            # Adam - Reggie's senior analyst (Haiku)
-    │   ├── dennis.md          # Dennis - Reggie's former boss (Opus)
-    │   └── [+7 infrastructure specialists]
-    └── hooks/                 # Intelligent skill activation system
+vp-real-estate/                                    # plugin marketplace root
+├── .claude-plugin/marketplace.json                # marketplace manifest
+├── plugins/
+│   ├── leasing-commercial/                        # 24 skills, 5 command subdirs, 1 agent (benji)
+│   ├── tenancies-residential/                     # 3 skills, 1 agent (anni)
+│   ├── expropriation-law/                         # 9 skills, 2 agents (christi, stevi)
+│   ├── appraisal-valuation/                       # 6 skills, 1 agent (alexi)
+│   ├── infrastructure-corridor-ops/               # 10 skills, 2 agents (katy, shadi)
+│   └── common-utilities/                          # 4 skills + 3 persona skills, 3 output styles, canonical shared_utils, subagent-stop hook
+├── scripts/                                       # vendor-shared-utils.sh, build-personas.sh, sync-all.sh
+├── docs/superpowers/specs/                        # design specs
+├── docs/superpowers/plans/                        # implementation plans
+├── Reports/                                       # user-generated outputs
+├── Sample_Inputs/, Sample_Outputs/                # documentation samples
+└── README.md, CLAUDE.md, etc.
 ```
 
-Refer to `CLAUDE.md` for a full breakdown of commands, skills, agents, and the intelligent hook system.
+Refer to `CLAUDE.md` for a full breakdown of plugins, commands, skills, agents, and output styles.
 
 ---
 
@@ -614,7 +622,7 @@ Academic foundations from R. Chan’s work on Ponzi Rental Rate and rental term 
 
 ## Support
 
-**Version**: 2.2.0 (Released 2026-01-15)
+**Version**: 3.0.0 (Released 2026-05-15)
 **Your VP of Leasing & Asset Management**: Reggie Chan, CFA, FRICS
 **Reggie's Team**: Adam (Senior Analyst) • Dennis (Strategic Advisor) • +7 Infrastructure Specialists
 
