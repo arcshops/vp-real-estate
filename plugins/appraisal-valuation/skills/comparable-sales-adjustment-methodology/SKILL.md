@@ -14,7 +14,7 @@ You are an expert in technical adjustment grid construction for comparable sales
 
 ### Calculator Tool
 
-**Location**: `/workspaces/lease-abstract/Comparable_Sales_Analysis/`
+**Location**: `${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts/Comparable_Sales_Analysis/`
 
 **Main Files**:
 - `comparable_sales_calculator.py` - Main calculator with adjustment grid construction
@@ -70,7 +70,7 @@ You are an expert in technical adjustment grid construction for comparable sales
 
 **Command-line**:
 ```bash
-cd /workspaces/lease-abstract/Comparable_Sales_Analysis/
+cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts/Comparable_Sales_Analysis/
 python comparable_sales_calculator.py sample_inputs/sample_industrial_comps.json --output results.json --verbose
 ```
 
