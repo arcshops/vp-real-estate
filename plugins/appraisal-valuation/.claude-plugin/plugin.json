@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "appraisal-valuation",
+  "version": "1.0.0",
+  "description": "Property valuation: cost approach, income approach, easement valuation, comparable sales adjustment (DCA + MCDA), title, environmental due diligence",
+  "author": { "name": "Reggie Chan", "email": "reggie.chan@gmail.com" },
+  "repository": "https://github.com/reggiechan/vp-real-estate",
+  "license": "see LICENSE in repo root",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "dependencies": [
+    { "name": "common-utilities", "version": "^1.0.0" }
+  ]
+}

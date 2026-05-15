@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "infrastructure-corridor-ops",
+  "version": "1.0.0",
+  "description": "Linear infrastructure acquisition: agricultural easements, cropland compensation, land assembly, public consultation, NIMBY response, transit station siting, transmission line specs, right-of-way",
+  "author": { "name": "Reggie Chan", "email": "reggie.chan@gmail.com" },
+  "repository": "https://github.com/reggiechan/vp-real-estate",
+  "license": "see LICENSE in repo root",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "dependencies": [
+    { "name": "common-utilities", "version": "^1.0.0" }
+  ]
+}

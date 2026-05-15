@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "common-utilities",
+  "version": "1.0.0",
+  "description": "Foundation plugin: analyst trio personas, cross-cutting skills, canonical Shared_Utils source-of-truth, subagent-stop hook",
+  "author": { "name": "Reggie Chan", "email": "reggie.chan@gmail.com" },
+  "repository": "https://github.com/reggiechan/vp-real-estate",
+  "license": "see LICENSE in repo root",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "outputStyles": "./output-styles/",
+  "hooks": "./hooks/hooks.json"
+}

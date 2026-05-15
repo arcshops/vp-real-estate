@@ -420,10 +420,11 @@ Breakdown:
 
 | Command | Purpose |
 |---------|---------|
-| `/cropland-compensation-analysis` | Agricultural easement compensation |
 | `/right-of-way-analysis` | ROW area and encumbrance calculation |
 | `/easement-valuation` | Value utility easements |
 | `/negotiation-strategy` | Owner-specific approach |
+
+Agricultural easement compensation is now handled by the `cropland-out-of-production-agreements` skill, which auto-loads on relevant questions.
 
 #### Example Queries
 
@@ -609,8 +610,9 @@ Breakdown:
 
 | Command | Purpose | Primary Agent |
 |---------|---------|---------------|
-| `/cropland-compensation-analysis` | Agricultural easement compensation | Shadi |
 | `/right-of-way-analysis` | ROW area and encumbrance calculation | Shadi |
+
+Agricultural easement compensation is provided by the `cropland-out-of-production-agreements` skill (auto-loads on relevant questions; Shadi-owned).
 
 ### Process Commands
 
@@ -801,9 +803,9 @@ User: "Shadi, negotiate a 30m pipeline easement through a 500-acre corn/soybean 
 
 Shadi: [Approaches farmer with seasonal awareness, addresses equipment concerns]
 
-User: "/cropland-compensation-analysis"
+User: "Calculate one-time vs. annual cropland compensation for this easement, comparing Ontario and Alberta models."
 
-[Calculates one-time vs. annual compensation, compares Ontario and Alberta models]
+[The `cropland-out-of-production-agreements` skill auto-loads and calculates one-time vs. annual compensation, comparing Ontario and Alberta models]
 ```
 
 ### Example 5: Settlement vs. Hearing Decision
@@ -918,7 +920,7 @@ When using industry defaults instead of market-derived factors:
 /expropriation-timeline <milestones.json>
 
 # Infrastructure
-/cropland-compensation-analysis <input.json>
+# (cropland compensation analysis now via the `cropland-out-of-production-agreements` skill)
 /right-of-way-analysis <corridor.json>
 /transit-station-scoring <sites.json>
 ```

@@ -5,6 +5,41 @@ All notable changes to the Commercial Real Estate Lease Analysis Toolkit will be
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] — 2026-05-15
+
+### BREAKING — Conversion to Claude Code plugin marketplace
+
+The entire repository has been restructured as a Claude Code plugin marketplace. The legacy `.claude/commands/` and `.claude/skills/` layout has been removed and replaced with six installable plugins under `plugins/`. Users must now install plugins via `/plugin marketplace add reggiechan/vp-real-estate` followed by `/plugin install <plugin-name>@vp-real-estate`. See README.md for full instructions.
+
+### Added
+
+- Plugin marketplace at `.claude-plugin/marketplace.json` listing six plugins
+- `plugins/common-utilities/` foundation plugin: 4 cross-cutting skills, 3 generated persona skills (Adam/Reggie/Dennis), 3 output styles, canonical Shared_Utils, subagent-stop hook
+- `plugins/leasing-commercial/` (24 skills, 5 command subdirs, 11 calculator scripts bundled, agent: benji)
+- `plugins/tenancies-residential/` (3 RTA skills, agent: anni)
+- `plugins/expropriation-law/` (9 skills, 2 command subdirs, 1 calculator bundled, agents: christi, stevi)
+- `plugins/appraisal-valuation/` (6 valuation skills, 2 command subdirs, 2 calculators bundled, agent: alexi)
+- `plugins/infrastructure-corridor-ops/` (10 skills, 4 command subdirs, 1 calculator bundled, agents: katy, shadi)
+- `scripts/vendor-shared-utils.sh` — syncs canonical Shared_Utils into consuming plugins
+- `scripts/build-personas.sh` — generates output styles + skill artifacts from `personas/` masters
+- `scripts/sync-all.sh` — wrapper for both sync scripts
+
+### Changed
+
+- Slash commands are now namespaced under their plugin (`/leasing-commercial:effective-rent`, etc.)
+- Calculator paths now use `${CLAUDE_PLUGIN_ROOT}/skills/<skill>/scripts/<Calculator_Subdir>/<script>` instead of top-level folders
+- Python imports converted from `Shared_Utils.*` to lowercase `shared_utils.*`
+- Output files now write to `$CLAUDE_PROJECT_DIR/Reports/` instead of repo-relative `Reports/`
+- Analyst trio (Adam/Reggie/Dennis) reimplemented as output styles + skills instead of sub-agents — solves the "fresh persona every invocation" problem
+
+### Removed
+
+- `.claude/` directory in its entirety
+- Top-level calculator folders: Eff_Rent_Calculator, IFRS16_Calculator, Option_Valuation, Renewal_Analysis, Rental_Variance, Rental_Yield_Curve, Rollover_Analysis, Default_Calculator, Credit_Analysis, Comparable_Sales_Analysis, MCDA_Sales_Comparison, MLS_Extractor, Relative_Valuation, Location_Overview, Expropriation_Forms
+- Top-level `Shared_Utils/` (now canonical at `plugins/common-utilities/shared_utils/`)
+- Top-level `Templates/` (now at `plugins/leasing-commercial/templates/`)
+- Custom skill-activation hook system (`pre-tool-use-skill-loader.{sh,ts}`, `skill-activation-prompt.{sh,ts}`, `generate-skill-rules.js`, `skill-rules.json`, `lease-types-map.json`) — replaced by native Claude Code skill auto-discovery
+
 ## [2.1.0] - 2025-12-17
 
 ### Added

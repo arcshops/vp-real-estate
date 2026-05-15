@@ -1,0 +1,576 @@
+---
+name: lease-comparison-expert
+description: Use when comparing a lease amendment to its original, evaluating competing inbound vs. outbound offers, benchmarking a draft against a standard precedent form, or producing a side-by-side deviation analysis to support a deal recommendation.
+---
+
+# Lease Comparison Expert
+
+## Overview
+
+**Lease Comparison** = Systematic analysis of multiple lease documents to identify differences in terms, structure, and economics.
+
+**Use Cases**:
+1. **Amendment vs. Original**: Track changes over time
+2. **Competing Offers**: Evaluate multiple tenant proposals
+3. **Precedent Deviation**: Ensure consistency with standard form
+4. **Portfolio Benchmarking**: Compare similar leases across properties
+5. **Market Analysis**: Benchmark against comparable deals
+
+## Core Concepts
+
+### Types of Comparisons
+
+**1. Amendment vs. Original Lease**
+- Identifies what changed
+- Tracks evolution of deal terms
+- Detects inconsistencies
+- Documents negotiation history
+
+**2. Offer A vs. Offer B (Competing Offers)**
+- Compares economic terms (NER, NPV)
+- Evaluates non-economic factors (term, flexibility)
+- Recommends best offer
+- Identifies negotiation leverage
+
+**3. Draft vs. Precedent (Standard Form)**
+- Highlights deviations from landlord's standard
+- Flags unusual provisions
+- Assesses risk of tenant-favorable changes
+- Maintains consistency across portfolio
+
+**4. Lease vs. Market Comparables**
+- Benchmarks rent against market
+- Compares concession packages
+- Evaluates competitiveness
+- Supports rent negotiations
+
+### Comparison Framework
+
+**Key Dimensions**:
+1. **Economic**: Rent, escalations, concessions, costs
+2. **Term**: Duration, renewal options, termination rights
+3. **Flexibility**: Assignment, subletting, expansion, contraction
+4. **Risk Allocation**: Insurance, indemnity, environmental
+5. **Operational**: Use, hours, parking, services
+6. **Legal**: Default, remedies, dispute resolution
+
+## Methodology
+
+### Step 1: Define Comparison Scope
+
+**Questions**:
+- What are you comparing? (2 offers, amendment vs. original, etc.)
+- What dimensions matter? (economic only, or full lease review?)
+- What's the decision being made? (accept/reject, negotiate, standardize?)
+
+### Step 2: Extract Key Terms
+
+**Create comparison matrix**:
+```
+Provision        | Document A | Document B | Difference | Impact
+-----------------+------------+------------+------------+---------
+Base Rent        | $20/sf     | $22/sf     | +$2/sf     | $40K/year higher
+Free Rent        | 3 months   | 6 months   | +3 months  | $55K concession
+TI Allowance     | $10/sf     | $15/sf     | +$5/sf     | $100K higher
+Term             | 5 years    | 3 years    | -2 years   | Shorter commitment
+Renewal Option   | 1 × 5 yrs  | None       | No option  | Less flexibility
+```
+
+### Step 3: Calculate Economic Impact
+
+For competing offers:
+1. **Calculate NER** for each offer
+2. **Calculate NPV** for each offer
+3. **Assess risk-adjusted return** (shorter term = higher risk)
+4. **Rank offers** by economic value
+
+### Step 4: Assess Non-Economic Factors
+
+**Consider**:
+- **Tenant quality**: Credit strength, business stability
+- **Operational fit**: Use compatibility, hours, parking needs
+- **Strategic value**: Anchor tenant, synergies with other tenants
+- **Flexibility**: Options, assignment rights, expansion potential
+
+### Step 5: Recommend Decision
+
+**Framework**:
+- **Best Economic Value**: Highest NPV/NER
+- **Best Risk-Adjusted Value**: Balances return and tenant quality
+- **Best Strategic Fit**: Aligns with long-term property plan
+
+**Output**: Clear recommendation with supporting rationale
+
+## Key Analysis Techniques
+
+### Net Effective Rent (NER) Comparison
+
+**Purpose**: Normalize different rent structures to comparable metric
+
+**Example**:
+```
+Offer A: $20/sf, 3 months free, $10/sf TI, 5 years
+  → NER = $18.50/sf
+
+Offer B: $22/sf, 6 months free, $15/sf TI, 3 years
+  → NER = $17.80/sf
+
+Conclusion: Offer A delivers higher NER despite lower headline rent
+```
+
+### Precedent Deviation Scoring
+
+**Categorize changes**:
+- **Minor**: Formatting, definitions (low risk)
+- **Moderate**: Extended cure periods, additional parking (medium risk)
+- **Major**: Tenant termination rights, unlimited assignment (high risk)
+
+**Recommendation**:
+- Accept: Minor deviations
+- Negotiate: Moderate deviations
+- Reject: Major deviations (or require offsetting concessions)
+
+### Amendment Tracking
+
+**Document evolution**:
+```
+Original Lease (2020): Base Rent $15/sf, 5-year term
+Amendment #1 (2022): Rent reduced to $14/sf (COVID relief)
+Amendment #2 (2024): Expansion from 10K sf to 15K sf, rent $16/sf
+Current Status: 15K sf at blended $15.20/sf, expires 2025
+```
+
+**Purpose**: Understand deal history for renewal negotiations
+
+## Red Flags
+
+### Competing Offer Red Flags
+
+**Too Good to Be True**:
+- Offer significantly above market (25%+ premium)
+- **Risk**: Tenant may default or renegotiate
+- **Action**: Verify tenant creditworthiness
+
+**Extreme Concessions**:
+- 12 months free rent on 3-year term
+- **Risk**: Tenant desperate (weak credit) or savvy negotiator
+- **Action**: Assess why tenant needs such concessions
+
+### Precedent Deviation Red Flags
+
+**Unlimited Assignment Rights**:
+- Standard form requires consent, tenant wants no consent required
+- **Risk**: Loss of control over tenant quality
+- **Action**: Reject or require recapture rights
+
+**Tenant Termination Option**:
+- Tenant may terminate with 90 days notice
+- **Risk**: Lease instability
+- **Action**: Reject or require significant termination fee
+
+**Liability Cap**:
+- Standard form unlimited liability, tenant wants cap at 1 year rent
+- **Risk**: Insufficient damages for major breaches
+- **Action**: Reject or require higher cap
+
+### Amendment Red Flags
+
+**Inconsistent Terms**:
+- Amendment says 5-day cure, but doesn't specify for what default type
+- **Risk**: Ambiguity, unenforceable
+- **Action**: Clarify all amendments
+
+**Undocumented Side Deals**:
+- Verbal agreement to reduce rent not memorialized
+- **Risk**: Not enforceable, creates disputes
+- **Action**: Formalize all changes in writing
+
+## Activation
+
+This skill is automatically loaded when:
+- User mentions: compare, comparison, amendment, precedent, deviation, benchmark, offers
+- Reading files: Multiple lease documents, amendments, offers
+
+All lease comparison workflows (amendment vs. original, competing offers, draft vs. precedent, general side-by-side) are handled directly by this skill — just ask in natural language.
+
+## Examples
+
+### Example 1: Competing Offers Analysis
+
+**Situation**: Landlord receives 2 offers for 10,000 sf industrial space
+
+**Offer A**:
+- Rent: $10/sf/year
+- Free Rent: 3 months
+- TI: $5/sf ($50K)
+- Term: 5 years
+- Renewal: 1 × 5 years at market
+- Tenant: Established distributor, B+ credit
+
+**Offer B**:
+- Rent: $11/sf/year
+- Free Rent: 6 months
+- TI: $10/sf ($100K)
+- Term: 3 years
+- Renewal: None
+- Tenant: Startup, C credit
+
+**Economic Analysis**:
+```
+Offer A:
+  NER: $9.20/sf/year
+  NPV: $380,000 (5 years)
+  Payback: 3.1 years
+
+Offer B:
+  NER: $8.50/sf/year
+  NPV: $180,000 (3 years)
+  Payback: 5.2 years (exceeds term!)
+
+Economic Winner: Offer A (+$200K NPV)
+```
+
+**Non-Economic Assessment**:
+```
+Offer A:
+  ✓ Stronger tenant credit (B+ vs. C)
+  ✓ Longer term (5 vs. 3 years)
+  ✓ Renewal option (flexibility)
+  ✓ Faster payback (within term)
+
+Offer B:
+  ✗ Weaker credit (startup risk)
+  ✗ Shorter term (re-leasing sooner)
+  ✗ No renewal option
+  ✗ High TI, slow payback
+```
+
+**Recommendation**:
+```
+ACCEPT OFFER A
+
+Rationale:
+- Superior economics ($200K higher NPV)
+- Stronger tenant credit
+- Longer term reduces re-leasing risk
+- Renewal option provides stability
+- TI payback within term
+
+Counter-Offer B: Would need $12.50/sf to match Offer A economics
+```
+
+### Example 2: Amendment vs. Original - Tracking Changes
+
+**Original Lease (2020)**:
+- Rent: $18/sf
+- Term: 10 years (2020-2030)
+- Use: General office
+- Assignment: Landlord consent required
+
+**Amendment #1 (2022) - COVID Relief**:
+- Rent: Reduced to $15/sf for Years 3-4 (2022-2024)
+- Years 5-10: Return to $18/sf
+- Free Rent: 3 months (retroactive relief)
+
+**Amendment #2 (2024) - Expansion**:
+- Area: Increased from 5,000 sf to 7,500 sf
+- Rent: New space at $20/sf (blended $18.67/sf)
+- Term: Extended 2 years (now expires 2032)
+- TI: $15/sf for new space ($37,500)
+
+**Current Status Summary**:
+```
+LEASE EVOLUTION SUMMARY
+
+Original Deal (2020):
+  - 5,000 sf @ $18/sf
+  - 10-year term
+  - Total rent over term: $900K
+
+After Amendments (2024):
+  - 7,500 sf @ blended $18.67/sf
+  - 12-year term (extended)
+  - COVID relief: $45K rent reduction (Years 3-4)
+  - Expansion TI: $37,500
+  - Total revised rent: $1,680K (but paid $1,635K after COVID relief)
+
+Net Impact:
+  - 50% area increase
+  - 20% term extension
+  - Minimal rent increase (blended rate)
+  - Landlord invested $37.5K TI for expansion
+  - Tenant remains through 2032 (positive)
+
+Assessment: Favorable expansion - retains tenant, adds revenue, modest TI investment
+```
+
+---
+
+## Workflow: Precedent Comparison
+
+**Invocation**: Ask in natural language, e.g. "Compare this draft lease against our standard precedent form."
+
+### Input Handling
+- First argument: current draft lease being negotiated
+- Second argument: your organization's standard form/precedent lease
+- Determine perspective (Landlord or Tenant) and whose form the precedent is
+
+### Change Classification
+
+For each section:
+- **Identical** ✓ — Matches precedent exactly
+- **Modified** ⚠️ — Language changed
+- **Deleted** ❌ — Section removed entirely
+- **Added** ⊕ — New section not in precedent
+- **Moved** ↔️ — Section relocated
+- **Weakened** ⬇️ — Protective language diluted
+- **Strengthened** ⬆️ — Language made more favorable to you
+
+### Protective Provisions Status Table
+
+**If Landlord Form:**
+
+| Protection | Status | Issue | Recommendation |
+|------------|--------|-------|----------------|
+| Subordination Rights | ✓/⚠️/✗ | | |
+| Broad Default Definition | ✓/⚠️/✗ | | |
+| Holdover Penalty (150-200%) | ✓/⚠️/✗ | | |
+| Tenant Indemnification | ✓/⚠️/✗ | | |
+| Landlord Exculpation | ✓/⚠️/✗ | | |
+| No Rental Abatement Except as Expressed | ✓/⚠️/✗ | | |
+| Personal Guaranty Requirements | ✓/⚠️/✗ | | |
+
+**If Tenant Form:**
+
+| Protection | Status | Issue | Recommendation |
+|------------|--------|-------|----------------|
+| Quiet Enjoyment | ✓/⚠️/✗ | | |
+| Non-Disturbance from Lender | ✓/⚠️/✗ | | |
+| Rent Abatement Rights | ✓/⚠️/✗ | | |
+| Op Cost Audit Rights | ✓/⚠️/✗ | | |
+| Assignment for Affiliates (no consent) | ✓/⚠️/✗ | | |
+| Cap on Operating Cost Increases | ✓/⚠️/✗ | | |
+| Reasonable Consent Standards | ✓/⚠️/✗ | | |
+
+### Deviation Tiering
+
+**Tier 1 — Must Fix (Deal-Breakers)** 🔴
+- Fundamental changes eliminating key protections
+- Material shifts in risk allocation
+- Missing critical provisions
+
+**Tier 2 — Should Fix (Strong Push)** 🟡
+- Important protections weakened but not eliminated
+- Missing desirable provisions
+- Ambiguous language replacing clear terms
+
+**Tier 3 — Can Accept** 🟢
+- Reasonable deal-specific changes
+- Market-standard deviations
+- Stylistic preferences
+
+### Tiered Negotiation Strategy
+1. **Opening**: Lead with Tier 1 items, frame as non-negotiable corrections to standard protections
+2. **Follow-up**: Address Tier 2, prioritize by deal specifics, be prepared to trade
+3. **Final**: Concede Tier 3 if needed as goodwill
+4. **Package deals**: "We'll accept [their Tier 2 change] if you restore [our Tier 2 provision]"
+
+### Precedent Evolution Recommendations
+
+After completing review, flag if any of the draft's changes represent market evolution worth adopting into your standard form. Distinguish:
+- **Reasonable market evolution** — Worth updating precedent
+- **One-party advocacy** — Reject and maintain current form
+
+### Common Sources of Deviation
+1. **Other Party's Form** — Consider requesting they start over with your form
+2. **Prior Deal Markup** — Identify deal-specific vs. form provisions that carried over
+3. **Intentional Negotiation** — Expected; focus on restoring critical protections
+4. **Drafting Errors** — Point out politely as corrections
+
+### Red Flags
+- Wholesale changes to Remedies section (weakening enforcement rights)
+- Subtle definition changes (can alter entire deal economics)
+- Missing entire protective sections (likely intentional)
+- New vague terms ("reasonable", "material", "substantial") without definition
+- Changed cross-references (may break logical connections)
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_precedent_comparison_[property].md`
+
+---
+
+## Workflow: Offer Comparison
+
+**Invocation**: Ask in natural language, e.g. "Compare the inbound offer to our outbound offer."
+
+### Input Handling
+- First argument: path to the inbound offer (received from the other party)
+- Second argument: path to your outbound offer (what you sent)
+- Determine perspective (Landlord or Tenant) from file names, headers, or document content
+
+### Movement Classification
+
+For each term, classify movement:
+- **Accepted** ✓ — Their offer matches your position
+- **Rejected** ✗ — Explicitly rejected or ignored
+- **Countered** ⟷ — Different value/approach proposed
+- **Partially Accepted** ◐ — Moved toward you but not all the way
+- **New Issue** ⊕ — Raised something not in your outbound offer
+- **Withdrawn** ⊖ — Something in your outbound not in their inbound
+
+### Scorecard Table
+
+| Category | Terms Changed | You Won | They Won | Compromised | New Issues | Still Open |
+|----------|---------------|---------|----------|-------------|------------|------------|
+| Financial | | | | | | |
+| Term & Renewal | | | | | | |
+| Flexibility | | | | | | |
+| Risk Allocation | | | | | | |
+| **TOTALS** | | | | | | |
+
+### Deal-Breakers vs. Trading Chips
+
+Classify each open issue:
+- **Deal-Breakers** 🔴 — Both parties far apart, fundamental economics
+- **Trading Chips** 🔄 — Stated positions but flexible; tradeable for bigger wins
+- **Quick Wins** ✓ — Positions very close; capture to build momentum
+
+### Negotiation Tactics to Watch For
+
+1. **Salami Tactics** — Tiny concessions on many fronts to appear reasonable
+   - Counter: Focus on key issues, don't get distracted by minor movement
+2. **Anchoring** — Extreme opening to make real target seem reasonable
+   - Counter: Re-anchor with market standards and comparables
+3. **Good Cop/Bad Cop** — Different team members take conflicting positions
+   - Counter: Stay focused on offer terms, not personalities
+4. **Deadline Pressure** — Artificial deadlines forcing concessions
+   - Counter: Set timeline based on real constraints
+5. **Nibbling** — After major issues resolved, asking for "one more small thing"
+   - Counter: Be clear about what's final, resist reopening settled issues
+
+### Reading Between the Lines
+- **Quick turnaround** = High interest or pressure on them
+- **Slow turnaround** = Less interest, shopping other deals, or internal approval issues
+- **Accepting most financial terms** = They need the space, financial terms less critical
+- **Fighting flexibility clauses** = They want a locked-in tenant/landlord
+- **Adding complexity** = They want negotiation leverage
+
+### Pre-Counteroffer Checklist
+
+**Content Verification:**
+- [ ] Every term in their inbound addressed (accepted/rejected/countered)
+- [ ] Every term in your outbound either accepted or re-raised
+- [ ] New issues responded to with clear positions
+- [ ] All numbers correct and consistent
+
+**Strategic Verification:**
+- [ ] Concessions align with priorities (giving on low-value, holding on high-value)
+- [ ] Trade proposals clearly articulated
+- [ ] Walk-away issues protected
+- [ ] Tone is professional and collaborative
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_offer_comparison_[property]_round[N].md`
+
+---
+
+## Workflow: Amendment Comparison
+
+**Invocation**: Ask in natural language, e.g. "Compare this new amendment against the lease history folder."
+
+### Input Handling
+- First argument: path to the new amendment file
+- Second argument: path to folder containing original lease + previous amendments
+- If only one argument provided, prompt user for missing path
+
+### Step 1: Load Lease History
+- Original lease: look for `lease.pdf`, `lease.docx`, `original_lease.*`
+- Previous amendments: `amendment*.pdf`, `amending*.pdf`, `*amendment*.md` — sort chronologically
+- Convert to markdown via `markitdown` if needed
+
+### Step 2: Recitals Verification (CRITICAL)
+
+Before substantive analysis, verify recitals in the new amendment:
+
+| Recital Element | Stated in Amendment | Actual (from History) | Match? | Issue |
+|-----------------|---------------------|----------------------|--------|-------|
+| Original Lease Date | [Date from recitals] | [Date from file] | ✓/✗ | |
+| Landlord Name | [Name from recitals] | [Name from original] | ✓/✗ | |
+| Tenant Name | [Name from recitals] | [Name from original] | ✓/✗ | |
+| Property Address | [Address from recitals] | [Address from original] | ✓/✗ | |
+| Amendment 1 Date | [Date from recitals] | [Date from file] | ✓/✗ | |
+| Amendment Number | [Number from recitals] | [Actual sequence] | ✓/✗ | |
+| Stated Purpose | [What recitals say] | [What amendment does] | ✓/✗ | |
+
+Flag all discrepancies prominently. Common recital errors:
+1. **Missing Amendments** — Amendment 3 recites 1 and 2 but a 2A exists
+2. **Wrong Dates** — Recitals state June 15, 2018 but actual amendment is 2017
+3. **Wrong Party Names** — "ABC Corp." in lease vs. "ABC Corporation" in recitals
+4. **Outdated Party Names** — Tenant was assigned but recitals still name original tenant
+5. **Wrong Amendment Numbers** — Calls it "Third Amendment" but it's actually the fourth
+6. **Purpose Mismatch** — Recitals say "to extend the term" but amendment also changes rent
+7. **Copy/Paste Errors** — Recitals reference a completely different property from a template
+
+### Step 3: Build Current Lease State
+Apply each previous amendment in chronological order to establish the state before the new amendment. Track sections amended multiple times.
+
+### Step 4: Section-by-Section Analysis
+
+For each modified section, capture:
+- **Current text** (before amendment)
+- **New text** (after amendment)
+- **Amendment history** for sections changed multiple times
+- **Impact**: Financial / Term / Rights / Obligations / Use / Critical Dates
+
+### Step 5: Report Structure
+
+```
+# LEASE AMENDMENT COMPARISON REPORT
+## [Property Address]
+
+## Executive Summary
+## Amendment Information (number, dates, parties, previous amendments)
+## Recitals Verification [table above]
+## ⚠️ Recital Issues Identified
+## Lease History Timeline [table]
+## Summary of Changes (What's Changed / Added / Deleted)
+## Detailed Change Analysis [per-section: current → new → impact]
+## Critical Changes Summary (🔴 High / 🟡 Medium / 🟢 Low)
+## Issues and Concerns (conflicts, ambiguities, missing elements)
+## Financial Impact Summary [table]
+## Updated Critical Dates
+## Recommendations (For Landlord / For Tenant / For Both)
+## Checklist Before Execution
+```
+
+### Pre-Execution Checklist
+
+**Recitals:**
+- [ ] Original lease date correct in recitals
+- [ ] Landlord name matches original lease exactly
+- [ ] Tenant name matches current tenant (or assignment documented)
+- [ ] Property address/description accurate
+- [ ] ALL previous amendments listed in recitals with correct dates
+- [ ] Amendment numbering sequential and correct
+- [ ] Stated purpose aligns with actual changes
+
+**Substantive Provisions:**
+- [ ] No conflicts with existing provisions
+- [ ] Financial impacts calculated and acceptable
+- [ ] Effective date clear and appropriate
+- [ ] All referenced exhibits/schedules attached
+- [ ] Both parties have authority to execute
+- [ ] All blanks filled in (no TBD items)
+
+### Output Naming
+
+Save report to `Reports/YYYY-MM-DD_HHMMSS_amendment_comparison_[property].md`
+
+---
+
+**Skill Version:** 1.0
+**Last Updated:** November 13, 2025
+**Related Skills:** commercial-lease-expert, effective-rent-analyzer, negotiation-expert, offer-to-lease-expert
+**Related Commands:** none — amendment, offer, precedent, lease-vs-lease, and market-comparison workflows are all handled by this skill directly

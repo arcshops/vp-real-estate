@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "leasing-commercial",
+  "version": "1.0.0",
+  "description": "Commercial lease analysis toolkit (industrial + office): abstraction, effective rent, tenant credit, options valuation, IFRS 16, consents, surrender, compliance",
+  "author": { "name": "Reggie Chan", "email": "reggie.chan@gmail.com" },
+  "repository": "https://github.com/reggiechan/vp-real-estate",
+  "license": "see LICENSE in repo root",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "dependencies": [
+    { "name": "common-utilities", "version": "^1.0.0" }
+  ]
+}

@@ -1,10 +1,24 @@
 # Meet Your New VP: Reggie Chan and His Team
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/reggiechan74/vp-real-estate/releases)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/reggiechan74/vp-real-estate/releases)
 [![Python](https://img.shields.io/badge/python-3.12%2B-brightgreen.svg)](https://www.python.org/downloads/)
-[![Tests](https://img.shields.io/badge/tests-235%2B%20passing-success.svg)](Eff_Rent_Calculator/Tests/)
+[![Tests](https://img.shields.io/badge/tests-235%2B%20passing-success.svg)](plugins/leasing-commercial/skills/effective-rent-analyzer/scripts/Eff_Rent_Calculator/Tests/)
 
-**Version 2.0.0** • Released 2025-11-13
+**Version 3.0.0** • Released 2026-05-15
+
+## Installation
+
+The fastest way to use these tools is via the Claude Code plugin marketplace:
+
+```bash
+/plugin marketplace add reggiechan/vp-real-estate
+/plugin install leasing-commercial@vp-real-estate
+/plugin install common-utilities@vp-real-estate
+```
+
+Then invoke commands with the plugin namespace, e.g. `/leasing-commercial:abstract-lease path/to/lease.pdf`.
+
+If you prefer to clone the repo directly for development, see CLAUDE.md.
 
 ## It's Like Having Reggie Chan Work for You—And He Brought His Team—For the Price of a Claude Code Subscription
 
@@ -43,9 +57,9 @@ Just address "Reggie" for most situations (he's your primary contact). For routi
 Together, they give you back two full days every week. Days you used to spend in spreadsheet purgatory. Days you can now spend closing deals, working the phones, or finally getting to that 2 p.m. tee time.
 
 **Reggie and his team have access to:**
-- **28 automated workflows** - One command, instant output for everything from lease abstraction to IFRS 16 accounting
+- **23 automated workflows** - One command, instant output for everything from lease abstraction to IFRS 16 accounting (15 in leasing-commercial plus 8 across the rest of the marketplace)
 - **11 financial calculators** - Built by people who actually understand leasing, not consultants
-- **23 specialized skills** - On-demand expertise for every lease situation including effective rent analysis, tenant credit, compliance auditing, portfolio strategy, and negotiation
+- **24 specialized skills in leasing-commercial** - On-demand expertise for every lease situation including effective rent analysis, tenant credit, compliance auditing, portfolio strategy, and negotiation (plus 35 more across the appraisal-valuation, expropriation-law, infrastructure-corridor-ops, tenancies-residential, and common-utilities plugins for 59 total)
 
 Every output is timestamped, auditable, and so clean that even your most pedantic asset manager will have to approve it. Because there's nothing to criticize.
 
@@ -62,7 +76,7 @@ Except you win more, because you're on the back nine by 3 p.m.
 It's stupidly simple:
 
 1. **Feed Reggie a lease PDF** (or DOCX, or Excel, or whatever disaster format you've been handed)
-2. **Type one command** (like `/effective-rent` or `/abstract-lease` or `/tenant-credit`)
+2. **Type one command** (like `/leasing-commercial:effective-rent` or `/leasing-commercial:abstract-lease` or `/leasing-commercial:tenant-credit`)
 3. **Get a board-ready report** in seconds
 
 Or just ask Reggie a question directly. He'll handle it. (For routine work, Adam's faster. For strategic wisdom, Dennis is your guy.)
@@ -85,7 +99,7 @@ Because the last thing you need is *more complexity*.
 
 *Old way:* Spend 90 minutes in Excel calculating debt service coverage, current ratios, leverage multiples. Build a memo. Hope you didn't fat-finger a formula. Send it to the asset manager. Get grilled on why your numbers don't match theirs.
 
-*New way:* Type `/tenant-credit path/to/financials.pdf`. Get back a complete credit analysis in 30 seconds. Fifteen ratios. A 100-point credit score. A recommended security deposit amount. PD/LGD estimates. Everything formatted, documented, defensible.
+*New way:* Type `/leasing-commercial:tenant-credit path/to/financials.pdf`. Get back a complete credit analysis in 30 seconds. Fifteen ratios. A 100-point credit score. A recommended security deposit amount. PD/LGD estimates. Everything formatted, documented, defensible.
 
 Or just ask: "Adam, run a credit check on this tenant." (Adam handles routine credit checks—Reggie steps in if there are red flags.)
 
@@ -156,7 +170,7 @@ The default Claude Code persona is still available for general questions. But wh
 
 *Old way:* Build a comparison spreadsheet from scratch. Copy-paste rent schedules. Try to remember which version of the model you sent last time. Hope nobody notices the TI number changed.
 
-*New way:* Type `/compare-offers offer1.pdf offer2.pdf`. Get a side-by-side analysis with NPV, effective rent, concession structure, and exactly which deal performs better under which assumptions.
+*New way:* Just ask: "Compare these two offers" and the `lease-comparison-expert` skill auto-activates to give you a side-by-side analysis with NPV, effective rent, concession structure, and exactly which deal performs better under which assumptions.
 
 **Decision made. Email sent. Deal closed.**
 
@@ -166,7 +180,7 @@ The default Claude Code persona is still available for general questions. But wh
 
 *Old way:* Log into CoStar. Export to Excel. Clean the data. Try to figure out why the asking rent is $14.50 in one row and "$14.50 PSF" in another. Build a custom comparison table. Hope it doesn't break when someone opens it in Google Sheets.
 
-*New way:* Type `/extract-mls mls_report.pdf --subject="2550 Stanfield"`. Get back a professionally formatted Excel file with your subject property highlighted, all competitors ranked, and every column clean and ready for analysis.
+*New way:* Type `/leasing-commercial:extract-mls mls_report.pdf --subject="2550 Stanfield"`. Get back a professionally formatted Excel file with your subject property highlighted, all competitors ranked, and every column clean and ready for analysis.
 
 **No cleanup. No formatting. Just data that works.**
 
@@ -176,7 +190,7 @@ The default Claude Code persona is still available for general questions. But wh
 
 *Old way:* Try to remember the formula for present value of lease liabilities. Google "ROU asset calculation." Build an amortization table from scratch. Email it to accounting. Get told it doesn't match their model. Start over.
 
-*New way:* Type `/ifrs16-calculation lease.pdf 5.5` (where 5.5 is your discount rate). Get back complete IFRS 16 / ASC 842 schedules, journal entries, CSV exports, everything accounting needs for month-end close.
+*New way:* Type `/leasing-commercial:ifrs16-calculation lease.pdf 5.5` (where 5.5 is your discount rate). Get back complete IFRS 16 / ASC 842 schedules, journal entries, CSV exports, everything accounting needs for month-end close.
 
 **They say "thank you" instead of "can you fix this?"**
 
@@ -186,7 +200,7 @@ The default Claude Code persona is still available for general questions. But wh
 
 *Old way:* Export every lease from the system. Build a pivot table. Try to figure out which leases matter most. Wing it on renewal probabilities. Send an email with "high risk" next to anything expiring soon.
 
-*New way:* Type `/rollover-analysis portfolio.json`. Get back a complete risk dashboard: lease expiry concentrations, priority scoring (based on rent contribution, urgency, and credit rating), three-scenario modeling, action plan for Q1/Q2/Q3.
+*New way:* Type `/leasing-commercial:rollover-analysis portfolio.json`. Get back a complete risk dashboard: lease expiry concentrations, priority scoring (based on rent contribution, urgency, and credit rating), three-scenario modeling, action plan for Q1/Q2/Q3.
 
 **Your boss thinks you've been doing strategic planning. You typed one command.**
 
@@ -196,7 +210,7 @@ The default Claude Code persona is still available for general questions. But wh
 
 *Old way:* Stare at the clause. Make an educated guess. Hope it doesn't come up again.
 
-*New way:* Type `/option-value lease.pdf`. Get back a Black-Scholes valuation of the embedded option, Greeks (Delta, Vega, Theta), probability in-the-money, sensitivity analysis.
+*New way:* Type `/leasing-commercial:option-value lease.pdf`. Get back a Black-Scholes valuation of the embedded option, Greeks (Delta, Vega, Theta), probability in-the-money, sensitivity analysis.
 
 **Now you can negotiate like you actually know the math. Because you do.**
 
@@ -204,43 +218,34 @@ The default Claude Code persona is still available for general questions. But wh
 
 ## Every Analysis You'll Ever Need
 
-### Reggie's 28 Workflows
+### Reggie's 15 Leasing Workflows
 
-Reggie and his team have 28 workflows ready for the questions you get asked every single week. One command, instant output, zero thinking required.
+Reggie and his team have 15 leasing workflows ready (plus 8 more across the full marketplace) for the questions you get asked every single week. One command, instant output, zero thinking required.
 
 **Abstraction** (2 commands)
-- `/abstract-lease` – Pull every term from a lease into a clean 24-section template
-- `/critical-dates` – Timeline of renewals, expirations, notice deadlines
+- `/leasing-commercial:abstract-lease` – Pull every term from a lease into a clean 25-section template
+- `/leasing-commercial:critical-dates` – Timeline of renewals, expirations, notice deadlines
 
-**Financial Analysis** (10 commands)
-- `/effective-rent` – NER, GER, NPV, breakeven, Ponzi Rental Rate, sensitivities
-- `/tenant-credit` – Full credit analysis with ratios, score, security recommendation
-- `/rental-variance` – Budget vs. actuals decomposition (rate, area, term)
-- `/market-comparison` – Benchmark rent against comps, calculate pricing gap
-- `/rollover-analysis` – Portfolio expiry risk dashboard with action plan
-- `/option-value` – Real options valuation for flexibility clauses
-- `/renewal-economics` – Renewal vs. relocation recommendation matrix
-- `/relative-valuation` – Competitive positioning across 25 variables
-- `/recommendation-memo` – VTS approval package with deal comparison
-- `/extract-mls` – MLS data extraction to professionally formatted Excel
+**Financial Analysis** (8 commands)
+- `/leasing-commercial:effective-rent` – NER, GER, NPV, breakeven, Ponzi Rental Rate, sensitivities
+- `/leasing-commercial:tenant-credit` – Full credit analysis with ratios, score, security recommendation
+- `/leasing-commercial:rental-variance` – Budget vs. actuals decomposition (rate, area, term)
+- `/leasing-commercial:rollover-analysis` – Portfolio expiry risk dashboard with action plan
+- `/leasing-commercial:option-value` – Real options valuation for flexibility clauses
+- `/leasing-commercial:renewal-economics` – Renewal vs. relocation recommendation matrix
+- `/leasing-commercial:relative-valuation` – Competitive positioning across 25 variables
+- `/leasing-commercial:extract-mls` – MLS data extraction to professionally formatted Excel
 
 **Accounting** (1 command)
-- `/ifrs16-calculation` – IFRS 16 / ASC 842 schedules and journal entries
+- `/leasing-commercial:ifrs16-calculation` – IFRS 16 / ASC 842 schedules and journal entries
 
-**Comparison** (4 commands)
-- `/compare-amendment` – Amendment vs. original lease summary
-- `/compare-offers` – Side-by-side economics for multiple offers
-- `/compare-precedent` – Deviations from your standard form
-- `/lease-vs-lease` – Clause-by-clause comparison
+**Compliance** (4 commands)
+- `/leasing-commercial:default-analysis` – Default provisions and cure period breakdown
+- `/leasing-commercial:estoppel-certificate` – Draft estoppel populated from lease abstract
+- `/leasing-commercial:notice-generator` – Draft lease notices (renewal, termination, default)
+- `/leasing-commercial:work-letter` – Work letter outline from TI provisions
 
-**Compliance** (7 commands)
-- `/assignment-consent` – Consent package checklist and risk analysis
-- `/default-analysis` – Default provisions and cure period breakdown
-- `/environmental-compliance` – Environmental obligations summary
-- `/estoppel-certificate` – Draft estoppel populated from lease abstract
-- `/insurance-audit` – Insurance requirement verification
-- `/notice-generator` – Draft lease notices (renewal, termination, default)
-- `/work-letter` – Work letter outline from TI provisions
+Note: comparison work (amendment vs. original, offer vs. offer, draft vs. precedent, clause-by-clause) is now handled by the `lease-comparison-expert` skill, which auto-activates whenever you ask Reggie to compare two documents. Same output, less typing.
 
 Every single one of these used to be a half-day project. Now they're 30 seconds.
 
@@ -268,11 +273,11 @@ Each one has been tested on real deals. 235+ passing tests. No surprises.
 
 ---
 
-### Reggie's 23 Specialized Skills
+### Reggie's 24 Specialized Skills
 
 Some questions don't have a formula. They need judgment. Experience. A senior advisor who's seen this exact situation 50 times.
 
-That's what Reggie brings. On-demand expertise for the messy stuff. These skills automatically activate when you need them—just ask your question.
+That's what Reggie brings. On-demand expertise for the messy stuff. These skills automatically activate when you need them—just ask your question. (And these 24 are just the leasing-commercial set; there are 35 more across the appraisal-valuation, expropriation-law, infrastructure-corridor-ops, tenancies-residential, and common-utilities plugins for 59 total in the marketplace.)
 
 **Core Leasing**
 - `commercial-lease-expert` – Deal structuring, net lease mechanics, negotiation strategy
@@ -448,13 +453,13 @@ That's it. No manual pip commands. No hunting for dependencies. No "works on my 
 
 ```bash
 # Abstract a lease
-/abstract-lease path/to/lease.docx
+/leasing-commercial:abstract-lease path/to/lease.docx
 
 # Analyze effective rent
-/effective-rent path/to/lease.pdf
+/leasing-commercial:effective-rent path/to/lease.pdf
 
 # Extract market comps
-/extract-mls path/to/mls_report.pdf --subject="2550 Stanfield"
+/leasing-commercial:extract-mls path/to/mls_report.pdf --subject="2550 Stanfield"
 ```
 
 Every report lands in the `Reports/` folder with a timestamp. Open it. Send it. Done.
@@ -514,7 +519,7 @@ We're not done. Here's what's coming:
 3. **API integrations** – DistanceMatrix.ai, CoStar, LoopNet for real-time data
 4. **Machine learning weight optimization** – Learn from your historical deal outcomes
 
-But here's the thing: **this already works.** Version 2.0.0 is production-ready. You can use it today.
+But here's the thing: **this already works.** Version 3.0.0 is production-ready. You can use it today.
 
 Don't wait for perfection. Start saving time now.
 
@@ -524,7 +529,7 @@ Don't wait for perfection. Start saving time now.
 
 **Your VP of Leasing & Asset Management:** Reggie Chan, CFA, FRICS
 **Reggie's Team:** Adam (Senior Analyst) • Dennis (Strategic Advisor)
-**Version:** 2.0.0 (Released 2025-11-13)
+**Version:** 3.0.0 (Released 2026-05-15)
 **Repository:** github.com/reggiechan74/vp-real-estate
 
 For issues, feature requests, or questions: open a ticket in the repository.
