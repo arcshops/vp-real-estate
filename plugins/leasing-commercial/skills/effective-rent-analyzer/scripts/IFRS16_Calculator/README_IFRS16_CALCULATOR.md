@@ -488,7 +488,7 @@ from financial_utils import (
 
 Run tests:
 ```bash
-cd /workspaces/lease-abstract/Eff_Rent_Calculator
+cd ${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/Eff_Rent_Calculator
 python3 -m pytest Tests/test_ifrs16_calculator.py -v
 ```
 

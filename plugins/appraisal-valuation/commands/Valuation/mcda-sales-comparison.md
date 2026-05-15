@@ -297,6 +297,6 @@ Provide the user with:
 
 - `/comparable-sales-analysis` - Traditional DCA with sequential adjustments (49 adjustments)
 - `/relative-valuation` - MCDA for competitive positioning (25 variables)
-- `/market-comparison` - Market rent benchmarking
+- Market rent benchmarking is handled by the `commercial-lease-expert` skill
 
 Begin the analysis with the provided input data.

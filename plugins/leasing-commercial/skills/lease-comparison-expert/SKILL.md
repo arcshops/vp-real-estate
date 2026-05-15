@@ -185,18 +185,13 @@ Current Status: 15K sf at blended $15.20/sf, expires 2025
 - **Risk**: Not enforceable, creates disputes
 - **Action**: Formalize all changes in writing
 
-## Integration with Slash Commands
+## Activation
 
 This skill is automatically loaded when:
 - User mentions: compare, comparison, amendment, precedent, deviation, benchmark, offers
-- Commands invoked: `/compare-amendment`, `/compare-offers`, `/compare-precedent`, `/lease-vs-lease`
 - Reading files: Multiple lease documents, amendments, offers
 
-**Related Commands**:
-- `/compare-amendment <original-lease> <amendment>` - Compare amendment against original
-- `/compare-offers <outbound-offer> <inbound-offer>` - Compare competing offers
-- `/compare-precedent <draft-lease> <precedent-lease>` - Compare against standard form
-- `/lease-vs-lease <lease1> <lease2>` - General side-by-side comparison
+All lease comparison workflows (amendment vs. original, competing offers, draft vs. precedent, general side-by-side) are handled directly by this skill — just ask in natural language.
 
 ## Examples
 
@@ -311,9 +306,9 @@ Assessment: Favorable expansion - retains tenant, adds revenue, modest TI invest
 
 ---
 
-## Slash Command Workflow: Precedent Comparison (`/compare-precedent`)
+## Workflow: Precedent Comparison
 
-**Invocation**: `/compare-precedent <draft-lease> <precedent-lease>`
+**Invocation**: Ask in natural language, e.g. "Compare this draft lease against our standard precedent form."
 
 ### Input Handling
 - First argument: current draft lease being negotiated
@@ -405,9 +400,9 @@ Save report to `Reports/YYYY-MM-DD_HHMMSS_precedent_comparison_[property].md`
 
 ---
 
-## Slash Command Workflow: Offer Comparison (`/compare-offers`)
+## Workflow: Offer Comparison
 
-**Invocation**: `/compare-offers <inbound-offer> <outbound-offer>`
+**Invocation**: Ask in natural language, e.g. "Compare the inbound offer to our outbound offer."
 
 ### Input Handling
 - First argument: path to the inbound offer (received from the other party)
@@ -481,9 +476,9 @@ Save report to `Reports/YYYY-MM-DD_HHMMSS_offer_comparison_[property]_round[N].m
 
 ---
 
-## Slash Command Workflow: Amendment Comparison (`/compare-amendment`)
+## Workflow: Amendment Comparison
 
-**Invocation**: `/compare-amendment <new-amendment> <lease-history-folder>`
+**Invocation**: Ask in natural language, e.g. "Compare this new amendment against the lease history folder."
 
 ### Input Handling
 - First argument: path to the new amendment file
@@ -578,4 +573,4 @@ Save report to `Reports/YYYY-MM-DD_HHMMSS_amendment_comparison_[property].md`
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, effective-rent-analyzer, negotiation-expert, offer-to-lease-expert
-**Related Commands:** /compare-amendment, /compare-offers, /compare-precedent, /lease-vs-lease, /market-comparison
+**Related Commands:** none — amendment, offer, precedent, lease-vs-lease, and market-comparison workflows are all handled by this skill directly

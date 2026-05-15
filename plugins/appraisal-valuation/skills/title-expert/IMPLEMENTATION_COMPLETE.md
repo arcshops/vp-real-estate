@@ -162,7 +162,7 @@ Result: All tests PASS ✓
 ## Integration
 
 ### Shared Utilities
-Imports from existing `/workspaces/lease-abstract/Shared_Utils/`:
+Imports from existing `${CLAUDE_PLUGIN_ROOT}/skills/title-expert/scripts/shared_utils/`:
 - `report_utils.eastern_timestamp()` - ET timestamp generation
 - `report_utils.format_markdown_table()` - Table formatting
 - `report_utils.generate_executive_summary()` - Summary templates

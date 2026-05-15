@@ -216,7 +216,7 @@ Prompt user for market parameters (or extract from provided data):
 Before running calculator, validate using the validator:
 
 ```bash
-cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/
+cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts/Comparable_Sales_Analysis/
 python3 validate_comparables.py input_file.json
 ```
 
@@ -308,7 +308,7 @@ Create the `inputs/` directory if it doesn't exist.
 Execute the calculator using Bash tool:
 
 ```bash
-cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/
+cd ${CLAUDE_PLUGIN_ROOT}/skills/comparable-sales-adjustment-methodology/scripts/Comparable_Sales_Analysis/
 python3 comparable_sales_calculator.py inputs/comps_input_[timestamp].json --output results/comps_results_[timestamp].json --verbose
 ```
 
@@ -940,9 +940,9 @@ After creating all files, provide the user with:
 ## Related Commands and Resources
 
 **Related Slash Commands:**
-- `/market-comparison` - Market rent benchmarking for income properties
 - `/relative-valuation` - MCDA competitive positioning analysis (25 variables)
 - `/renewal-economics` - Renewal vs. relocation NPV analysis
+- Market rent benchmarking for income properties is handled by the `commercial-lease-expert` skill
 
 **Related Calculators:**
 - `${CLAUDE_PLUGIN_ROOT}/skills/effective-rent-analyzer/scripts/` - Effective rent and NPV analysis

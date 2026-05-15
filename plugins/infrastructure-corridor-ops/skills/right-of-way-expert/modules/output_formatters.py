@@ -8,6 +8,7 @@ import sys
 import os
 
 # Add shared_utils to path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'scripts')))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..')))
 from shared_utils.report_utils import eastern_timestamp, format_markdown_table
 

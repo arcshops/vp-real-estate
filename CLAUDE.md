@@ -146,7 +146,7 @@ Skills are **automatically invoked** through Claude Code's native skill discover
 ### Financial Analysis (NEW - 3 skills)
 - **effective-rent-analyzer** - NER, NPV, breakeven analysis using Ponzi Rental Rate framework
 - **tenant-credit-analyst** - Creditworthiness assessment, DSCR analysis, security structuring
-- **lease-abstraction-specialist** - 24-section lease abstraction, critical dates extraction
+- **lease-abstraction-specialist** - 25-section lease abstraction, critical dates extraction
 
 ### Compliance & Process (NEW - 3 skills)
 - **lease-compliance-auditor** - Insurance, environmental, use clause, covenant compliance

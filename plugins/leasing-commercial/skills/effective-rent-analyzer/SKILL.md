@@ -292,13 +292,13 @@ Asking Rent (with standard concessions): $19.50/sf
 
 This skill is automatically loaded when:
 - User mentions: NER, NPV, effective rent, breakeven, landlord return, lease economics
-- Commands invoked: `/effective-rent`, `/renewal-economics`, `/market-comparison`
+- Commands invoked: `/effective-rent`, `/renewal-economics`
 - Reading files: `*offer*lease*`, `*_input.json` in Eff_Rent_Calculator
 
 **Related Commands**:
 - `/effective-rent <lease-or-offer-path> <landlord-params-json-path>` - Full NER/NPV analysis with Ponzi Rental Rate breakeven
 - `/renewal-economics <current-lease-path>` - Renewal vs. relocation NPV comparison
-- `/market-comparison <subject-lease> [comparables...]` - Benchmark rent against market NER
+- Market rent benchmarking is handled by the `commercial-lease-expert` skill, which auto-loads on relevant questions
 
 ## Examples
 
@@ -393,4 +393,4 @@ RECOMMENDATION: ACCEPT - Excellent economics, long-term stable tenant
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, offer-to-lease-expert, negotiation-expert, portfolio-strategy-advisor
-**Related Commands:** /effective-rent, /renewal-economics, /market-comparison (VTS approval memos are now generated via the `commercial-lease-expert` skill, which auto-loads on relevant questions)
+**Related Commands:** /effective-rent, /renewal-economics (market rent benchmarking and VTS approval memos are now generated via the `commercial-lease-expert` skill, which auto-loads on relevant questions)

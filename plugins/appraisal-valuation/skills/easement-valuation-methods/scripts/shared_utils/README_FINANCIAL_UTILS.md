@@ -365,7 +365,7 @@ else:
 Run comprehensive test suite:
 
 ```bash
-cd /workspaces/lease-abstract/Eff_Rent_Calculator
+cd ${CLAUDE_PLUGIN_ROOT}/skills/easement-valuation-methods/scripts/shared_utils
 python3 -m pytest Tests/test_financial_utils.py -v
 ```
 

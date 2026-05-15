@@ -1364,6 +1364,6 @@ A: No, it uses asking rent only. For net effective rent analysis, use `/effectiv
 
 **END OF DOCUMENT**
 
-*For implementation details, see `/workspaces/lease-abstract/Relative_Valuation/relative_valuation_calculator.py`*
-*For schema reference, see `/workspaces/lease-abstract/Relative_Valuation/SCHEMA.md`*
-*For usage examples, see `/workspaces/lease-abstract/Relative_Valuation/README.md`*
+*For implementation details, see `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/relative_valuation_calculator.py`*
+*For schema reference, see `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/SCHEMA.md`*
+*For usage examples, see `${CLAUDE_PLUGIN_ROOT}/skills/portfolio-strategy-advisor/scripts/Relative_Valuation/README.md`*

@@ -208,13 +208,12 @@ Obligation | Frequency | Deadline | Status | Last Verified
 
 This skill is automatically loaded when:
 - User mentions: compliance, insurance audit, environmental compliance, use clause, covenant
-- Commands invoked: `/insurance-audit`, `/environmental-compliance`
 - Reading files: Insurance certificates, environmental reports, compliance documents
 
 **Related Commands**:
-- `/insurance-audit <lease-path> [insurance-policies]` - Verify insurance compliance
-- `/environmental-compliance <lease-path>` - Review environmental provisions and compliance
 - `/default-analysis <lease-path>` - Assess compliance violations as defaults
+
+Insurance audits and environmental compliance reviews are handled directly by this skill — just ask in natural language.
 
 ## Examples
 
@@ -295,9 +294,9 @@ Status: VIOLATION - Immediate action required
 
 ---
 
-## Slash Command Workflow: Insurance Audit (`/insurance-audit`)
+## Insurance Audit Workflow
 
-**Invocation**: `/insurance-audit <lease-path> [insurance-policies]`
+**Invocation**: Ask in natural language, e.g. "Audit the insurance compliance for this lease against the attached certificate."
 
 ### Step 1: Extract Lease Insurance Requirements
 
@@ -455,13 +454,11 @@ Report includes:
 
 ### Example Usage
 
-```
-/insurance-audit /path/to/lease_abstract.md /path/to/insurance_certificate.pdf
-```
+> "Audit insurance compliance for `/path/to/lease_abstract.md` against `/path/to/insurance_certificate.pdf`."
 
 ---
 
 **Skill Version:** 1.0
 **Last Updated:** November 13, 2025
 **Related Skills:** commercial-lease-expert, default-and-remedies-advisor, lease-abstraction-specialist
-**Related Commands:** /insurance-audit, /environmental-compliance, /default-analysis
+**Related Commands:** /default-analysis (insurance and environmental compliance reviews are handled by this skill)

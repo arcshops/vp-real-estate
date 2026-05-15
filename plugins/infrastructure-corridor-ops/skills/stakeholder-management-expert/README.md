@@ -6,7 +6,7 @@ Expert in stakeholder consultation analysis, feedback summarization, sentiment a
 
 ```bash
 # Run consultation summarizer with sample data
-cd /workspaces/lease-abstract/${CLAUDE_PLUGIN_ROOT}/skills/stakeholder-management-expert
+cd ${CLAUDE_PLUGIN_ROOT}/skills/stakeholder-management-expert
 python consultation_summarizer.py samples/sample_1_station_public_meeting.json --verbose
 
 # Specify output location
@@ -148,7 +148,7 @@ stakeholder-management-expert/
 
 ## Shared Utilities
 
-This skill uses shared utilities from `/workspaces/lease-abstract/Shared_Utils/`:
+This skill uses shared utilities from `${CLAUDE_PLUGIN_ROOT}/skills/stakeholder-management-expert/scripts/shared_utils/`:
 
 ### stakeholder_utils.py
 - `categorize_themes()` - Theme categorization with keyword matching
@@ -231,7 +231,7 @@ python consultation_summarizer.py samples/sample_1_station_public_meeting.json -
 ```
 
 Expected output:
-- Report generated in `/workspaces/lease-abstract/Reports/`
+- Report generated in `$CLAUDE_PROJECT_DIR/Reports/`
 - 10 themes identified
 - 86 comments analyzed
 - 50 commitments tracked

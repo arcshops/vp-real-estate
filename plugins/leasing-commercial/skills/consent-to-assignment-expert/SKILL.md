@@ -211,9 +211,11 @@ Landlord provides recent operating expense reconciliation within 30 days. Assign
 
 ---
 
-## Slash Command Workflow: Assignment Consent Analysis (`/assignment-consent`)
+## Workflow: Assignment Consent Analysis
 
-**Invocation**: `/assignment-consent <lease-path> <assignment-request> [assignee-financials]`
+**Invocation**: Ask in natural language, e.g. "Analyze the assignment consent request for this lease."
+
+This workflow is handled directly by the skill — no slash command required.
 
 ### Step 1: Extract Assignment/Subletting Provisions from Lease
 
@@ -346,9 +348,8 @@ Report includes:
 
 ### Example Usage
 
-```
-/assignment-consent /path/to/lease.md "Tenant ABC Corp wants to assign to XYZ Inc, 3-year-old manufacturing company"
-/assignment-consent /path/to/lease.md /path/to/request.pdf /path/to/assignee_financials.pdf
-```
+> "Analyze the assignment consent for `/path/to/lease.md` — Tenant ABC Corp wants to assign to XYZ Inc, 3-year-old manufacturing company."
+>
+> "Run an assignment consent analysis using `/path/to/lease.md`, `/path/to/request.pdf`, and `/path/to/assignee_financials.pdf`."
 
 ---

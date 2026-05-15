@@ -70,7 +70,7 @@ This document demonstrates the complete **PDF → JSON → Analysis → Report**
 ### Execution
 
 ```bash
-cd /workspaces/lease-abstract/Eff_Rent_Calculator
+cd ${CLAUDE_PLUGIN_ROOT}/skills/tenant-credit-analyst/scripts/Credit_Analysis
 python3 run_credit_analysis.py credit_inputs/sample_tenant_2025-10-31_input.json
 ```
 

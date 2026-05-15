@@ -196,9 +196,9 @@ Rationale for discount rates: estimates may be overstated, buyer may have operat
 Automatically loaded when user mentions environmental due diligence, Phase I/II ESA, contamination, remediation, cleanup cost, environmental risk; or reads files matching `*phase*ESA*`, `*contamination*`, `*environmental*report*`, `*risk*assessment*`.
 
 **Related Commands**:
-- `/environmental-compliance <lease-path>` — Lease-based environmental obligations and compliance
 - `/expropriation-compensation` — Compensation adjustments for contaminated properties
 - `/settlement-analysis` — Environmental liability settlement scenarios
+- Lease-based environmental obligations and compliance reviews are handled by the `lease-compliance-auditor` skill in the `leasing-commercial` plugin
 
 **Related Calculators**:
 - `${CLAUDE_PLUGIN_ROOT}/skills/environmental-due-diligence-expert/environmental_risk_calculator.py` — Automated contamination risk scoring and cleanup cost estimation
@@ -285,4 +285,4 @@ Automatically loaded when user mentions environmental due diligence, Phase I/II 
 **Skill Version:** 1.1
 **Last Updated:** May 15, 2026
 **Related Skills:** commercial-lease-expert, lease-compliance-auditor, expropriation-compensation-entitlement-analysis, settlement-analysis-expert
-**Related Commands:** /environmental-compliance, /expropriation-compensation
+**Related Commands:** /expropriation-compensation (lease-based environmental compliance is handled by the `lease-compliance-auditor` skill)

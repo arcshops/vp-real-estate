@@ -55,7 +55,7 @@ This calculator provides detailed technical methodology for assessing:
 The calculator requires Python 3.7+ and uses only standard library modules (no external dependencies).
 
 ```bash
-cd /workspaces/lease-abstract/${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment
+cd ${CLAUDE_PLUGIN_ROOT}/skills/injurious-affection-assessment
 chmod +x injurious_affection_calculator.py
 ```
 

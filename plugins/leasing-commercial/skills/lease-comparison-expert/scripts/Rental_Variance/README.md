@@ -176,7 +176,7 @@ Included sample files based on the original Excel spreadsheet implementation:
 ### Test the Calculator
 
 ```bash
-cd /workspaces/lease-abstract
+cd ${CLAUDE_PLUGIN_ROOT}/skills/lease-comparison-expert/scripts
 python3 Rental_Variance/rental_variance_calculator.py \
   Rental_Variance/sample_variance_input.json \
   -o test_results.json -v

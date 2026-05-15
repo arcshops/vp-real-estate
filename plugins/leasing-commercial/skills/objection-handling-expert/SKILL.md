@@ -111,7 +111,7 @@ For each objection, determine:
 1. **Mirror**: "Too high?"
 2. **Let them elaborate**: [Wait for them to explain]
 3. **Calibrated question**: "What rent level were you expecting, and what are you basing that on?"
-4. **Evidence anchor**: "I'm basing $18/sf on [X market data from `/market-comparison`]. Every comparable transaction in the last 6 months for this building class has been $17.50-19.50."
+4. **Evidence anchor**: "I'm basing $18/sf on [X market data from the `commercial-lease-expert` skill's market benchmarking]. Every comparable transaction in the last 6 months for this building class has been $17.50-19.50."
 5. **Shift burden**: "What market evidence are you seeing that suggests a lower number?"
 
 **Key**: Make them do analytical work. If they have no data, they'll either find some (good—now you're negotiating facts) or back down.
@@ -134,7 +134,7 @@ For each objection, determine:
 
 *Response*:
 1. **Accusation audit**: "I know it might seem like I'm being inflexible here..."
-2. **Evidence anchor**: "But I need to show you the market data I'm working with [attach `/relative-valuation` or `/market-comparison` results]. Every comparable property is leasing for $17.50-19.50."
+2. **Evidence anchor**: "But I need to show you the market data I'm working with [attach `/relative-valuation` results or market benchmarking from `commercial-lease-expert`]. Every comparable property is leasing for $17.50-19.50."
 3. **Calibrated question**: "How am I supposed to justify $14/sf when the market shows $18? What am I missing in your analysis?"
 4. **Label** if they push back: "It sounds like you have budget constraints beyond just the market rent..."
 5. **Uncover interest**: "What would it take to make $18 work for you? Is it TI, free rent, term length, or something else?"
@@ -181,7 +181,7 @@ For each objection, determine:
 
 **Response Framework**:
 1. **Gather their evidence**: "What comparables are you using?"
-2. **Present your evidence**: [Reference `/relative-valuation` or `/market-comparison` results]
+2. **Present your evidence**: [Reference `/relative-valuation` results or market benchmarking from the `commercial-lease-expert` skill]
 3. **Reconcile differences**: "How do you adjust for clear height / dock doors / parking / age?"
 4. **Calibrated question**: "If we're both looking at market data, what explains the gap in our conclusions?"
 
@@ -203,7 +203,7 @@ For each objection, determine:
 **Response Framework**:
 1. **Label** to understand: "It seems like cash flow during the transition is a concern..."
 2. **Calibrated question**: "What's driving the free rent requirement—construction timeline, budget timing, or lease overlap?"
-3. **Evidence anchor**: "Market deals for [X]-year terms are giving [Y] months free [cite `/market-comparison`]. The gap is worth $[Z] in lost rent."
+3. **Evidence anchor**: "Market deals for [X]-year terms are giving [Y] months free [cite market benchmarking from `commercial-lease-expert`]. The gap is worth $[Z] in lost rent."
 4. **Value trade**: "If I gave you [X] months free, what could you give me on term length / base rent / renewal options?"
 
 **Alternative structures**:
@@ -305,7 +305,7 @@ When negotiating concession trade-offs:
 - Show NER equivalence: "Both structures give me the same $42/sf NER"
 - Let them choose structure that fits their needs while preserving your economics
 
-### `/market-comparison` Data
+### Market Comparison Data (via `commercial-lease-expert` skill)
 When they claim "market is lower":
 - Present comprehensive market comp table
 - Show median/range for comparable transactions
